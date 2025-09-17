@@ -5,41 +5,37 @@ Ini panduan cepat supaya kamu bisa langsung pakai project **CodeIgniter 4** ini.
 
 ---
 
-## Yang dibutuhkan
-- XAMPP (PHP + Apache)  
-- Browser  
-- Git (untuk clone project, opsional kalau pakai ZIP)
+## Yang Dibutuhkan
+- **XAMPP** (PHP + Apache)  
+- **Browser**  
+- **Git** (opsional, kalau mau clone project; kalau tidak bisa pakai download ZIP)
 
 ---
 
-## Langkah-langkah
+## Langkah-Langkah
 
-1. **Clone project atau download ZIP**  
-   ```bash
-   git clone https://github.com/VanZainur/WebMitraPermata.git
-Masuk ke folder project:
+1. **Buat folder di XAMPP**  
+   - Buka folder `htdocs` di XAMPP (biasanya `C:\xampp\htdocs`)  
+   - Buat folder baru bernama `MitraPermata`
 
-cd WebMitraPermata
+2. **Clone project atau download ZIP**  
+   - Kalau pakai Git:
+     ```bash
+     git clone https://github.com/VanZainur/WebMitraPermata.git
+     ```
+   - Jika pakai ZIP, extract isi project ke folder `C:\xampp\htdocs\MitraPermata`
 
+3. **Jalankan Apache** di XAMPP
 
-Pindahkan ke XAMPP
-Copy folder MitraPermata ke:
+4. **Buka project di browser**  
+   - Akses:
+     ```
+     http://localhost/MitraPermata/public
+     ```
 
-( bikin dlu folder #MitraPermata# baru paste disitu )
+---
 
-C:\xampp\htdocs\MitraPermata
+🎉 Project siap digunakan!  
 
-
-Jalankan Apache di XAMPP.
-
-Buka project di browser
-
-http://localhost/MitraPermata/public
-
-
-Project siap digunakan! 🎉
-Untuk sementara, database belum dipakai, jadi beberapa fitur belum aktif.
-
-
-Notes :
-Klo ada error kontak aja
+> **Catatan:** Saat ini project belum pakai database, jadi beberapa fitur belum aktif.  
+> Jika ada error, jangan ragu untuk **kontak saya**.
