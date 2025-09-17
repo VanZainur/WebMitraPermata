@@ -25,6 +25,8 @@ cd WebMitraPermata
 Pindahkan ke XAMPP
 Copy folder MitraPermata ke:
 
+bikin dlu folder MitraPermata baru paste disitu
+
 C:\xampp\htdocs\MitraPermata
 
 
@@ -37,3 +39,7 @@ http://localhost/MitraPermata/public
 
 Project siap digunakan! 🎉
 Untuk sementara, database belum dipakai, jadi beberapa fitur belum aktif.
+
+
+Notes :
+Klo ada error kontak aja
