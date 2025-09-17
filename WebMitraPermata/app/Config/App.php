@@ -16,7 +16,7 @@ class App extends BaseConfig
      *
      * E.g., http://example.com/
      */
-    public string $baseURL =  'https://a63d64391ef0.ngrok-free.app';
+    public string $baseURL = 'http://localhost/MitraPermata/public';
 
     /**
      * Allowed Hostnames in the Site URL other than the hostname in the baseURL.
