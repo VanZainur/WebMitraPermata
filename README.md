@@ -25,7 +25,7 @@ cd WebMitraPermata
 Pindahkan ke XAMPP
 Copy folder MitraPermata ke:
 
-bikin dlu folder MitraPermata baru paste disitu
+( bikin dlu folder #MitraPermata# baru paste disitu )
 
 C:\xampp\htdocs\MitraPermata
 
