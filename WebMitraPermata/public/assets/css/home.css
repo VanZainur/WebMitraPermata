@@ -85,29 +85,31 @@ body {
 }
 
 /* Slide Background Images */
+/* Ganti background SVG dengan gambar Anda sendiri */
+/* Slide Background Images - Path Relatif */
 .slide-1 { 
   background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
-    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%2310b981" width="1200" height="800"/><circle fill="%23059669" cx="200" cy="200" r="100" opacity="0.7"/><circle fill="%2322c55e" cx="800" cy="400" r="150" opacity="0.5"/><circle fill="%2316a34a" cx="1000" cy="150" r="80" opacity="0.6"/></svg>'); 
+    url('/assets/images/hero/1.jpg'); 
 }
 
 .slide-2 { 
   background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
-    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%2322c55e" width="1200" height="800"/><polygon fill="%23059669" points="0,0 400,300 0,800" opacity="0.7"/><circle fill="%2310b981" cx="900" cy="200" r="120" opacity="0.6"/></svg>'); 
+    url('/assets/images/hero/2.jpg'); 
 }
 
 .slide-3 { 
   background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
-    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%2316a34a" width="1200" height="800"/><path fill="%2322c55e" d="M0,400 Q300,200 600,400 T1200,400 V800 H0 Z" opacity="0.8"/><circle fill="%2310b981" cx="300" cy="150" r="90" opacity="0.7"/></svg>'); 
+    url('/assets/images/hero/3.jpg'); 
 }
 
 .slide-4 { 
   background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
-    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%2315803d" width="1200" height="800"/><ellipse fill="%2322c55e" cx="600" cy="400" rx="400" ry="200" opacity="0.8"/><rect fill="%2310b981" x="0" y="600" width="1200" height="200" opacity="0.6"/></svg>'); 
+    url('/assets/images/hero/slide-4.jpg'); 
 }
 
 .slide-5 { 
   background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
-    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%2365a30d" width="1200" height="800"/><circle fill="%2384cc16" cx="100" cy="100" r="150" opacity="0.7"/><path fill="%2322c55e" d="M400,0 Q800,200 1200,0 V300 Q800,500 400,300 Z" opacity="0.6"/></svg>'); 
+    url('/assets/images/hero/slide-5.jpg'); 
 }
 
 /* Carousel Navigation */
