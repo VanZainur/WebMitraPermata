@@ -38,7 +38,7 @@
   <!-- Main Content -->
   <div class="hero-content">
     <div class="hero-text">
-      <h1 class="hero-title">Kembangkan Potensi Belajar Hal-Hal Baru</h1>
+      <h1 class="hero-title">Kembangkan Potensi Belajar Hal-Hal Baru tes </h1>
       <p class="hero-subtitle">
         Bergabunglah dengan TK-SD-SMP-SMK-PKBM-LKP Mitra Permata dan rasakan pengalaman 
         pendidikan yang lengkap dari usia dini hingga siap kerja.
