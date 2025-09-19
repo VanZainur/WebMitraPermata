@@ -38,7 +38,7 @@
   <!-- Main Content -->
   <div class="hero-content">
     <div class="hero-text">
-      <h1 class="hero-title">Kembangkan Potensi Belajar Hal-Hal Baru tes </h1>
+      <h1 class="hero-title">Mari Kembangkan Potensi Belajar Kalian Bersama Mitra Permata</h1>
       <p class="hero-subtitle">
         Bergabunglah dengan TK-SD-SMP-SMK-PKBM-LKP Mitra Permata dan rasakan pengalaman 
         pendidikan yang lengkap dari usia dini hingga siap kerja.
@@ -153,49 +153,56 @@
     <div class="jenjang-grid">
       <div class="jenjang-card">
         <div class="jenjang-img-wrapper">
-          <img src="<?= base_url('assets/images/jenjang/Tk.jpeg') ?>" 
+          <img src="<?= base_url('assets/images/jenjang/TK.jpg') ?>" 
                alt="TK" 
                class="jenjang-img">
         </div>
         <h3 class="jenjang-title">Taman Kanak-Kanak (TK)</h3>
         <p class="jenjang-desc">
-          Fasilitas pendidikan usia dini dengan metode belajar kreatif dan menyenangkan.
+          Taman Kanak-Kanak Mitra Permata menghadirkan fasilitas pendidikan usia dini dengan 
+          belajar kreatif, menyenangkan, dan penuh keceriaan untuk menumbuhkan rasa ingin tahu, 
+          kemandirian, serta karakter positif sejak dini.
         </p>
       </div>
 
       <div class="jenjang-card">
         <div class="jenjang-img-wrapper">
-          <img src="<?= base_url('assets/images/jenjang/sd.png') ?>" 
+          <img src="<?= base_url('assets/images/jenjang/SD.png') ?>" 
                alt="SD" 
                class="jenjang-img">
         </div>
         <h3 class="jenjang-title">Sekolah Dasar (SD)</h3>
         <p class="jenjang-desc">
-          Program pendidikan dasar dengan pendekatan holistik dan karakter.
+          Sekolah Dasar Mitra Permata menghadirkan program pendidikan dasar yang menyeimbangkan 
+          akademik, karakter, dan keterampilan hidup, sehingga membentuk pribadi cerdas, berakhlak, 
+          dan percaya diri.
         </p>
       </div>
 
       <div class="jenjang-card">
         <div class="jenjang-img-wrapper">
-          <img src="<?= base_url('assets/images/jenjang/smp.png') ?>" 
+          <img src="<?= base_url('assets/images/jenjang/SMP.png') ?>" 
                alt="SMP" 
                class="jenjang-img">
         </div>
         <h3 class="jenjang-title">Sekolah Menengah Pertama (SMP)</h3>
         <p class="jenjang-desc">
-          Mengembangkan potensi akademik dan kreativitas siswa secara optimal.
+          SMP Mitra Permata mendorong siswa untuk berprestasi secara akademik, berkreasi dengan 
+          bebas, serta membangun karakter yang positif dalam menghadapi masa depan.
         </p>
       </div>
 
       <div class="jenjang-card">
         <div class="jenjang-img-wrapper">
-          <img src="<?= base_url('assets/images/jenjang/smk.png') ?>" 
+          <img src="<?= base_url('assets/images/jenjang/SMK.png') ?>" 
                alt="SMK" 
                class="jenjang-img">
         </div>
         <h3 class="jenjang-title">Sekolah Menengah Kejuruan (SMK)</h3>
         <p class="jenjang-desc">
-          Fokus pada keterampilan profesional dan siap kerja di industri.
+          SMK Mitra Permata berfokus pada pengembangan keterampilan profesional dan kesiapan kerja 
+          di berbagai bidang industri, sehingga siswa tidak hanya terampil secara teknis tetapi 
+          juga siap bersaing di dunia kerja.
         </p>
       </div>
 
