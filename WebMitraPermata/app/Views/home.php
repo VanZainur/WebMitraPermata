@@ -70,13 +70,13 @@
           <img src="<?= base_url('assets/images/partners/Pt Dynaplast.jpg') ?>" alt="PT. Dynaplast">
         </div>
         <div class="partner-box">
-          <img src="<?= base_url('assets/images/partners/acer.png') ?>" alt="Cv. Tidar Sakti Mobilindo">
+          <img src="<?= base_url('assets/images/partners/Tidar.png') ?>" alt="Cv. Tidar Sakti Mobilindo">
         </div>
         <div class="partner-box">
-          <img src="<?= base_url('assets/images/partners/intel.png') ?>" alt="PT. Sentra Trada Indostation">
+          <img src="<?= base_url('assets/images/partners/Pt. Indostation.png') ?>" alt="PT. Sentra Trada Indostation">
         </div>
         <div class="partner-box">
-          <img src="<?= base_url('assets/images/partners/intel.png') ?>" alt="Universitas Yatsi Madani">
+          <img src="<?= base_url('assets/images/partners/Universitas Yatsi Madani.png') ?>" alt="Universitas Yatsi Madani">
         </div>
         <div class="partner-box">
           <img src="<?= base_url('assets/images/partners/Global Institute.png') ?>" alt="Institut Teknologi dan Bisnis Bina Sarana Global">
@@ -85,10 +85,10 @@
           <img src="<?= base_url('assets/images/partners/UMT.png') ?>" alt="Universitas Muhammadiyah Tangerang">
         </div>
         <div class="partner-box">
-          <img src="<?= base_url('assets/images/partners/intel.png') ?>" alt="Universitas Raharja">
+          <img src="<?= base_url('assets/images/partners/Universitas Raharja.png') ?>" alt="Universitas Raharja">
         </div>
         <div class="partner-box">
-          <img src="<?= base_url('assets/images/partners/intel.png') ?>" alt="Universitas Salakanagara">
+          <img src="<?= base_url('assets/images/partners/Universitas Unsaka.png') ?>" alt="Universitas Salakanagara">
         </div>
         
         <!-- Duplicate Set for Seamless Loop -->
@@ -102,13 +102,13 @@
           <img src="<?= base_url('assets/images/partners/Pt Dynaplast.jpg') ?>" alt="PT. Dynaplast">
         </div>
         <div class="partner-box">
-          <img src="<?= base_url('assets/images/partners/acer.png') ?>" alt="Cv. Tidar Sakti Mobilindo">
+          <img src="<?= base_url('assets/images/partners/Tidar.png') ?>" alt="Cv. Tidar Sakti Mobilindo">
         </div>
         <div class="partner-box">
-          <img src="<?= base_url('assets/images/partners/intel.png') ?>" alt="PT. Sentra Trada Indostation">
+          <img src="<?= base_url('assets/images/partners/Pt. Indostation.png') ?>" alt="PT. Sentra Trada Indostation">
         </div>
         <div class="partner-box">
-          <img src="<?= base_url('assets/images/partners/intel.png') ?>" alt="Universitas Yatsi Madani">
+          <img src="<?= base_url('assets/images/partners/Universitas Yatsi Madani.png') ?>" alt="Universitas Yatsi Madani">
         </div>
         <div class="partner-box">
           <img src="<?= base_url('assets/images/partners/Global Institute.png') ?>" alt="Institut Teknologi dan Bisnis Bina Sarana Global">
@@ -117,10 +117,10 @@
           <img src="<?= base_url('assets/images/partners/UMT.png') ?>" alt="Universitas Muhammadiyah Tangerang">
         </div>
         <div class="partner-box">
-          <img src="<?= base_url('assets/images/partners/intel.png') ?>" alt="Universitas Raharja">
+          <img src="<?= base_url('assets/images/partners/Universitas Raharja.png') ?>" alt="Universitas Raharja">
         </div>
         <div class="partner-box">
-          <img src="<?= base_url('assets/images/partners/intel.png') ?>" alt="Universitas Salakanagara">
+          <img src="<?= base_url('assets/images/partners/Universitas Unsaka.png') ?>" alt="Universitas Salakanagara">
         </div>
       </div>
     </div>
