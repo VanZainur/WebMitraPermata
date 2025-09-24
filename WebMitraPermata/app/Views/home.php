@@ -61,36 +61,66 @@
       <div class="partners-slider" id="partnersSlider">
         <!-- First Set -->
         <div class="partner-box">
-          <img src="<?= base_url('assets/images/partners/honda.png') ?>" alt="Honda">
+          <img src="<?= base_url('assets/images/partners/Pt Auto2000.jpg') ?>" alt="PT. AUTO2000">
         </div>
         <div class="partner-box">
-          <img src="<?= base_url('assets/images/partners/mikrotik.png') ?>" alt="Mikrotik">
+          <img src="<?= base_url('assets/images/partners/Pt Sumber Alfaria Trijaya.png') ?>" alt="PT. Sumber Alfaria Trijaya">
         </div>
         <div class="partner-box">
-          <img src="<?= base_url('assets/images/partners/logitech.png') ?>" alt="Logitech">
+          <img src="<?= base_url('assets/images/partners/Pt Dynaplast.jpg') ?>" alt="PT. Dynaplast">
         </div>
         <div class="partner-box">
-          <img src="<?= base_url('assets/images/partners/acer.png') ?>" alt="Acer">
+          <img src="<?= base_url('assets/images/partners/acer.png') ?>" alt="Cv. Tidar Sakti Mobilindo">
         </div>
         <div class="partner-box">
-          <img src="<?= base_url('assets/images/partners/intel.png') ?>" alt="Intel">
+          <img src="<?= base_url('assets/images/partners/intel.png') ?>" alt="PT. Sentra Trada Indostation">
+        </div>
+        <div class="partner-box">
+          <img src="<?= base_url('assets/images/partners/intel.png') ?>" alt="Universitas Yatsi Madani">
+        </div>
+        <div class="partner-box">
+          <img src="<?= base_url('assets/images/partners/Global Institute.png') ?>" alt="Institut Teknologi dan Bisnis Bina Sarana Global">
+        </div>
+        <div class="partner-box">
+          <img src="<?= base_url('assets/images/partners/UMT.png') ?>" alt="Universitas Muhammadiyah Tangerang">
+        </div>
+        <div class="partner-box">
+          <img src="<?= base_url('assets/images/partners/intel.png') ?>" alt="Universitas Raharja">
+        </div>
+        <div class="partner-box">
+          <img src="<?= base_url('assets/images/partners/intel.png') ?>" alt="Universitas Salakanagara">
         </div>
         
         <!-- Duplicate Set for Seamless Loop -->
         <div class="partner-box">
-          <img src="<?= base_url('assets/images/partners/honda.png') ?>" alt="Honda">
+          <img src="<?= base_url('assets/images/partners/Pt Auto2000.jpg') ?>" alt="PT. AUTO2000">
         </div>
         <div class="partner-box">
-          <img src="<?= base_url('assets/images/partners/mikrotik.png') ?>" alt="Mikrotik">
+          <img src="<?= base_url('assets/images/partners/Pt Sumber Alfaria Trijaya.png') ?>" alt="PT. Sumber Alfaria Trijaya">
         </div>
         <div class="partner-box">
-          <img src="<?= base_url('assets/images/partners/logitech.png') ?>" alt="Logitech">
+          <img src="<?= base_url('assets/images/partners/Pt Dynaplast.jpg') ?>" alt="PT. Dynaplast">
         </div>
         <div class="partner-box">
-          <img src="<?= base_url('assets/images/partners/acer.png') ?>" alt="Acer">
+          <img src="<?= base_url('assets/images/partners/acer.png') ?>" alt="Cv. Tidar Sakti Mobilindo">
         </div>
         <div class="partner-box">
-          <img src="<?= base_url('assets/images/partners/intel.png') ?>" alt="Intel">
+          <img src="<?= base_url('assets/images/partners/intel.png') ?>" alt="PT. Sentra Trada Indostation">
+        </div>
+        <div class="partner-box">
+          <img src="<?= base_url('assets/images/partners/intel.png') ?>" alt="Universitas Yatsi Madani">
+        </div>
+        <div class="partner-box">
+          <img src="<?= base_url('assets/images/partners/Global Institute.png') ?>" alt="Institut Teknologi dan Bisnis Bina Sarana Global">
+        </div>
+        <div class="partner-box">
+          <img src="<?= base_url('assets/images/partners/UMT.png') ?>" alt="Universitas Muhammadiyah Tangerang">
+        </div>
+        <div class="partner-box">
+          <img src="<?= base_url('assets/images/partners/intel.png') ?>" alt="Universitas Raharja">
+        </div>
+        <div class="partner-box">
+          <img src="<?= base_url('assets/images/partners/intel.png') ?>" alt="Universitas Salakanagara">
         </div>
       </div>
     </div>
