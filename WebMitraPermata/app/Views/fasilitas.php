@@ -14,25 +14,25 @@
     <div class="fasilitas-grid">
         <!-- Ruang Kelas -->
         <div class="fasilitas-item">
-            <img src="https://images.unsplash.com/photo-1562774053-701939374585?w=400&h=250&fit=crop&crop=center" alt="Ruang Kelas">
+            <img src="<?= base_url('assets/images/fasilitas/ruang kelas.jpg') ?>" alt="Ruang Kelas">
             <div class="content">
                 <h3>Ruang Kelas</h3>
-                <p>Ruang kelas yang nyaman, luas, dan dilengkapi sarana pembelajaran modern untuk mendukung proses belajar mengajar yang efektif.</p>
+                <p>Ruang kelas yang nyaman, luas, dan dilengkapi sarana pembelajaran modern untuk menciptakan suasana belajar yang efektif dan interaktif.</p>
             </div>
         </div>
 
         <!-- Laboratorium -->
         <div class="fasilitas-item">
-            <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=400&h=250&fit=crop&crop=center" alt="Laboratorium">
+            <img src="<?= base_url('assets/images/fasilitas/Lab Komputer.png') ?>" alt="Lab Komputer">
             <div class="content">
-                <h3>Laboratorium</h3>
-                <p>Laboratorium sains dan komputer yang dilengkapi peralatan modern untuk mendukung praktik dan riset siswa.</p>
+                <h3>Lab Komputer</h3>
+                <p>Lab komputer yang dilengkapi peralatan modern untuk mendukung praktik dan riset siswa.</p>
             </div>
         </div>
 
         <!-- Perpustakaan -->
         <div class="fasilitas-item">
-            <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=250&fit=crop&crop=center" alt="Perpustakaan">
+            <img src="<?= base_url('assets/images/fasilitas/Perpustakaan.png') ?>" alt="Perpustakaan">
             <div class="content">
                 <h3>Perpustakaan</h3>
                 <p>Koleksi buku yang lengkap serta ruang baca yang nyaman dan tenang untuk mendukung kegiatan literasi siswa.</p>
@@ -41,16 +41,16 @@
 
         <!-- Lapangan Olahraga -->
         <div class="fasilitas-item">
-            <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&h=250&fit=crop&crop=center" alt="Lapangan Olahraga">
+            <img src="<?= base_url('assets/images/fasilitas/taman.jpg') ?>" alt="Taman">
             <div class="content">
-                <h3>Lapangan Olahraga</h3>
-                <p>Lapangan olahraga multifungsi untuk kegiatan fisik dan ekstrakurikuler yang mendukung kesehatan siswa.</p>
+                <h3>Taman</h3>
+                <p>Area hijau yang asri dan tertata rapi sebagai ruang terbuka untuk bersantai, berdiskusi, maupun mencari inspirasi belajar.</p>
             </div>
         </div>
 
         <!-- Kantin -->
         <div class="fasilitas-item">
-            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&h=250&fit=crop&crop=center" alt="Kantin">
+            <img src="<?= base_url('assets/images/fasilitas/kantin.jpg') ?>" alt="Kantin">
             <div class="content">
                 <h3>Kantin</h3>
                 <p>Kantin bersih dan sehat dengan berbagai pilihan makanan bergizi dan tempat duduk yang nyaman.</p>
@@ -59,10 +59,10 @@
 
         <!-- Masjid -->
         <div class="fasilitas-item">
-            <img src="https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=400&h=250&fit=crop&crop=center" alt="Masjid">
+            <img src="<?= base_url('assets/images/fasilitas/Musholla.png') ?>" alt="Musholla">
             <div class="content">
-                <h3>Masjid</h3>
-                <p>Masjid yang luas dan nyaman untuk kegiatan ibadah dan pembinaan spiritual siswa.</p>
+                <h3>Musholla</h3>
+                <p>Musholla yang bersih dan nyaman dengan fasilitas ibadah lengkap untuk mendukung kegiatan keagamaan civitas akademika..</p>
             </div>
         </div>
     </div>
