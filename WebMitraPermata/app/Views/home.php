@@ -238,25 +238,29 @@
 
       <div class="jenjang-card">
         <div class="jenjang-img-wrapper">
-          <img src="<?= base_url('assets/images/jenjang/pkbm.png') ?>" 
+          <img src="<?= base_url('assets/images/jenjang/pkbm.jpg') ?>" 
                alt="PKBM" 
                class="jenjang-img">
         </div>
         <h3 class="jenjang-title">PKBM</h3>
         <p class="jenjang-desc">
-          Pusat Kegiatan Belajar Masyarakat untuk pendidikan berkelanjutan.
+        PKBM Mitra Permata menyediakan program pendidikan kesetaraan dan pembelajaran nonformal, 
+        sehingga masyarakat tetap dapat menempuh pendidikan, mengembangkan pengetahuan, 
+        serta membangun keterampilan yang berguna dalam kehidupan sehari-hari.
         </p>
       </div>
 
       <div class="jenjang-card">
         <div class="jenjang-img-wrapper">
-          <img src="<?= base_url('assets/images/jenjang/lkp.png') ?>" 
+          <img src="<?= base_url('assets/images/jenjang/LKP.jpg') ?>" 
                alt="LKP" 
                class="jenjang-img">
         </div>
         <h3 class="jenjang-title">LKP</h3>
         <p class="jenjang-desc">
-          Lembaga Kursus & Pelatihan untuk keterampilan praktis dan profesional.
+        LKP Mitra Permata menyelenggarakan berbagai program kursus dan pelatihan keterampilan praktis
+        yang dirancang untuk meningkatkan kompetensi, 
+        kemandirian, serta peluang dalam mengembangkan diri.
         </p>
       </div>
     </div>
