@@ -136,32 +136,32 @@
     
     <div class="achievements-grid">
       <div class="achievement-card">
-        <img src="<?= base_url('assets/images/achievements/1.jpg') ?>" 
+        <img src="<?= base_url('assets/images/achievements/Juara 1 Badminton.png') ?>" 
              alt="Juara 1 Lomba Matematika" 
              class="achievement-image">
-        <h3 class="achievement-title">Juara 1 Lomba Matematika</h3>
+        <h3 class="achievement-title">Juara 1 Lomba Badminton</h3>
         <p class="achievement-description">
-          Siswa Mitra Permata meraih juara 1 dalam lomba Matematika tingkat kabupaten 2025.
+          Siswa Mitra Permata Meraih Juara 1 Lomba Badminton dalam Kejuaraan Kota Tangerang Selatan 2025.
         </p>
       </div>
 
       <div class="achievement-card">
-        <img src="<?= base_url('assets/images/achievements/OIP.webp') ?>" 
+        <img src="<?= base_url('assets/images/achievements/Juara 2 BNI Sirkuit.png') ?>" 
              alt="Juara 2 Lomba Fisika" 
              class="achievement-image">
-        <h3 class="achievement-title">Juara 2 Lomba Fisika</h3>
+        <h3 class="achievement-title">Juara 2 Lomba Badminton</h3>
         <p class="achievement-description">
-          Prestasi membanggakan di bidang sains dengan juara 2 Lomba Fisika tingkat provinsi.
+          Siswa Mitra Permata Meraih Juara 2 Lomba Badminton dalam BNI SIRKUIT NASIONAL NTB 2025.
         </p>
       </div>
 
       <div class="achievement-card">
-        <img src="<?= base_url('assets/images/achievements/OIP.jpeg') ?>" 
+        <img src="<?= base_url('assets/images/achievements/Juara 3 Voly.png') ?>" 
              alt="Juara 3 Lomba Seni" 
              class="achievement-image">
-        <h3 class="achievement-title">Juara 3 Lomba Seni</h3>
+        <h3 class="achievement-title">Juara 3 Lomba Voly</h3>
         <p class="achievement-description">
-          Siswa aktif berprestasi di lomba seni, menempati posisi juara 3 tingkat nasional.
+          Siswa Mitra Permata Meraih Juara 3 Lomba Volly SLTA Se-Banten dalam Piala Rektor UIN SMH BANTEN 2025.
         </p>
       </div>
     </div>
