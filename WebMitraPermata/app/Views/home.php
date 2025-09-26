@@ -259,8 +259,7 @@
         <h3 class="jenjang-title">LKP</h3>
         <p class="jenjang-desc">
         LKP Mitra Permata menyelenggarakan berbagai program kursus dan pelatihan keterampilan praktis
-        yang dirancang untuk meningkatkan kompetensi, 
-        kemandirian, serta peluang dalam mengembangkan diri.
+        yang dirancang untuk meningkatkan kompetensi, kemandirian, serta peluang dalam mengembangkan diri.
         </p>
       </div>
     </div>
