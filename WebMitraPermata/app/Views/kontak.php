@@ -1,7 +1,7 @@
 <?= $this->extend('layout/navbar.php') ?>
 <?= $this->section('content') ?>
 
-<link rel="stylesheet" href="<?= base_url('assets/css/contact.css') ?>">
+<link rel="stylesheet" href="<?= base_url('assets/css/kontak.css') ?>">
 <!-- Font Awesome -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
