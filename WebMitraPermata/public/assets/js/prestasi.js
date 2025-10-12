@@ -1,52 +1,80 @@
-/* ================================
-   PRESTASI PAGE JAVASCRIPT
-   ================================ */
-
+// Prestasi Page JavaScript - Complete Fixed Logic
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize AOS (Animate On Scroll)
-    AOS.init({
-        duration: 800,
-        easing: 'ease-in-out',
-        once: true,
-        offset: 100
-    });
-
-    // Initialize all components
-    initStatCounters();
-    initFilterSystem();
-    initLoadMore();
-    initImageLazyLoading();
-    initRippleEffects();
-    initScrollAnimations();
+    initializePrestasiPage();
 });
 
-/* ================================
-   ANIMATED STATISTICS COUNTERS
-   ================================ */
+// Global variables
+let currentFilter = 'all';
+let prestasiData = [];
+let visibleCardsCount = 6; // Show 6 cards initially
+let totalCards = 0;
+let isAnimating = false;
 
-function initStatCounters() {
-    const statNumbers = document.querySelectorAll('[data-count]');
+function initializePrestasiPage() {
+    // Initialize all components
+    collectPrestasiData();
+    initializeCounterAnimation();
+    setupFilterSystem();
+    setupLoadMoreButton();
+    setupModal();
+    setupCardInteractions();
+    setupSearch();
+    setupLazyLoading();
+    setupImageErrorHandling();
+    enhanceAccessibility();
+    
+    // Show initial cards
+    showCards();
+    
+    console.log('Prestasi page initialized successfully');
+}
+
+// Collect prestasi data from DOM
+function collectPrestasiData() {
+    const cards = document.querySelectorAll('.prestasi-card');
+    prestasiData = Array.from(cards).map((card, index) => {
+        return {
+            element: card,
+            category: card.dataset.category || 'all',
+            title: card.querySelector('h3')?.textContent || '',
+            description: card.querySelector('p')?.textContent || '',
+            date: card.querySelector('.card-footer .date span')?.textContent || '',
+            location: card.querySelector('.card-footer .location span')?.textContent || '',
+            image: card.querySelector('img')?.src || '',
+            level: card.querySelector('.achievement-level')?.textContent || '',
+            categoryTag: card.querySelector('.category-tag')?.textContent || '',
+            index: index
+        };
+    });
+    
+    totalCards = prestasiData.length;
+    console.log(`Collected ${totalCards} prestasi cards`);
+}
+
+// Counter animation for stats
+function initializeCounterAnimation() {
+    const counters = document.querySelectorAll('.stat-number');
     const observerOptions = {
         threshold: 0.5,
-        rootMargin: '0px 0px -100px 0px'
+        rootMargin: '0px'
     };
 
-    const statsObserver = new IntersectionObserver((entries) => {
+    const counterObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting) {
+            if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
                 animateCounter(entry.target);
-                statsObserver.unobserve(entry.target);
+                entry.target.classList.add('animated');
             }
         });
     }, observerOptions);
 
-    statNumbers.forEach(stat => {
-        statsObserver.observe(stat);
+    counters.forEach(counter => {
+        counterObserver.observe(counter);
     });
 }
 
 function animateCounter(element) {
-    const target = parseInt(element.dataset.count);
+    const target = parseInt(element.dataset.count) || 0;
     const duration = 2000; // 2 seconds
     const step = target / (duration / 16); // 60fps
     let current = 0;
@@ -60,510 +88,514 @@ function animateCounter(element) {
             element.textContent = Math.floor(current);
         }
     }, 16);
-
-    // Add a pulsing animation effect
-    element.style.transform = 'scale(1.1)';
-    setTimeout(() => {
-        element.style.transform = 'scale(1)';
-        element.style.transition = 'transform 0.3s ease';
-    }, 100);
 }
 
-/* ================================
-   ACHIEVEMENT FILTER SYSTEM
-   ================================ */
-
-function initFilterSystem() {
+// Filter system
+function setupFilterSystem() {
     const filterButtons = document.querySelectorAll('.filter-btn');
-    const achievementCards = document.querySelectorAll('.achievement-card');
-
+    
     filterButtons.forEach(button => {
-        button.addEventListener('click', (e) => {
-            e.preventDefault();
+        button.addEventListener('click', function() {
+            if (isAnimating) return;
+            
+            const filter = this.dataset.filter;
             
             // Update active button
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
+            filterButtons.forEach(btn => {
+                btn.classList.remove('active');
+                btn.setAttribute('aria-selected', 'false');
+            });
+            this.classList.add('active');
+            this.setAttribute('aria-selected', 'true');
             
-            // Add ripple effect
-            addRippleEffect(button, e);
-            
-            // Filter achievements
-            const filterValue = button.dataset.filter;
-            filterAchievements(achievementCards, filterValue);
+            // Apply filter
+            applyFilter(filter);
         });
     });
 }
 
-function filterAchievements(cards, filter) {
-    cards.forEach((card, index) => {
-        const category = card.dataset.category;
-        const shouldShow = filter === 'all' || category === filter;
-        
-        if (shouldShow) {
-            // Show with staggered animation
-            setTimeout(() => {
-                card.style.display = 'block';
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(20px)';
-                
-                // Trigger animation
-                setTimeout(() => {
-                    card.style.transition = 'all 0.5s ease';
-                    card.style.opacity = '1';
-                    card.style.transform = 'translateY(0)';
-                }, 50);
-            }, index * 100);
-        } else {
-            // Hide with animation
-            card.style.transition = 'all 0.3s ease';
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(-20px)';
-            
-            setTimeout(() => {
-                card.style.display = 'none';
-            }, 300);
-        }
-    });
-}
-
-/* ================================
-   LOAD MORE FUNCTIONALITY
-   ================================ */
-
-function initLoadMore() {
-    const loadMoreBtn = document.getElementById('loadMoreBtn');
-    if (!loadMoreBtn) return;
-
-    // Mock additional achievement data
-    const additionalAchievements = [
-        {
-            category: 'olahraga',
-            title: 'Juara 2 Basket Putri',
-            year: '2024',
-            level: 'city',
-            levelText: 'Tingkat Kota',
-            description: 'Tim basket putri berhasil meraih juara 2 dalam turnamen basket antar sekolah tingkat kota dengan permainan yang kompetitif.',
-            participant: 'Tim Basket Putri',
-            date: 'April 2024',
-            image: 'https://images.unsplash.com/photo-1546519638-68e109498ffc?w=400&h=250&fit=crop'
-        },
-        {
-            category: 'seni',
-            title: 'Juara 1 Lomba Lukis',
-            year: '2023',
-            level: 'provincial',
-            levelText: 'Tingkat Provinsi',
-            description: 'Karya seni lukis dengan tema alam Indonesia berhasil menyabet juara pertama dengan teknik yang menawan.',
-            participant: 'Maya Sari Indah',
-            date: 'November 2023',
-            image: 'https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=400&h=250&fit=crop'
-        },
-        {
-            category: 'teknologi',
-            title: 'Juara 2 Coding Competition',
-            year: '2024',
-            level: 'provincial',
-            levelText: 'Tingkat Provinsi',
-            description: 'Algoritma inovatif dalam pemecahan masalah computational thinking berhasil meraih posisi runner-up.',
-            participant: 'Tim Programming Ace',
-            date: 'Mei 2024',
-            image: 'https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?w=400&h=250&fit=crop'
-        }
-    ];
-
-    let currentIndex = 0;
-    let isLoading = false;
-
-    loadMoreBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        
-        if (isLoading || currentIndex >= additionalAchievements.length) return;
-        
-        isLoading = true;
-        loadMoreBtn.classList.add('loading');
-        loadMoreBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i><span>Memuat...</span>';
-        
-        // Simulate API call delay
-        setTimeout(() => {
-            loadAdditionalAchievements();
-            isLoading = false;
-            loadMoreBtn.classList.remove('loading');
-            loadMoreBtn.innerHTML = '<i class="fas fa-plus-circle"></i><span>Muat Lebih Banyak</span>';
-            
-            if (currentIndex >= additionalAchievements.length) {
-                loadMoreBtn.style.display = 'none';
-            }
-        }, 1500);
-    });
-
-    function loadAdditionalAchievements() {
-        const achievementsGrid = document.querySelector('.achievements-grid');
-        const batchSize = 3;
-        const endIndex = Math.min(currentIndex + batchSize, additionalAchievements.length);
-        
-        for (let i = currentIndex; i < endIndex; i++) {
-            const achievement = additionalAchievements[i];
-            const cardHTML = createAchievementCard(achievement);
-            
-            const tempDiv = document.createElement('div');
-            tempDiv.innerHTML = cardHTML;
-            const newCard = tempDiv.firstElementChild;
-            
-            // Add initial hidden state
-            newCard.style.opacity = '0';
-            newCard.style.transform = 'translateY(30px)';
-            
-            achievementsGrid.appendChild(newCard);
-            
-            // Animate in
-            setTimeout(() => {
-                newCard.style.transition = 'all 0.6s ease';
-                newCard.style.opacity = '1';
-                newCard.style.transform = 'translateY(0)';
-            }, (i - currentIndex) * 200);
-        }
-        
-        currentIndex = endIndex;
-    }
-
-    function createAchievementCard(achievement) {
-        const categoryClasses = {
-            'akademik': 'academic',
-            'olahraga': 'sports',
-            'seni': 'arts',
-            'teknologi': 'technology'
-        };
-        
-        const categoryIcons = {
-            'akademik': 'fas fa-graduation-cap',
-            'olahraga': 'fas fa-running',
-            'seni': 'fas fa-theater-masks',
-            'teknologi': 'fas fa-microchip'
-        };
-        
-        const categoryNames = {
-            'akademik': 'Akademik',
-            'olahraga': 'Olahraga',
-            'seni': 'Seni & Budaya',
-            'teknologi': 'Teknologi'
-        };
-
-        return `
-            <article class="achievement-card" data-category="${achievement.category}">
-                <div class="card-image">
-                    <img src="${achievement.image}" alt="${achievement.title}" loading="lazy">
-                    <div class="image-overlay">
-                        <div class="overlay-content">
-                            <i class="${categoryIcons[achievement.category]}"></i>
-                            <span>Lihat Detail</span>
-                        </div>
-                    </div>
-                    <div class="category-badge ${categoryClasses[achievement.category]}">
-                        <i class="${categoryIcons[achievement.category]}"></i>
-                        <span>${categoryNames[achievement.category]}</span>
-                    </div>
-                </div>
-                
-                <div class="card-content">
-                    <div class="card-header">
-                        <h3 class="achievement-title">${achievement.title}</h3>
-                        <div class="achievement-meta">
-                            <span class="year-badge">${achievement.year}</span>
-                            <span class="level-badge ${achievement.level}">${achievement.levelText}</span>
-                        </div>
-                    </div>
-                    
-                    <p class="achievement-description">${achievement.description}</p>
-                    
-                    <div class="card-footer">
-                        <div class="achievement-info">
-                            <i class="fas fa-${achievement.participant.includes('Tim') ? 'users' : 'user-graduate'}"></i>
-                            <span>${achievement.participant}</span>
-                        </div>
-                        <div class="achievement-info">
-                            <i class="fas fa-calendar-alt"></i>
-                            <span>${achievement.date}</span>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        `;
-    }
-}
-
-/* ================================
-   IMAGE LAZY LOADING
-   ================================ */
-
-function initImageLazyLoading() {
-    const images = document.querySelectorAll('img[loading="lazy"]');
+function applyFilter(filter) {
+    if (currentFilter === filter) return;
     
+    isAnimating = true;
+    currentFilter = filter;
+    visibleCardsCount = 6; // Reset visible count
+    
+    // Hide all cards with animation
+    const allCards = document.querySelectorAll('.prestasi-card');
+    allCards.forEach((card, index) => {
+        setTimeout(() => {
+            card.style.transform = 'translateY(20px)';
+            card.style.opacity = '0';
+        }, index * 50);
+    });
+    
+    // Filter and show cards after animation
+    setTimeout(() => {
+        showCards();
+        isAnimating = false;
+        
+        // Dispatch event for other components
+        document.dispatchEvent(new CustomEvent('prestasiFiltered', {
+            detail: { filter: currentFilter }
+        }));
+    }, (allCards.length * 50) + 300);
+}
+
+function showCards() {
+    // Filter cards based on current filter
+    const filteredData = currentFilter === 'all' 
+        ? prestasiData 
+        : prestasiData.filter(item => item.category === currentFilter);
+    
+    // Hide all cards first
+    prestasiData.forEach(item => {
+        item.element.classList.add('hidden');
+        item.element.style.display = 'none';
+    });
+    
+    // Show filtered cards with limit
+    const cardsToShow = filteredData.slice(0, visibleCardsCount);
+    
+    cardsToShow.forEach((item, index) => {
+        setTimeout(() => {
+            item.element.style.display = 'block';
+            item.element.classList.remove('hidden');
+            item.element.style.transform = 'translateY(0)';
+            item.element.style.opacity = '1';
+        }, index * 100);
+    });
+    
+    // Update load more button
+    updateLoadMoreButton(filteredData.length);
+    
+    console.log(`Showing ${cardsToShow.length} of ${filteredData.length} cards for filter: ${currentFilter}`);
+}
+
+// Load more functionality
+function setupLoadMoreButton() {
+    const loadMoreBtn = document.querySelector('.load-more-btn');
+    
+    if (loadMoreBtn) {
+        loadMoreBtn.addEventListener('click', function() {
+            if (isAnimating) return;
+            
+            loadMoreCards();
+        });
+    }
+}
+
+function loadMoreCards() {
+    const filteredData = currentFilter === 'all' 
+        ? prestasiData 
+        : prestasiData.filter(item => item.category === currentFilter);
+    
+    const currentlyVisible = visibleCardsCount;
+    visibleCardsCount += 3; // Load 3 more cards
+    
+    const newCards = filteredData.slice(currentlyVisible, visibleCardsCount);
+    
+    newCards.forEach((item, index) => {
+        setTimeout(() => {
+            item.element.style.display = 'block';
+            item.element.classList.remove('hidden');
+            item.element.style.transform = 'translateY(0)';
+            item.element.style.opacity = '1';
+        }, index * 150);
+    });
+    
+    updateLoadMoreButton(filteredData.length);
+}
+
+function updateLoadMoreButton(totalFiltered) {
+    const loadMoreBtn = document.querySelector('.load-more-btn');
+    const loadMoreContainer = document.querySelector('.load-more-container');
+    
+    if (!loadMoreBtn || !loadMoreContainer) return;
+    
+    if (visibleCardsCount >= totalFiltered) {
+        // Hide button if all cards are shown
+        loadMoreContainer.style.display = 'none';
+    } else {
+        // Show button with updated text
+        loadMoreContainer.style.display = 'block';
+        const remaining = totalFiltered - visibleCardsCount;
+        loadMoreBtn.querySelector('span').textContent = `Lihat ${remaining} Lainnya`;
+        loadMoreBtn.disabled = false;
+    }
+}
+
+// Modal functionality
+function setupModal() {
+    const modal = document.getElementById('achievementModal');
+    const modalClose = document.querySelector('.modal-close');
+    const modalOverlay = document.querySelector('.modal-overlay');
+    
+    if (!modal) return;
+    
+    // Close modal events
+    if (modalClose) {
+        modalClose.addEventListener('click', closeModal);
+    }
+    
+    if (modalOverlay) {
+        modalOverlay.addEventListener('click', closeModal);
+    }
+    
+    // Escape key to close modal
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closeModal();
+        }
+    });
+    
+    console.log('Modal system initialized');
+}
+
+function openModal(cardData) {
+    const modal = document.getElementById('achievementModal');
+    if (!modal || !cardData) return;
+    
+    // Populate modal with card data
+    populateModalContent(cardData);
+    
+    // Show modal
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    
+    // Focus management for accessibility
+    const firstFocusableElement = modal.querySelector('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+    if (firstFocusableElement) {
+        firstFocusableElement.focus();
+    }
+    
+    // Dispatch event
+    document.dispatchEvent(new CustomEvent('modalOpened', { detail: cardData }));
+}
+
+function closeModal() {
+    const modal = document.getElementById('achievementModal');
+    if (!modal) return;
+    
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+    
+    // Return focus to the last focused element
+    const lastFocused = document.querySelector('.prestasi-card:focus, .prestasi-card[data-last-focused]');
+    if (lastFocused) {
+        lastFocused.focus();
+        lastFocused.removeAttribute('data-last-focused');
+    }
+    
+    // Dispatch event
+    document.dispatchEvent(new CustomEvent('modalClosed'));
+}
+
+function populateModalContent(cardData) {
+    const modalImage = document.querySelector('.modal-image');
+    const modalTitle = document.querySelector('.modal-title');
+    const modalDescription = document.querySelector('.modal-description');
+    const modalCategory = document.querySelector('.modal-category');
+    const modalLevel = document.querySelector('.modal-level');
+    const modalDate = document.querySelector('.modal-date');
+    const modalLocation = document.querySelector('.modal-location');
+    
+    if (modalImage) {
+        modalImage.src = cardData.image;
+        modalImage.alt = cardData.title;
+    }
+    if (modalTitle) modalTitle.textContent = cardData.title;
+    if (modalDescription) modalDescription.textContent = cardData.description;
+    if (modalCategory) modalCategory.textContent = cardData.categoryTag;
+    if (modalLevel) modalLevel.textContent = cardData.level;
+    if (modalDate) modalDate.textContent = cardData.date;
+    if (modalLocation) modalLocation.textContent = cardData.location;
+}
+
+// Card interactions
+function setupCardInteractions() {
+    // Use event delegation for better performance
+    const prestasiGrid = document.querySelector('.prestasi-grid');
+    
+    if (prestasiGrid) {
+        prestasiGrid.addEventListener('click', handleCardClick);
+        prestasiGrid.addEventListener('keydown', handleCardKeydown);
+    }
+}
+
+function handleCardClick(e) {
+    const card = e.target.closest('.prestasi-card');
+    if (!card || card.classList.contains('hidden')) return;
+    
+    // Store reference for focus management
+    card.setAttribute('data-last-focused', 'true');
+    
+    const cardData = prestasiData.find(item => item.element === card);
+    
+    if (cardData) {
+        openModal(cardData);
+    }
+}
+
+function handleCardKeydown(e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        handleCardClick(e);
+    }
+}
+
+// Search functionality
+function setupSearch() {
+    const searchInput = document.querySelector('#searchInput');
+    if (!searchInput) return;
+    
+    const debouncedSearch = debounce(performSearch, 300);
+    searchInput.addEventListener('input', debouncedSearch);
+    
+    // Clear search on escape
+    searchInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            this.value = '';
+            performSearch({ target: { value: '' } });
+        }
+    });
+}
+
+function performSearch(e) {
+    const query = e.target.value.toLowerCase().trim();
+    
+    if (query === '') {
+        // Reset to current filter
+        showCards();
+        return;
+    }
+    
+    // Filter by search query
+    const searchResults = prestasiData.filter(item => {
+        return item.title.toLowerCase().includes(query) ||
+               item.description.toLowerCase().includes(query) ||
+               item.categoryTag.toLowerCase().includes(query) ||
+               item.location.toLowerCase().includes(query);
+    });
+    
+    // Apply current category filter to search results
+    const filteredResults = currentFilter === 'all' 
+        ? searchResults
+        : searchResults.filter(item => item.category === currentFilter);
+    
+    showSearchResults(filteredResults);
+}
+
+function showSearchResults(results) {
+    // Hide all cards
+    prestasiData.forEach(item => {
+        item.element.classList.add('hidden');
+        item.element.style.display = 'none';
+    });
+    
+    // Show search results
+    results.forEach((item, index) => {
+        setTimeout(() => {
+            item.element.style.display = 'block';
+            item.element.classList.remove('hidden');
+            item.element.style.transform = 'translateY(0)';
+            item.element.style.opacity = '1';
+        }, index * 100);
+    });
+    
+    // Hide load more button during search
+    const loadMoreContainer = document.querySelector('.load-more-container');
+    if (loadMoreContainer) {
+        loadMoreContainer.style.display = 'none';
+    }
+    
+    // Show search results count
+    showSearchResultsCount(results.length);
+}
+
+function showSearchResultsCount(count) {
+    // Remove existing result count
+    const existingCount = document.querySelector('.search-results-count');
+    if (existingCount) {
+        existingCount.remove();
+    }
+    
+    if (count === 0) return;
+    
+    // Create and show result count
+    const searchContainer = document.querySelector('.search-container');
+    if (searchContainer) {
+        const countElement = document.createElement('div');
+        countElement.className = 'search-results-count';
+        countElement.textContent = `Ditemukan ${count} prestasi`;
+        countElement.style.cssText = `
+            text-align: center;
+            margin-top: 10px;
+            color: var(--gray-600);
+            font-size: 0.9rem;
+        `;
+        searchContainer.appendChild(countElement);
+    }
+}
+
+// Lazy loading for images
+function setupLazyLoading() {
     if ('IntersectionObserver' in window) {
-        const imageObserver = new IntersectionObserver((entries) => {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const img = entry.target;
-                    img.classList.add('fade-in');
-                    imageObserver.unobserve(img);
+                    if (img.dataset.src) {
+                        img.src = img.dataset.src;
+                        img.removeAttribute('data-src');
+                    }
+                    img.classList.remove('lazy');
+                    observer.unobserve(img);
                 }
             });
         });
-
-        images.forEach(img => {
+        
+        document.querySelectorAll('img[loading="lazy"]').forEach(img => {
             imageObserver.observe(img);
         });
     }
 }
 
-/* ================================
-   RIPPLE EFFECTS
-   ================================ */
+// Error handling
+function handleImageError(img) {
+    img.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkltYWdlIG5vdCBmb3VuZDwvdGV4dD48L3N2Zz4=';
+    img.classList.add('image-error');
+    img.alt = 'Image not available';
+}
 
-function initRippleEffects() {
-    const rippleElements = document.querySelectorAll('.filter-btn, .btn-load-more, .btn-primary, .btn-secondary');
-    
-    rippleElements.forEach(element => {
-        element.addEventListener('click', (e) => {
-            addRippleEffect(element, e);
-        });
+// Setup image error handling
+function setupImageErrorHandling() {
+    document.querySelectorAll('.prestasi-card img').forEach(img => {
+        img.addEventListener('error', () => handleImageError(img));
     });
 }
 
-function addRippleEffect(element, event) {
-    const ripple = document.createElement('span');
-    const rect = element.getBoundingClientRect();
-    const size = Math.max(rect.width, rect.height);
-    const x = event.clientX - rect.left - size / 2;
-    const y = event.clientY - rect.top - size / 2;
-    
-    ripple.style.cssText = `
-        position: absolute;
-        width: ${size}px;
-        height: ${size}px;
-        left: ${x}px;
-        top: ${y}px;
-        background: rgba(255, 255, 255, 0.3);
-        border-radius: 50%;
-        transform: scale(0);
-        animation: ripple 0.6s ease-out;
-        pointer-events: none;
-        z-index: 1000;
-    `;
-    
-    // Add ripple styles if not already added
-    if (!document.querySelector('#ripple-styles')) {
-        const style = document.createElement('style');
-        style.id = 'ripple-styles';
-        style.textContent = `
-            @keyframes ripple {
-                to {
-                    transform: scale(4);
-                    opacity: 0;
-                }
-            }
-        `;
-        document.head.appendChild(style);
-    }
-    
-    element.style.position = 'relative';
-    element.style.overflow = 'hidden';
-    element.appendChild(ripple);
-    
-    setTimeout(() => {
-        ripple.remove();
-    }, 600);
-}
-
-/* ================================
-   SCROLL ANIMATIONS
-   ================================ */
-
-function initScrollAnimations() {
-    // Parallax effect for floating icons
-    const floatingIcons = document.querySelectorAll('.floating-icon');
-    
-    window.addEventListener('scroll', () => {
-        const scrolled = window.pageYOffset;
-        const rate = scrolled * -0.5;
-        
-        floatingIcons.forEach((icon, index) => {
-            const speed = 0.5 + (index * 0.1);
-            icon.style.transform = `translateY(${rate * speed}px) rotate(${scrolled * 0.1}deg)`;
-        });
+// Accessibility enhancements
+function enhanceAccessibility() {
+    // Add ARIA labels and roles for filter buttons
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    filterButtons.forEach((btn, index) => {
+        btn.setAttribute('role', 'tab');
+        btn.setAttribute('aria-pressed', btn.classList.contains('active'));
+        btn.setAttribute('tabindex', btn.classList.contains('active') ? '0' : '-1');
     });
-
-    // Progress indicator for timeline
-    const timeline = document.querySelector('.timeline');
-    if (timeline) {
-        const timelineObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateTimelineProgress();
-                    timelineObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.3 });
-        
-        timelineObserver.observe(timeline);
-    }
-
-    // Smooth reveal for stats cards
-    const statCards = document.querySelectorAll('.stat-card');
-    const cardObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry, index) => {
-            if (entry.isIntersecting) {
-                setTimeout(() => {
-                    entry.target.classList.add('fade-in');
-                }, index * 200);
-                cardObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.5 });
-
-    statCards.forEach(card => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(30px)';
-        card.style.transition = 'all 0.6s ease';
-        cardObserver.observe(card);
+    
+    // Add keyboard navigation for cards
+    const cards = document.querySelectorAll('.prestasi-card');
+    cards.forEach(card => {
+        card.setAttribute('tabindex', '0');
+        card.setAttribute('role', 'button');
+        const title = card.querySelector('h3')?.textContent || 'prestasi';
+        card.setAttribute('aria-label', `Buka detail ${title}`);
     });
+    
+    // Add live region for announcements
+    const liveRegion = document.createElement('div');
+    liveRegion.setAttribute('aria-live', 'polite');
+    liveRegion.setAttribute('aria-atomic', 'true');
+    liveRegion.className = 'sr-only';
+    liveRegion.id = 'announcements';
+    document.body.appendChild(liveRegion);
 }
 
-function animateTimelineProgress() {
-    const timelineLine = document.querySelector('.timeline::before');
-    if (timelineLine) {
-        // Create animated timeline line
-        const animatedLine = document.createElement('div');
-        animatedLine.style.cssText = `
-            position: absolute;
-            top: 0;
-            left: 50%;
-            width: 2px;
-            height: 0;
-            background: linear-gradient(to bottom, var(--primary-color), var(--accent-color));
-            transform: translateX(-50%);
-            transition: height 2s ease-in-out;
-            z-index: 1;
-        `;
-        
-        document.querySelector('.timeline').appendChild(animatedLine);
-        
-        setTimeout(() => {
-            animatedLine.style.height = '100%';
-        }, 500);
-    }
-}
-
-/* ================================
-   UTILITY FUNCTIONS
-   ================================ */
-
-// Smooth scrolling for anchor links
-function initSmoothScrolling() {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    });
-}
-
-// Debounce function for performance
-function debounce(func, wait, immediate) {
+// Utility functions
+function debounce(func, wait) {
     let timeout;
-    return function executedFunction() {
-        const context = this;
-        const args = arguments;
-        const later = function() {
-            timeout = null;
-            if (!immediate) func.apply(context, args);
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
         };
-        const callNow = immediate && !timeout;
         clearTimeout(timeout);
         timeout = setTimeout(later, wait);
-        if (callNow) func.apply(context, args);
     };
 }
 
-// Performance optimized scroll handler
-const optimizedScrollHandler = debounce(function() {
-    // Add any scroll-based functionality here
-    requestAnimationFrame(() => {
-        // Scroll-based animations
-    });
-}, 16); // 60fps
-
-window.addEventListener('scroll', optimizedScrollHandler);
-
-/* ================================
-   ACCESSIBILITY ENHANCEMENTS
-   ================================ */
-
-// Keyboard navigation support
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-        const focusedElement = document.activeElement;
-        if (focusedElement.classList.contains('filter-btn') || 
-            focusedElement.classList.contains('btn-load-more')) {
-            e.preventDefault();
-            focusedElement.click();
+function throttle(func, limit) {
+    let inThrottle;
+    return function() {
+        const args = arguments;
+        const context = this;
+        if (!inThrottle) {
+            func.apply(context, args);
+            inThrottle = true;
+            setTimeout(() => inThrottle = false, limit);
         }
-    }
-});
+    };
+}
 
-// Focus management for dynamically added content
-function manageFocus() {
-    const focusableElements = document.querySelectorAll(
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-    );
+function announceToScreenReader(message) {
+    const announcer = document.getElementById('announcements');
+    if (announcer) {
+        announcer.textContent = message;
+        setTimeout(() => {
+            announcer.textContent = '';
+        }, 1000);
+    }
+}
+
+// Performance monitoring (debug mode)
+function initializePerformanceMonitoring() {
+    if (window.location.hash !== '#debug') return;
     
-    focusableElements.forEach(element => {
-        element.addEventListener('focus', () => {
-            element.classList.add('keyboard-focus');
-        });
-        
-        element.addEventListener('blur', () => {
-            element.classList.remove('keyboard-focus');
-        });
+    window.addEventListener('load', () => {
+        if ('performance' in window) {
+            const timing = performance.timing;
+            const loadTime = timing.loadEventEnd - timing.navigationStart;
+            console.log(`Page loaded in ${loadTime}ms`);
+        }
     });
 }
 
-// Initialize accessibility enhancements
-manageFocus();
+// Public API for external use
+window.PrestasiPage = {
+    filter: applyFilter,
+    loadMore: loadMoreCards,
+    openModal: openModal,
+    closeModal: closeModal,
+    search: (query) => {
+        const searchInput = document.querySelector('#searchInput');
+        if (searchInput) {
+            searchInput.value = query;
+            performSearch({ target: { value: query } });
+        }
+    },
+    refresh: () => {
+        collectPrestasiData();
+        showCards();
+    },
+    getStats: () => ({
+        total: totalCards,
+        visible: visibleCardsCount,
+        currentFilter: currentFilter,
+        data: prestasiData
+    })
+};
 
-/* ================================
-   ERROR HANDLING
-   ================================ */
-
-// Global error handler for the prestasi page
-window.addEventListener('error', (e) => {
-    console.error('Prestasi page error:', e.error);
-    
-    // Graceful fallback for critical functionality
-    if (e.error.message.includes('AOS')) {
-        console.warn('AOS library not loaded, skipping animations');
-        return;
-    }
-    
-    // Show user-friendly error message if needed
-    const errorBoundary = document.querySelector('.error-boundary');
-    if (errorBoundary) {
-        errorBoundary.style.display = 'block';
-    }
+// Event listeners for custom events
+document.addEventListener('prestasiFiltered', function(e) {
+    announceToScreenReader(`Filter berubah ke ${e.detail.filter}`);
 });
 
-// Handle potential network issues for image loading
-document.addEventListener('error', (e) => {
-    if (e.target.tagName === 'IMG') {
-        e.target.style.display = 'none';
-        console.warn('Image failed to load:', e.target.src);
-    }
-}, true);
+document.addEventListener('modalOpened', function() {
+    announceToScreenReader('Detail prestasi dibuka');
+});
 
-console.log('Prestasi page JavaScript loaded successfully!');
+document.addEventListener('modalClosed', function() {
+    announceToScreenReader('Detail prestasi ditutup');
+});
+
+// Initialize performance monitoring if needed
+if (window.location.hash === '#debug') {
+    initializePerformanceMonitoring();
+}
+
+// Export for module systems
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = window.PrestasiPage;
+}
