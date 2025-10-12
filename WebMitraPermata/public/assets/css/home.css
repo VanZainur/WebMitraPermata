@@ -104,12 +104,12 @@ body {
 
 .slide-4 { 
   background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
-    url('/assets/images/hero/slide-4.jpg'); 
+    url('/assets/images/hero/4.jpg'); 
 }
 
 .slide-5 { 
   background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
-    url('/assets/images/hero/slide-5.jpg'); 
+    url('/assets/images/hero/5.jpg'); 
 }
 
 /* Carousel Navigation */

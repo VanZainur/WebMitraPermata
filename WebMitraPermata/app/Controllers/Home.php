@@ -45,5 +45,9 @@ class Home extends BaseController
         return view('prestasi'); // app/Views/struktur.php
     }
 
+    public function berita(): string
+    {
+        return view('berita'); // app/Views/berita.php
+    }
 }
 

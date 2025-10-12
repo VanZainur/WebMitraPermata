@@ -38,7 +38,7 @@
   <!-- Main Content -->
   <div class="hero-content">
     <div class="hero-text">
-      <h1 class="hero-title">Kembangkan Potensi Belajar Hal-Hal Baru tes </h1>
+      <h1 class="hero-title">Mari Kembangkan Potensi Belajar Kalian Bersama Mitra Permata</h1>
       <p class="hero-subtitle">
         Bergabunglah dengan TK-SD-SMP-SMK-PKBM-LKP Mitra Permata dan rasakan pengalaman 
         pendidikan yang lengkap dari usia dini hingga siap kerja.
@@ -61,36 +61,66 @@
       <div class="partners-slider" id="partnersSlider">
         <!-- First Set -->
         <div class="partner-box">
-          <img src="<?= base_url('assets/images/partners/honda.png') ?>" alt="Honda">
+          <img src="<?= base_url('assets/images/partners/Pt Auto2000.jpg') ?>" alt="PT. AUTO2000">
         </div>
         <div class="partner-box">
-          <img src="<?= base_url('assets/images/partners/mikrotik.png') ?>" alt="Mikrotik">
+          <img src="<?= base_url('assets/images/partners/Pt Sumber Alfaria Trijaya.png') ?>" alt="PT. Sumber Alfaria Trijaya">
         </div>
         <div class="partner-box">
-          <img src="<?= base_url('assets/images/partners/logitech.png') ?>" alt="Logitech">
+          <img src="<?= base_url('assets/images/partners/Pt Dynaplast.jpg') ?>" alt="PT. Dynaplast">
         </div>
         <div class="partner-box">
-          <img src="<?= base_url('assets/images/partners/acer.png') ?>" alt="Acer">
+          <img src="<?= base_url('assets/images/partners/Tidar.png') ?>" alt="Cv. Tidar Sakti Mobilindo">
         </div>
         <div class="partner-box">
-          <img src="<?= base_url('assets/images/partners/intel.png') ?>" alt="Intel">
+          <img src="<?= base_url('assets/images/partners/Pt. Indostation.png') ?>" alt="PT. Sentra Trada Indostation">
+        </div>
+        <div class="partner-box">
+          <img src="<?= base_url('assets/images/partners/Universitas Yatsi Madani.png') ?>" alt="Universitas Yatsi Madani">
+        </div>
+        <div class="partner-box">
+          <img src="<?= base_url('assets/images/partners/Global Institute.png') ?>" alt="Institut Teknologi dan Bisnis Bina Sarana Global">
+        </div>
+        <div class="partner-box">
+          <img src="<?= base_url('assets/images/partners/UMT.png') ?>" alt="Universitas Muhammadiyah Tangerang">
+        </div>
+        <div class="partner-box">
+          <img src="<?= base_url('assets/images/partners/Universitas Raharja.png') ?>" alt="Universitas Raharja">
+        </div>
+        <div class="partner-box">
+          <img src="<?= base_url('assets/images/partners/Universitas Unsaka.png') ?>" alt="Universitas Salakanagara">
         </div>
         
         <!-- Duplicate Set for Seamless Loop -->
         <div class="partner-box">
-          <img src="<?= base_url('assets/images/partners/honda.png') ?>" alt="Honda">
+          <img src="<?= base_url('assets/images/partners/Pt Auto2000.jpg') ?>" alt="PT. AUTO2000">
         </div>
         <div class="partner-box">
-          <img src="<?= base_url('assets/images/partners/mikrotik.png') ?>" alt="Mikrotik">
+          <img src="<?= base_url('assets/images/partners/Pt Sumber Alfaria Trijaya.png') ?>" alt="PT. Sumber Alfaria Trijaya">
         </div>
         <div class="partner-box">
-          <img src="<?= base_url('assets/images/partners/logitech.png') ?>" alt="Logitech">
+          <img src="<?= base_url('assets/images/partners/Pt Dynaplast.jpg') ?>" alt="PT. Dynaplast">
         </div>
         <div class="partner-box">
-          <img src="<?= base_url('assets/images/partners/acer.png') ?>" alt="Acer">
+          <img src="<?= base_url('assets/images/partners/Tidar.png') ?>" alt="Cv. Tidar Sakti Mobilindo">
         </div>
         <div class="partner-box">
-          <img src="<?= base_url('assets/images/partners/intel.png') ?>" alt="Intel">
+          <img src="<?= base_url('assets/images/partners/Pt. Indostation.png') ?>" alt="PT. Sentra Trada Indostation">
+        </div>
+        <div class="partner-box">
+          <img src="<?= base_url('assets/images/partners/Universitas Yatsi Madani.png') ?>" alt="Universitas Yatsi Madani">
+        </div>
+        <div class="partner-box">
+          <img src="<?= base_url('assets/images/partners/Global Institute.png') ?>" alt="Institut Teknologi dan Bisnis Bina Sarana Global">
+        </div>
+        <div class="partner-box">
+          <img src="<?= base_url('assets/images/partners/UMT.png') ?>" alt="Universitas Muhammadiyah Tangerang">
+        </div>
+        <div class="partner-box">
+          <img src="<?= base_url('assets/images/partners/Universitas Raharja.png') ?>" alt="Universitas Raharja">
+        </div>
+        <div class="partner-box">
+          <img src="<?= base_url('assets/images/partners/Universitas Unsaka.png') ?>" alt="Universitas Salakanagara">
         </div>
       </div>
     </div>
@@ -106,32 +136,32 @@
     
     <div class="achievements-grid">
       <div class="achievement-card">
-        <img src="<?= base_url('assets/images/achievements/1.jpg') ?>" 
+        <img src="<?= base_url('assets/images/achievements/Juara 1 Badminton.png') ?>" 
              alt="Juara 1 Lomba Matematika" 
              class="achievement-image">
-        <h3 class="achievement-title">Juara 1 Lomba Matematika</h3>
+        <h3 class="achievement-title">Juara 1 Lomba Badminton</h3>
         <p class="achievement-description">
-          Siswa Mitra Permata meraih juara 1 dalam lomba Matematika tingkat kabupaten 2025.
+          Siswa Mitra Permata Meraih Juara 1 Lomba Badminton dalam Kejuaraan Kota Tangerang Selatan 2025.
         </p>
       </div>
 
       <div class="achievement-card">
-        <img src="<?= base_url('assets/images/achievements/OIP.webp') ?>" 
+        <img src="<?= base_url('assets/images/achievements/Juara 2 BNI Sirkuit.png') ?>" 
              alt="Juara 2 Lomba Fisika" 
              class="achievement-image">
-        <h3 class="achievement-title">Juara 2 Lomba Fisika</h3>
+        <h3 class="achievement-title">Juara 2 Lomba Badminton</h3>
         <p class="achievement-description">
-          Prestasi membanggakan di bidang sains dengan juara 2 Lomba Fisika tingkat provinsi.
+          Siswa Mitra Permata Meraih Juara 2 Lomba Badminton dalam BNI SIRKUIT NASIONAL NTB 2025.
         </p>
       </div>
 
       <div class="achievement-card">
-        <img src="<?= base_url('assets/images/achievements/OIP.jpeg') ?>" 
+        <img src="<?= base_url('assets/images/achievements/Juara 3 Voly.png') ?>" 
              alt="Juara 3 Lomba Seni" 
              class="achievement-image">
-        <h3 class="achievement-title">Juara 3 Lomba Seni</h3>
+        <h3 class="achievement-title">Juara 3 Lomba Voly</h3>
         <p class="achievement-description">
-          Siswa aktif berprestasi di lomba seni, menempati posisi juara 3 tingkat nasional.
+          Siswa Mitra Permata Meraih Juara 3 Lomba Volly SLTA Se-Banten dalam Piala Rektor UIN SMH BANTEN 2025.
         </p>
       </div>
     </div>
@@ -153,73 +183,91 @@
     <div class="jenjang-grid">
       <div class="jenjang-card">
         <div class="jenjang-img-wrapper">
+<<<<<<< HEAD
           <img src="<?= base_url('assets/images/jenjang/Tk.jpg') ?>" 
+=======
+          <img src="<?= base_url('assets/images/jenjang/TK.jpg') ?>" 
+>>>>>>> 2e4b313f11682d1435b336a17f5cf5c3e1ecebf7
                alt="TK" 
                class="jenjang-img">
         </div>
         <h3 class="jenjang-title">Taman Kanak-Kanak (TK)</h3>
         <p class="jenjang-desc">
-          Fasilitas pendidikan usia dini dengan metode belajar kreatif dan menyenangkan.
+          Taman Kanak-Kanak Mitra Permata menghadirkan fasilitas pendidikan usia dini dengan 
+          belajar kreatif, menyenangkan, dan penuh keceriaan untuk menumbuhkan rasa ingin tahu, 
+          kemandirian, serta karakter positif sejak dini.
         </p>
       </div>
 
       <div class="jenjang-card">
         <div class="jenjang-img-wrapper">
-          <img src="<?= base_url('assets/images/jenjang/sd.png') ?>" 
+          <img src="<?= base_url('assets/images/jenjang/SD.png') ?>" 
                alt="SD" 
                class="jenjang-img">
         </div>
         <h3 class="jenjang-title">Sekolah Dasar (SD)</h3>
         <p class="jenjang-desc">
-          Program pendidikan dasar dengan pendekatan holistik dan karakter.
+          Sekolah Dasar Mitra Permata menghadirkan program pendidikan dasar yang menyeimbangkan 
+          akademik, karakter, dan keterampilan hidup, sehingga membentuk pribadi cerdas, berakhlak, 
+          dan percaya diri.
         </p>
       </div>
 
       <div class="jenjang-card">
         <div class="jenjang-img-wrapper">
-          <img src="<?= base_url('assets/images/jenjang/smp.png') ?>" 
+          <img src="<?= base_url('assets/images/jenjang/SMP.png') ?>" 
                alt="SMP" 
                class="jenjang-img">
         </div>
         <h3 class="jenjang-title">Sekolah Menengah Pertama (SMP)</h3>
         <p class="jenjang-desc">
-          Mengembangkan potensi akademik dan kreativitas siswa secara optimal.
+          SMP Mitra Permata mendorong siswa untuk berprestasi secara akademik, berkreasi dengan 
+          bebas, serta membangun karakter yang positif dalam menghadapi masa depan.
         </p>
       </div>
 
       <div class="jenjang-card">
         <div class="jenjang-img-wrapper">
+<<<<<<< HEAD
           <img src="<?= base_url('assets/images/jenjang/SMK.jpg') ?>" 
+=======
+          <img src="<?= base_url('assets/images/jenjang/SMK.png') ?>" 
+>>>>>>> 2e4b313f11682d1435b336a17f5cf5c3e1ecebf7
                alt="SMK" 
                class="jenjang-img">
         </div>
         <h3 class="jenjang-title">Sekolah Menengah Kejuruan (SMK)</h3>
         <p class="jenjang-desc">
-          Fokus pada keterampilan profesional dan siap kerja di industri.
+          SMK Mitra Permata berfokus pada pengembangan keterampilan profesional dan kesiapan kerja 
+          di berbagai bidang industri, sehingga siswa tidak hanya terampil secara teknis tetapi 
+          juga siap bersaing di dunia kerja.
         </p>
       </div>
 
       <div class="jenjang-card">
         <div class="jenjang-img-wrapper">
-          <img src="<?= base_url('assets/images/jenjang/pkbm.png') ?>" 
+          <img src="<?= base_url('assets/images/jenjang/pkbm.jpg') ?>" 
                alt="PKBM" 
                class="jenjang-img">
         </div>
         <h3 class="jenjang-title">PKBM</h3>
         <p class="jenjang-desc">
-          Pusat Kegiatan Belajar Masyarakat untuk pendidikan berkelanjutan.
+        PKBM Mitra Permata menyediakan program pendidikan kesetaraan dan pembelajaran nonformal, 
+        sehingga masyarakat tetap dapat menempuh pendidikan, mengembangkan pengetahuan, 
+        serta membangun keterampilan yang berguna dalam kehidupan sehari-hari.
         </p>
       </div>
 
       <div class="jenjang-card">
         <div class="jenjang-img-wrapper">
-          <img src="<?= base_url('assets/images/jenjang/lkp.png') ?>" 
+          <img src="<?= base_url('assets/images/jenjang/LKP.jpg') ?>" 
                alt="LKP" 
                class="jenjang-img">
         </div>
         <h3 class="jenjang-title">LKP</h3>
         <p class="jenjang-desc">
-          Lembaga Kursus & Pelatihan untuk keterampilan praktis dan profesional.
+        LKP Mitra Permata menyelenggarakan berbagai program kursus dan pelatihan keterampilan praktis
+        yang dirancang untuk meningkatkan kompetensi, kemandirian, serta peluang dalam mengembangkan diri.
         </p>
       </div>
     </div>
