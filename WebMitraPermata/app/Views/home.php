@@ -183,11 +183,7 @@
     <div class="jenjang-grid">
       <div class="jenjang-card">
         <div class="jenjang-img-wrapper">
-<<<<<<< HEAD
-          <img src="<?= base_url('assets/images/jenjang/Tk.jpg') ?>" 
-=======
           <img src="<?= base_url('assets/images/jenjang/TK.jpg') ?>" 
->>>>>>> 2e4b313f11682d1435b336a17f5cf5c3e1ecebf7
                alt="TK" 
                class="jenjang-img">
         </div>
@@ -228,11 +224,7 @@
 
       <div class="jenjang-card">
         <div class="jenjang-img-wrapper">
-<<<<<<< HEAD
-          <img src="<?= base_url('assets/images/jenjang/SMK.jpg') ?>" 
-=======
           <img src="<?= base_url('assets/images/jenjang/SMK.png') ?>" 
->>>>>>> 2e4b313f11682d1435b336a17f5cf5c3e1ecebf7
                alt="SMK" 
                class="jenjang-img">
         </div>
