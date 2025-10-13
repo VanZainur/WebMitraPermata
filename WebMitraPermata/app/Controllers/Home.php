@@ -49,5 +49,11 @@ class Home extends BaseController
     {
         return view('berita'); // app/Views/berita.php
     }
+
+     public function akademik(): string
+    {
+        return view('akademik'); // app/Views/berita.php
+    }
 }
+
 
