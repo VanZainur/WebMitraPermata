@@ -481,7 +481,7 @@ body {
     }
 }
 
-/* Responsive Design */
+/* biar Responsive - updated */
 @media (max-width: 768px) {
     .prestasi-section {
         padding: 80px 0 60px;
@@ -547,6 +547,7 @@ body {
     }
 }
 
+/* biar Responsive - updated */
 @media (max-width: 480px) {
     .prestasi-section {
         padding: 60px 0 40px;
