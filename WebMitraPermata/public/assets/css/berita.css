@@ -825,7 +825,7 @@ body {
     }
 }
 
-/* Responsive Design */
+/* biar responsive tablet - updated */
 @media (max-width: 1200px) {
     .masonry-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -861,6 +861,7 @@ body {
     }
 }
 
+/* biar responsive hp - updated */
 @media (max-width: 768px) {
     .berita-hero {
         padding: 100px 0 60px;
