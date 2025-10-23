@@ -295,46 +295,93 @@
 <!-- ========================================
      NEWS & ACTIVITIES SECTION
      ======================================== -->
-<section id="achievements" class="achievements-section">
+<section id="news" class="news-section">
   <div class="container">
     <h2 class="section-title">Berita & Kegiatan Terbaru</h2>
     
     <div class="news-grid">
       <article class="news-card">
-        <div class="news-image">📋</div>
+        <div class="news-image-wrapper">
+          <img src="<?= base_url('assets/images/news/ppdb.jpg') ?>" 
+               alt="PPDB 2025" 
+               class="news-img">
+          <div class="news-category">Pendaftaran</div>
+        </div>
         <div class="news-content">
+          <div class="news-meta">
+            <span class="news-date">📅 Agustus 2025</span>
+            <span class="news-author">👤 Admin</span>
+          </div>
           <h3 class="news-title">Pendaftaran Siswa Baru 2025/2026</h3>
           <p class="news-excerpt">
             PPDB Mitra Permata telah dibuka! Daftarkan putra-putri Anda untuk tahun ajaran 
-            baru di semua jenjang pendidikan...
+            baru di semua jenjang pendidikan dengan fasilitas terlengkap dan tenaga pengajar profesional.
           </p>
-          <div class="news-date">Agustus 2025</div>
+          <a href="#" class="news-read-more">
+            Selengkapnya 
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </a>
         </div>
       </article>
       
       <article class="news-card">
-        <div class="news-image">🎓</div>
+        <div class="news-image-wrapper">
+          <img src="<?= base_url('assets/images/news/smk.jpg') ?>" 
+               alt="SMK Akreditasi B" 
+               class="news-img">
+          <div class="news-category">Prestasi</div>
+        </div>
         <div class="news-content">
+          <div class="news-meta">
+            <span class="news-date">📅 Juli 2025</span>
+            <span class="news-author">👤 Admin</span>
+          </div>
           <h3 class="news-title">Program SMK Berkualitas Akreditasi B</h3>
           <p class="news-excerpt">
             SMK Mitra Permata dengan akreditasi B siap mencetak lulusan yang kompeten 
-            dan siap kerja di dunia industri...
+            dan siap kerja di dunia industri dengan berbagai jurusan unggulan.
           </p>
-          <div class="news-date">Juli 2025</div>
+          <a href="#" class="news-read-more">
+            Selengkapnya 
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </a>
         </div>
       </article>
       
       <article class="news-card">
-        <div class="news-image">🏫</div>
+        <div class="news-image-wrapper">
+          <img src="<?= base_url('assets/images/news/pkbm.jpg') ?>" 
+               alt="PKBM & LKP" 
+               class="news-img">
+          <div class="news-category">Fasilitas</div>
+        </div>
         <div class="news-content">
+          <div class="news-meta">
+            <span class="news-date">📅 Juni 2025</span>
+            <span class="news-author">👤 Admin</span>
+          </div>
           <h3 class="news-title">Fasilitas PKBM & LKP Terlengkap</h3>
           <p class="news-excerpt">
             Mitra Permata menyediakan program pendidikan berkelanjutan melalui PKBM 
-            dan LKP untuk masyarakat umum...
+            dan LKP untuk masyarakat umum dengan berbagai kursus keterampilan praktis.
           </p>
-          <div class="news-date">Juni 2025</div>
+          <a href="#" class="news-read-more">
+            Selengkapnya 
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </a>
         </div>
       </article>
+    </div>
+
+    <!-- More Button -->
+    <div class="more-button-wrapper">
+      <a href="<?= base_url('berita') ?>" class="btn-more">Lihat Semua Berita</a>
     </div>
   </div>
 </section>

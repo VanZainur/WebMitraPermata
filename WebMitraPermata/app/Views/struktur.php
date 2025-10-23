@@ -28,9 +28,6 @@
         <div class="struktur-grid">
             <!-- Ketua Yayasan -->
             <div class="struktur-card">
-                <div class="card-image-container">
-                    <img src="<?= base_url('assets/img/ketua.jpg') ?>" alt="Ketua Yayasan" loading="lazy">
-                </div>
                 <h3>Ibu Siti Aminah</h3>
                 <div class="position-badge">Ketua Yayasan</div>
                 <div class="contact-info">
@@ -47,9 +44,6 @@
 
             <!-- Kepala Sekolah SMK -->
             <div class="struktur-card">
-                <div class="card-image-container">
-                    <img src="<?= base_url('assets/img/kepsek-smk.jpg') ?>" alt="Kepala Sekolah SMK" loading="lazy">
-                </div>
                 <h3>Ibu Dewi Lestari</h3>
                 <div class="position-badge">Kepala Sekolah SMK</div>
                 <div class="contact-info">
@@ -66,9 +60,6 @@
 
             <!-- Kepala Sekolah SMP -->
             <div class="struktur-card">
-                <div class="card-image-container">
-                    <img src="<?= base_url('assets/img/kepsek-smp.jpg') ?>" alt="Kepala Sekolah SMP" loading="lazy">
-                </div>
                 <h3>Bapak Ahmad Fauzi</h3>
                 <div class="position-badge">Kepala Sekolah SMP</div>
                 <div class="contact-info">
@@ -85,9 +76,6 @@
 
             <!-- Bendahara -->
             <div class="struktur-card">
-                <div class="card-image-container">
-                    <img src="<?= base_url('assets/img/bendahara.jpg') ?>" alt="Bendahara" loading="lazy">
-                </div>
                 <h3>Ibu Nur Aisyah</h3>
                 <div class="position-badge">Kepala Sekolah SD</div>
                 <div class="contact-info">
@@ -105,9 +93,6 @@
 
           <!-- Ketua Yayasan -->
             <div class="struktur-card">
-                <div class="card-image-container">
-                    <img src="<?= base_url('assets/img/ketua.jpg') ?>" alt="Ketua Yayasan" loading="lazy">
-                </div>
                 <h3>Ibu Siti Aminah</h3>
                 <div class="position-badge">Kepala Sekolah TK</div>
                 <div class="contact-info">
@@ -124,9 +109,6 @@
 
             <!-- Kepala Sekolah SMK -->
             <div class="struktur-card">
-                <div class="card-image-container">
-                    <img src="<?= base_url('assets/img/kepsek-smk.jpg') ?>" alt="Kepala Sekolah SMK" loading="lazy">
-                </div>
                 <h3>Ibu Dewi Lestari</h3>
                 <div class="position-badge">Kepala PKBM</div>
                 <div class="contact-info">

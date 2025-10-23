@@ -149,13 +149,13 @@
             <h2>Mari Bergabung Bersama Kami</h2>
             <p>Jadilah bagian dari perubahan positif dan berkontribusilah untuk kemajuan bangsa</p>
             <div class="cta-buttons">
-                <a href="#" class="btn btn-primary">
+                <a href="/kontak" class="btn btn-primary">
                     <i class="fas fa-hands-helping"></i>
-                    Donasi Sekarang
+                    Kontak Kami
                 </a>
-                <a href="#" class="btn btn-secondary">
+                <a href="/akademik" class="btn btn-secondary">
                     <i class="fas fa-users"></i>
-                    Jadi Relawan
+                    Akademik
                 </a>
             </div>
         </div>

@@ -213,11 +213,11 @@
             <div class="cta-buttons">
                 <a href="/kontak" class="btn-primary">
                     <i class="fas fa-handshake"></i>
-                    Jadi Mitra
+                    Kontak Kami
                 </a>
-                <a href="/program" class="btn-secondary">
+                <a href="/profil" class="btn-secondary">
                     <i class="fas fa-info-circle"></i>
-                    Pelajari Program
+                    Tentang Kami
                 </a>
             </div>
         </div>
