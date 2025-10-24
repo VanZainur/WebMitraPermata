@@ -60,7 +60,7 @@
             <!-- Pramuka -->
             <div class="kegiatan-item" data-category="karakter">
                 <div class="activity-image">
-                    <img src="https://via.placeholder.com/400x250/059669/ffffff?text=PRAMUKA" alt="Pramuka">
+                <img src="<?= base_url('assets/images/kegiatan/pramuka.jpg') ?>" alt="Eskul Pramuka">
                     <div class="activity-overlay">
                         <div class="overlay-content">
                             <i class="fas fa-campground"></i>
@@ -92,7 +92,7 @@
             <!-- Paskibra -->
             <div class="kegiatan-item" data-category="karakter">
                 <div class="activity-image">
-                    <img src="https://via.placeholder.com/400x250/047857/ffffff?text=PASKIBRA" alt="Paskibra">
+                <img src="<?= base_url('assets/images/kegiatan/paskibra.jpg') ?>" alt="Paskibra">
                     <div class="activity-overlay">
                         <div class="overlay-content">
                             <i class="fas fa-flag"></i>
@@ -124,7 +124,7 @@
             <!-- Olahraga -->
             <div class="kegiatan-item" data-category="olahraga">
                 <div class="activity-image">
-                    <img src="https://via.placeholder.com/400x250/10b981/ffffff?text=OLAHRAGA" alt="Olahraga">
+                <img src="<?= base_url('assets/images/kegiatan/olahraga.png') ?>" alt="Olahraga">
                     <div class="activity-overlay">
                         <div class="overlay-content">
                             <i class="fas fa-running"></i>
@@ -153,10 +153,42 @@
                 </div>
             </div>
 
+            <!-- Marawis -->
+            <div class="kegiatan-item" data-category="seni">
+                <div class="activity-image">
+                <img src="<?= base_url('assets/images/kegiatan/marawis.jpg') ?>" alt="Marawis">
+                    <div class="activity-overlay">
+                        <div class="overlay-content">
+                            <i class="fas fa-music"></i>
+                            <span>Lihat Detail</span>
+                        </div>
+                    </div>
+                    <div class="activity-badge">Seni</div>
+                </div>
+                <div class="activity-content">
+                    <h3>Marawis</h3>
+                    <p>Ekstrakurikuler seni musik rebana Islami yang melatih siswa dalam bermain alat musik tradisional dan menyanyikan shalawat.</p></p>
+                    <div class="activity-features">
+                        <div class="feature-item">
+                            <i class="fas fa-users"></i>
+                            <span>30+ Anggota</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>2x Seminggu</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-medal"></i>
+                            <span>8 Prestasi</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Seni Musik -->
             <div class="kegiatan-item" data-category="seni">
                 <div class="activity-image">
-                    <img src="https://via.placeholder.com/400x250/065f46/ffffff?text=MUSIK" alt="Seni Musik">
+                <img src="<?= base_url('assets/images/kegiatan/seni musik.jpeg') ?>" alt="Seni Musik">
                     <div class="activity-overlay">
                         <div class="overlay-content">
                             <i class="fas fa-music"></i>
@@ -188,7 +220,7 @@
             <!-- Seni Tari -->
             <div class="kegiatan-item" data-category="seni">
                 <div class="activity-image">
-                    <img src="https://via.placeholder.com/400x250/14532d/ffffff?text=TARI" alt="Seni Tari">
+                <img src="<?= base_url('assets/images/kegiatan/seni tari.jpeg') ?>"  alt="Seni Tari">
                     <div class="activity-overlay">
                         <div class="overlay-content">
                             <i class="fas fa-theater-masks"></i>
@@ -217,10 +249,10 @@
                 </div>
             </div>
 
-            <!-- English Club -->
+            <!-- English Club 
             <div class="kegiatan-item" data-category="akademik">
                 <div class="activity-image">
-                    <img src="https://via.placeholder.com/400x250/166534/ffffff?text=ENGLISH" alt="English Club">
+                <img src="<?= base_url('assets/images/kegiatan/english club.png') ?>" alt="English Club">
                     <div class="activity-overlay">
                         <div class="overlay-content">
                             <i class="fas fa-globe"></i>
@@ -247,9 +279,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
-            <!-- Robotika -->
+            <!-- Robotika 
             <div class="kegiatan-item" data-category="akademik">
                 <div class="activity-image">
                     <img src="https://via.placeholder.com/400x250/15803d/ffffff?text=ROBOTIKA" alt="Robotika">
@@ -279,9 +311,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>-->
 
-            <!-- Jurnalistik -->
+            <!-- Jurnalistik 
             <div class="kegiatan-item" data-category="akademik">
                 <div class="activity-image">
                     <img src="https://via.placeholder.com/400x250/22c55e/ffffff?text=JURNALISTIK" alt="Jurnalistik">
@@ -311,7 +343,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>-->
         </div>
     </div>
 </div>
