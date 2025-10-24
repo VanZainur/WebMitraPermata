@@ -39,7 +39,7 @@
         <!-- Jenjang TK -->
         <a href="<?= base_url('akademik/tk') ?>" class="akademik-card" data-category="early">
             <div class="card-image">
-                <img src="<?= base_url('assets/images/akademik/tk.jpg') ?>" alt="Taman Kanak-Kanak">
+                <img src="<?= base_url('assets/images/jenjang/Tk2.jpg') ?>" alt="Taman Kanak-Kanak">
                 <div class="image-overlay">
                     <span class="view-details">Lihat Detail →</span>
                 </div>
@@ -58,7 +58,7 @@
         <!-- Jenjang SD -->
         <a href="<?= base_url('akademik/sd') ?>" class="akademik-card" data-category="primary">
             <div class="card-image">
-                <img src="<?= base_url('assets/images/akademik/sd.jpg') ?>" alt="Sekolah Dasar">
+                <img src="<?= base_url('assets/images/jenjang/SD.png') ?>" alt="Sekolah Dasar">
                 <div class="image-overlay">
                     <span class="view-details">Lihat Detail →</span>
                 </div>
@@ -77,7 +77,7 @@
         <!-- Jenjang SMP -->
         <a href="<?= base_url('akademik/smp') ?>" class="akademik-card" data-category="junior">
             <div class="card-image">
-                <img src="<?= base_url('assets/images/akademik/smp.jpg') ?>" alt="Sekolah Menengah Pertama">
+                <img src="<?= base_url('assets/images/jenjang/SMP.png') ?>" alt="Sekolah Menengah Pertama">
                 <div class="image-overlay">
                     <span class="view-details">Lihat Detail →</span>
                 </div>
@@ -93,20 +93,20 @@
             </div>
         </a>
 
-        <!-- Jenjang SMA -->
+        <!-- Jenjang SMK -->
         <a href="<?= base_url('akademik/sma') ?>" class="akademik-card" data-category="senior">
             <div class="card-image">
-                <img src="<?= base_url('assets/images/akademik/sma.jpg') ?>" alt="Sekolah Menengah Atas">
+                <img src="<?= base_url('assets/images/jenjang/SMK2.jpg') ?>" alt="Sekolah Menengah Kejuruan">
                 <div class="image-overlay">
                     <span class="view-details">Lihat Detail →</span>
                 </div>
             </div>
             <div class="card-content">
                 <div class="card-category">Kelas 10-12</div>
-                <h3>Sekolah Menengah Atas (SMA)</h3>
+                <h3>Sekolah Menengah Kejuruan (SMK)</h3>
                 <p>Persiapan optimal menuju perguruan tinggi dan karir dengan penjurusan akademik yang mendalam dan bimbingan konseling profesional.</p>
                 <div class="card-features">
-                    <span class="feature-tag">Penjurusan IPA/IPS</span>
+                    <span class="feature-tag">Penjurusan TKJ&TKR</span>
                     <span class="feature-tag">PTN Preparation</span>
                 </div>
             </div>

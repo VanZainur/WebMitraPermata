@@ -238,7 +238,7 @@
 
       <div class="jenjang-card">
         <div class="jenjang-img-wrapper">
-          <img src="<?= base_url('assets/images/jenjang/pkbm.jpg') ?>" 
+          <img src="<?= base_url('assets/images/jenjang/PKBM.jpg') ?>" 
                alt="PKBM" 
                class="jenjang-img">
         </div>
