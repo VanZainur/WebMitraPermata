@@ -87,14 +87,14 @@
         <div class="kemitraan-grid">
             <div class="kemitraan-item">
                 <div class="partner-image">
-                    <img src="https://via.placeholder.com/200x120/4f46e5/ffffff?text=UNIV" alt="Universitas Terkemuka">
+                    <img src="assets/images/partners/Global Institute.png" alt="Universitas Terkemuka">
                     <div class="partner-overlay">
                         <i class="fas fa-external-link-alt"></i>
                     </div>
                 </div>
                 <div class="partner-content">
                     <div class="partner-badge">Pendidikan</div>
-                    <h3>Universitas Indonesia</h3>
+                    <h3>Institut Teknologi dan Bisnis Bina Sarana Global</h3>
                     <p>Kerja sama dalam program beasiswa unggulan dan penelitian pendidikan yang berkelanjutan untuk menciptakan generasi masa depan.</p>
                     <div class="partner-tags">
                         <span class="tag">Beasiswa</span>
@@ -106,14 +106,14 @@
 
             <div class="kemitraan-item">
                 <div class="partner-image">
-                    <img src="https://via.placeholder.com/200x120/059669/ffffff?text=CORP" alt="Perusahaan Multinasional">
+                    <img src="assets/images/partners/Pt Auto2000.jpg" alt="Perusahaan Multinasional">
                     <div class="partner-overlay">
                         <i class="fas fa-external-link-alt"></i>
                     </div>
                 </div>
                 <div class="partner-content">
                     <div class="partner-badge">Korporasi</div>
-                    <h3>PT Mitra Sejahtera</h3>
+                    <h3>PT Auto2000</h3>
                     <p>Dukungan komprehensif dalam pengembangan infrastruktur pendidikan dan program CSR yang berdampak luas bagi masyarakat.</p>
                     <div class="partner-tags">
                         <span class="tag">CSR</span>
@@ -125,14 +125,14 @@
 
             <div class="kemitraan-item">
                 <div class="partner-image">
-                    <img src="https://via.placeholder.com/200x120/dc2626/ffffff?text=NGO" alt="Lembaga Sosial">
+                    <img src="assets/images/partners/Pt Sumber Alfaria Trijaya.png" alt="Lembaga Sosial">
                     <div class="partner-overlay">
                         <i class="fas fa-external-link-alt"></i>
                     </div>
                 </div>
                 <div class="partner-content">
-                    <div class="partner-badge">NGO</div>
-                    <h3>Yayasan Peduli Bangsa</h3>
+                    <div class="partner-badge">KORPORASI</div>
+                    <h3>PT. Sumber Alfaria Trijaya</h3>
                     <p>Kolaborasi strategis dalam program kemanusiaan, bantuan sosial, dan pemberdayaan ekonomi masyarakat grassroot.</p>
                     <div class="partner-tags">
                         <span class="tag">Kemanusiaan</span>
@@ -144,14 +144,14 @@
 
             <div class="kemitraan-item">
                 <div class="partner-image">
-                    <img src="https://via.placeholder.com/200x120/7c3aed/ffffff?text=GOV" alt="Pemerintah">
+                    <img src="assets/images/partners/Pt Dynaplast.jpg" alt="Pemerintah">
                     <div class="partner-overlay">
                         <i class="fas fa-external-link-alt"></i>
                     </div>
                 </div>
                 <div class="partner-content">
-                    <div class="partner-badge">Pemerintah</div>
-                    <h3>Kementerian Pendidikan</h3>
+                    <div class="partner-badge">KORPORASI</div>
+                    <h3>PT. Dynaplast</h3>
                     <p>Sinergi dalam peningkatan kualitas pendidikan nasional melalui program pelatihan, seminar, dan pengembangan SDM.</p>
                     <div class="partner-tags">
                         <span class="tag">Kebijakan</span>
@@ -163,38 +163,95 @@
 
             <div class="kemitraan-item">
                 <div class="partner-image">
-                    <img src="https://via.placeholder.com/200x120/ea580c/ffffff?text=TECH" alt="Perusahaan Teknologi">
+                    <img src="assets/images/partners/Universitas Yatsi Madani.png" alt="Perusahaan Teknologi">
                     <div class="partner-overlay">
                         <i class="fas fa-external-link-alt"></i>
                     </div>
                 </div>
                 <div class="partner-content">
-                    <div class="partner-badge">Teknologi</div>
-                    <h3>Innovate Digital</h3>
+                    <div class="partner-badge">Pendidikan</div>
+                    <h3>Universitas Yatsi Madani</h3>
                     <p>Partnership dalam transformasi digital pendidikan dan pengembangan platform pembelajaran yang inovatif dan accessible.</p>
                     <div class="partner-tags">
-                        <span class="tag">Digital</span>
-                        <span class="tag">Platform</span>
-                        <span class="tag">Inovasi</span>
+                        <span class="tag">Beasiswa</span>
+                        <span class="tag">Penelitian</span>
+                        <span class="tag">Pelatihan</span>
                     </div>
                 </div>
             </div>
 
             <div class="kemitraan-item">
                 <div class="partner-image">
-                    <img src="https://via.placeholder.com/200x120/0891b2/ffffff?text=INT" alt="Organisasi Internasional">
+                    <img src="assets/images/partners/Pt. Indostation.png" alt="Organisasi Internasional">
                     <div class="partner-overlay">
                         <i class="fas fa-external-link-alt"></i>
                     </div>
                 </div>
                 <div class="partner-content">
-                    <div class="partner-badge">Internasional</div>
-                    <h3>Global Education Alliance</h3>
+                    <div class="partner-badge">KORPORASI</div>
+                    <h3>PT. Sentra Trada Indostation</h3>
                     <p>Kolaborasi internasional dalam pertukaran pengetahuan, best practices, dan program capacity building berkelanjutan.</p>
                     <div class="partner-tags">
                         <span class="tag">Global</span>
                         <span class="tag">Exchange</span>
                         <span class="tag">Capacity</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="kemitraan-item">
+                <div class="partner-image">
+                    <img src="assets/images/partners/UMT.png" alt="Perusahaan Teknologi">
+                    <div class="partner-overlay">
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+                <div class="partner-content">
+                    <div class="partner-badge">Pendidikan</div>
+                    <h3>Universitas Muhammadiyah Tangerang</h3>
+                    <p>Partnership dalam transformasi digital pendidikan dan pengembangan platform pembelajaran yang inovatif dan accessible.</p>
+                    <div class="partner-tags">
+                        <span class="tag">Beasiswa</span>
+                        <span class="tag">Penelitian</span>
+                        <span class="tag">Pelatihan</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="kemitraan-item">
+                <div class="partner-image">
+                    <img src="assets/images/partners/Universitas Raharja.png" alt="Perusahaan Teknologi">
+                    <div class="partner-overlay">
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+                <div class="partner-content">
+                    <div class="partner-badge">Pendidikan</div>
+                    <h3>Universitas Raharja</h3>
+                    <p>Partnership dalam transformasi digital pendidikan dan pengembangan platform pembelajaran yang inovatif dan accessible.</p>
+                    <div class="partner-tags">
+                        <span class="tag">Beasiswa</span>
+                        <span class="tag">Penelitian</span>
+                        <span class="tag">Pelatihan</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="kemitraan-item">
+                <div class="partner-image">
+                    <img src="assets/images/partners/Universitas Unsaka.png" alt="Perusahaan Teknologi">
+                    <div class="partner-overlay">
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+                <div class="partner-content">
+                    <div class="partner-badge">Pendidikan</div>
+                    <h3>Universitas Salakanagara</h3>
+                    <p>Partnership dalam transformasi digital pendidikan dan pengembangan platform pembelajaran yang inovatif dan accessible.</p>
+                    <div class="partner-tags">
+                        <span class="tag">Beasiswa</span>
+                        <span class="tag">Penelitian</span>
+                        <span class="tag">Pelatihan</span>
                     </div>
                 </div>
             </div>
