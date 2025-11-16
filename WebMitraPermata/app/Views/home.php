@@ -98,9 +98,9 @@
         <div class="partner-box">
           <img src="<?= base_url('assets/images/partners/Pt Dynaplast.jpg') ?>" alt="PT. Dynaplast">
         </div>
-        <div class="partner-box">
+        <!-- <div class="partner-box">
           <img src="<?= base_url('assets/images/partners/Tidar.png') ?>" alt="Cv. Tidar Sakti Mobilindo">
-        </div>
+        </div> -->
         <div class="partner-box">
           <img src="<?= base_url('assets/images/partners/Pt. Indostation.png') ?>" alt="PT. Sentra Trada Indostation">
         </div>

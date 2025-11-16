@@ -87,34 +87,18 @@
         <div class="kemitraan-grid">
             <div class="kemitraan-item">
                 <div class="partner-image">
-                    <img src="https://via.placeholder.com/200x120/4f46e5/ffffff?text=UNIV" alt="Universitas Terkemuka">
-                    <div class="partner-overlay">
-                        <i class="fas fa-external-link-alt"></i>
-                    </div>
-                </div>
-                <div class="partner-content">
-                    <div class="partner-badge">Pendidikan</div>
-                    <h3>Universitas Indonesia</h3>
-                    <p>Kerja sama dalam program beasiswa unggulan dan penelitian pendidikan yang berkelanjutan untuk menciptakan generasi masa depan.</p>
-                    <div class="partner-tags">
-                        <span class="tag">Beasiswa</span>
-                        <span class="tag">Penelitian</span>
-                        <span class="tag">Pelatihan</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="kemitraan-item">
-                <div class="partner-image">
-                    <img src="https://via.placeholder.com/200x120/059669/ffffff?text=CORP" alt="Perusahaan Multinasional">
+                    <img src="assets/images/partners/Pt Auto2000.jpg" alt="PT Auto2000">
                     <div class="partner-overlay">
                         <i class="fas fa-external-link-alt"></i>
                     </div>
                 </div>
                 <div class="partner-content">
                     <div class="partner-badge">Korporasi</div>
-                    <h3>PT Mitra Sejahtera</h3>
-                    <p>Dukungan komprehensif dalam pengembangan infrastruktur pendidikan dan program CSR yang berdampak luas bagi masyarakat.</p>
+                    <h3>PT Auto2000</h3>
+                    <p>Kerja sama dalam pengembangan infrastruktur pendidikan, pelatihan teknologi otomotif, 
+                        dan program CSR yang berfokus pada peningkatan kompetensi serta kesejahteraan masyarakat. 
+                        PT Auto2000 berkomitmen mendukung dunia pendidikan dan menciptakan dampak sosial yang 
+                        berkelanjutan melalui inovasi dan tanggung jawab sosial perusahaan.</p>
                     <div class="partner-tags">
                         <span class="tag">CSR</span>
                         <span class="tag">Infrastruktur</span>
@@ -125,15 +109,41 @@
 
             <div class="kemitraan-item">
                 <div class="partner-image">
-                    <img src="https://via.placeholder.com/200x120/dc2626/ffffff?text=NGO" alt="Lembaga Sosial">
+                    <img src="assets/images/partners/Global Institute.png" alt="Institut Teknologi dan Bisnis Bina Sarana Global">
                     <div class="partner-overlay">
                         <i class="fas fa-external-link-alt"></i>
                     </div>
                 </div>
                 <div class="partner-content">
-                    <div class="partner-badge">NGO</div>
-                    <h3>Yayasan Peduli Bangsa</h3>
-                    <p>Kolaborasi strategis dalam program kemanusiaan, bantuan sosial, dan pemberdayaan ekonomi masyarakat grassroot.</p>
+                    <div class="partner-badge">Pendidikan</div>
+                    <h3>Institut Teknologi dan Bisnis Bina Sarana Global</h3>
+                    <p>Kerja sama strategis dalam bidang pendidikan untuk meningkatkan kualitas sumber daya 
+                        manusia melalui program beasiswa unggulan, penelitian terapan, dan pengembangan kurikulum 
+                        berbasis industri. Institut Teknologi dan Bisnis Bina Sarana Global berperan aktif 
+                        menciptakan ekosistem pembelajaran yang inovatif, berkelanjutan, dan relevan dengan 
+                        kebutuhan dunia kerja.</p>
+                    <div class="partner-tags">
+                        <span class="tag">Beasiswa</span>
+                        <span class="tag">Penelitian</span>
+                        <span class="tag">Pelatihan</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="kemitraan-item">
+                <div class="partner-image">
+                    <img src="assets/images/partners/Pt Sumber Alfaria Trijaya.png" alt="Lembaga Sosial">
+                    <div class="partner-overlay">
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+                <div class="partner-content">
+                    <div class="partner-badge">KORPORASI</div>
+                    <h3>PT. Sumber Alfaria Trijaya</h3>
+                    <p>Kolaborasi strategis dalam bidang kemanusiaan, bantuan sosial, dan pemberdayaan ekonomi 
+                        masyarakat melalui berbagai program tanggung jawab sosial perusahaan (CSR) yang berkelanjutan. 
+                        PT. Sumber Alfaria Trijaya berkomitmen untuk memberikan dampak positif bagi komunitas lokal, 
+                        meningkatkan kesejahteraan masyarakat, serta mendukung pertumbuhan ekonomi yang berkelanjutan.</p>
                     <div class="partner-tags">
                         <span class="tag">Kemanusiaan</span>
                         <span class="tag">Pemberdayaan</span>
@@ -144,15 +154,18 @@
 
             <div class="kemitraan-item">
                 <div class="partner-image">
-                    <img src="https://via.placeholder.com/200x120/7c3aed/ffffff?text=GOV" alt="Pemerintah">
+                    <img src="assets/images/partners/Pt Dynaplast.jpg" alt="Pemerintah">
                     <div class="partner-overlay">
                         <i class="fas fa-external-link-alt"></i>
                     </div>
                 </div>
                 <div class="partner-content">
-                    <div class="partner-badge">Pemerintah</div>
-                    <h3>Kementerian Pendidikan</h3>
-                    <p>Sinergi dalam peningkatan kualitas pendidikan nasional melalui program pelatihan, seminar, dan pengembangan SDM.</p>
+                    <div class="partner-badge">KORPORASI</div>
+                    <h3>PT. Dynaplast</h3>
+                    <p>Kerja sama dalam bidang pengembangan industri manufaktur dan pendidikan vokasi, dengan 
+                        fokus pada peningkatan kompetensi mahasiswa melalui program magang, pelatihan teknis, 
+                        serta memberi pengetahuan teknologi kemasan plastik. PT. Dynaplast berperan aktif dalam 
+                        mendukung terciptanya sumber daya manusia yang terampil dan siap bersaing di dunia industri.</p>
                     <div class="partner-tags">
                         <span class="tag">Kebijakan</span>
                         <span class="tag">Pelatihan</span>
@@ -163,38 +176,111 @@
 
             <div class="kemitraan-item">
                 <div class="partner-image">
-                    <img src="https://via.placeholder.com/200x120/ea580c/ffffff?text=TECH" alt="Perusahaan Teknologi">
+                    <img src="assets/images/partners/Universitas Yatsi Madani.png" alt="Perusahaan Teknologi">
                     <div class="partner-overlay">
                         <i class="fas fa-external-link-alt"></i>
                     </div>
                 </div>
                 <div class="partner-content">
-                    <div class="partner-badge">Teknologi</div>
-                    <h3>Innovate Digital</h3>
-                    <p>Partnership dalam transformasi digital pendidikan dan pengembangan platform pembelajaran yang inovatif dan accessible.</p>
+                    <div class="partner-badge">Pendidikan</div>
+                    <h3>Universitas Yatsi Madani</h3>
+                    <p>Kerja sama dalam bidang pendidikan dan penelitian yang berfokus pada pengembangan 
+                        kompetensi mahasiswa serta penerapan teknologi dalam pembelajaran. Universitas Yatsi 
+                        Madani berperan aktif dalam menciptakan inovasi akademik dan kolaborasi lintas institusi 
+                        untuk meningkatkan kualitas pendidikan yang berdaya saing dan berintegritas.</p>
                     <div class="partner-tags">
-                        <span class="tag">Digital</span>
-                        <span class="tag">Platform</span>
-                        <span class="tag">Inovasi</span>
+                        <span class="tag">Beasiswa</span>
+                        <span class="tag">Penelitian</span>
+                        <span class="tag">Pelatihan</span>
                     </div>
                 </div>
             </div>
 
             <div class="kemitraan-item">
                 <div class="partner-image">
-                    <img src="https://via.placeholder.com/200x120/0891b2/ffffff?text=INT" alt="Organisasi Internasional">
+                    <img src="assets/images/partners/Pt. Indostation.png" alt="Organisasi Internasional">
                     <div class="partner-overlay">
                         <i class="fas fa-external-link-alt"></i>
                     </div>
                 </div>
                 <div class="partner-content">
-                    <div class="partner-badge">Internasional</div>
-                    <h3>Global Education Alliance</h3>
-                    <p>Kolaborasi internasional dalam pertukaran pengetahuan, best practices, dan program capacity building berkelanjutan.</p>
+                    <div class="partner-badge">KORPORASI</div>
+                    <h3>PT. Sentra Trada Indostation</h3>
+                    <p>Kerja sama dalam bidang pengembangan digitalisasi layanan ritel, pelatihan kewirausahaan, 
+                        dan penerapan teknologi informasi untuk meningkatkan efisiensi bisnis serta daya saing 
+                        industri lokal. PT. Sentra Trada Indostation berperan aktif dalam mendukung inovasi dan 
+                        kolaborasi antara dunia pendidikan dan dunia usaha.</p>
                     <div class="partner-tags">
                         <span class="tag">Global</span>
                         <span class="tag">Exchange</span>
                         <span class="tag">Capacity</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="kemitraan-item">
+                <div class="partner-image">
+                    <img src="assets/images/partners/UMT.png" alt="Perusahaan Teknologi">
+                    <div class="partner-overlay">
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+                <div class="partner-content">
+                    <div class="partner-badge">Pendidikan</div>
+                    <h3>Universitas Muhammadiyah Tangerang</h3>
+                    <p>Kerja sama dalam bidang pendidikan, penelitian, dan pengabdian masyarakat untuk 
+                        meningkatkan kualitas akademik dan penerapan ilmu pengetahuan. Universitas Muhammadiyah 
+                        Tangerang berperan aktif dalam mendukung pengembangan sumber daya manusia yang berintegritas, 
+                        inovatif, dan berkontribusi bagi kemajuan masyarakat serta dunia industri.</p>
+                    <div class="partner-tags">
+                        <span class="tag">Beasiswa</span>
+                        <span class="tag">Penelitian</span>
+                        <span class="tag">Pelatihan</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="kemitraan-item">
+                <div class="partner-image">
+                    <img src="assets/images/partners/Universitas Raharja.png" alt="Perusahaan Teknologi">
+                    <div class="partner-overlay">
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+                <div class="partner-content">
+                    <div class="partner-badge">Pendidikan</div>
+                    <h3>Universitas Raharja</h3>
+                    <p>Kerja sama dalam bidang pengembangan teknologi pendidikan, penelitian inovatif, dan 
+                        penguatan kompetensi digital mahasiswa. Universitas Raharja berperan aktif dalam 
+                        menciptakan lingkungan akademik yang adaptif terhadap transformasi digital serta 
+                        mendorong kolaborasi antara dunia kampus dan industri untuk menghasilkan lulusan 
+                        yang siap bersaing di era modern.</p>
+                    <div class="partner-tags">
+                        <span class="tag">Beasiswa</span>
+                        <span class="tag">Penelitian</span>
+                        <span class="tag">Pelatihan</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="kemitraan-item">
+                <div class="partner-image">
+                    <img src="assets/images/partners/Universitas Unsaka.png" alt="Perusahaan Teknologi">
+                    <div class="partner-overlay">
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </div>
+                <div class="partner-content">
+                    <div class="partner-badge">Pendidikan</div>
+                    <h3>Universitas Salakanagara</h3>
+                    <p>Kemitraan dalam bidang pendidikan dan penelitian yang berfokus pada transformasi digital 
+                        pembelajaran serta pengembangan sumber daya manusia. Universitas Salakanagara 
+                        berkomitmen menciptakan lingkungan akademik yang inovatif dan kolaboratif untuk 
+                        mendukung kemajuan pendidikan yang relevan dengan perkembangan teknologi.</p>
+                    <div class="partner-tags">
+                        <span class="tag">Beasiswa</span>
+                        <span class="tag">Penelitian</span>
+                        <span class="tag">Pelatihan</span>
                     </div>
                 </div>
             </div>
