@@ -54,6 +54,13 @@ class Home extends BaseController
     {
         return view('akademik'); // app/Views/berita.php
     }
+
+  public function SMK(): string
+    {
+        return view('smk/index'); // app/Views/berita.php
+    }
+
+
 }
 
 

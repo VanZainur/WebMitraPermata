@@ -65,7 +65,8 @@
             <a href="/TK">TK</a>
             <a href="/SD">SD</a>
             <a href="/SMP">SMP</a>
-            <a href="/SMK">SMK</a>
+            <a href="<?= base_url('smk') ?>">SMK</a>
+
            
           </div>
         </li>
