@@ -156,7 +156,7 @@
         <img src="<?= base_url('assets/images/achievements/Juara 3 Voly.png') ?>" 
              alt="Juara 3 Lomba Seni" 
              class="achievement-image">
-        <h3 class="achievement-title">Juara 3 Lomba Voly</h3>
+        <h3 class="achievement-title">Juara 3 Lomba Volly</h3>
         <p class="achievement-description">
           Siswa Mitra Permata Meraih Juara 3 Lomba Volly SLTA Se-Banten dalam Piala Rektor UIN SMH BANTEN 2025.
         </p>
