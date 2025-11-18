@@ -227,7 +227,7 @@
                     <div class="row g-3">
                         <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
                             <a class="position-relative d-block overflow-hidden" href="">
-                                <img class="img-fluid" src="<?= base_url('assets/images/kegiatan/pramuka.jpg') ?>" alt="">
+                                <img class="img-fluid" src="<?= base_url('assets/SMK/img/pramuka.jpg') ?>" alt="">
 
                                 <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
                                     <h5 class="m-0">Pramuka</h5>
@@ -237,7 +237,7 @@
                         </div>
                         <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
                             <a class="position-relative d-block overflow-hidden" href="">
-                                <img class="img-fluid" src="<?= base_url('assets/images/kegiatan/paskibra.jpg') ?>" alt="">
+                                <img class="img-fluid" src="<?= base_url('assets/SMK/img/paskibra.jpg') ?>" alt="">
 
                                 <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
                                     <h5 class="m-0">Paskibra</h5>
@@ -247,7 +247,7 @@
                         </div>
                         <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
                             <a class="position-relative d-block overflow-hidden" href="">
-                                <img class="img-fluid" src="<?= base_url('assets/images/kegiatan/marawis.jpg') ?>" alt="">
+                                <img class="img-fluid" src="<?= base_url('assets/SMK/img/marawis.jpg') ?>" alt="">
 
                                 <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
                                     <h5 class="m-0">Marawis</h5>
@@ -259,7 +259,7 @@
                 </div>
                 <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px;">
                     <a class="position-relative d-block h-100 overflow-hidden" href="">
-                        <img class="img-fluid" src="<?= base_url('assets/images/kegiatan/seni musik.jpeg') ?>" alt="">
+                        <img class="img-fluid" src="<?= base_url('assets/SMK/img/seni musik.jpeg') ?>" alt="">
 
                         <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin:  1px;">
                             <h5 class="m-0">Seni Musik</h5>
