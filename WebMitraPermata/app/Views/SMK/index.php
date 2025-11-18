@@ -91,7 +91,7 @@
     <div class="container-fluid p-0 mb-5">
         <div class="owl-carousel header-carousel position-relative">
             <div class="owl-carousel-item position-relative">
-                  <img class="img-fluid" src="<?= base_url('assets/SMK/img/carousel-1.jpg') ?>" alt="">
+                  <img class="img-fluid" src="<?= base_url('assets/SMK/img/background1.jpg') ?>" alt="">
                 <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .7);">
                     <div class="container">
                         <div class="row justify-content-start">
@@ -107,7 +107,7 @@
                 </div>
             </div>
             <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="<?= base_url('assets/SMK/img/carousel-2.jpg') ?>" alt="">
+                <img class="img-fluid" src="<?= base_url('assets/SMK/img/background4.jpg') ?>" alt="">
                 <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .7);">
                     <div class="container">
                         <div class="row justify-content-start">
@@ -127,50 +127,60 @@
     <!-- Carousel End -->
 
 
-    <!-- Service Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item text-center pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
-                            <h5 class="mb-3">Guru Profesional</h5>
-                            <p>Tenaga pendidik berpengalaman dan bersertifikasi yang siap membimbing siswa menuju kompetensi terbaik.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item text-center pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-globe text-primary mb-4"></i>
-                            <h5 class="mb-3">Online Classes</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item text-center pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-home text-primary mb-4"></i>
-                            <h5 class="mb-3">Home Projects</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="service-item text-center pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-book-open text-primary mb-4"></i>
-                            <h5 class="mb-3">Book Library</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
-                        </div>
+  <!-- Service Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-4">
+
+            <!-- Guru Kompeten -->
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item text-center pt-3">
+                    <div class="p-4">
+                        <i class="fa fa-3x fa-chalkboard-teacher text-primary mb-4"></i>
+                        <h5 class="mb-3">Guru Kompeten</h5>
+                        <p>Guru yang memiliki keahlian sesuai bidangnya dan mampu membimbing siswa dengan baik.</p>
                     </div>
                 </div>
             </div>
+
+            <!-- Prakerin -->
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="service-item text-center pt-3">
+                    <div class="p-4">
+                        <i class="fa fa-3x fa-industry text-primary mb-4"></i>
+                        <h5 class="mb-3">Praktik Kerja Lapangan</h5>
+                        <p>Program magang di dunia industri yang memberikan pengalaman kerja nyata.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bengkel / Workshop -->
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="service-item text-center pt-3">
+                    <div class="p-4">
+                        <i class="fa fa-3x fa-tools text-primary mb-4"></i>
+                        <h5 class="mb-3">Bengkel Praktik</h5>
+                        <p>Fasilitas praktik lengkap untuk melatih keterampilan siswa sesuai jurusan yang mereka pelajari.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bursa Kerja Khusus -->
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                <div class="service-item text-center pt-3">
+                    <div class="p-4">
+                        <i class="fa fa-3x fa-briefcase text-primary mb-4"></i>
+                        <h5 class="mb-3">Bursa Kerja Khusus</h5>
+                        <p>Layanan sekolah untuk membantu siswa dan alumni mendapatkan informasi lowongan kerja.</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
-    <!-- Service End -->
+</div>
+<!-- Service End -->
+
 
 
     <!-- About Start -->
@@ -186,38 +196,18 @@
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                     <!-- <h6 class="section-title bg-white text-start text-primary pe-3">About Us</h6> -->
                     <h1 class="mb-4">Sambutan Kepala Sekolah</h1>
-                    <p class="mb-4">Dengan penuh rasa syukur, kami menyambut Anda di SMK Mitra Permata, sebuah 
+                    <p class="mb-4" style="text-align: justify;">Dengan penuh rasa syukur, kami menyambut Anda di SMK Mitra Permata, sebuah 
                         lembaga pendidikan yang berkomitmen membentuk generasi muda yang unggul, berkarakter, 
                         dan siap bersaing di dunia kerja. Melalui pembelajaran berbasis kompetensi, fasilitas 
                         yang mendukung, serta kemitraan dengan berbagai industri, kami berupaya menghadirkan 
                         lingkungan belajar yang inovatif dan inspiratif bagi seluruh peserta didik.</p>
-                    <p class="mb-4">Kami percaya bahwa setiap siswa memiliki potensi besar yang harus 
+                    <p class="mb-4" style="text-align: justify;">Kami percaya bahwa setiap siswa memiliki potensi besar yang harus 
                         dikembangkan melalui pendidikan yang tepat. Oleh karena itu, SMK Mitra Permata 
                         terus bertransformasi untuk menghadirkan pengalaman belajar yang relevan, berdaya 
                         guna, dan sejalan dengan kebutuhan perkembangan teknologi serta industri masa kini.</p>
-                    <p class="mb-4">Semoga website ini dapat menjadi jembatan informasi bagi siswa, 
+                    <p class="mb-4" style="text-align: justify;">Semoga website ini dapat menjadi jembatan informasi bagi siswa, 
                         orang tua, mitra industri, dan masyarakat dalam mengenal lebih dekat SMK Mitra Permata.</p>
-                    <!-- <div class="row gy-2 gx-4 mb-4">
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Skilled Instructors</p>
-                        </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Online Classes</p>
-                        </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>International Certificate</p>
-                        </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Skilled Instructors</p>
-                        </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Online Classes</p>
-                        </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>International Certificate</p>
-                        </div>
-                    </div> -->
-                    <a class="btn btn-primary py-3 px-5 mt-2" href="">Read More</a>
+                    <!-- <a class="btn btn-primary py-3 px-5 mt-2" href="">Read More</a> -->
                 </div>
             </div>
         </div>
