@@ -13,7 +13,7 @@
     
     <div class="hero-overlay">
         <h1>Struktur Organisasi</h1>
-        <p>Yayasan Mitra Permata</p>
+        <p>Yayasan Wiyata Insani</p>
     </div>
 </section>
 
@@ -22,14 +22,14 @@
     <section class="struktur-section">
         <div class="section-title">
             <h2>Tim Kepemimpinan</h2>
-            <p>Berkenalan dengan para pemimpin yang berdedikasi memajukan pendidikan di Yayasan Mitra Permata</p>
+            <p>Berkenalan dengan para pemimpin yang berdedikasi memajukan pendidikan di Yayasan Wiyata Insani</p>
         </div>
 
         <div class="struktur-grid">
             <!-- Ketua Yayasan -->
             <div class="struktur-card">
-                <h3>Ibu Siti Aminah</h3>
-                <div class="position-badge">Ketua Yayasan</div>
+                <h3>Muzayanah., M.Pd</h3>
+                <div class="position-badge">Ketua Yayasan Wiyata Insani</div>
                 <div class="contact-info">
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
@@ -42,9 +42,25 @@
                 </div>
             </div>
 
+            <!-- Pengawas Ketua Yayasan -->
+            <div class="struktur-card">
+                <h3>Suwito, S.Pd,.M.Si</h3>
+                <div class="position-badge">Pengawas Yayasan Wiyata Insani</div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>pengawas@mitrapermata.edu</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+62 812-3456-7890</span>
+                    </div>
+                </div>
+            </div>
+
             <!-- Kepala Sekolah SMK -->
             <div class="struktur-card">
-                <h3>Ibu Dewi Lestari</h3>
+                <h3>Dewi Lestari</h3>
                 <div class="position-badge">Kepala Sekolah SMK</div>
                 <div class="contact-info">
                     <div class="contact-item">
@@ -60,7 +76,7 @@
 
             <!-- Kepala Sekolah SMP -->
             <div class="struktur-card">
-                <h3>Bapak Ahmad Fauzi</h3>
+                <h3>Ali Rahmat, S.Pd.I.</h3>
                 <div class="position-badge">Kepala Sekolah SMP</div>
                 <div class="contact-info">
                     <div class="contact-item">
@@ -74,14 +90,14 @@
                 </div>
             </div>
 
-            <!-- Bendahara -->
+            <!-- Kepala Sekolah SD -->
             <div class="struktur-card">
-                <h3>Ibu Nur Aisyah</h3>
+                <h3>Nur Aisyah</h3>
                 <div class="position-badge">Kepala Sekolah SD</div>
                 <div class="contact-info">
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
-                        <span>bendahara@mitrapermata.edu</span>
+                        <span>kepsek.sd@mitrapermata.edu</span>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-phone"></i>
@@ -90,15 +106,14 @@
                 </div>
             </div>
 
-
-          <!-- Ketua Yayasan -->
+          <!-- Kepala Sekolah TK -->
             <div class="struktur-card">
-                <h3>Ibu Siti Aminah</h3>
+                <h3>Siti Aminah</h3>
                 <div class="position-badge">Kepala Sekolah TK</div>
                 <div class="contact-info">
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
-                        <span>ketua@mitrapermata.edu</span>
+                        <span>kepsek.tk@mitrapermata.edu</span>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-phone"></i>
@@ -107,21 +122,6 @@
                 </div>
             </div>
 
-            <!-- Kepala Sekolah SMK -->
-            <div class="struktur-card">
-                <h3>Ibu Dewi Lestari</h3>
-                <div class="position-badge">Kepala PKBM</div>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>kepsek.smk@mitrapermata.edu</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <span>+62 813-4567-8901</span>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 </div>
