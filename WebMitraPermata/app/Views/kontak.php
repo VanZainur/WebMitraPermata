@@ -40,10 +40,10 @@
             <a href="https://facebook.com/mitrapermata" target="_blank">
                 <i class="fab fa-facebook-f"></i>Facebook
             </a>
-            <a href="https://instagram.com/mitrapermata" target="_blank">
+            <a href="https://www.instagram.com/yayasan_wiyata_insani" target="_blank">
                 <i class="fab fa-instagram"></i>Instagram
             </a>
-            <a href="https://youtube.com/@mitrapermata" target="_blank">
+            <a href="http://www.youtube.com/@mitrapermata" target="_blank">
                 <i class="fab fa-youtube"></i>YouTube
             </a>
         </div>

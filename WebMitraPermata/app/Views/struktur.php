@@ -28,7 +28,7 @@
         <div class="struktur-grid">
             <!-- Ketua Yayasan -->
             <div class="struktur-card">
-                <h3>Muzayanah., M.Pd</h3>
+                <h3>Muzayanah, M.Pd</h3>
                 <div class="position-badge">Ketua Yayasan Wiyata Insani</div>
                 <div class="contact-info">
                     <div class="contact-item">
@@ -44,7 +44,7 @@
 
             <!-- Pengawas Ketua Yayasan -->
             <div class="struktur-card">
-                <h3>Suwito, S.Pd,.M.Si</h3>
+                <h3>Suwito, S.Pd, M.Si</h3>
                 <div class="position-badge">Pengawas Yayasan Wiyata Insani</div>
                 <div class="contact-info">
                     <div class="contact-item">
@@ -60,7 +60,7 @@
 
             <!-- Kepala Sekolah SMK -->
             <div class="struktur-card">
-                <h3>Dewi Lestari</h3>
+                <h3>Rini Yuniarti, S.Sos, S.Pd</h3>
                 <div class="position-badge">Kepala Sekolah SMK</div>
                 <div class="contact-info">
                     <div class="contact-item">
