@@ -62,24 +62,24 @@
 
      <div class="collapse navbar-collapse" id="navbarCollapse">
     <div class="navbar-nav ms-auto p-4 p-lg-0">
-        <a href="<?= base_url('smk'); ?>" class="nav-item nav-link active">Home</a>
-        <a href="<?= base_url('smk/about'); ?>" class="nav-item nav-link">About</a>
-        <a href="<?= base_url('smk/courses'); ?>" class="nav-item nav-link">Courses</a>
+        <a href="<?= base_url('smk'); ?>" class="nav-item nav-link active">Beranda</a>
+        <a href="<?= base_url('smk/about'); ?>" class="nav-item nav-link">Tentang</a>
+        <a href="<?= base_url('smk/courses'); ?>" class="nav-item nav-link">Jurusan</a>
 
-        <div class="nav-item dropdown">
+        <!-- <div class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
             <div class="dropdown-menu fade-down m-0">
                 <a href="<?= base_url('smk/team'); ?>" class="dropdown-item">Our Team</a>
                 <a href="<?= base_url('smk/testimonial'); ?>" class="dropdown-item">Testimonial</a>
                 <a href="<?= base_url('smk/404'); ?>" class="dropdown-item">404 Page</a>
             </div>
-        </div>
+        </div> -->
 
-        <a href="<?= base_url('smk/contact'); ?>" class="nav-item nav-link">Contact</a>
+        <a href="<?= base_url('smk/contact'); ?>" class="nav-item nav-link">Kontak</a>
     </div>
 
     <a href="#" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">
-        Join Now <i class="fa fa-arrow-right ms-3"></i>
+        Daftar Sekarang<i class="fa fa-arrow-right ms-3"></i>
     </a>
 </div>
 
@@ -96,27 +96,27 @@
                     <div class="container">
                         <div class="row justify-content-start">
                             <div class="col-sm-10 col-lg-8">
-                                <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Best Online Courses</h5>
+                                <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Pendidikan Berkualitas</h5>
                                 <h1 class="display-3 text-white animated slideInDown">Selamat Datang di SMK Mitra Permata</h1>
                                 <p class="fs-5 text-white mb-4 pb-2">SMK Mitra Permata merupakan sekolah menengah kejuruan yang berkomitmen untuk menghasilkan lulusan yang kompeten, berkarakter, dan siap kerja</p>
-                                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
-                                <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a>
+                                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Info Selengkapnya</a>
+                                <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Daftar Sekarang</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="<?= base_url('assets/SMK/img/background4.jpg') ?>" alt="">
+                <img class="img-fluid" src="<?= base_url('assets/SMK/img/background2.jpg') ?>" alt="">
                 <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .7);">
                     <div class="container">
                         <div class="row justify-content-start">
                             <div class="col-sm-10 col-lg-8">
-                                <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Best Online Courses</h5>
+                                <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Bersama Membangun Masa Depan</h5>
                                 <h1 class="display-3 text-white animated slideInDown">Penerimaan Siswa Baru</h1>
-                                <p class="fs-5 text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea sanctus eirmod elitr.</p>
-                                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
-                                <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a>
+                                <p class="fs-5 text-white mb-4 pb-2">SMK Mitra Permata siap mendampingi siswa meraih masa depan yang lebih cerah. Daftarkan diri Anda dan jadilah bagian dari keluarga besar SMK Mitra Permata!</p>
+                                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Info Selengkapnya</a>
+                                <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Daftar Sekarang</a>
                             </div>
                         </div>
                     </div>
