@@ -502,3 +502,56 @@
   width: 48% !important;
 }
 
+/* ========================================
+   FOOTER FULL WIDTH FIX - ULTIMATE
+   ======================================== */
+
+/* Force footer keluar dari container parent */
+.footer {
+  width: 100vw !important;
+  position: relative !important;
+  left: 50% !important;
+  right: 50% !important;
+  margin-left: -50vw !important;
+  margin-right: -50vw !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding: 0 !important;
+}
+
+/* Container di dalam footer biar konten tetap rapi */
+.footer .container {
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+
+/* Copyright section */
+.footer .copyright {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 25px 0 !important;
+}
+
+.footer .copyright .container {
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+}
+
+.footer .copyright p {
+  margin-bottom: 0 !important;
+}
+
+/* Hapus overflow dan margin body */
+body, html {
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow-x: hidden !important;
+  width: 100% !important;
+}
+
+/* Fix back to top button */
+.back-to-top {
+  z-index: 9999 !important;
+}

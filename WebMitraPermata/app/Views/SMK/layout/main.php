@@ -112,6 +112,7 @@ window.onload = function() {
 };
 </script>
 
+
 <!-- POP UP BROSUR END -->
 
 
@@ -172,6 +173,8 @@ window.onload = function() {
         Daftar Sekarang<i class="fa fa-arrow-right ms-3"></i>
     </a> -->
 </div>
+</div>
+
 
     </nav>
     <!-- Navbar End -->
@@ -179,12 +182,18 @@ window.onload = function() {
       <!-- Content Section -->
     <?= $this->renderSection('content') ?>
 
-<?= $this->endSection() ?>
+
      
-    <!-- Footer Start -->
-    
-      <div class="container-fluid bg-dark text-light footer pt-5 mt-5">
-        <div class="container-fluid py-5">
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+   <!-- Footer Start -->
+<div class="bg-dark text-light footer pt-5">
+<!-- ☝️ HAPUS mt-5 nya! -->
+
+    <div class="container py-5">
         <div class="row g-5">
 
             <!-- QUICK LINK -->
@@ -242,21 +251,18 @@ window.onload = function() {
     </div>
 
     <!-- COPYRIGHT -->
-    <div class="container-fluid">
-        <div class="copyright">
-            <div class="row">
-                <div class="col-md-12 text-center mb-3 mb-md-0">
-                    <p class="mb-0">&copy; 2025 <a class="border-bottom text-white" href="<?= base_url('smk'); ?>">Sekolah Mitra Permata</a>. All Rights Reserved.</p>
-                </div>
+    <div class="copyright">
+    <!-- ☝️ HAPUS div container di sini -->
+        <div class="row">
+            <div class="col-md-12 text-center py-4">
+            <!-- ☝️ Tambah py-4 buat padding atas-bawah -->
+                <p class="mb-0">&copy; 2025 <a class="border-bottom text-white" href="<?= base_url('smk'); ?>">Sekolah Mitra Permata</a>. All Rights Reserved.</p>
             </div>
         </div>
     </div>
 </div>
 <!-- Footer End -->
 
-
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
 
     <!-- JavaScript Libraries -->
