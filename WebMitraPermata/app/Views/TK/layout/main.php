@@ -8,7 +8,7 @@ $uri = service('uri');
 
 <head>
     <meta charset="utf-8">
-    <title>tk Mitra Permata</title>
+    <title>TK Mitra Permata</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -58,7 +58,7 @@ $uri = service('uri');
              style="height: 45px; width: auto;" 
              class="me-3">
 
-        <h2 class="m-0 text-primary">tk Mitra Permata</h2>
+        <h2 class="m-0 text-primary">TK Mitra Permata</h2>
     </a>
 
     <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">

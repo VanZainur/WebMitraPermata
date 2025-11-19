@@ -1,6 +1,6 @@
 <?= $this->extend('sd/layout/main') ?>
 
-<?= $this->section('title') ?>SMK Mitra Permata<?= $this->endSection() ?>
+<?= $this->section('title') ?>SD Mitra Permata<?= $this->endSection() ?>
 
 <?= $this->section('content') ?>
 
@@ -14,8 +14,8 @@
                         <div class="row justify-content-start">
                             <div class="col-sm-10 col-lg-8">
                                 <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Pendidikan Berkualitas</h5>
-                                <h1 class="display-3 text-white animated slideInDown">Selamat Datang di SMK Mitra Permata</h1>
-                                <p class="fs-5 text-white mb-4 pb-2">SMK Mitra Permata merupakan sekolah menengah kejuruan yang berkomitmen untuk menghasilkan lulusan yang kompeten, berkarakter, dan siap kerja</p>
+                                <h1 class="display-3 text-white animated slideInDown">Selamat Datang di SD Mitra Permata</h1>
+                                <p class="fs-5 text-white mb-4 pb-2">SD Mitra Permata menghadirkan pembelajaran inovatif yang mendorong kreativitas, karakter, serta kemampuan dasar siswa untuk menghadapi masa depan.</p>
                                 <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Info Selengkapnya</a>
                                 <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Daftar Sekarang</a>
                             </div>
@@ -24,14 +24,14 @@
                 </div>
             </div>
             <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="<?= base_url('assets/SMK/img/background2.jpg') ?>" alt="">
+                <img class="img-fluid" src="<?= base_url('assets/sd/img/background2.png') ?>" alt="">
                 <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .7);">
                     <div class="container">
                         <div class="row justify-content-start">
                             <div class="col-sm-10 col-lg-8">
                                 <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Bersama Membangun Masa Depan</h5>
                                 <h1 class="display-3 text-white animated slideInDown">Penerimaan Siswa Baru</h1>
-                                <p class="fs-5 text-white mb-4 pb-2">SMK Mitra Permata siap mendampingi siswa meraih masa depan yang lebih cerah. Daftarkan diri Anda dan jadilah bagian dari keluarga besar SMK Mitra Permata!</p>
+                                <p class="fs-5 text-white mb-4 pb-2">SD Mitra Permata membuka Penerimaan Siswa Baru untuk tahun ajaran baru. Mari bergabung bersama kami dan wujudkan pendidikan dasar yang unggul, berkarakter, dan menyenangkan.</p>
                                 <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Info Selengkapnya</a>
                                 <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Daftar Sekarang</a>
                             </div>
