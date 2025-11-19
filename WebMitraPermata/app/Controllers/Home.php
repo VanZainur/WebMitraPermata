@@ -60,7 +60,13 @@ class Home extends BaseController
         return view('smk/index'); // app/Views/berita.php
     }
 
+     public function SMP(): string
+    {
+        return view('smp/index'); // app/Views/berita.php
+    }
+
 
 }
+
 
 

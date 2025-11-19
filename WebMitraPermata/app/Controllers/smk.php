@@ -4,6 +4,11 @@ namespace App\Controllers;
 
 class Smk extends BaseController
 {
+    public function __construct()
+    {
+        helper(['url']); // Load URL helper
+    }
+
     public function index()
     {
         return view('smk/index');
@@ -19,14 +24,19 @@ class Smk extends BaseController
         return view('smk/courses');
     }
 
-    public function team()
+    public function kegiatan()
     {
-        return view('smk/team');
+        return view('smk/kegiatan');
     }
 
-    public function testimonial()
+    public function prestasi()
     {
-        return view('smk/testimonial');
+        return view('smk/prestasi');
+    }
+
+     public function berita()
+    {
+        return view('smk/berita');
     }
 
     public function notfound()

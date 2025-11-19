@@ -62,9 +62,9 @@
             Pendaftaran
           </a>
           <div class="dropdown-content">
-            <a href="/TK">TK</a>
-            <a href="/SD">SD</a>
-            <a href="/SMP">SMP</a>
+            <a href="<?= base_url('tk') ?>">TK</a>
+            <a href="<?= base_url('sd') ?>">SD</a>
+            <a href="<?= base_url('smp') ?>">SMP</a>
             <a href="<?= base_url('smk') ?>">SMK</a>
 
            
@@ -136,10 +136,10 @@
       <span class="arrow">▼</span>
     </a>
     <div class="mobile-dropdown-content">
-      <a href="/TK">TK</a>
-      <a href="/SD">SD</a>
-      <a href="/SMP">SMP</a>
-      <a href="/SMK">SMK</a>
+      <a href="<?= base_url('tk') ?>">TK</a>
+            <a href="<?= base_url('sd') ?>">SD</a>
+            <a href="<?= base_url('smp') ?>">SMP</a>
+            <a href="<?= base_url('smk') ?>">SMK</a>
     </div>
   </div>
 </div>
