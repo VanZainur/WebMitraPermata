@@ -43,63 +43,6 @@
     </div>
     <!-- Carousel End -->
 
-
-  <!-- Service Start -->
-<div class="container-xxl py-5">
-    <div class="container">
-        <div class="row g-4">
-
-            <!-- Guru Kompeten -->
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="service-item text-center pt-3">
-                    <div class="p-4">
-                        <i class="fa fa-3x fa-chalkboard-teacher text-primary mb-4"></i>
-                        <h5 class="mb-3">Guru Kompeten</h5>
-                        <p>Guru yang memiliki keahlian sesuai bidangnya dan mampu membimbing siswa dengan baik.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Prakerin -->
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="service-item text-center pt-3">
-                    <div class="p-4">
-                        <i class="fa fa-3x fa-industry text-primary mb-4"></i>
-                        <h5 class="mb-3">Praktik Kerja Lapangan</h5>
-                        <p>Program magang di dunia industri yang memberikan pengalaman kerja nyata.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Bengkel / Workshop -->
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="service-item text-center pt-3">
-                    <div class="p-4">
-                        <i class="fa fa-3x fa-tools text-primary mb-4"></i>
-                        <h5 class="mb-3">Bengkel Praktik</h5>
-                        <p>Fasilitas praktik lengkap untuk melatih keterampilan siswa sesuai jurusan yang mereka pelajari.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Bursa Kerja Khusus -->
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                <div class="service-item text-center pt-3">
-                    <div class="p-4">
-                        <i class="fa fa-3x fa-briefcase text-primary mb-4"></i>
-                        <h5 class="mb-3">Bursa Kerja Khusus</h5>
-                        <p>Layanan sekolah untuk membantu siswa dan alumni mendapatkan informasi lowongan kerja.</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</div>
-<!-- Service End -->
-
-
-
     <!-- About Start -->
     <div class="container-xxl py-5">
         <div class="container">
@@ -124,19 +67,72 @@
                         guna, dan sejalan dengan kebutuhan perkembangan teknologi serta industri masa kini.</p>
                     <p class="mb-4" style="text-align: justify;">Semoga website ini dapat menjadi jembatan informasi bagi siswa, 
                         orang tua, mitra industri, dan masyarakat dalam mengenal lebih dekat SMK Mitra Permata.</p>
-                    <!-- <a class="btn btn-primary py-3 px-5 mt-2" href="">Read More</a> -->
+                    <a class="btn btn-primary py-3 px-5 mt-2" href="">Lihat Selengkapnya</a>
                 </div>
             </div>
         </div>
     </div>
     <!-- About End -->
 
+    <!-- Service Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="row g-4">
 
-    <!-- Categories Start -->
+                <!-- Guru Kompeten -->
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-chalkboard-teacher text-primary mb-4"></i>
+                            <h5 class="mb-3">Guru Kompeten</h5>
+                            <p>Guru yang memiliki keahlian sesuai bidangnya dan mampu membimbing siswa dengan baik.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Prakerin -->
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-industry text-primary mb-4"></i>
+                            <h5 class="mb-3">Praktik Kerja Lapangan</h5>
+                            <p>Program magang di dunia industri yang memberikan pengalaman kerja nyata.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bengkel / Workshop -->
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-tools text-primary mb-4"></i>
+                            <h5 class="mb-3">Bengkel Praktik</h5>
+                            <p>Fasilitas praktik lengkap untuk melatih keterampilan siswa sesuai jurusan yang mereka pelajari.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bursa Kerja Khusus -->
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-briefcase text-primary mb-4"></i>
+                            <h5 class="mb-3">Bursa Kerja Khusus</h5>
+                            <p>Layanan sekolah untuk membantu siswa dan alumni mendapatkan informasi lowongan kerja.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+    <!-- Ekstrakulikuler Start -->
     <div class="container-xxl py-5 category">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Categories</h6>
+                <h6 class="section-title bg-white text-center text-primary px-3">Eskul</h6>
                 <h1 class="mb-5">Ekstrakulikuler</h1>
             </div>
             <div class="row g-3">
@@ -187,14 +183,14 @@
             </div>
         </div>
     </div>
-    <!-- Categories Start -->
+    <!-- Ekstrakulikuler Start -->
 
 
-    <!-- Courses Start -->
+    <!-- Jurusan Start -->
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Courses</h6>
+                <h6 class="section-title bg-white text-center text-primary px-3">Jurusan</h6>
                 <h1 class="mb-5">Program Keahlian</h1>
             </div>
             <div class="row g-4 justify-content-center">
@@ -288,15 +284,75 @@
             </div>
         </div>
     </div>
-    <!-- Courses End -->
+    <!-- Jurusan End -->
 
+    <!-- Prestasi  Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
 
-    <!-- Team Start -->
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Prestasi</h6>
+                <h1 class="mb-5">Prestasi Terbaik Siswa</h1>
+            </div>
+
+            <div class="row g-4">
+
+                <!-- Card 1 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="prestasi-card shadow-lg rounded overflow-hidden">
+                        <div class="prestasi-img">
+                            <img src="<?= base_url('assets/images/achievements/Juara 1 Badminton.png') ?>" class="img-fluid" alt="Prestasi 1">
+                        </div>
+                        <div class="prestasi-body p-4">
+                            <h5 class="fw-bold mb-2">Juara 1 Lomba LKS TKJ</h5>
+                            <p class="text-muted mb-0">
+                                Keberhasilan siswa kami meraih juara tingkat Kabupaten pada ajang LKS.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="prestasi-card shadow-lg rounded overflow-hidden">
+                        <div class="prestasi-img">
+                            <img src="<?= base_url('assets/images/achievements/Juara 1 Badminton.png') ?>" class="img-fluid" alt="Prestasi 2">
+                        </div>
+                        <div class="prestasi-body p-4">
+                            <h5 class="fw-bold mb-2">Juara 2 Desain Grafis</h5>
+                            <p class="text-muted mb-0">
+                                Siswa berhasil menunjukkan kreativitas dalam lomba desain tingkat Provinsi.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="prestasi-card shadow-lg rounded overflow-hidden">
+                        <div class="prestasi-img">
+                            <img src="<?= base_url('assets/images/achievements/Juara 1 Badminton.png') ?>" class="img-fluid" alt="Prestasi 3">
+                        </div>
+                        <div class="prestasi-body p-4">
+                            <h5 class="fw-bold mb-2">Juara 3 Robotik Nasional</h5>
+                            <p class="text-muted mb-0">
+                                Tim robotik SMK Mitra Permata berhasil meraih posisi 3 besar nasional.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Prestasi  End -->
+
+    <!-- Guru Start -->
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Instructors</h6>
-                <h1 class="mb-5">TENAGA PENDIDIK DAN KEPENDIDIKAN</h1>
+                <h6 class="section-title bg-white text-center text-primary px-3">Guru</h6>
+                <h1 class="mb-5">Tenaga Pendidik Dan Kependidikan</h1>
             </div>
             <div class="row g-4">
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -378,7 +434,7 @@
             </div>
         </div>
     </div>
-    <!-- Team End -->
+    <!-- Guru End -->
 
 
     <!-- Testimonial Start -->
@@ -426,5 +482,88 @@
         </div>
     </div>
     <!-- Testimonial End -->
+
+    <!-- Contact Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Kontak Kami</h6>
+                <h1 class="mb-5">Hubungi kami untuk pertanyaan apa pun.</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <h5>Kami Siap Membantu</h5>
+                    <p class="mb-3" style= "text-align:justify;">Hubungi kami untuk mendapatkan informasi terbaru seputar program pendidikan, pendaftaran siswa baru, dan layanan akademik. Tim kami siap membantu Anda dengan respon yang cepat dan ramah.</p>
+                    <div class="d-flex align-items-left mb-3">
+                        <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary" style="width: 50px; height: 50px;">
+                            <i class="fa fa-map-marker-alt text-white"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h5 class="text-primary">Lokasi</h5>
+                            <p class="mb-1">Perumahan Villa Permata, Blok. D8 - D9 No.1, Sindangsari, Kec. Ps. Kemis, Kabupaten Tangerang, Banten 15560</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary" style="width: 50px; height: 50px;">
+                            <i class="fa fa-phone-alt text-white"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h5 class="text-primary">No Telepon</h5>
+                            <p class="mb-1  ">(021) 123456</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary" style="width: 50px; height: 50px;">
+                            <i class="fa fa-envelope-open text-white"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h5 class="text-primary">Email</h5>
+                            <p class="mb-0">info@mitrapermata.sch.id</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <iframe class="position-relative rounded w-100 h-100"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.9391231209147!2d106.52772367366288!3d-6.13888099384802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6a000100000001%3A0x78b8d9a04432be9f!2sTK-SD-SMP-SMK-PKBM%20-%20LKP%20MITRA%20PERMATA!5e0!3m2!1sid!2sid!4v1759418850999!5m2!1sid!2sid"
+                        frameborder="0" style="min-height: 300px; border:0;" allowfullscreen="" aria-hidden="false"
+                        tabindex="0"></iframe>
+                </div>
+                <div class="col-lg-4 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                    <label for="name">Nama Anda</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                    <label for="email">Email Anda</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                    <label for="subject">Subjek</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 150px"></textarea>
+                                    <label for="message">Pesan</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary w-100 py-3" type="submit">Kirim Pesan</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
         
 <?= $this->endSection() ?>

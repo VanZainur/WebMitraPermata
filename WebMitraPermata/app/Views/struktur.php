@@ -92,7 +92,7 @@
 
             <!-- Kepala Sekolah SD -->
             <div class="struktur-card">
-                <h3>Nur Aisyah</h3>
+                <h3>Lita Karmelita</h3>
                 <div class="position-badge">Kepala Sekolah SD</div>
                 <div class="contact-info">
                     <div class="contact-item">
@@ -108,7 +108,7 @@
 
           <!-- Kepala Sekolah TK -->
             <div class="struktur-card">
-                <h3>Siti Aminah</h3>
+                <h3>Lhiena Effendi</h3>
                 <div class="position-badge">Kepala Sekolah TK</div>
                 <div class="contact-info">
                     <div class="contact-item">

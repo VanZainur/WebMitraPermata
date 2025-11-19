@@ -305,6 +305,7 @@
 /*** Team ***/
 .team-item img {
   transition: 0.5s;
+
 }
 
 .team-item:hover img {
@@ -455,4 +456,36 @@
   margin-right: 0;
   padding-right: 0;
   border-right: none;
+}
+
+/* Prestasi Modern Card */
+.prestasi-card {
+  background: #ffffff;
+  border-radius: 15px;
+  transition: 0.4s ease;
+}
+
+.prestasi-img img {
+  height: 220px;
+  width: 100%;
+  object-fit: cover;
+  transition: 0.4s ease;
+}
+
+.prestasi-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.prestasi-card:hover img {
+  transform: scale(1.08);
+}
+
+.prestasi-body h5 {
+  color: var(--dark);
+  text-align: center;
+}
+
+.prestasi-body p {
+  font-size: 14px;
 }

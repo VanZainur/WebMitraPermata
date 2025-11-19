@@ -79,11 +79,20 @@ $uri = service('uri');
 
         <a href="<?= base_url('smk/courses'); ?>" 
             class="nav-item nav-link <?= ($uri->getSegment(2) == 'courses' ? 'active' : '') ?>">
+            Eskul
+            </a>
+
+        <a href="<?= base_url('smk/courses'); ?>" 
+            class="nav-item nav-link <?= ($uri->getSegment(2) == 'courses' ? 'active' : '') ?>">
             Jurusan
             </a>
 
+        <a href="<?= base_url('smk/courses'); ?>" 
+            class="nav-item nav-link <?= ($uri->getSegment(2) == 'courses' ? 'active' : '') ?>">
+            Prestasi
+            </a>
 
-        <?php  $pagesActive = in_array($uri->getSegment(2), ['kegiatan', 'prestasi', 'berita']); ?>
+        <!-- <?php  $pagesActive = in_array($uri->getSegment(2), ['kegiatan', 'prestasi', 'berita']); ?>
 
 
         <div class="nav-item dropdown">
@@ -95,14 +104,14 @@ $uri = service('uri');
             <a href="<?= base_url('smk/berita'); ?>" class="dropdown-item <?= ($uri->getSegment(2) == 'berita' ? 'active' : '') ?>"> Berita </a>
 
         </div>
-    </div>
+    </div> -->
 
        <a href="<?= base_url('smk/contact'); ?>" class="nav-item nav-link <?= ($uri->getSegment(2) == 'contact' ? 'active' : '') ?>"> Kontak </a>
 
 
-    <a href="#" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">
+    <!-- <a href="#" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">
         Daftar Sekarang<i class="fa fa-arrow-right ms-3"></i>
-    </a>
+    </a> -->
 </div>
 
     </nav>
@@ -122,8 +131,11 @@ $uri = service('uri');
                 <h4 class="text-white mb-3">Akses Cepat</h4>
                 <a class="btn btn-link" href="<?= base_url('smk'); ?>">Beranda</a>
                 <a class="btn btn-link" href="<?= base_url('smk/about'); ?>">Tentang</a>
+                <a class="btn btn-link" href="<?= base_url('smk/about'); ?>">Ekstrakulikuler</a>
+                <a class="btn btn-link" href="<?= base_url('smk/about'); ?>">Jurusan</a>
+                <a class="btn btn-link" href="<?= base_url('smk/about'); ?>">Prestasi</a>
                 <a class="btn btn-link" href="<?= base_url('smk/contact'); ?>">Kontak</a>
-                <a class="btn btn-link" href="#">Pendaftaran</a>
+                <!-- <a class="btn btn-link" href="#">Pendaftaran</a> -->
             </div>
 
             <!-- CONTACT -->
