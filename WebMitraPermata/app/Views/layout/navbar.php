@@ -59,7 +59,7 @@
 
          <li class="dropdown">
           <a href="#" class="navbar-cta">
-            Pendaftaran
+            Jenjang Pendidikan
           </a>
           <div class="dropdown-content">
             <a href="<?= base_url('tk') ?>">TK</a>

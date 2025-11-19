@@ -44,7 +44,7 @@
     <!-- Carousel End -->
 
     <!-- About Start -->
-    <div class="container-xxl py-5">
+    <div id="about" class="container-xxl py-5 category">
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
@@ -73,6 +73,15 @@
         </div>
     </div>
     <!-- About End -->
+
+    <!-- Kemitraan Start -->
+     <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Kerja Sama</h6>
+                <h1 class="mb-5">Kemitraan</h1>
+            </div>
+        <!-- Kemitraan End -->
+
 
     <!-- Service Start -->
         <div class="container-xxl py-5">
@@ -128,66 +137,11 @@
     </div>
     <!-- Service End -->
 
-    <!-- Ekstrakulikuler Start -->
-    <div class="container-xxl py-5 category">
-        <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Eskul</h6>
-                <h1 class="mb-5">Ekstrakulikuler</h1>
-            </div>
-            <div class="row g-3">
-                <div class="col-lg-7 col-md-6">
-                    <div class="row g-3">
-                        <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
-                            <a class="position-relative d-block overflow-hidden" href="">
-                                <img class="img-fluid" src="<?= base_url('assets/SMK/img/pramuka.jpg') ?>" alt="">
-
-                                <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
-                                    <h5 class="m-0">Pramuka</h5>
-                                    <small class="text-primary">Sabtu</small>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
-                            <a class="position-relative d-block overflow-hidden" href="">
-                                <img class="img-fluid" src="<?= base_url('assets/SMK/img/paskibra.jpg') ?>" alt="">
-
-                                <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
-                                    <h5 class="m-0">Paskibra</h5>
-                                    <small class="text-primary">Jumat</small>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
-                            <a class="position-relative d-block overflow-hidden" href="">
-                                <img class="img-fluid" src="<?= base_url('assets/SMK/img/marawis.jpg') ?>" alt="">
-
-                                <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
-                                    <h5 class="m-0">Marawis</h5>
-                                    <small class="text-primary">Selasa</small>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px;">
-                    <a class="position-relative d-block h-100 overflow-hidden" href="">
-                        <img class="img-fluid" src="<?= base_url('assets/SMK/img/seni musik.jpeg') ?>" alt="">
-
-                        <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin:  1px;">
-                            <h5 class="m-0">Seni Musik</h5>
-                            <small class="text-primary">Minggu</small>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Ekstrakulikuler Start -->
 
 
     <!-- Jurusan Start -->
-    <div class="container-xxl py-5">
+    <div id="jurusan" class="container-xxl py-5 category">
+
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="section-title bg-white text-center text-primary px-3">Jurusan</h6>
@@ -257,68 +211,7 @@
     </div>
     <!-- Jurusan End -->
 
-    <!-- Prestasi  Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Prestasi</h6>
-                <h1 class="mb-5">Prestasi Terbaik Siswa</h1>
-            </div>
-
-            <div class="row g-4">
-
-                <!-- Card 1 -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="prestasi-card shadow-lg rounded overflow-hidden">
-                        <div class="prestasi-img">
-                            <img src="<?= base_url('assets/images/achievements/Juara 1 Badminton.png') ?>" class="img-fluid" alt="Prestasi 1">
-                        </div>
-                        <div class="prestasi-body p-4">
-                            <h5 class="fw-bold mb-2">Juara 1 Lomba Badminton</h5>
-                            <p class="text-muted mb-0">
-                                Siswa Mitra Permata Meraih Juara 1 Lomba Badminton dalam Kejuaraan Kota Tangerang Selatan 2025.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="prestasi-card shadow-lg rounded overflow-hidden">
-                        <div class="prestasi-img">
-                            <img src="<?= base_url('assets/images/achievements/Juara 1 Voly.png') ?>" class="img-fluid" alt="Prestasi 2">
-                        </div>
-                        <div class="prestasi-body p-4">
-                            <h5 class="fw-bold mb-2">Juara 1 Volly Putra</h5>
-                            <p class="text-muted mb-0">
-                                Siswa SMK Mitra Permata Berhasil Meraih Juara 1 Lomba Volly OSIS CUP di SMAN 4 Kabupaten Tangerang.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="prestasi-card shadow-lg rounded overflow-hidden">
-                        <div class="prestasi-img">
-                            <img src="<?= base_url('assets/images/achievements/Juara 3 Voly.png') ?>" class="img-fluid" alt="Prestasi 3">
-                        </div>
-                        <div class="prestasi-body p-4">
-                            <h5 class="fw-bold mb-2">Juara 3 Volly Putra</h5>
-                            <p class="text-muted mb-0">
-                               Siswa Mitra Permata Meraih Juara 3 Lomba Volly SLTA Se-Banten dalam Piala Rektor UIN SMH BANTEN 2025.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <!-- Prestasi  End -->
-
-    <!-- Guru Start -->
+        <!-- Guru Start -->
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
@@ -407,6 +300,191 @@
     </div>
     <!-- Guru End -->
 
+    <!-- Prestasi  Start -->
+    <div id="prestasi" class="container-xxl py-5 category">
+
+        <div class="container">
+
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Prestasi</h6>
+                <h1 class="mb-5">Prestasi Terbaik Siswa</h1>
+            </div>
+
+            <div class="row g-4">
+
+                <!-- Card 1 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="prestasi-card shadow-lg rounded overflow-hidden">
+                        <div class="prestasi-img">
+                            <img src="<?= base_url('assets/images/achievements/Juara 1 Badminton.png') ?>" class="img-fluid" alt="Prestasi 1">
+                        </div>
+                        <div class="prestasi-body p-4">
+                            <h5 class="fw-bold mb-2">Juara 1 Lomba Badminton</h5>
+                            <p class="text-muted mb-0">
+                                Siswa Mitra Permata Meraih Juara 1 Lomba Badminton dalam Kejuaraan Kota Tangerang Selatan 2025.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="prestasi-card shadow-lg rounded overflow-hidden">
+                        <div class="prestasi-img">
+                            <img src="<?= base_url('assets/images/achievements/Juara 1 Voly.png') ?>" class="img-fluid" alt="Prestasi 2">
+                        </div>
+                        <div class="prestasi-body p-4">
+                            <h5 class="fw-bold mb-2">Juara 1 Volly Putra</h5>
+                            <p class="text-muted mb-0">
+                                Siswa SMK Mitra Permata Berhasil Meraih Juara 1 Lomba Volly OSIS CUP di SMAN 4 Kabupaten Tangerang.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="prestasi-card shadow-lg rounded overflow-hidden">
+                        <div class="prestasi-img">
+                            <img src="<?= base_url('assets/images/achievements/Juara 3 Voly.png') ?>" class="img-fluid" alt="Prestasi 3">
+                        </div>
+                        <div class="prestasi-body p-4">
+                            <h5 class="fw-bold mb-2">Juara 3 Volly Putra</h5>
+                            <p class="text-muted mb-0">
+                               Siswa Mitra Permata Meraih Juara 3 Lomba Volly SLTA Se-Banten dalam Piala Rektor UIN SMH BANTEN 2025.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                   <!-- Card 1 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="prestasi-card shadow-lg rounded overflow-hidden">
+                        <div class="prestasi-img">
+                            <img src="<?= base_url('assets/images/achievements/Juara 1 Badminton.png') ?>" class="img-fluid" alt="Prestasi 1">
+                        </div>
+                        <div class="prestasi-body p-4">
+                            <h5 class="fw-bold mb-2">Juara 1 Lomba Badminton</h5>
+                            <p class="text-muted mb-0">
+                                Siswa Mitra Permata Meraih Juara 1 Lomba Badminton dalam Kejuaraan Kota Tangerang Selatan 2025.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="prestasi-card shadow-lg rounded overflow-hidden">
+                        <div class="prestasi-img">
+                            <img src="<?= base_url('assets/images/achievements/Juara 1 Voly.png') ?>" class="img-fluid" alt="Prestasi 2">
+                        </div>
+                        <div class="prestasi-body p-4">
+                            <h5 class="fw-bold mb-2">Juara 1 Volly Putra</h5>
+                            <p class="text-muted mb-0">
+                                Siswa SMK Mitra Permata Berhasil Meraih Juara 1 Lomba Volly OSIS CUP di SMAN 4 Kabupaten Tangerang.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="prestasi-card shadow-lg rounded overflow-hidden">
+                        <div class="prestasi-img">
+                            <img src="<?= base_url('assets/images/achievements/Juara 3 Voly.png') ?>" class="img-fluid" alt="Prestasi 3">
+                        </div>
+                        <div class="prestasi-body p-4">
+                            <h5 class="fw-bold mb-2">Juara 3 Volly Putra</h5>
+                            <p class="text-muted mb-0">
+                               Siswa Mitra Permata Meraih Juara 3 Lomba Volly SLTA Se-Banten dalam Piala Rektor UIN SMH BANTEN 2025.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Prestasi  End -->
+
+
+
+     <!-- Ekstrakulikuler Start -->
+    <div id="eskul" class="container-xxl py-5 category">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Eskul</h6>
+                <h1 class="mb-5">Ekstrakulikuler</h1>
+            </div>
+            <div class="row g-3">
+                <div class="col-lg-7 col-md-6">
+                    <div class="row g-3">
+                        <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
+                            <a class="position-relative d-block overflow-hidden" href="">
+                                <img class="img-fluid" src="<?= base_url('assets/SMK/img/pramuka.jpg') ?>" alt="">
+
+                                <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
+                                    <h5 class="m-0">Pramuka</h5>
+                                    <small class="text-primary">Sabtu</small>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
+                            <a class="position-relative d-block overflow-hidden" href="">
+                                <img class="img-fluid" src="<?= base_url('assets/SMK/img/paskibra.jpg') ?>" alt="">
+
+                                <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
+                                    <h5 class="m-0">Paskibra</h5>
+                                    <small class="text-primary">Jumat</small>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
+                            <a class="position-relative d-block overflow-hidden" href="">
+                                <img class="img-fluid" src="<?= base_url('assets/SMK/img/marawis.jpg') ?>" alt="">
+
+                                <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
+                                    <h5 class="m-0">Marawis</h5>
+                                    <small class="text-primary">Selasa</small>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px;">
+                    <a class="position-relative d-block h-100 overflow-hidden" href="">
+                        <img class="img-fluid" src="<?= base_url('assets/SMK/img/seni musik.jpeg') ?>" alt="">
+
+                        <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin:  1px;">
+                            <h5 class="m-0">Seni Musik</h5>
+                            <small class="text-primary">Minggu</small>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Ekstrakulikuler End-->
+
+
+        <!-- kegiatan Start-->
+        <div id="kegiatan" class="container-xxl py-5 category">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Acara</h6>
+                <h1 class="mb-5">Kegiatan</h1>
+            </div>
+        <!-- Kegiatan End-->
+
+    <!-- Berita Start-->
+        <div id="berita" class="container-xxl py-5 category">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Eskul</h6>
+                <h1 class="mb-5">Berita</h1>
+            </div>
+<!-- Berita End-->
 
     <!-- Testimonial Start -->
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
@@ -455,7 +533,8 @@
     <!-- Testimonial End -->
 
     <!-- Contact Start -->
-    <div class="container-xxl py-5">
+    <div id="kontak" class="container-xxl py-5 category">
+
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="section-title bg-white text-center text-primary px-3">Kontak Kami</h6>
@@ -536,5 +615,5 @@
         </div>
     </div>
     <!-- Contact End -->
-        
+ 
 <?= $this->endSection() ?>
