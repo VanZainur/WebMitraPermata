@@ -38,6 +38,90 @@ $uri = service('uri');
 
 </head>
 
+<!-- Popup Brosur Start -->
+<div id="brosurPopup"
+     style="position: fixed; inset: 0; background: rgba(0,0,0,0.6); 
+            display: none; align-items: center; justify-content: center; 
+            z-index: 99999; padding: 20px;">
+
+    <div style="background: #fff; width: 100%; max-width: 900px; 
+                border-radius: 15px; overflow: hidden; box-shadow: 0 0 30px rgba(0,0,0,0.3); 
+                display: flex; flex-wrap: wrap; position: relative;">
+
+        <!-- Tombol Close -->
+        <button onclick="document.getElementById('brosurPopup').style.display='none'"
+            style="position: absolute; top: 15px; right: 15px; background: white; border: none; 
+                   color: #000000 ; width: 35px; height: 35px; font-size: 18px;
+                   border-radius: 50%; cursor: pointer;">
+            ✕
+        </button>
+
+        <!-- KIRI (GAMBAR PROMO) -->
+        <div style="flex: 1; min-width: 40%; background: #f5f5f5;">
+            <img src="<?= base_url('assets/images/berita/brosur.jpg') ?>"
+                 style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+
+        <!-- KANAN (FORM) -->
+        <div style="flex: 1; min-width: 60%; padding: 30px;">
+
+            <h3 class="text-center mb-4" style="font-weight: 800;">
+                Pendaftaran Peserta Didik Baru 2025
+            </h3>
+
+            <form>
+
+                <!-- NAMA -->
+                <div class="mb-3">
+                    <label class="form-label">Nama Lengkap</label>
+                    <input type="text" class="form-control" placeholder="Masukkan nama lengkap">
+                </div>
+
+                <!-- TTL -->
+                <div class="mb-3">
+                    <label class="form-label">Tempat, Tanggal Lahir</label>
+                    <input type="text" class="form-control" placeholder="Contoh: Tangerang, 01-01-2010">
+                </div>
+
+                <!-- ASAL SEKOLAH -->
+                <div class="mb-3">
+                    <label class="form-label">Asal Sekolah</label>
+                    <input type="text" class="form-control" placeholder="Contoh: SMP Negeri 5">
+                </div>
+
+                <!-- NO WA -->
+                <div class="mb-3">
+                    <label class="form-label">Nomor WhatsApp</label>
+                    <input type="text" class="form-control" placeholder="0812xxxxxxx">
+                </div>
+
+                <!-- JURUSAN -->
+                <div class="mb-3">
+                    <label class="form-label">Jurusan Yang Dipilih</label>
+                    <select class="form-control">
+                        <option>Teknik Komputer Jaringan</option>
+                        <option>Teknik Kendaraan Ringan</option>
+                    </select>
+                </div>
+
+                <!-- SUBMIT -->
+                <button type="submit" class="btn btn-primary w-100 py-2">
+                    Kirim Pendaftaran
+                </button>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+// Tampilkan popup saat halaman selesai load
+window.onload = function() {
+    document.getElementById('brosurPopup').style.display = 'flex';
+};
+</script>
+<!-- POP UP BROSUR END -->
+ 
 <body>
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">

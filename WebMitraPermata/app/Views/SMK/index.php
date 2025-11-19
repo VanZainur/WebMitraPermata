@@ -197,7 +197,7 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="course-item bg-light">
                         <div class="position-relative overflow-hidden">
-                            <img class="img-fluid" src="<?= base_url('assets/SMK/img/course-1.jpg') ?>" alt="">
+                            <img class="img-fluid" src="<?= base_url('assets/SMK/img/SMK2.jpg') ?>" alt="">
 
                             <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
                                 <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
@@ -226,7 +226,7 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="course-item bg-light">
                         <div class="position-relative overflow-hidden">
-                           <img class="img-fluid" src="<?= base_url('assets/SMK/img/course-2.jpg') ?>" alt="">
+                           <img class="img-fluid" src="<?= base_url('assets/SMK/img/LKP.jpg') ?>" alt="">
 
                             <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
                                 <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
@@ -244,35 +244,6 @@
                                 <small>(123)</small>
                             </div>
                             <h5 class="mb-4">Teknik Komputer dan Jaringan</h5>
-                        </div>
-                        <div class="d-flex border-top">
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>John Doe</small>
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>1.49 Hrs</small>
-                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>30 Students</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="course-item bg-light">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid" src="<?= base_url('assets/SMK/img/course-3.jpg') ?>" alt="">
-
-                            <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
-                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4 pb-0">
-                            <h3 class="mb-0">$149.00</h3>
-                            <div class="mb-3">
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small>(123)</small>
-                            </div>
-                            <h5 class="mb-4">Perhotelan</h5>
                         </div>
                         <div class="d-flex border-top">
                             <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>John Doe</small>
@@ -304,9 +275,9 @@
                             <img src="<?= base_url('assets/images/achievements/Juara 1 Badminton.png') ?>" class="img-fluid" alt="Prestasi 1">
                         </div>
                         <div class="prestasi-body p-4">
-                            <h5 class="fw-bold mb-2">Juara 1 Lomba LKS TKJ</h5>
+                            <h5 class="fw-bold mb-2">Juara 1 Lomba Badminton</h5>
                             <p class="text-muted mb-0">
-                                Keberhasilan siswa kami meraih juara tingkat Kabupaten pada ajang LKS.
+                                Siswa Mitra Permata Meraih Juara 1 Lomba Badminton dalam Kejuaraan Kota Tangerang Selatan 2025.
                             </p>
                         </div>
                     </div>
@@ -316,12 +287,12 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="prestasi-card shadow-lg rounded overflow-hidden">
                         <div class="prestasi-img">
-                            <img src="<?= base_url('assets/images/achievements/Juara 1 Badminton.png') ?>" class="img-fluid" alt="Prestasi 2">
+                            <img src="<?= base_url('assets/images/achievements/Juara 1 Voly.png') ?>" class="img-fluid" alt="Prestasi 2">
                         </div>
                         <div class="prestasi-body p-4">
-                            <h5 class="fw-bold mb-2">Juara 2 Desain Grafis</h5>
+                            <h5 class="fw-bold mb-2">Juara 1 Volly Putra</h5>
                             <p class="text-muted mb-0">
-                                Siswa berhasil menunjukkan kreativitas dalam lomba desain tingkat Provinsi.
+                                Siswa SMK Mitra Permata Berhasil Meraih Juara 1 Lomba Volly OSIS CUP di SMAN 4 Kabupaten Tangerang.
                             </p>
                         </div>
                     </div>
@@ -331,12 +302,12 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="prestasi-card shadow-lg rounded overflow-hidden">
                         <div class="prestasi-img">
-                            <img src="<?= base_url('assets/images/achievements/Juara 1 Badminton.png') ?>" class="img-fluid" alt="Prestasi 3">
+                            <img src="<?= base_url('assets/images/achievements/Juara 3 Voly.png') ?>" class="img-fluid" alt="Prestasi 3">
                         </div>
                         <div class="prestasi-body p-4">
-                            <h5 class="fw-bold mb-2">Juara 3 Robotik Nasional</h5>
+                            <h5 class="fw-bold mb-2">Juara 3 Volly Putra</h5>
                             <p class="text-muted mb-0">
-                                Tim robotik SMK Mitra Permata berhasil meraih posisi 3 besar nasional.
+                               Siswa Mitra Permata Meraih Juara 3 Lomba Volly SLTA Se-Banten dalam Piala Rektor UIN SMH BANTEN 2025.
                             </p>
                         </div>
                     </div>
