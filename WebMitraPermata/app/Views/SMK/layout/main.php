@@ -288,6 +288,85 @@ document.querySelectorAll('.nav-item.dropdown > a.dropdown-toggle').forEach(func
 });
 </script>
 
+<!-- // ======================================== -->
+   <!-- SECTION EKSTRAKURIKULER - SLIDER STYLE -->
+   <!-- ======================================== // -->
+
+   <script>
+let eskulCurrentIndex = 0;
+const eskulCardsPerView = getEskulCardsPerView();
+
+function getEskulCardsPerView() {
+    if (window.innerWidth <= 576) return 1;
+    if (window.innerWidth <= 768) return 2;
+    if (window.innerWidth <= 1200) return 3;
+    return 4;
+}
+
+function eskulSlide(direction) {
+    const track = document.getElementById('eskulTrack');
+    const cards = track.children;
+    const totalCards = cards.length;
+    const maxIndex = totalCards - eskulCardsPerView;
+
+    eskulCurrentIndex += direction;
+
+    if (eskulCurrentIndex < 0) {
+        eskulCurrentIndex = 0;
+    } else if (eskulCurrentIndex > maxIndex) {
+        eskulCurrentIndex = maxIndex;
+    }
+
+    const cardWidth = cards[0].offsetWidth;
+    const gap = 30;
+    const translateX = -(eskulCurrentIndex * (cardWidth + gap));
+
+    track.style.transform = `translateX(${translateX}px)`;
+    updateEskulDots();
+}
+
+function updateEskulDots() {
+    const dotsContainer = document.getElementById('eskulDots');
+    const totalCards = document.getElementById('eskulTrack').children.length;
+    const totalDots = totalCards - eskulCardsPerView + 1;
+
+    dotsContainer.innerHTML = '';
+
+    for (let i = 0; i < totalDots; i++) {
+        const dot = document.createElement('div');
+        dot.className = 'eskul-dot' + (i === eskulCurrentIndex ? ' active' : '');
+        dot.onclick = () => goToEskulSlide(i);
+        dotsContainer.appendChild(dot);
+    }
+}
+
+function goToEskulSlide(index) {
+    const track = document.getElementById('eskulTrack');
+    const cards = track.children;
+    eskulCurrentIndex = index;
+
+    const cardWidth = cards[0].offsetWidth;
+    const gap = 30;
+    const translateX = -(eskulCurrentIndex * (cardWidth + gap));
+
+    track.style.transform = `translateX(${translateX}px)`;
+    updateEskulDots();
+}
+
+// Initialize dots on page load
+window.addEventListener('load', updateEskulDots);
+
+// Update on window resize
+let resizeTimer;
+window.addEventListener('resize', function() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+        eskulCurrentIndex = 0;
+        document.getElementById('eskulTrack').style.transform = 'translateX(0)';
+        updateEskulDots();
+    }, 250);
+});
+</script>
 </body>
 
 </html>

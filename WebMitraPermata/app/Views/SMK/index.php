@@ -335,7 +335,7 @@
                         <div class="prestasi-body p-4">
                             <h5 class="fw-bold mb-2">Juara 1 Volly Putra</h5>
                             <p class="text-muted mb-0">
-                                Siswa SMK Mitra Permata Berhasil Meraih Juara 1 Lomba Volly OSIS CUP di SMAN 4 Kabupaten Tangerang.
+                                Siswa SMK Mitra Permata  Meraih Juara 1 Lomba Volly OSIS CUP di SMAN 4 Kabupaten Tangerang.
                             </p>
                         </div>
                     </div>
@@ -381,7 +381,7 @@
                         <div class="prestasi-body p-4">
                             <h5 class="fw-bold mb-2">Juara 1 Volly Putra</h5>
                             <p class="text-muted mb-0">
-                                Siswa SMK Mitra Permata Berhasil Meraih Juara 1 Lomba Volly OSIS CUP di SMAN 4 Kabupaten Tangerang.
+                                Siswa SMK Mitra Permata  Meraih Juara 1 Lomba Volly OSIS CUP di SMAN 4 Kabupaten Tangerang.
                             </p>
                         </div>
                     </div>
@@ -407,83 +407,306 @@
     </div>
     <!-- Prestasi  End -->
 
-    <!-- Ekstrakulikuler Start -->
-    <div id="eskul" class="container-xxl py-5 category">
-        <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Eskul</h6>
-                <h1 class="mb-5">Ekstrakulikuler</h1>
-            </div>
-            <div class="row g-3">
-                <div class="col-lg-7 col-md-6">
-                    <div class="row g-3">
-                        <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
-                            <a class="position-relative d-block overflow-hidden" href="">
-                                <img class="img-fluid" src="<?= base_url('assets/SMK/img/pramuka.jpg') ?>" alt="">
-
-                                <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
-                                    <h5 class="m-0">Pramuka</h5>
-                                    <small class="text-primary">Sabtu</small>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
-                            <a class="position-relative d-block overflow-hidden" href="">
-                                <img class="img-fluid" src="<?= base_url('assets/SMK/img/paskibra.jpg') ?>" alt="">
-
-                                <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
-                                    <h5 class="m-0">Paskibra</h5>
-                                    <small class="text-primary">Jumat</small>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
-                            <a class="position-relative d-block overflow-hidden" href="">
-                                <img class="img-fluid" src="<?= base_url('assets/SMK/img/marawis.jpg') ?>" alt="">
-
-                                <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
-                                    <h5 class="m-0">Marawis</h5>
-                                    <small class="text-primary">Selasa</small>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px;">
-                    <a class="position-relative d-block h-100 overflow-hidden" href="">
-                        <img class="img-fluid" src="<?= base_url('assets/SMK/img/seni musik.jpeg') ?>" alt="">
-
-                        <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin:  1px;">
-                            <h5 class="m-0">Seni Musik</h5>
-                            <small class="text-primary">Minggu</small>
-                        </div>
-                    </a>
-                </div>
-            </div>
+<!-- Ekstrakurikuler Start -->
+<div id="eskul" class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h6 class="section-title bg-white text-center text-primary px-3">Ekstrakurikuler</h6>
+            <h1 class="mb-5">Kegiatan Ekstrakurikuler</h1>
         </div>
+
+        <!-- Eskul Slider Container -->
+        <div class="eskul-slider-wrapper">
+            
+            <!-- Navigation Button Left -->
+            <button class="eskul-nav eskul-prev" onclick="eskulSlide(-1)">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+
+            <!-- Eskul Cards Container -->
+            <div class="eskul-cards-container">
+                <div class="eskul-cards-track" id="eskulTrack">
+                    
+                    <!-- Eskul Card 1 - Pramuka -->
+                    <div class="eskul-slider-card">
+                        <div class="eskul-slider-image">
+                            <img src="<?= base_url('assets/images/kegiatan/pramuka.jpg') ?>" alt="Pramuka">
+                        </div>
+                        <h5 class="eskul-slider-title">Pramuka</h5>
+                        <p class="eskul-slider-desc">Kegiatan kepramukaan yang melatih kedisiplinan, kemandirian, dan kepemimpinan siswa melalui berbagai aktivitas outdoor.</p>
+                        <p class="eskul-slider-schedule">Setiap Sabtu</p>
+                    </div>
+
+                    <!-- Eskul Card 2 - Paskibra -->
+                    <div class="eskul-slider-card">
+                        <div class="eskul-slider-image">
+                            <img src="<?= base_url('assets/images/kegiatan/paskibra.jpg') ?>" alt="Paskibra">
+                        </div>
+                        <h5 class="eskul-slider-title">Paskibra</h5>
+                        <p class="eskul-slider-desc">Pasukan Pengibar Bendera yang melatih kekompakan, ketegasan, dan nasionalisme dalam upacara bendera.</p>
+                        <p class="eskul-slider-schedule">Setiap Jumat</p>
+                    </div>
+
+                    <!-- Eskul Card 3 - Seni Musik -->
+                    <div class="eskul-slider-card">
+                        <div class="eskul-slider-image">
+                            <img src="<?= base_url('assets/images/kegiatan/seni musik.jpeg') ?>" alt="Seni Musik">
+                        </div>
+                        <h5 class="eskul-slider-title">Seni Musik</h5>
+                        <p class="eskul-slider-desc">Mengembangkan kreativitas dan bakat seni musik siswa melalui berbagai alat musik modern dan tradisional.</p>
+                        <p class="eskul-slider-schedule">Setiap Minggu</p>
+                    </div>
+
+                    <!-- Eskul Card 4 - Seni Tari -->
+                    <div class="eskul-slider-card">
+                        <div class="eskul-slider-image">
+                            <img src="<?= base_url('assets/images/kegiatan/seni tari.jpeg') ?>" alt="Seni Tari">
+                        </div>
+                        <h5 class="eskul-slider-title">Seni Tari</h5>
+                        <p class="eskul-slider-desc">Melatih kemampuan seni tari tradisional dan modern untuk mengembangkan kepercayaan diri dan ekspresi siswa.</p>
+                        <p class="eskul-slider-schedule">Setiap Rabu</p>
+                    </div>
+
+                    <!-- Eskul Card 5 - Marawis -->
+                    <div class="eskul-slider-card">
+                        <div class="eskul-slider-image">
+                            <img src="<?= base_url('assets/images/kegiatan/marawis.jpg') ?>" alt="Marawis">
+                        </div>
+                        <h5 class="eskul-slider-title">Marawis</h5>
+                        <p class="eskul-slider-desc">Seni musik tradisional Islam yang mengembangkan bakat seni dan memperkuat nilai-nilai keagamaan siswa.</p>
+                        <p class="eskul-slider-schedule">Setiap Selasa</p>
+                    </div>
+
+                    <!-- Eskul Card 6 - Futsal -->
+                    <div class="eskul-slider-card">
+                        <div class="eskul-slider-image">
+                            <img src="<?= base_url('assets/images/kegiatan/futsal.jpg') ?>" alt="Futsal">
+                        </div>
+                        <h5 class="eskul-slider-title">Futsal</h5>
+                        <p class="eskul-slider-desc">Olahraga futsal untuk meningkatkan kebugaran, kerja sama tim, dan sportivitas siswa dalam kompetisi.</p>
+                        <p class="eskul-slider-schedule">Setiap Kamis</p>
+                    </div>
+
+                    <!-- Eskul Card 7 - Voli -->
+                    <div class="eskul-slider-card">
+                        <div class="eskul-slider-image">
+                            <img src="<?= base_url('assets/images/kegiatan/olahraga.png') ?>" alt="Voli">
+                        </div>
+                        <h5 class="eskul-slider-title">Voli</h5>
+                        <p class="eskul-slider-desc">Olahraga bola voli yang melatih koordinasi, kekuatan, dan kekompakan tim dalam pertandingan.</p>
+                        <p class="eskul-slider-schedule">Setiap Senin</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Navigation Button Right -->
+            <button class="eskul-nav eskul-next" onclick="eskulSlide(1)">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+
+        </div>
+
+        <!-- Slider Dots -->
+        <div class="eskul-dots" id="eskulDots"></div>
+
     </div>
-    <!-- Ekstrakulikuler End-->
+</div>
+<!-- Ekstrakurikuler End -->
 
     <!-- kegiatan Start-->
-    <div id="kegiatan" class="container-xxl py-5 category">
-        <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Acara</h6>
-                <h1 class="mb-5">Kegiatan</h1>
+    <div id="kegiatan" class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h6 class="section-title bg-white text-center text-primary px-3">Acara</h6>
+            <h1 class="mb-5">Kegiatan Sekolah</h1>
+        </div>
+
+        <div class="row g-4">
+            
+            <!-- Kegiatan Card 1 -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="kegiatan-card">
+                    <div class="kegiatan-image">
+                        <img src="<?= base_url('assets/SMK/img/pramuka.jpg') ?>" alt="Upacara Hari Pahlawan">
+                        <div class="kegiatan-date">15 Jan 2025</div>
+                    </div>
+                    <div class="kegiatan-content">
+                        <h5 class="kegiatan-title">Upacara Hari Pahlawan</h5>
+                        <p class="kegiatan-desc">Pelaksanaan upacara bendera dalam rangka memperingati Hari Pahlawan Nasional yang dihadiri seluruh siswa dan guru SMK Mitra Permata.</p>
+                        <a href="#" class="kegiatan-link">
+                            Lihat Detail <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
+
+            <!-- Kegiatan Card 2 -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="kegiatan-card">
+                    <div class="kegiatan-image">
+                        <img src="<?= base_url('assets/SMK/img/paskibra.jpg') ?>" alt="Kunjungan Industri">
+                        <div class="kegiatan-date">20 Jan 2025</div>
+                    </div>
+                    <div class="kegiatan-content">
+                        <h5 class="kegiatan-title">Kunjungan Industri</h5>
+                        <p class="kegiatan-desc">Siswa jurusan TKJ berkunjung ke perusahaan teknologi untuk menambah wawasan dan pengalaman kerja di dunia industri teknologi informasi.</p>
+                        <a href="#" class="kegiatan-link">
+                            Lihat Detail <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kegiatan Card 3 -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="kegiatan-card">
+                    <div class="kegiatan-image">
+                        <img src="<?= base_url('assets/SMK/img/marawis.jpg') ?>" alt="Class Meeting 2025">
+                        <div class="kegiatan-date">25 Jan 2025</div>
+                    </div>
+                    <div class="kegiatan-content">
+                        <h5 class="kegiatan-title">Class Meeting 2025</h5>
+                        <p class="kegiatan-desc">Kompetisi olahraga dan seni antar kelas dalam rangka mempererat tali persaudaraan dan mengembangkan sportivitas siswa SMK Mitra Permata.</p>
+                        <a href="#" class="kegiatan-link">
+                            Lihat Detail <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
+</div>
     <!-- Kegiatan End-->
 
     <!-- Berita Start-->
     <div id="berita" class="container-xxl py-5 category">
-        <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Eskul</h6>
-                <h1 class="mb-5">Berita</h1>
+    <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h6 class="section-title bg-white text-center text-primary px-3">News</h6>
+            <h1 class="mb-5">Berita Sekolah</h1>
+        </div>
+
+        <div class="row g-4">
+            
+            <!-- Berita Card 1 -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="berita-card">
+                    <div class="berita-image">
+                        <img src="<?= base_url('assets/images/berita/spnb.png') ?>" alt="PPDB">
+                        <div class="berita-badge">
+                            <i class="fa fa-calendar"></i> 10 Feb 2025
+                        </div>
+                    </div>
+                    <div class="berita-content">
+                        <h5 class="berita-title">Pendaftaran Siswa Baru 2025/2026 Resmi Dibuka</h5>
+                        <p class="berita-desc">SMK Mitra Permata membuka pendaftaran siswa baru untuk tahun ajaran 2025/2026. Segera daftarkan putra-putri Anda dan raih masa depan cerah bersama kami!</p>
+                        <a href="#" class="berita-link">
+                            Baca Selengkapnya <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
+
+            <!-- Berita Card 2 -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="berita-card">
+                    <div class="berita-image">
+                        <img src="<?= base_url('assets/images/berita/hut ri.webp') ?>" alt="Kerja Sama">
+                        <div class="berita-badge">
+                            <i class="fa fa-calendar"></i> 08 Feb 2025
+                        </div>
+                    </div>
+                    <div class="berita-content">
+                        <h5 class="berita-title">Peringatan HUT RI dengan Berbagai Lomba Menarik</h5>
+                        <p class="berita-desc">Kemeriahan HUT RI ke-80 terasa di lingkungan SMK Mitra Permata dengan berbagai kompetisi seru dan kegiatan yang melibatkan seluruh siswa.</p>
+                        <a href="#" class="berita-link">
+                            Baca Selengkapnya <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Berita Card 3 -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="berita-card">
+                    <div class="berita-image">
+                        <img src="<?= base_url('assets/images/berita/Juara 1 Badminton.jpg') ?>" alt="Pelatihan">
+                        <div class="berita-badge">
+                            <i class="fa fa-calendar"></i> 05 Feb 2025
+                        </div>
+                    </div>
+                    <div class="berita-content">
+                        <h5 class="berita-title">Juara 1 Lomba Badminton Tingkat Nasional</h5>
+                        <p class="berita-desc">Atlet badminton SMK Mitra Permata berhasil meraih juara pertama dalam turnamen bergengsi tingkat nasional. Prestasi luar biasa ini merupakan hasil dari latihan intensif dan dedikasi tinggi.</p>
+                        <a href="#" class="berita-link">
+                            Baca Selengkapnya <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Berita Card 4 -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="berita-card">
+                    <div class="berita-image">
+                        <img src="<?= base_url('assets/images/berita/tips ujian.png') ?>" alt="Prestasi">
+                        <div class="berita-badge">
+                            <i class="fa fa-calendar"></i> 01 Feb 2025
+                        </div>
+                    </div>
+                    <div class="berita-content">
+                        <h5 class="berita-title">Tips Sukses Menghadapi Ujian Akhir Semester</h5>
+                        <p class="berita-desc">Persiapan matang adalah kunci kesuksesan. Berikut tips dan strategi belajar efektif dari para guru untuk menghadapi ujian dengan percaya diri</p>
+                        <a href="#" class="berita-link">
+                            Baca Selengkapnya <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Berita Card 5 -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="berita-card">
+                    <div class="berita-image">
+                        <img src="<?= base_url('assets/images/berita/pkk.png') ?>" alt="Seminar">
+                        <div class="berita-badge">
+                            <i class="fa fa-calendar"></i> 28 Jan 2025
+                        </div>
+                    </div>
+                    <div class="berita-content">
+                        <h5 class="berita-title">Sidang PKL Siswa/Siswi SMK Mitra Permata Tahun 2025</h5>
+                        <p class="berita-desc">SMK Mitra Permata mengadakan Sidang PKL untuk membekali siswa dengan mindset dan skill.</p>
+                        <a href="#" class="berita-link">
+                            Baca Selengkapnya <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Berita Card 6 -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="berita-card">
+                    <div class="berita-image">
+                        <img src="<?= base_url('assets/images/berita/kunjungan industri.jpg') ?>" alt="Fasilitas">
+                        <div class="berita-badge">
+                            <i class="fa fa-calendar"></i> 25 Jan 2025
+                        </div>
+                    </div>
+                    <div class="berita-content">
+                        <h5 class="berita-title">Kunjungan Industri ke Perusahaan Teknologi Terkemuka</h5>
+                        <p class="berita-desc">Siswa jurusan TKJ mendapat kesempatan emas untuk berkunjung langsung ke perusahaan teknologi startup unicorn. Pengalaman berharga ini memberikan insight dunia kerja</p>
+                        <a href="#" class="berita-link">
+                            Baca Selengkapnya <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
+</div>
     <!-- Berita End-->
 
     <!-- Testimonial Start -->
