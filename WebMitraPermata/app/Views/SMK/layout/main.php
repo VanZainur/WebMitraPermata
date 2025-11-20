@@ -177,58 +177,45 @@ $uri = service('uri');
 
 
    <!-- Footer Start -->
-    <div class="bg-dark text-light footer pt-5">
-    <!-- ☝️ HAPUS mt-5 nya! -->
-
-    <div class="container py-5">
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5">
+        <div class="container py-5">
         <div class="row g-5">
 
             <!-- QUICK LINK -->
-            <div class="col-lg-3 col-md-6">
-                <h4 class="text-white mb-4">Akses Cepat</h4>
-                <a class="btn btn-link text-light" href="<?= base_url('smk'); ?>">Beranda</a>
-                <a class="btn btn-link text-light" href="#about">Tentang</a>
-                <a class="btn btn-link text-light" href="#eskul">Ekstrakulikuler</a>
-                <a class="btn btn-link text-light" href="#jurusan">Jurusan</a>
-                <a class="btn btn-link text-light" href="#prestasi">Prestasi</a>
-                <a class="btn btn-link text-light" href="#kontak">Kontak</a>
+            <div class="col-lg-4 col-md-6">
+                <h4 class="text-white mb-3">Akses Cepat</h4>
+                <a class="btn btn-link" href="<?= base_url('smk'); ?>">Beranda</a>
+                <a class="btn btn-link" href="<?= base_url('smk/about'); ?>">Tentang</a>
+                <a class="btn btn-link" href="<?= base_url('smk/about'); ?>">Ekstrakulikuler</a>
+                <a class="btn btn-link" href="<?= base_url('smk/about'); ?>">Jurusan</a>
+                <a class="btn btn-link" href="<?= base_url('smk/about'); ?>">Prestasi</a>
+                <a class="btn btn-link" href="<?= base_url('smk/contact'); ?>">Kontak</a>
+                <!-- <a class="btn btn-link" href="#">Pendaftaran</a> -->
             </div>
 
             <!-- CONTACT -->
-            <div class="col-lg-5 col-md-6">
-                <h4 class="text-white mb-4">Kontak</h4>
+            <div class="col-lg-4 col-md-6">
+                <h4 class="text-white mb-3">Kontak</h4>
                 <p class="mb-2">
                     <i class="fa fa-map-marker-alt me-3"></i>
                     Perumahan Villa Permata, Blk. D8 - D9 No.1, Sindangsari, Kec. Ps. Kemis, Kabupaten Tangerang, Banten 15560
                 </p>
-                <p class="mb-2">
-                    <i class="fa fa-phone-alt me-3"></i>(021) 123456
-                </p>
-                <p class="mb-2">
-                    <i class="fa fa-envelope me-3"></i>info@mitrapermata.sch.id
-                </p>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>(021) 123456</p>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@mitrapermata.sch.id</p>
 
                 <!-- SOCIAL MEDIA -->
-                <div class="d-flex pt-3">
-                    <a class="btn btn-outline-light btn-social me-2" href="#" target="_blank">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a class="btn btn-outline-light btn-social me-2" href="#" target="_blank">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a class="btn btn-outline-light btn-social me-2" href="#" target="_blank">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                    <a class="btn btn-outline-light btn-social" href="#" target="_blank">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
+                <div class="d-flex pt-2">
+                    <a class="btn btn-outline-light btn-social me-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social me-2" href="#"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-outline-light btn-social me-2" href="#"><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
 
             <!-- ABOUT SCHOOL -->
             <div class="col-lg-4 col-md-6">
-                <h4 class="text-white mb-4">Sekolah Mitra Permata</h4>
-                <p class="mb-0" style="text-align: justify;">
+                <h4 class="text-white mb-3">Sekolah Mitra Permata</h4>
+                <p style="text-align: justify;">
                     Lembaga pendidikan dari TK, SD, SMP, hingga SMK yang berkomitmen memberikan layanan pendidikan berkualitas 
                     dengan lingkungan belajar yang aman, nyaman, dan berkarakter.
                 </p>
@@ -237,18 +224,14 @@ $uri = service('uri');
         </div>
     </div>
 
-    <!-- COPYRIGHT -->
-    <div class="copyright">
-    <!-- ☝️ HAPUS div container di sini -->
-        <div class="row">
-            <div class="col-md-12 text-center py-4">
-            <!-- ☝️ Tambah py-4 buat padding atas-bawah -->
-                <p class="mb-0">&copy; 2025 <a class="border-bottom text-white" href="<?= base_url('smk'); ?>">Sekolah Mitra Permata</a>. All Rights Reserved.</p>
-            </div>
+        <!-- COPYRIGHT -->
+        <div class="container">
+        <div class="copyright text-center">
+            &copy; 2025 Sekolah Mitra Permata. All Rights Reserved.
         </div>
     </div>
 </div>
-<!-- Footer End -->
+    <!-- Footer End -->
 
 
 
