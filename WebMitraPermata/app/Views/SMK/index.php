@@ -79,12 +79,13 @@
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="section-title bg-white text-center text-primary px-3">Kerja Sama</h6>
                 <h1 class="mb-5">Kemitraan</h1>
-            </div>
-        <!-- Kemitraan End -->
+        </div>
+     </div>
+    <!-- Kemitraan End -->
 
 
     <!-- Service Start -->
-        <div class="container-xxl py-5">
+    <div class="container-xxl py-5">
             <div class="container">
                 <div class="row g-4">
 
@@ -136,8 +137,6 @@
         </div>
     </div>
     <!-- Service End -->
-
-
 
     <!-- Jurusan Start -->
     <div id="jurusan" class="container-xxl py-5 category">
@@ -211,7 +210,7 @@
     </div>
     <!-- Jurusan End -->
 
-        <!-- Guru Start -->
+    <!-- Guru Start -->
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
@@ -408,9 +407,7 @@
     </div>
     <!-- Prestasi  End -->
 
-
-
-     <!-- Ekstrakulikuler Start -->
+    <!-- Ekstrakulikuler Start -->
     <div id="eskul" class="container-xxl py-5 category">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
@@ -467,24 +464,27 @@
     </div>
     <!-- Ekstrakulikuler End-->
 
-
-        <!-- kegiatan Start-->
-        <div id="kegiatan" class="container-xxl py-5 category">
+    <!-- kegiatan Start-->
+    <div id="kegiatan" class="container-xxl py-5 category">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="section-title bg-white text-center text-primary px-3">Acara</h6>
                 <h1 class="mb-5">Kegiatan</h1>
             </div>
-        <!-- Kegiatan End-->
+        </div>
+    </div>
+    <!-- Kegiatan End-->
 
     <!-- Berita Start-->
-        <div id="berita" class="container-xxl py-5 category">
+    <div id="berita" class="container-xxl py-5 category">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="section-title bg-white text-center text-primary px-3">Eskul</h6>
                 <h1 class="mb-5">Berita</h1>
             </div>
-<!-- Berita End-->
+        </div>
+    </div>
+    <!-- Berita End-->
 
     <!-- Testimonial Start -->
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">

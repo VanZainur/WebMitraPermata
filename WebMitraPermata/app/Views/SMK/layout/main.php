@@ -38,18 +38,15 @@ $uri = service('uri');
 
 </head>
 
-
- 
 <body>
 
-
-<!-- Popup Brosur Start -->
-<div id="brosurPopup"
-     style="position: fixed; inset: 0; background: rgba(0,0,0,0.6); 
+    <!-- Popup Brosur Start -->
+    <div id="brosurPopup"
+        style="position: fixed; inset: 0; background: rgba(0,0,0,0.6); 
             display: none; align-items: center; justify-content: center; 
             z-index: 99999; padding: 20px;">
 
-    <div style="background: #fff; width: 100%; max-width: 750px; 
+        <div style="background: #fff; width: 100%; max-width: 750px; 
                 border-radius: 15px; overflow: hidden; box-shadow: 0 0 30px rgba(0,0,0,0.3); 
                 display: flex; flex-wrap: wrap; position: relative;
                 max-height: 90vh;"> <!-- BATAS TINGGI 90% LAYAR -->
@@ -102,18 +99,16 @@ $uri = service('uri');
                 <button type="submit" class="btn btn-primary w-100 py-2">Kirim Pendaftaran</button>
             </form>
 
+            </div>
         </div>
     </div>
-</div>
 
-<script>
-window.onload = function() {
-    document.getElementById('brosurPopup').style.display = 'flex';
-};
-</script>
-
-
-<!-- POP UP BROSUR END -->
+    <script>
+    window.onload = function() {
+        document.getElementById('brosurPopup').style.display = 'flex';
+    };
+    </script>
+    <!-- POP UP BROSUR END -->
 
 
     <!-- Spinner Start -->
@@ -134,7 +129,6 @@ window.onload = function() {
              alt="Logo" 
              style="height: 45px; width: auto;" 
              class="me-3">
-
         <h2 class="m-0 text-primary">SMK Mitra Permata</h2>
     </a>
 
@@ -142,7 +136,7 @@ window.onload = function() {
         <span class="navbar-toggler-icon"></span>
     </button>
 
-     <div class="collapse navbar-collapse" id="navbarCollapse">
+    <div class="collapse navbar-collapse" id="navbarCollapse">
     <div class="navbar-nav ms-auto p-4 p-lg-0">
         <a href="<?= base_url('smk'); ?>" 
             class="nav-item nav-link <?= ($uri->getSegment(1) == 'smk' && $uri->getTotalSegments() == 1 ? 'active' : '') ?>">
@@ -163,35 +157,28 @@ window.onload = function() {
                 <a href="#eskul" class="dropdown-item">Extrakulikuler</a>
                 <a href="#berita" class="dropdown-item">Berita</a>
             </div>
+            </div>
+
+            <a href="#kontak" class="nav-item nav-link">Kontak</a>
+
+            <!-- <a href="#" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">
+                Daftar Sekarang<i class="fa fa-arrow-right ms-3"></i>
+            </a> -->
+            </div>
         </div>
-
-        <a href="#kontak" class="nav-item nav-link">Kontak</a>
-        
-
-
-    <!-- <a href="#" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">
-        Daftar Sekarang<i class="fa fa-arrow-right ms-3"></i>
-    </a> -->
-</div>
-</div>
-
-
     </nav>
     <!-- Navbar End -->
 
-      <!-- Content Section -->
+    <!-- Content Section -->
     <?= $this->renderSection('content') ?>
-
-
-     
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
 
    <!-- Footer Start -->
-<div class="bg-dark text-light footer pt-5">
-<!-- ☝️ HAPUS mt-5 nya! -->
+    <div class="bg-dark text-light footer pt-5">
+    <!-- ☝️ HAPUS mt-5 nya! -->
 
     <div class="container py-5">
         <div class="row g-5">
