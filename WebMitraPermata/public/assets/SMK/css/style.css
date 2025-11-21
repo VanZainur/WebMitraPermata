@@ -505,9 +505,65 @@
   font-size: 14px;
 }
 
-/* HANYA untuk section Jurusan */
-.container-xxl.py-5 .row.g-4.justify-content-center > div.col-lg-4 {
-  width: 48% !important;
+/* ========================================
+   SECTION JURUSAN - RESPONSIVE PROPER
+   ======================================== */
+
+/* Desktop - 2 Kolom Samping */
+@media (min-width: 992px) {
+  #jurusan .row.g-4.justify-content-center > div.col-lg-4 {
+      width: 48% !important;
+      max-width: 550px;
+  }
+}
+
+/* Tablet - 2 Kolom */
+@media (min-width: 768px) and (max-width: 991px) {
+  #jurusan .row.g-4.justify-content-center > div.col-lg-4 {
+      width: 48% !important;
+  }
+}
+
+/* Mobile - 1 KOLOM PENUH (ATAS BAWAH) */
+@media (max-width: 767px) {
+  #jurusan .row.g-4.justify-content-center > div.col-lg-4 {
+      width: 100% !important;
+      max-width: 100%;
+      margin-bottom: 2rem;
+  }
+
+  /* Card jadi full width */
+  #jurusan .course-item {
+      width: 100%;
+  }
+
+  /* Adjust font size di mobile */
+  #jurusan .course-item h3 {
+      font-size: 1.4rem;
+  }
+
+  #jurusan .course-item h5 {
+      font-size: 15px;
+      line-height: 1.6;
+  }
+
+  /* Button lebih gede di mobile */
+  #jurusan .course-item .btn-sm {
+      padding: 10px 20px;
+      font-size: 13px;
+  }
+
+  /* Footer info */
+  #jurusan .course-item .d-flex.border-top small {
+      font-size: 12px;
+      padding: 10px 5px !important;
+  }
+
+  /* Gambar optimal di mobile */
+  #jurusan .course-item img {
+      height: 220px !important;
+      object-fit: cover;
+  }
 }
 
 /* ========================================
@@ -989,3 +1045,146 @@ html {
     min-width: 100%;
   }
 }
+
+/* ========================================
+   KEMITRAAN SLIDER - WHITE CLEAN
+   ======================================== */
+
+   .partner-modern-slider {
+    position: relative;
+    padding: 10px 0 60px;
+    overflow: hidden;
+    background: white; /* UBAH JADI PUTIH */
+}
+
+.partner-track-wrapper {
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.partner-track {
+    display: flex;
+    gap: 40px;
+    animation: smoothPartnerSlide 45s linear infinite;
+    width: fit-content;
+    align-items: center;
+}
+
+/* Pause on hover */
+.partner-track:hover {
+    animation-play-state: paused;
+}
+
+.partner-card {
+    flex: 0 0 auto;
+    background: white;
+    border-radius: 12px;
+    padding: 30px 40px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.partner-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.partner-logo-box {
+    width: 180px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+}
+
+.partner-logo-box img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.partner-card:hover .partner-logo-box img {
+    transform: scale(1.05);
+}
+
+.partner-name {
+    display: none;
+}
+
+/* Smooth Animation */
+@keyframes smoothPartnerSlide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Gradient Fade - WHITE VERSION */
+.partner-modern-slider::before,
+.partner-modern-slider::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 120px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.partner-modern-slider::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%); /* WHITE FADE */
+}
+
+.partner-modern-slider::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%); /* WHITE FADE */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .partner-track {
+        gap: 30px;
+        animation: smoothPartnerSlide 35s linear infinite;
+    }
+
+    .partner-card {
+        padding: 20px 30px;
+    }
+
+    .partner-logo-box {
+        width: 140px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 576px) {
+    .partner-track {
+        gap: 20px;
+        animation: smoothPartnerSlide 30s linear infinite;
+    }
+
+    .partner-card {
+        padding: 15px 20px;
+    }
+
+    .partner-logo-box {
+        width: 120px;
+        height: 70px;
+    }
+
+    .partner-modern-slider::before,
+    .partner-modern-slider::after {
+        width: 80px;
+    }
+}
+

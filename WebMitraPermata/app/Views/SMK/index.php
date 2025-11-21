@@ -43,6 +43,129 @@
     </div>
     <!-- Carousel End -->
 
+        <!-- Kemitraan Start -->
+        <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Kerja Sama</h6>
+                <h1 class="mb-4">Mitra Kerjasama Kami</h1>
+                <p class="text-muted mb-5">Bersama industri dan universitas terkemuka untuk menghasilkan lulusan berkualitas</p>
+            </div>
+
+            <!-- Partner Slider Modern -->
+            <div class="partner-modern-slider">
+                <div class="partner-track-wrapper">
+                    <div class="partner-track" id="partnerTrack">
+                        
+                        <!-- Partner Card 1 -->
+                        <div class="partner-card">
+                            <div class="partner-logo-box">
+                                <img src="<?= base_url('assets/images/partners/Pt Auto2000.jpg') ?>" alt="PT. AUTO2000">
+                            </div>
+                            <div class="partner-name">PT. AUTO2000</div>
+                        </div>
+
+                        <!-- Partner Card 2 -->
+                        <div class="partner-card">
+                            <div class="partner-logo-box">
+                                <img src="<?= base_url('assets/images/partners/Pt Sumber Alfaria Trijaya.png') ?>" alt="PT. Alfamart">
+                            </div>
+                            <div class="partner-name">PT. Sumber Alfaria Trijaya</div>
+                        </div>
+
+                        <!-- Partner Card 3 -->
+                        <div class="partner-card">
+                            <div class="partner-logo-box">
+                                <img src="<?= base_url('assets/images/partners/Pt Dynaplast.jpg') ?>" alt="PT. Dynaplast">
+                            </div>
+                            <div class="partner-name">PT. Dynaplast</div>
+                        </div>
+
+                        <!-- Partner Card 4 -->
+                        <div class="partner-card">
+                            <div class="partner-logo-box">
+                                <img src="<?= base_url('assets/images/partners/Pt. Indostation.png') ?>" alt="PT. Sentra Trada Indostation">
+                            </div>
+                            <div class="partner-name">PT. Sentra Trada Indostation</div>
+                        </div>
+
+                        <!-- Partner Card 5 -->
+                        <div class="partner-card">
+                            <div class="partner-logo-box">
+                                <img src="<?= base_url('assets/images/partners/Universitas Yatsi Madani.png') ?>" alt="Universitas Yatsi Madani">
+                            </div>
+                            <div class="partner-name">Universitas Yatsi Madani</div>
+                        </div>
+
+                        <!-- Partner Card 6 -->
+                        <div class="partner-card">
+                            <div class="partner-logo-box">
+                                <img src="<?= base_url('assets/images/partners/Global Institute.png') ?>" alt="ITB Bina Sarana Global">
+                            </div>
+                            <div class="partner-name">ITB Bina Sarana Global</div>
+                        </div>
+
+                        <!-- Partner Card 7 -->
+                        <div class="partner-card">
+                            <div class="partner-logo-box">
+                                <img src="<?= base_url('assets/images/partners/UMT.png') ?>" alt="Universitas Muhammadiyah Tangerang">
+                            </div>
+                            <div class="partner-name">Universitas Muhammadiyah Tangerang</div>
+                        </div>
+
+                        <!-- Partner Card 8 -->
+                        <div class="partner-card">
+                            <div class="partner-logo-box">
+                                <img src="<?= base_url('assets/images/partners/Universitas Raharja.png') ?>" alt="Universitas Raharja">
+                            </div>
+                            <div class="partner-name">Universitas Raharja</div>
+                        </div>
+
+                        <!-- Partner Card 9 -->
+                        <div class="partner-card">
+                            <div class="partner-logo-box">
+                                <img src="<?= base_url('assets/images/partners/Universitas Unsaka.png') ?>" alt="Universitas Salakanagara">
+                            </div>
+                            <div class="partner-name">Universitas Salakanagara</div>
+                        </div>
+
+                        <!-- Duplicate untuk seamless loop -->
+                        <div class="partner-card">
+                            <div class="partner-logo-box">
+                                <img src="<?= base_url('assets/images/partners/Pt Auto2000.jpg') ?>" alt="PT. AUTO2000">
+                            </div>
+                            <div class="partner-name">PT. AUTO2000</div>
+                        </div>
+
+                        <div class="partner-card">
+                            <div class="partner-logo-box">
+                                <img src="<?= base_url('assets/images/partners/Pt Sumber Alfaria Trijaya.png') ?>" alt="PT. Alfamart">
+                            </div>
+                            <div class="partner-name">PT. Sumber Alfaria Trijaya</div>
+                        </div>
+
+                        <div class="partner-card">
+                            <div class="partner-logo-box">
+                                <img src="<?= base_url('assets/images/partners/Pt Dynaplast.jpg') ?>" alt="PT. Dynaplast">
+                            </div>
+                            <div class="partner-name">PT. Dynaplast</div>
+                        </div>
+
+                        <div class="partner-card">
+                            <div class="partner-logo-box">
+                                <img src="<?= base_url('assets/images/partners/Pt. Indostation.png') ?>" alt="PT. Sentra Trada Indostation">
+                            </div>
+                            <div class="partner-name">PT. Sentra Trada Indostation</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Kemitraan End -->
+
     <!-- About Start -->
     <div id="about" class="container-xxl py-5 category">
         <div class="container">
@@ -73,15 +196,6 @@
         </div>
     </div>
     <!-- About End -->
-
-    <!-- Kemitraan Start -->
-     <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Kerja Sama</h6>
-                <h1 class="mb-5">Kemitraan</h1>
-        </div>
-     </div>
-    <!-- Kemitraan End -->
 
     <!-- Service Start -->
     <div class="container-xxl py-5">

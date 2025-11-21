@@ -122,7 +122,7 @@ $uri = service('uri');
 
     <!-- Navbar Start -->
    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-    <a href="<?= base_url('smp'); ?>"  class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+    <a href="<?= base_url('index.php'); ?>"  class="navbar-brand d-flex align-items-center px-4 px-lg-5">
 
         <!-- LOGO -->
         <img src="<?= base_url('assets/SMP/img/logo.png') ?>" 
