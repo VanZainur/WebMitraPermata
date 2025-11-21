@@ -122,7 +122,7 @@ $uri = service('uri');
 
     <!-- Navbar Start -->
    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-    <a href="<?= base_url('smk'); ?>"  class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+    <a href="<?= base_url('index.php'); ?>"  class="navbar-brand d-flex align-items-center px-4 px-lg-5">
 
         <!-- LOGO -->
         <img src="<?= base_url('assets/SMK/img/logo.png') ?>" 
@@ -271,10 +271,11 @@ document.querySelectorAll('.nav-item.dropdown > a.dropdown-toggle').forEach(func
 });
 </script>
 
-<!-- // ======================================== -->
-   <!-- SECTION EKSTRAKURIKULER - SLIDER STYLE -->
-   <!-- ======================================== // -->
 
+
+   <!-- ======================================== -->
+   <!-- SECTION EKSTRAKURIKULER - SLIDER STYLE   -->
+   <!-- ======================================== -->
    <script>
 let eskulCurrentIndex = 0;
 const eskulCardsPerView = getEskulCardsPerView();
@@ -348,6 +349,54 @@ window.addEventListener('resize', function() {
         document.getElementById('eskulTrack').style.transform = 'translateX(0)';
         updateEskulDots();
     }, 250);
+});
+</script>
+
+
+
+    <!--======================================== -->
+   <!--Smooth scroll polyfill untuk semua browser -->
+   <!-- ======================================== -->
+   <script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Smooth scroll polyfill untuk semua browser
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function(e) {
+            var href = this.getAttribute('href');
+            if (!href || href === '#') return;
+            
+            var target = document.querySelector(href);
+            if (target) {
+                e.preventDefault();
+                
+                var navbar = document.querySelector('.navbar');
+                var offset = navbar ? navbar.offsetHeight + 20 : 100;
+                var targetPosition = target.offsetTop - offset;
+                var startPosition = window.pageYOffset;
+                var distance = targetPosition - startPosition;
+                var duration = 800; // 800ms = 0.8 detik
+                var start = null;
+                
+                function animation(currentTime) {
+                    if (start === null) start = currentTime;
+                    var timeElapsed = currentTime - start;
+                    var run = ease(timeElapsed, startPosition, distance, duration);
+                    window.scrollTo(0, run);
+                    if (timeElapsed < duration) requestAnimationFrame(animation);
+                }
+                
+                // Easing function untuk smooth effect
+                function ease(t, b, c, d) {
+                    t /= d / 2;
+                    if (t < 1) return c / 2 * t * t + b;
+                    t--;
+                    return -c / 2 * (t * (t - 2) - 1) + b;
+                }
+                
+                requestAnimationFrame(animation);
+            }
+        });
+    });
 });
 </script>
 </body>
