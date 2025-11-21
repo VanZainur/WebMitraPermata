@@ -39,6 +39,78 @@ $uri = service('uri');
 </head>
 
 <body>
+
+    <!-- Popup Brosur Start -->
+    <div id="brosurPopup"
+        style="position: fixed; inset: 0; background: rgba(0,0,0,0.6); 
+            display: none; align-items: center; justify-content: center; 
+            z-index: 99999; padding: 20px;">
+
+        <div style="background: #fff; width: 100%; max-width: 750px; 
+                border-radius: 15px; overflow: hidden; box-shadow: 0 0 30px rgba(0,0,0,0.3); 
+                display: flex; flex-wrap: wrap; position: relative;
+                max-height: 90vh;"> <!-- BATAS TINGGI 90% LAYAR -->
+
+        <!-- Tombol Close -->
+        <button onclick="document.getElementById('brosurPopup').style.display='none'"
+            style="position: absolute; top: 15px; right: 15px; background: white; border: none; 
+                   color: #000000 ; width: 35px; height: 35px; font-size: 18px;
+                   border-radius: 50%; cursor: pointer;">
+            ✕
+        </button>
+
+        <!-- KIRI (GAMBAR PROMO) -->
+        <div style="flex: 1; min-width: 40%; max-height: 90vh;">
+            <img src="<?= base_url('assets/images/berita/brosur.jpg') ?>"
+                 style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+
+        <!-- KANAN (FORM) -->
+        <div style="flex: 1; min-width: 60%; padding: 25px; overflow-y: auto; max-height: 90vh;">
+
+            <h3 class="text-center mb-4" style="font-weight: 800;">
+                Pendaftaran Peserta Didik Baru 2025
+            </h3>
+
+            <form>
+                <div class="mb-3">
+                    <label class="form-label">Nama Lengkap</label>
+                    <input type="text" class="form-control" placeholder="Masukkan nama lengkap">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Tempat, Tanggal Lahir</label>
+                    <input type="text" class="form-control" placeholder="Tangerang, 01-01-2010">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Asal Sekolah</label>
+                    <input type="text" class="form-control" placeholder="SD Negeri 5">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Nomor WhatsApp</label>
+                    <input type="text" class="form-control" placeholder="0812xxxxxxx">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Jurusan</label>
+                    <select class="form-control">
+                        <option>Teknik Komputer Jaringan</option>
+                        <option>Teknik Kendaraan Ringan</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary w-100 py-2">Kirim Pendaftaran</button>
+            </form>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+    window.onload = function() {
+        document.getElementById('brosurPopup').style.display = 'flex';
+    };
+    </script>
+    <!-- POP UP BROSUR END -->
+
+
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
@@ -53,11 +125,10 @@ $uri = service('uri');
     <a href="<?= base_url('smp'); ?>"  class="navbar-brand d-flex align-items-center px-4 px-lg-5">
 
         <!-- LOGO -->
-        <img src="<?= base_url('assets/smp/img/logo.png') ?>" 
+        <img src="<?= base_url('assets/SMP/img/logo.png') ?>" 
              alt="Logo" 
              style="height: 45px; width: auto;" 
              class="me-3">
-
         <h2 class="m-0 text-primary">SMP Mitra Permata</h2>
     </a>
 
@@ -65,54 +136,46 @@ $uri = service('uri');
         <span class="navbar-toggler-icon"></span>
     </button>
 
-     <div class="collapse navbar-collapse" id="navbarCollapse">
+    <div class="collapse navbar-collapse" id="navbarCollapse">
     <div class="navbar-nav ms-auto p-4 p-lg-0">
         <a href="<?= base_url('smp'); ?>" 
             class="nav-item nav-link <?= ($uri->getSegment(1) == 'smp' && $uri->getTotalSegments() == 1 ? 'active' : '') ?>">
             Beranda
             </a>
 
-        <a href="<?= base_url('smp/about'); ?>" 
-            class="nav-item nav-link <?= ($uri->getSegment(2) == 'about' ? 'active' : '') ?>">
-            Tentang
+       <a href="#about" class="nav-item nav-link">Tentang Kami</a>
+            <div class="nav-item dropdown">
+            <a href="#kegiatan" 
+            class="nav-link dropdown-toggle" 
+            data-bs-toggle="dropdown">
+            Kegiatan
             </a>
 
-        <a href="<?= base_url('smp/courses'); ?>" 
-            class="nav-item nav-link <?= ($uri->getSegment(2) == 'courses' ? 'active' : '') ?>">
-            Jurusan
-            </a>
+            <div class="dropdown-menu">
+                <a href="#prestasi" class="dropdown-item">Prestasi</a>
+                <a href="#eskul" class="dropdown-item">Extrakulikuler</a>
+                <a href="#berita" class="dropdown-item">Berita</a>
+            </div>
+            </div>
 
+            <a href="#kontak" class="nav-item nav-link">Kontak</a>
 
-        <?php  $pagesActive = in_array($uri->getSegment(2), ['kegiatan', 'prestasi', 'berita']); ?>
-
-
-        <div class="nav-item dropdown">
-            <a href="<?= base_url('smp/kegiatan'); ?>" class="nav-link dropdown-toggle <?= $pagesActive ? 'active' : '' ?>" data-bs-toggle="dropdown"> Kegiatan </a>
-            <div class="dropdown-menu fade-down m-0">
-            
-            <a href="<?= base_url('smp/prestasi'); ?>" class="dropdown-item <?= ($uri->getSegment(2) == 'prestasi' ? 'active' : '') ?>"> Prestasi </a>
-            
-            <a href="<?= base_url('smp/berita'); ?>" class="dropdown-item <?= ($uri->getSegment(2) == 'berita' ? 'active' : '') ?>"> Berita </a>
-
+            <!-- <a href="#" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">
+                Daftar Sekarang<i class="fa fa-arrow-right ms-3"></i>
+            </a> -->
+            </div>
         </div>
-    </div>
-
-       <a href="<?= base_url('smp/contact'); ?>" class="nav-item nav-link <?= ($uri->getSegment(2) == 'contact' ? 'active' : '') ?>"> Kontak </a>
-
-
-    <a href="#" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">
-        Daftar Sekarang<i class="fa fa-arrow-right ms-3"></i>
-    </a>
-</div>
-
     </nav>
     <!-- Navbar End -->
 
-      <!-- Content Section -->
+    <!-- Content Section -->
     <?= $this->renderSection('content') ?>
 
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
-        <!-- Footer Start -->
+
+   <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5">
         <div class="container py-5">
         <div class="row g-5">
@@ -122,8 +185,11 @@ $uri = service('uri');
                 <h4 class="text-white mb-3">Akses Cepat</h4>
                 <a class="btn btn-link" href="<?= base_url('smp'); ?>">Beranda</a>
                 <a class="btn btn-link" href="<?= base_url('smp/about'); ?>">Tentang</a>
+                <a class="btn btn-link" href="<?= base_url('smp/about'); ?>">Ekstrakulikuler</a>
+                <a class="btn btn-link" href="<?= base_url('smp/about'); ?>">Jurusan</a>
+                <a class="btn btn-link" href="<?= base_url('smp/about'); ?>">Prestasi</a>
                 <a class="btn btn-link" href="<?= base_url('smp/contact'); ?>">Kontak</a>
-                <a class="btn btn-link" href="#">Pendaftaran</a>
+                <!-- <a class="btn btn-link" href="#">Pendaftaran</a> -->
             </div>
 
             <!-- CONTACT -->
@@ -149,7 +215,7 @@ $uri = service('uri');
             <div class="col-lg-4 col-md-6">
                 <h4 class="text-white mb-3">Sekolah Mitra Permata</h4>
                 <p style="text-align: justify;">
-                    Lembaga pendidikan dari TK, SD, SMP, hingga smp yang berkomitmen memberikan layanan pendidikan berkualitas 
+                    Lembaga pendidikan dari TK, SD, SMP, hingga SMK yang berkomitmen memberikan layanan pendidikan berkualitas 
                     dengan lingkungan belajar yang aman, nyaman, dan berkarakter.
                 </p>
             </div>
@@ -167,20 +233,17 @@ $uri = service('uri');
     <!-- Footer End -->
 
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-   <script src="<?= base_url('assets/smp/lib/wow/wow.min.js') ?>"></script>
-    <script src="<?= base_url('assets/smp/lib/easing/easing.min.js') ?>"></script>
-    <script src="<?= base_url('assets/smp/lib/waypoints/waypoints.min.js') ?>"></script>
-    <script src="<?= base_url('assets/smp/lib/owlcarousel/owl.carousel.min.js') ?>"></script>
+   <script src="<?= base_url('assets/SMP/lib/wow/wow.min.js') ?>"></script>
+    <script src="<?= base_url('assets/SMP/lib/easing/easing.min.js') ?>"></script>
+    <script src="<?= base_url('assets/SMP/lib/waypoints/waypoints.min.js') ?>"></script>
+    <script src="<?= base_url('assets/SMP/lib/owlcarousel/owl.carousel.min.js') ?>"></script>
 
     <!-- Template Javascript -->
-    <script src="<?= base_url('assets/smp/js/main.js') ?>"></script>
+    <script src="<?= base_url('assets/SMP/js/main.js') ?>"></script>
     <script>
 document.querySelectorAll('.nav-item.dropdown > a.dropdown-toggle').forEach(function(el) {
     let clickedOnce = false;
@@ -207,6 +270,134 @@ document.querySelectorAll('.nav-item.dropdown > a.dropdown-toggle').forEach(func
 });
 </script>
 
+
+
+   <!-- ======================================== -->
+   <!-- SECTION EKSTRAKURIKULER - SLIDER STYLE   -->
+   <!-- ======================================== -->
+   <script>
+let eskulCurrentIndex = 0;
+const eskulCardsPerView = getEskulCardsPerView();
+
+function getEskulCardsPerView() {
+    if (window.innerWidth <= 576) return 1;
+    if (window.innerWidth <= 768) return 2;
+    if (window.innerWidth <= 1200) return 3;
+    return 4;
+}
+
+function eskulSlide(direction) {
+    const track = document.getElementById('eskulTrack');
+    const cards = track.children;
+    const totalCards = cards.length;
+    const maxIndex = totalCards - eskulCardsPerView;
+
+    eskulCurrentIndex += direction;
+
+    if (eskulCurrentIndex < 0) {
+        eskulCurrentIndex = 0;
+    } else if (eskulCurrentIndex > maxIndex) {
+        eskulCurrentIndex = maxIndex;
+    }
+
+    const cardWidth = cards[0].offsetWidth;
+    const gap = 30;
+    const translateX = -(eskulCurrentIndex * (cardWidth + gap));
+
+    track.style.transform = `translateX(${translateX}px)`;
+    updateEskulDots();
+}
+
+function updateEskulDots() {
+    const dotsContainer = document.getElementById('eskulDots');
+    const totalCards = document.getElementById('eskulTrack').children.length;
+    const totalDots = totalCards - eskulCardsPerView + 1;
+
+    dotsContainer.innerHTML = '';
+
+    for (let i = 0; i < totalDots; i++) {
+        const dot = document.createElement('div');
+        dot.className = 'eskul-dot' + (i === eskulCurrentIndex ? ' active' : '');
+        dot.onclick = () => goToEskulSlide(i);
+        dotsContainer.appendChild(dot);
+    }
+}
+
+function goToEskulSlide(index) {
+    const track = document.getElementById('eskulTrack');
+    const cards = track.children;
+    eskulCurrentIndex = index;
+
+    const cardWidth = cards[0].offsetWidth;
+    const gap = 30;
+    const translateX = -(eskulCurrentIndex * (cardWidth + gap));
+
+    track.style.transform = `translateX(${translateX}px)`;
+    updateEskulDots();
+}
+
+// Initialize dots on page load
+window.addEventListener('load', updateEskulDots);
+
+// Update on window resize
+let resizeTimer;
+window.addEventListener('resize', function() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+        eskulCurrentIndex = 0;
+        document.getElementById('eskulTrack').style.transform = 'translateX(0)';
+        updateEskulDots();
+    }, 250);
+});
+</script>
+
+
+
+    <!--======================================== -->
+   <!--Smooth scroll polyfill untuk semua browser -->
+   <!-- ======================================== -->
+   <script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Smooth scroll polyfill untuk semua browser
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function(e) {
+            var href = this.getAttribute('href');
+            if (!href || href === '#') return;
+            
+            var target = document.querySelector(href);
+            if (target) {
+                e.preventDefault();
+                
+                var navbar = document.querySelector('.navbar');
+                var offset = navbar ? navbar.offsetHeight + 20 : 100;
+                var targetPosition = target.offsetTop - offset;
+                var startPosition = window.pageYOffset;
+                var distance = targetPosition - startPosition;
+                var duration = 800; // 800ms = 0.8 detik
+                var start = null;
+                
+                function animation(currentTime) {
+                    if (start === null) start = currentTime;
+                    var timeElapsed = currentTime - start;
+                    var run = ease(timeElapsed, startPosition, distance, duration);
+                    window.scrollTo(0, run);
+                    if (timeElapsed < duration) requestAnimationFrame(animation);
+                }
+                
+                // Easing function untuk smooth effect
+                function ease(t, b, c, d) {
+                    t /= d / 2;
+                    if (t < 1) return c / 2 * t * t + b;
+                    t--;
+                    return -c / 2 * (t * (t - 2) - 1) + b;
+                }
+                
+                requestAnimationFrame(animation);
+            }
+        });
+    });
+});
+</script>
 </body>
 
 </html>

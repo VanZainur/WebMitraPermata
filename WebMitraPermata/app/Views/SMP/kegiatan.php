@@ -1,4 +1,4 @@
-<?= $this->extend('smp/layout/main') ?>
+<?= $this->extend('smk/layout/main') ?>
 
 <?= $this->section('title') ?>SMK Mitra Permata<?= $this->endSection() ?>
 
