@@ -83,7 +83,6 @@
      </div>
     <!-- Kemitraan End -->
 
-
     <!-- Service Start -->
     <div class="container-xxl py-5">
             <div class="container">
@@ -153,12 +152,12 @@
                             <img class="img-fluid" src="<?= base_url('assets/SMK/img/SMK2.jpg') ?>" alt="">
 
                             <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
-                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
+                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Selengkapnya</a>
+                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Bergabung</a>
                             </div>
                         </div>
                         <div class="text-center p-4 pb-0">
-                            <h3 class="mb-0">$149.00</h3>
+                            <h3 class="mb-0">Teknik Kendaraan Ringan</h3>
                             <div class="mb-3">
                                 <small class="fa fa-star text-primary"></small>
                                 <small class="fa fa-star text-primary"></small>
@@ -167,12 +166,14 @@
                                 <small class="fa fa-star text-primary"></small>
                                 <small>(123)</small>
                             </div>
-                            <h5 class="mb-4">Teknik Kendaraan Ringan</h5>
+                            <h5 class="mb-4" style="font-weight: normal; font-size: 16px;">Teknik Kendaraan Ringan adalah jurusan yang mempelajari perawatan, 
+                                perbaikan, dan diagnosa sistem pada kendaraan bermotor, sehingga siswa mampu memahami 
+                                teknologi otomotif modern dan siap bekerja di industri perbengkelan maupun manufaktur.</h5>
                         </div>
                         <div class="d-flex border-top">
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>John Doe</small>
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>1.49 Hrs</small>
-                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>30 Students</small>
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>Muhamad Rodiyansah</small>
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>08.00 - 10.00</small>
+                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>30 Murid</small>
                         </div>
                     </div>
                 </div>
@@ -182,12 +183,12 @@
                            <img class="img-fluid" src="<?= base_url('assets/SMK/img/LKP.jpg') ?>" alt="">
 
                             <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
-                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
+                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Selengkapnya</a>
+                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Bergabung</a>
                             </div>
                         </div>
                         <div class="text-center p-4 pb-0">
-                            <h3 class="mb-0">$149.00</h3>
+                            <h3 class="mb-0">Teknik Komputer dan Jaringan</h3>
                             <div class="mb-3">
                                 <small class="fa fa-star text-primary"></small>
                                 <small class="fa fa-star text-primary"></small>
@@ -196,12 +197,14 @@
                                 <small class="fa fa-star text-primary"></small>
                                 <small>(123)</small>
                             </div>
-                            <h5 class="mb-4">Teknik Komputer dan Jaringan</h5>
+                            <h5 class="mb-4" style="font-weight: normal; font-size: 16px;">Teknik Komputer dan Jaringan adalah jurusan yang mempelajari instalasi, 
+                                perakitan, dan pengelolaan jaringan komputer, sehingga siswa memiliki kemampuan dalam 
+                                teknologi informasi modern dan siap bekerja di bidang teknisi IT maupun administrasi jaringan.</h5>
                         </div>
                         <div class="d-flex border-top">
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>John Doe</small>
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>1.49 Hrs</small>
-                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>30 Students</small>
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>Dwi Bayu Nugraha</small>
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>08.00 - 10.00</small>
+                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>35 Murid</small>
                         </div>
                     </div>
                 </div>
@@ -407,122 +410,122 @@
     </div>
     <!-- Prestasi  End -->
 
-<!-- Ekstrakurikuler Start -->
-<div id="eskul" class="container-xxl py-5">
-    <div class="container">
-        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title bg-white text-center text-primary px-3">Ekstrakurikuler</h6>
-            <h1 class="mb-5">Kegiatan Ekstrakurikuler</h1>
-        </div>
-
-        <!-- Eskul Slider Container -->
-        <div class="eskul-slider-wrapper">
-            
-            <!-- Navigation Button Left -->
-            <button class="eskul-nav eskul-prev" onclick="eskulSlide(-1)">
-                <i class="fas fa-chevron-left"></i>
-            </button>
-
-            <!-- Eskul Cards Container -->
-            <div class="eskul-cards-container">
-                <div class="eskul-cards-track" id="eskulTrack">
-                    
-                    <!-- Eskul Card 1 - Pramuka -->
-                    <div class="eskul-slider-card">
-                        <div class="eskul-slider-image">
-                            <img src="<?= base_url('assets/images/kegiatan/pramuka.jpg') ?>" alt="Pramuka">
-                        </div>
-                        <h5 class="eskul-slider-title">Pramuka</h5>
-                        <p class="eskul-slider-desc">Kegiatan kepramukaan yang melatih kedisiplinan, kemandirian, dan kepemimpinan siswa melalui berbagai aktivitas outdoor.</p>
-                        <p class="eskul-slider-schedule">Setiap Sabtu</p>
-                    </div>
-
-                    <!-- Eskul Card 2 - Paskibra -->
-                    <div class="eskul-slider-card">
-                        <div class="eskul-slider-image">
-                            <img src="<?= base_url('assets/images/kegiatan/paskibra.jpg') ?>" alt="Paskibra">
-                        </div>
-                        <h5 class="eskul-slider-title">Paskibra</h5>
-                        <p class="eskul-slider-desc">Pasukan Pengibar Bendera yang melatih kekompakan, ketegasan, dan nasionalisme dalam upacara bendera.</p>
-                        <p class="eskul-slider-schedule">Setiap Jumat</p>
-                    </div>
-
-                    <!-- Eskul Card 3 - Seni Musik -->
-                    <div class="eskul-slider-card">
-                        <div class="eskul-slider-image">
-                            <img src="<?= base_url('assets/images/kegiatan/seni musik.jpeg') ?>" alt="Seni Musik">
-                        </div>
-                        <h5 class="eskul-slider-title">Seni Musik</h5>
-                        <p class="eskul-slider-desc">Mengembangkan kreativitas dan bakat seni musik siswa melalui berbagai alat musik modern dan tradisional.</p>
-                        <p class="eskul-slider-schedule">Setiap Minggu</p>
-                    </div>
-
-                    <!-- Eskul Card 4 - Seni Tari -->
-                    <div class="eskul-slider-card">
-                        <div class="eskul-slider-image">
-                            <img src="<?= base_url('assets/images/kegiatan/seni tari.jpeg') ?>" alt="Seni Tari">
-                        </div>
-                        <h5 class="eskul-slider-title">Seni Tari</h5>
-                        <p class="eskul-slider-desc">Melatih kemampuan seni tari tradisional dan modern untuk mengembangkan kepercayaan diri dan ekspresi siswa.</p>
-                        <p class="eskul-slider-schedule">Setiap Rabu</p>
-                    </div>
-
-                    <!-- Eskul Card 5 - Marawis -->
-                    <div class="eskul-slider-card">
-                        <div class="eskul-slider-image">
-                            <img src="<?= base_url('assets/images/kegiatan/marawis.jpg') ?>" alt="Marawis">
-                        </div>
-                        <h5 class="eskul-slider-title">Marawis</h5>
-                        <p class="eskul-slider-desc">Seni musik tradisional Islam yang mengembangkan bakat seni dan memperkuat nilai-nilai keagamaan siswa.</p>
-                        <p class="eskul-slider-schedule">Setiap Selasa</p>
-                    </div>
-
-                    <!-- Eskul Card 6 - Futsal -->
-                    <div class="eskul-slider-card">
-                        <div class="eskul-slider-image">
-                            <img src="<?= base_url('assets/images/kegiatan/futsal.jpg') ?>" alt="Futsal">
-                        </div>
-                        <h5 class="eskul-slider-title">Futsal</h5>
-                        <p class="eskul-slider-desc">Olahraga futsal untuk meningkatkan kebugaran, kerja sama tim, dan sportivitas siswa dalam kompetisi.</p>
-                        <p class="eskul-slider-schedule">Setiap Kamis</p>
-                    </div>
-
-                    <!-- Eskul Card 7 - Voli -->
-                    <div class="eskul-slider-card">
-                        <div class="eskul-slider-image">
-                            <img src="<?= base_url('assets/images/kegiatan/olahraga.png') ?>" alt="Voli">
-                        </div>
-                        <h5 class="eskul-slider-title">Voli</h5>
-                        <p class="eskul-slider-desc">Olahraga bola voli yang melatih koordinasi, kekuatan, dan kekompakan tim dalam pertandingan.</p>
-                        <p class="eskul-slider-schedule">Setiap Senin</p>
-                    </div>
-
-                </div>
+    <!-- Ekstrakurikuler Start -->
+    <div id="eskul" class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Ekstrakurikuler</h6>
+                <h1 class="mb-5">Kegiatan Ekstrakurikuler</h1>
             </div>
 
-            <!-- Navigation Button Right -->
-            <button class="eskul-nav eskul-next" onclick="eskulSlide(1)">
-                <i class="fas fa-chevron-right"></i>
-            </button>
+            <!-- Eskul Slider Container -->
+            <div class="eskul-slider-wrapper">
+                
+                <!-- Navigation Button Left -->
+                <button class="eskul-nav eskul-prev" onclick="eskulSlide(-1)">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <!-- Eskul Cards Container -->
+                <div class="eskul-cards-container">
+                    <div class="eskul-cards-track" id="eskulTrack">
+                        
+                        <!-- Eskul Card 1 - Pramuka -->
+                        <div class="eskul-slider-card">
+                            <div class="eskul-slider-image">
+                                <img src="<?= base_url('assets/images/kegiatan/pramuka.jpg') ?>" alt="Pramuka">
+                            </div>
+                            <h5 class="eskul-slider-title">Pramuka</h5>
+                            <p class="eskul-slider-desc">Kegiatan kepramukaan yang melatih kedisiplinan, kemandirian, dan kepemimpinan siswa melalui berbagai aktivitas outdoor.</p>
+                            <p class="eskul-slider-schedule">Setiap Sabtu</p>
+                        </div>
+
+                        <!-- Eskul Card 2 - Paskibra -->
+                        <div class="eskul-slider-card">
+                            <div class="eskul-slider-image">
+                                <img src="<?= base_url('assets/images/kegiatan/paskibra.jpg') ?>" alt="Paskibra">
+                            </div>
+                            <h5 class="eskul-slider-title">Paskibra</h5>
+                            <p class="eskul-slider-desc">Pasukan Pengibar Bendera yang melatih kekompakan, ketegasan, dan nasionalisme dalam upacara bendera.</p>
+                            <p class="eskul-slider-schedule">Setiap Jumat</p>
+                        </div>
+
+                        <!-- Eskul Card 3 - Seni Musik -->
+                        <div class="eskul-slider-card">
+                            <div class="eskul-slider-image">
+                                <img src="<?= base_url('assets/images/kegiatan/seni musik.jpeg') ?>" alt="Seni Musik">
+                            </div>
+                            <h5 class="eskul-slider-title">Seni Musik</h5>
+                            <p class="eskul-slider-desc">Mengembangkan kreativitas dan bakat seni musik siswa melalui berbagai alat musik modern dan tradisional.</p>
+                            <p class="eskul-slider-schedule">Setiap Minggu</p>
+                        </div>
+
+                        <!-- Eskul Card 4 - Seni Tari -->
+                        <div class="eskul-slider-card">
+                            <div class="eskul-slider-image">
+                                <img src="<?= base_url('assets/images/kegiatan/seni tari.jpeg') ?>" alt="Seni Tari">
+                            </div>
+                            <h5 class="eskul-slider-title">Seni Tari</h5>
+                            <p class="eskul-slider-desc">Melatih kemampuan seni tari tradisional dan modern untuk mengembangkan kepercayaan diri dan ekspresi siswa.</p>
+                            <p class="eskul-slider-schedule">Setiap Rabu</p>
+                        </div>
+
+                        <!-- Eskul Card 5 - Marawis -->
+                        <div class="eskul-slider-card">
+                            <div class="eskul-slider-image">
+                                <img src="<?= base_url('assets/images/kegiatan/marawis.jpg') ?>" alt="Marawis">
+                            </div>
+                            <h5 class="eskul-slider-title">Marawis</h5>
+                            <p class="eskul-slider-desc">Seni musik tradisional Islam yang mengembangkan bakat seni dan memperkuat nilai-nilai keagamaan siswa.</p>
+                            <p class="eskul-slider-schedule">Setiap Selasa</p>
+                        </div>
+
+                        <!-- Eskul Card 6 - Futsal -->
+                        <div class="eskul-slider-card">
+                            <div class="eskul-slider-image">
+                                <img src="<?= base_url('assets/images/kegiatan/futsal.jpg') ?>" alt="Futsal">
+                            </div>
+                            <h5 class="eskul-slider-title">Futsal</h5>
+                            <p class="eskul-slider-desc">Olahraga futsal untuk meningkatkan kebugaran, kerja sama tim, dan sportivitas siswa dalam kompetisi.</p>
+                            <p class="eskul-slider-schedule">Setiap Kamis</p>
+                        </div>
+
+                        <!-- Eskul Card 7 - Voli -->
+                        <div class="eskul-slider-card">
+                            <div class="eskul-slider-image">
+                                <img src="<?= base_url('assets/images/kegiatan/olahraga.png') ?>" alt="Voli">
+                            </div>
+                            <h5 class="eskul-slider-title">Voli</h5>
+                            <p class="eskul-slider-desc">Olahraga bola voli yang melatih koordinasi, kekuatan, dan kekompakan tim dalam pertandingan.</p>
+                            <p class="eskul-slider-schedule">Setiap Senin</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Navigation Button Right -->
+                <button class="eskul-nav eskul-next" onclick="eskulSlide(1)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+
+            </div>
+
+            <!-- Slider Dots -->
+            <div class="eskul-dots" id="eskulDots"></div>
 
         </div>
-
-        <!-- Slider Dots -->
-        <div class="eskul-dots" id="eskulDots"></div>
-
     </div>
-</div>
-<!-- Ekstrakurikuler End -->
+    <!-- Ekstrakurikuler End -->
 
     <!-- kegiatan Start-->
     <div id="kegiatan" class="container-xxl py-5">
-    <div class="container">
-        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title bg-white text-center text-primary px-3">Acara</h6>
-            <h1 class="mb-5">Kegiatan Sekolah</h1>
-        </div>
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Acara</h6>
+                <h1 class="mb-5">Kegiatan Sekolah</h1>
+            </div>
 
-        <div class="row g-4">
+            <div class="row g-4">
             
             <!-- Kegiatan Card 1 -->
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -575,9 +578,9 @@
                 </div>
             </div>
 
+            </div>
         </div>
     </div>
-</div>
     <!-- Kegiatan End-->
 
     <!-- Berita Start-->

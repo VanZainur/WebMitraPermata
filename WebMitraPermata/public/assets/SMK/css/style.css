@@ -930,6 +930,24 @@ body, html {
     border-radius: 5px;
 }
 
+.eskul-cards-container {
+    overflow: visible !important;
+}
+
+.eskul-cards-track {
+    overflow: visible !important;
+}
+
+.eskul-slider-card {
+    transition: 0.3s ease;
+    transform-origin: center;
+}
+
+.eskul-slider-card:hover {
+    transform: translateY(-10px);
+}
+
+
 /* Responsive */
 @media (max-width: 1200px) {
     .eskul-slider-card {
