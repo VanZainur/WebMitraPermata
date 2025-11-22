@@ -645,7 +645,6 @@
                     { id: 'yayasan-mitra', label: 'Mitra Kerjasama', icon: '🤝', type: 'mitra' },
                     { id: 'yayasan-eskul', label: 'Ekstrakurikuler', icon: '📚', type: 'eskul', hasCategory: true },
                     { id: 'yayasan-galeri', label: 'Galeri', icon: '🖼️', type: 'galeri' },
-                    { id: 'yayasan-pendaftaran', label: 'Pendaftaran', icon: '👥', type: 'pendaftaran' }
                 ]
             },
             {
@@ -655,8 +654,8 @@
                 badge: { color: 'badge-green', text: 'TK' },
                 children: [
                     { id: 'tk-kegiatan', label: 'Kegiatan', icon: '📅', type: 'kegiatan' },
-                    { id: 'tk-pendaftaran', label: 'Pendaftaran', icon: '👥', type: 'pendaftaran' },
-                    { id: 'tk-galeri', label: 'Galeri Foto', icon: '🖼️', type: 'galeri' }
+                    { id: 'tk-galeri', label: 'Galeri Foto', icon: '🖼️', type: 'galeri' },
+                    { id: 'tk-pendaftaran', label: 'Pendaftaran', icon: '👥', type: 'pendaftaran' }
                 ]
             },
             {
@@ -700,7 +699,8 @@
                     { id: 'smk-program', label: 'Program Keahlian', icon: '🎓', type: 'program' },
                     { id: 'smk-mitra', label: 'Mitra Kerjasama', icon: '🤝', type: 'mitra' },
                     { id: 'smk-galeri', label: 'Galeri', icon: '🖼️', type: 'galeri' },
-                    { id: 'smk-testimoni', label: 'Testimoni', icon: '💬', type: 'testimoni' }
+                    { id: 'smk-testimoni', label: 'Testimoni', icon: '💬', type: 'testimoni' },
+                    { id: 'tk-pendaftaran', label: 'Pendaftaran', icon: '👥', type: 'pendaftaran' }
                 ]
             }
         ];

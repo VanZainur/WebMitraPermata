@@ -108,9 +108,7 @@
       <span class="arrow">▼</span>
     </a>
     <div class="mobile-dropdown-content">
-      <a href="/layanan/pendaftaran">Extrakulikuler</a>
-      <a href="/layanan/konsultasi">Prestasi</a>
-      <a href="/galeri">Galeri</a>
+      <a href="/prestasi">Prestasi</a>
       <a href="/berita">Berita</a>
     </div>
   </div>
