@@ -63,6 +63,9 @@ $routes->get('/prestasi/all', 'PrestasiController::index');
 //     $routes->get('berita/hapus/(:num)', 'Admin::hapusBerita/$1');
 // });
 
+// Route untuk Admin Dashboard
+$routes->get('admin', 'Admin::index');
+$routes->get('admin/dashboard', 'Admin::index');
 // --------------------------------------------------------------------
 // Additional Routes
 // --------------------------------------------------------------------
