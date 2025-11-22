@@ -346,6 +346,9 @@ body {
   transition: right 0.3s ease;
   padding: 80px 30px 30px;
   box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+  overflow-y: auto !important; 
+  overflow-x: hidden;
+  padding-bottom: 50px;
 }
 
 .mobile-menu.active {
@@ -408,7 +411,8 @@ body {
   margin-top: 10px;
   border-radius: 12px;
   opacity: 0;
-  padding: 0; /* biar rapi */
+  padding: 0;
+  overflow-y: auto;
 }
 
 .mobile-dropdown.active .mobile-dropdown-content {
