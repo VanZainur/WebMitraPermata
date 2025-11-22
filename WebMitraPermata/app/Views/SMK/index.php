@@ -416,114 +416,50 @@
     </div>
     <!-- Guru End -->
 
-    <!-- Prestasi  Start -->
-    <div id="prestasi" class="container-xxl py-5 category">
+   <!-- Prestasi Start -->
+<div id="prestasi" class="container-xxl py-5 category">
+    <div class="container">
 
-        <div class="container">
-
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Prestasi</h6>
-                <h1 class="mb-3">Terbaik Siswa</h1>
-                <p class="text-muted mb-4">Siswa-siswi kami berhasil meraih berbagai prestasi yang membanggakan, baik di bidang akademik, olahraga, maupun seni. Setiap pencapaian ini menunjukkan kerja keras, disiplin, serta semangat mereka dalam mengembangkan potensi terbaik</p>
-            </div>
-
-            <div class="row g-4">
-
-                <!-- Card 1 -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="prestasi-card shadow-lg rounded overflow-hidden">
-                        <div class="prestasi-img">
-                            <img src="<?= base_url('assets/images/achievements/Juara 1 Badminton.png') ?>" class="img-fluid" alt="Prestasi 1">
-                        </div>
-                        <div class="prestasi-body p-4">
-                            <h5 class="fw-bold mb-2">Juara 1 Lomba Badminton</h5>
-                            <p class="text-muted mb-0">
-                                Siswa Mitra Permata Meraih Juara 1 Lomba Badminton dalam Kejuaraan Kota Tangerang Selatan 2025.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="prestasi-card shadow-lg rounded overflow-hidden">
-                        <div class="prestasi-img">
-                            <img src="<?= base_url('assets/images/achievements/Juara 1 Voly.png') ?>" class="img-fluid" alt="Prestasi 2">
-                        </div>
-                        <div class="prestasi-body p-4">
-                            <h5 class="fw-bold mb-2">Juara 1 Volly Putra</h5>
-                            <p class="text-muted mb-0">
-                                Siswa SMK Mitra Permata  Meraih Juara 1 Lomba Volly OSIS CUP di SMAN 4 Kabupaten Tangerang.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="prestasi-card shadow-lg rounded overflow-hidden">
-                        <div class="prestasi-img">
-                            <img src="<?= base_url('assets/images/achievements/Juara 3 Voly.png') ?>" class="img-fluid" alt="Prestasi 3">
-                        </div>
-                        <div class="prestasi-body p-4">
-                            <h5 class="fw-bold mb-2">Juara 3 Volly Putra</h5>
-                            <p class="text-muted mb-0">
-                               Siswa Mitra Permata Meraih Juara 3 Lomba Volly SLTA Se-Banten dalam Piala Rektor UIN SMH BANTEN 2025.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-
-                   <!-- Card 1 -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="prestasi-card shadow-lg rounded overflow-hidden">
-                        <div class="prestasi-img">
-                            <img src="<?= base_url('assets/images/achievements/Juara 1 Badminton.png') ?>" class="img-fluid" alt="Prestasi 1">
-                        </div>
-                        <div class="prestasi-body p-4">
-                            <h5 class="fw-bold mb-2">Juara 1 Lomba Badminton</h5>
-                            <p class="text-muted mb-0">
-                                Siswa Mitra Permata Meraih Juara 1 Lomba Badminton dalam Kejuaraan Kota Tangerang Selatan 2025.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="prestasi-card shadow-lg rounded overflow-hidden">
-                        <div class="prestasi-img">
-                            <img src="<?= base_url('assets/images/achievements/Juara 1 Voly.png') ?>" class="img-fluid" alt="Prestasi 2">
-                        </div>
-                        <div class="prestasi-body p-4">
-                            <h5 class="fw-bold mb-2">Juara 1 Volly Putra</h5>
-                            <p class="text-muted mb-0">
-                                Siswa SMK Mitra Permata  Meraih Juara 1 Lomba Volly OSIS CUP di SMAN 4 Kabupaten Tangerang.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="prestasi-card shadow-lg rounded overflow-hidden">
-                        <div class="prestasi-img">
-                            <img src="<?= base_url('assets/images/achievements/Juara 3 Voly.png') ?>" class="img-fluid" alt="Prestasi 3">
-                        </div>
-                        <div class="prestasi-body p-4">
-                            <h5 class="fw-bold mb-2">Juara 3 Volly Putra</h5>
-                            <p class="text-muted mb-0">
-                               Siswa Mitra Permata Meraih Juara 3 Lomba Volly SLTA Se-Banten dalam Piala Rektor UIN SMH BANTEN 2025.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h6 class="section-title bg-white text-center text-primary px-3">Prestasi</h6>
+            <h1 class="mb-3">Terbaik Siswa</h1>
+            <p class="text-muted mb-4">Siswa-siswi kami berhasil meraih berbagai prestasi yang membanggakan, baik di bidang akademik, olahraga, maupun seni. Setiap pencapaian ini menunjukkan kerja keras, disiplin, serta semangat mereka dalam mengembangkan potensi terbaik</p>
         </div>
+
+        <div class="row g-4">
+            <?php if (!empty($prestasi)): ?>
+                <?php foreach ($prestasi as $item): ?>
+                    <!-- Prestasi Card -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="prestasi-card shadow-lg rounded overflow-hidden">
+                            <div class="prestasi-img">
+                                <img src="<?= base_url('assets/images/achievements/' . $item['gambar']) ?>" 
+                                     class="img-fluid" 
+                                     alt="<?= esc($item['judul']) ?>">
+                            </div>
+                            <div class="prestasi-body p-4">
+                                <h5 class="fw-bold mb-2"><?= esc($item['judul']) ?></h5>
+                                <p class="text-muted mb-0">
+                                    <?= esc($item['deskripsi']) ?>
+                                </p>
+                                <small class="text-muted d-block mt-2">
+                                    <i class="fa fa-calendar"></i> 
+                                    <?= date('d M Y', strtotime($item['tanggal'])) ?>
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <div class="col-12">
+                    <p class="text-center text-muted">Belum ada prestasi tersedia.</p>
+                </div>
+            <?php endif; ?>
+        </div>
+
     </div>
-    <!-- Prestasi  End -->
+</div>
+<!-- Prestasi End -->
 
     <!-- Ekstrakurikuler Start -->
     <div id="eskul" class="container-xxl py-5">
@@ -642,193 +578,78 @@
                 <p class="text-muted mb-4">Kegiatan sekolah kami mencakup berbagai program yang edukatif, kreatif, dan membangun karakter. Mulai dari kegiatan rutin hingga acara khusus, semuanya dirancang untuk memberikan pengalaman belajar yang menyenangkan sekaligus memperkuat kebersamaan di lingkungan sekolah</p>
             </div>
 
-            <div class="row g-4">
-            
-            <!-- Kegiatan Card 1 -->
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="kegiatan-card">
-                    <div class="kegiatan-image">
-                        <img src="<?= base_url('assets/SMK/img/pramuka.jpg') ?>" alt="Upacara Hari Pahlawan">
-                        <div class="kegiatan-date">15 Jan 2025</div>
-                    </div>
-                    <div class="kegiatan-content">
-                        <h5 class="kegiatan-title">Upacara Hari Pahlawan</h5>
-                        <p class="kegiatan-desc">Pelaksanaan upacara bendera dalam rangka memperingati Hari Pahlawan Nasional yang dihadiri seluruh siswa dan guru SMK Mitra Permata.</p>
-                        <a href="#" class="kegiatan-link">
-                            Lihat Detail <i class="fa fa-arrow-right"></i>
-                        </a>
+           <div class="row g-4">
+
+        <?php if (!empty($kegiatan)): ?>
+            <?php foreach ($kegiatan as $item): ?>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="kegiatan-card">
+                        <div class="kegiatan-image">
+                            <img src="<?= base_url('assets/images/kegiatan/' . $item['gambar']) ?>" alt="<?= esc($item['judul']) ?>">
+                            <div class="kegiatan-date">
+                                <?= date('d M Y', strtotime($item['tanggal'])) ?>
+                            </div>
+                        </div>
+                        <div class="kegiatan-content">
+                            <h5 class="kegiatan-title"><?= esc($item['judul']) ?></h5>
+                            <p class="kegiatan-desc"><?= esc($item['deskripsi']) ?></p>
+                            <a href="<?= base_url('kegiatan/detail/' . $item['id']) ?>" class="kegiatan-link">
+                                Lihat Detail <i class="fa fa-arrow-right"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
+            <?php endforeach; ?>
+        <?php else: ?>
+            <div class="col-12 text-center text-muted">Belum ada kegiatan tersedia.</div>
+        <?php endif; ?>
 
-            <!-- Kegiatan Card 2 -->
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="kegiatan-card">
-                    <div class="kegiatan-image">
-                        <img src="<?= base_url('assets/SMK/img/paskibra.jpg') ?>" alt="Kunjungan Industri">
-                        <div class="kegiatan-date">20 Jan 2025</div>
-                    </div>
-                    <div class="kegiatan-content">
-                        <h5 class="kegiatan-title">Kunjungan Industri</h5>
-                        <p class="kegiatan-desc">Siswa jurusan TKJ berkunjung ke perusahaan teknologi untuk menambah wawasan dan pengalaman kerja di dunia industri teknologi informasi.</p>
-                        <a href="#" class="kegiatan-link">
-                            Lihat Detail <i class="fa fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
+        </div>
 
-            <!-- Kegiatan Card 3 -->
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="kegiatan-card">
-                    <div class="kegiatan-image">
-                        <img src="<?= base_url('assets/SMK/img/marawis.jpg') ?>" alt="Class Meeting 2025">
-                        <div class="kegiatan-date">25 Jan 2025</div>
-                    </div>
-                    <div class="kegiatan-content">
-                        <h5 class="kegiatan-title">Class Meeting 2025</h5>
-                        <p class="kegiatan-desc">Kompetisi olahraga dan seni antar kelas dalam rangka mempererat tali persaudaraan dan mengembangkan sportivitas siswa SMK Mitra Permata.</p>
-                        <a href="#" class="kegiatan-link">
-                            Lihat Detail <i class="fa fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            </div>
         </div>
     </div>
     <!-- Kegiatan End-->
 
-    <!-- Berita Start-->
-    <div id="berita" class="container-xxl py-5 category">
+ <!-- Berita Start-->
+<div id="berita" class="container-xxl py-5">
     <div class="container">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title bg-white text-center text-primary px-3">News</h6>
-            <h1 class="mb-5">Berita Sekolah</h1>
+            <h6 class="section-title bg-white text-center text-primary px-3">Informasi</h6>
+            <h1 class="mb-5">Berita Terkini</h1>
         </div>
 
         <div class="row g-4">
-            
-            <!-- Berita Card 1 -->
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="berita-card">
-                    <div class="berita-image">
-                        <img src="<?= base_url('assets/images/berita/spnb.png') ?>" alt="PPDB">
-                        <div class="berita-badge">
-                            <i class="fa fa-calendar"></i> 10 Feb 2025
+            <?php if (!empty($berita)): ?>
+                <?php foreach ($berita as $item): ?>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="berita-card">
+                            <div class="berita-image">
+                                <img src="<?= base_url('assets/images/berita/' . $item['gambar']) ?>" alt="<?= $item['judul'] ?>">
+                                <div class="berita-badge">
+                                    <i class="fa fa-calendar"></i> 
+                                    <?= date('d M Y', strtotime($item['tanggal'])) ?>
+                                </div>
+                            </div>
+                            <div class="berita-content">
+                                <h5 class="berita-title"><?= esc($item['judul']) ?></h5>
+                                <p class="berita-desc"><?= esc($item['deskripsi']) ?></p>
+                                <a href="<?= base_url('berita/detail/' . $item['id']) ?>" class="berita-link">
+                                    Baca Selengkapnya <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="berita-content">
-                        <h5 class="berita-title">Pendaftaran Siswa Baru 2025/2026 Resmi Dibuka</h5>
-                        <p class="berita-desc">SMK Mitra Permata membuka pendaftaran siswa baru untuk tahun ajaran 2025/2026. Segera daftarkan putra-putri Anda dan raih masa depan cerah bersama kami!</p>
-                        <a href="#" class="berita-link">
-                            Baca Selengkapnya <i class="fa fa-arrow-right"></i>
-                        </a>
-                    </div>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <div class="col-12">
+                    <p class="text-center text-muted">Belum ada berita tersedia.</p>
                 </div>
-            </div>
-
-            <!-- Berita Card 2 -->
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="berita-card">
-                    <div class="berita-image">
-                        <img src="<?= base_url('assets/images/berita/hut ri.webp') ?>" alt="Kerja Sama">
-                        <div class="berita-badge">
-                            <i class="fa fa-calendar"></i> 08 Feb 2025
-                        </div>
-                    </div>
-                    <div class="berita-content">
-                        <h5 class="berita-title">Peringatan HUT RI dengan Berbagai Lomba Menarik</h5>
-                        <p class="berita-desc">Kemeriahan HUT RI ke-80 terasa di lingkungan SMK Mitra Permata dengan berbagai kompetisi seru dan kegiatan yang melibatkan seluruh siswa.</p>
-                        <a href="#" class="berita-link">
-                            Baca Selengkapnya <i class="fa fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Berita Card 3 -->
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="berita-card">
-                    <div class="berita-image">
-                        <img src="<?= base_url('assets/images/berita/Juara 1 Badminton.jpg') ?>" alt="Pelatihan">
-                        <div class="berita-badge">
-                            <i class="fa fa-calendar"></i> 05 Feb 2025
-                        </div>
-                    </div>
-                    <div class="berita-content">
-                        <h5 class="berita-title">Juara 1 Lomba Badminton Tingkat Nasional</h5>
-                        <p class="berita-desc">Atlet badminton SMK Mitra Permata berhasil meraih juara pertama dalam turnamen bergengsi tingkat nasional. Prestasi luar biasa ini merupakan hasil dari latihan intensif dan dedikasi tinggi.</p>
-                        <a href="#" class="berita-link">
-                            Baca Selengkapnya <i class="fa fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Berita Card 4 -->
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="berita-card">
-                    <div class="berita-image">
-                        <img src="<?= base_url('assets/images/berita/tips ujian.png') ?>" alt="Prestasi">
-                        <div class="berita-badge">
-                            <i class="fa fa-calendar"></i> 01 Feb 2025
-                        </div>
-                    </div>
-                    <div class="berita-content">
-                        <h5 class="berita-title">Tips Sukses Menghadapi Ujian Akhir Semester</h5>
-                        <p class="berita-desc">Persiapan matang adalah kunci kesuksesan. Berikut tips dan strategi belajar efektif dari para guru untuk menghadapi ujian dengan percaya diri</p>
-                        <a href="#" class="berita-link">
-                            Baca Selengkapnya <i class="fa fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Berita Card 5 -->
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="berita-card">
-                    <div class="berita-image">
-                        <img src="<?= base_url('assets/images/berita/pkk.png') ?>" alt="Seminar">
-                        <div class="berita-badge">
-                            <i class="fa fa-calendar"></i> 28 Jan 2025
-                        </div>
-                    </div>
-                    <div class="berita-content">
-                        <h5 class="berita-title">Sidang PKL Siswa/Siswi SMK Mitra Permata Tahun 2025</h5>
-                        <p class="berita-desc">SMK Mitra Permata mengadakan Sidang PKL untuk membekali siswa dengan mindset dan skill.</p>
-                        <a href="#" class="berita-link">
-                            Baca Selengkapnya <i class="fa fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Berita Card 6 -->
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="berita-card">
-                    <div class="berita-image">
-                        <img src="<?= base_url('assets/images/berita/kunjungan industri.jpg') ?>" alt="Fasilitas">
-                        <div class="berita-badge">
-                            <i class="fa fa-calendar"></i> 25 Jan 2025
-                        </div>
-                    </div>
-                    <div class="berita-content">
-                        <h5 class="berita-title">Kunjungan Industri ke Perusahaan Teknologi Terkemuka</h5>
-                        <p class="berita-desc">Siswa jurusan TKJ mendapat kesempatan emas untuk berkunjung langsung ke perusahaan teknologi startup unicorn. Pengalaman berharga ini memberikan insight dunia kerja</p>
-                        <a href="#" class="berita-link">
-                            Baca Selengkapnya <i class="fa fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
+            <?php endif; ?>
         </div>
     </div>
 </div>
-    <!-- Berita End-->
-
+<!-- Berita End-->
+    
     <!-- Testimonial Start -->
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">

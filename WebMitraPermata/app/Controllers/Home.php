@@ -2,71 +2,90 @@
 
 namespace App\Controllers;
 
+use App\Models\BeritaModel;
+use App\Models\KegiatanModel;
+use App\Models\PrestasiModel;
+
 class Home extends BaseController
 {
     public function index(): string
     {
-        return view('home'); // app/Views/home.php
+        return view('home');
     }
 
     public function profil(): string
     {
-        return view('profil'); // app/Views/profil.php
+        return view('profil');
     }
 
     public function kontak(): string
     {
-        return view('kontak'); // app/Views/kontak.php
+        return view('kontak');
     }
 
-        public function struktur(): string
+    public function struktur(): string
     {
-        return view('struktur'); // app/Views/struktur.php
+        return view('struktur');
     }
 
     public function fasilitas(): string
     {
-        return view('fasilitas'); // app/Views/struktur.php
+        return view('fasilitas');
     }
-
 
     public function kemitraan(): string
     {
-        return view('kemitraan'); // app/Views/struktur.php
+        return view('kemitraan');
     }
 
     public function kegiatan(): string
     {
-        return view('kegiatan'); // app/Views/struktur.php
+        return view('kegiatan');
     }
 
-     public function prestasi(): string
+    public function prestasi(): string
     {
-        return view('prestasi'); // app/Views/struktur.php
+        return view('prestasi');
     }
 
     public function berita(): string
     {
-        return view('berita'); // app/Views/berita.php
+        return view('berita');
     }
 
-     public function akademik(): string
+    public function akademik(): string
     {
-        return view('akademik'); // app/Views/berita.php
+        return view('akademik');
     }
 
+    // Method SMK: kirim data berita, kegiatan, DAN prestasi ke view
   public function SMK(): string
+        {
+            $beritaModel = new BeritaModel();
+            $kegiatanModel = new KegiatanModel();
+            $prestasiModel = new PrestasiModel();
+
+            $data = [
+                'berita' => $beritaModel->orderBy('tanggal', 'DESC')->findAll(3),      // 6 berita terbaru
+                'kegiatan' => $kegiatanModel->orderBy('tanggal', 'DESC')->findAll(3),  // 3 kegiatan terbaru
+                'prestasi' => $prestasiModel->orderBy('tanggal', 'DESC')->findAll(6)   // 6 prestasi terbaru
+            ];
+
+            return view('smk/index', $data);
+        }
+    // Method SMP: juga kirim data yang sama
+    public function SMP(): string
     {
-        return view('smk/index'); // app/Views/berita.php
+        $beritaModel = new BeritaModel();
+        $kegiatanModel = new KegiatanModel();
+        $prestasiModel = new PrestasiModel();
+
+        $data = [
+            'berita' => $beritaModel->orderBy('tanggal', 'DESC')->findAll(),
+            'kegiatan' => $kegiatanModel->orderBy('tanggal', 'DESC')->findAll(),
+            'prestasi' => $prestasiModel->orderBy('tanggal', 'DESC')->findAll()
+        ];
+
+        return view('smp/index', $data);
     }
-
-     public function SMP(): string
-    {
-        return view('smp/index'); // app/Views/berita.php
-    }
-
-
 }
-
-
-

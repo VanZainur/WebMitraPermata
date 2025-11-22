@@ -6,8 +6,16 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 
-// ROUTE WEBSITE UTAMA
+// --------------------------------------------------------------------
+// Route Definitions
+// --------------------------------------------------------------------
+
+// Default Route - Halaman Utama
 $routes->get('/', 'Home::index');
+
+// --------------------------------------------------------------------
+// Routes untuk Menu Umum
+// --------------------------------------------------------------------
 $routes->get('/profil', 'Home::profil');
 $routes->get('/kontak', 'Home::kontak');
 $routes->get('/struktur', 'Home::struktur');
@@ -18,42 +26,58 @@ $routes->get('/prestasi', 'Home::prestasi');
 $routes->get('/berita', 'Home::berita');
 $routes->get('/akademik', 'Home::akademik');
 
-// ROUTE SMK (WEB DI DALAM WEB)
-$routes->get('/smk', 'Smk::index');
-$routes->get('/smk/about', 'Smk::about');
-$routes->get('/smk/courses', 'Smk::courses');
-$routes->get('/smk/kegiatan', 'Smk::kegiatan');
-$routes->get('/smk/prestasi', 'Smk::prestasi');
-$routes->get('/smk/berita', 'Smk::berita');
-$routes->get('/smk/contact', 'Smk::contact');
-$routes->get('/smk/404', 'Smk::notfound');
+// --------------------------------------------------------------------
+// Routes untuk Halaman SMK dan SMP
+// --------------------------------------------------------------------
+$routes->get('/smk', 'Home::SMK');
+$routes->get('/smp', 'Home::SMP');
 
-// ROUTE SMP (WEB DI DALAM WEB)
-$routes->get('/smp', 'Smp::index');
-$routes->get('/smp/about', 'Smp::about');
-$routes->get('/smp/courses', 'Smp::courses');
-$routes->get('/smp/kegiatan', 'Smp::kegiatan');
-$routes->get('/smp/prestasi', 'Smp::prestasi');
-$routes->get('/smp/berita', 'Smp::berita');
-$routes->get('/smp/contact', 'Smp::contact');
-$routes->get('/smp/404', 'Smp::notfound');
+// --------------------------------------------------------------------
+// Routes untuk Berita
+// --------------------------------------------------------------------
+// Detail Berita (dengan parameter ID)
+$routes->get('/berita/detail/(:num)', 'BeritaController::detail/$1');
+$routes->get('/kegiatan/detail/(:num)', 'KegiatanController::detail/$1');
 
-// ROUTE SD (WEB DI DALAM WEB)
-$routes->get('/sd', 'Sd::index');
-$routes->get('/sd/about', 'Sd::about');
-$routes->get('/sd/courses', 'Sd::courses');
-$routes->get('/sd/kegiatan', 'Sd::kegiatan');
-$routes->get('/sd/prestasi', 'Sd::prestasi');
-$routes->get('/sd/berita', 'Sd::berita');
-$routes->get('/sd/contact', 'Sd::contact');
-$routes->get('/sd/404', 'Sd::notfound');
 
-// ROUTE TK (WEB DI DALAM WEB)
-$routes->get('/tk', 'Tk::index');
-$routes->get('/tk/about', 'Tk::about');
-$routes->get('/tk/courses', 'Tk::courses');
-$routes->get('/tk/kegiatan', 'Tk::kegiatan');
-$routes->get('/tk/prestasi', 'Tk::prestasi');
-$routes->get('/tk/berita', 'Tk::berita');
-$routes->get('/tk/contact', 'Tk::contact');
-$routes->get('/tk/404', 'Tk::notfound');
+// Jika ingin menampilkan semua berita di halaman khusus
+$routes->get('/berita/all', 'BeritaController::index');
+
+
+// Routes untuk Prestasi
+$routes->get('/prestasi/detail/(:num)', 'PrestasiController::detail/$1');
+$routes->get('/prestasi/all', 'PrestasiController::index');
+
+// --------------------------------------------------------------------
+// Routes untuk Admin (jika diperlukan nanti)
+// --------------------------------------------------------------------
+// $routes->group('admin', function($routes) {
+//     $routes->get('dashboard', 'Admin::dashboard');
+//     $routes->get('berita', 'Admin::berita');
+//     $routes->get('berita/tambah', 'Admin::tambahBerita');
+//     $routes->post('berita/simpan', 'Admin::simpanBerita');
+//     $routes->get('berita/edit/(:num)', 'Admin::editBerita/$1');
+//     $routes->post('berita/update/(:num)', 'Admin::updateBerita/$1');
+//     $routes->get('berita/hapus/(:num)', 'Admin::hapusBerita/$1');
+// });
+
+// --------------------------------------------------------------------
+// Additional Routes
+// --------------------------------------------------------------------
+
+/*
+ * --------------------------------------------------------------------
+ * Route untuk Error 404
+ * --------------------------------------------------------------------
+ */
+$routes->set404Override(function() {
+    echo view('errors/html/error_404');
+});
+
+/*
+ * --------------------------------------------------------------------
+ * Additional Routing
+ * --------------------------------------------------------------------
+ */
+// Jika Anda ingin menggunakan auto-routing (tidak direkomendasikan)
+// $routes->setAutoRoute(true);
