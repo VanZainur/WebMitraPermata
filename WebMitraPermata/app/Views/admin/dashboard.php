@@ -593,6 +593,7 @@
             'yayasan-mitra': [],
             'yayasan-eskul': [],
             'yayasan-galeri': [],
+            'yayasan-pendaftaran': [],
             'tk-kegiatan': [],
             'tk-pendaftaran': [],
             'tk-galeri': [],
@@ -606,6 +607,7 @@
             'smp-guru': [],
             'smp-galeri': [],
             'smp-testimoni': [],
+            'smp-pendaftaran': [],
             'smk-berita': [],
             'smk-kegiatan': [],
             'smk-prestasi': [],
@@ -614,7 +616,8 @@
             'smk-program': [],
             'smk-mitra': [],
             'smk-galeri': [],
-            'smk-testimoni': []
+            'smk-testimoni': [],
+            'smk-pendaftaran': []
         };
 
         let activeMenu = 'dashboard';
@@ -641,7 +644,8 @@
                     { id: 'yayasan-prestasi', label: 'Prestasi', icon: '🏆', type: 'prestasi' },
                     { id: 'yayasan-mitra', label: 'Mitra Kerjasama', icon: '🤝', type: 'mitra' },
                     { id: 'yayasan-eskul', label: 'Ekstrakurikuler', icon: '📚', type: 'eskul', hasCategory: true },
-                    { id: 'yayasan-galeri', label: 'Galeri', icon: '🖼️', type: 'galeri' }
+                    { id: 'yayasan-galeri', label: 'Galeri', icon: '🖼️', type: 'galeri' },
+                    { id: 'yayasan-pendaftaran', label: 'Pendaftaran', icon: '👥', type: 'pendaftaran' }
                 ]
             },
             {
@@ -678,7 +682,8 @@
                     { id: 'smp-eskul', label: 'Ekstrakurikuler', icon: '📚', type: 'eskul' },
                     { id: 'smp-guru', label: 'Guru', icon: '👨‍🏫', type: 'guru' },
                     { id: 'smp-galeri', label: 'Galeri', icon: '🖼️', type: 'galeri' },
-                    { id: 'smp-testimoni', label: 'Testimoni', icon: '💬', type: 'testimoni' }
+                    { id: 'smp-testimoni', label: 'Testimoni', icon: '💬', type: 'testimoni' },
+                    { id: 'smp-pendaftaran', label: 'Pendaftaran', icon: '👥', type: 'pendaftaran' }
                 ]
             },
             {
