@@ -40,145 +40,145 @@ $uri = service('uri');
 
 <body>
 
-<!-- Popup Brosur Start -->
-<div id="brosurPopup"
-    style="position: fixed; inset: 0; background: rgba(0,0,0,0.6); 
-        display: none; align-items: center; justify-content: center; 
-        z-index: 99999; padding: 20px;">
+    <!-- Popup Brosur Start -->
+    <div id="brosurPopup"
+        style="position: fixed; inset: 0; background: rgba(0,0,0,0.6); 
+            display: none; align-items: center; justify-content: center; 
+            z-index: 99999; padding: 20px;">
 
-    <div style="background: #fff; width: 100%; max-width: 750px; 
-            border-radius: 15px; overflow: hidden; box-shadow: 0 0 30px rgba(0,0,0,0.3); 
-            display: flex; flex-wrap: wrap; position: relative;
-            max-height: 90vh;">
+        <div style="background: #fff; width: 100%; max-width: 750px; 
+                border-radius: 15px; overflow: hidden; box-shadow: 0 0 30px rgba(0,0,0,0.3); 
+                display: flex; flex-wrap: wrap; position: relative;
+                max-height: 90vh;">
 
-        <!-- Tombol Close -->
-        <button onclick="document.getElementById('brosurPopup').style.display='none'"
-            style="position: absolute; top: 15px; right: 15px; background: white; border: none; 
-                color: #000000; width: 35px; height: 35px; font-size: 18px;
-                border-radius: 50%; cursor: pointer; z-index: 10;">
-            ✕
-        </button>
+            <!-- Tombol Close -->
+            <button onclick="document.getElementById('brosurPopup').style.display='none'"
+                style="position: absolute; top: 15px; right: 15px; background: white; border: none; 
+                    color: #000000; width: 35px; height: 35px; font-size: 18px;
+                    border-radius: 50%; cursor: pointer; z-index: 10;">
+                ✕
+            </button>
 
-        <!-- KIRI -->
-        <div style="flex: 1; min-width: 40%; max-height: 90vh;">
-            <img src="<?= base_url('assets/images/berita/brosur.jpg') ?>"
-                style="width: 100%; height: 100%; object-fit: cover;">
-        </div>
+            <!-- KIRI -->
+            <div style="flex: 1; min-width: 40%; max-height: 90vh;">
+                <img src="<?= base_url('assets/images/berita/brosur.jpg') ?>"
+                    style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
 
-        <!-- KANAN (FORM) -->
-        <div style="flex: 1; min-width: 60%; padding: 25px; overflow-y: auto; max-height: 90vh;">
+            <!-- KANAN (FORM) -->
+            <div style="flex: 1; min-width: 60%; padding: 25px; overflow-y: auto; max-height: 90vh;">
 
-            <h3 class="text-center mb-4" style="font-weight: 800;">
-                Pendaftaran Peserta Didik Baru 2025
-            </h3>
+                <h3 class="text-center mb-4" style="font-weight: 800;">
+                    Pendaftaran Peserta Didik Baru 2025
+                </h3>
 
-            <!-- NOTIF / ALERT -->
-            <div id="alertContainer"></div>
+                <!-- NOTIF / ALERT -->
+                <div id="alertContainer"></div>
 
-            <form id="formPendaftaran">
-                
-                <div class="mb-3">
-                    <label class="form-label">Nama Lengkap *</label>
-                    <input type="text" name="nama" class="form-control" required>
-                </div>
+                <form id="formPendaftaran">
+                    
+                    <div class="mb-3">
+                        <label class="form-label">Nama Lengkap *</label>
+                        <input type="text" name="nama" class="form-control" required>
+                    </div>
 
-                <div class="mb-3">
-                    <label class="form-label">Alamat Lengkap</label>
-                    <input type="text" name="alamat" class="form-control">
-                </div>
+                    <div class="mb-3">
+                        <label class="form-label">Alamat Lengkap</label>
+                        <input type="text" name="alamat" class="form-control">
+                    </div>
 
-                <div class="mb-3">
-                    <label class="form-label">Asal Sekolah</label>
-                    <input type="text" name="asal_sekolah" class="form-control">
-                </div>
+                    <div class="mb-3">
+                        <label class="form-label">Asal Sekolah</label>
+                        <input type="text" name="asal_sekolah" class="form-control">
+                    </div>
 
-                <div class="mb-3">
-                    <label class="form-label">Nomor WhatsApp *</label>
-                    <input type="text" name="no_hp" class="form-control" required>
-                </div>
+                    <div class="mb-3">
+                        <label class="form-label">Nomor WhatsApp *</label>
+                        <input type="text" name="no_hp" class="form-control" required>
+                    </div>
 
-                <div class="mb-3">
-                    <label class="form-label">Jurusan *</label>
-                    <select name="jurusan" class="form-control" required>
-                        <option value="">-- Pilih Jurusan --</option>
-                        <option value="TKJ">Teknik Komputer Jaringan</option>
-                        <option value="TKR">Teknik Kendaraan Ringan</option>
-                    </select>
-                </div>
+                    <div class="mb-3">
+                        <label class="form-label">Jurusan *</label>
+                        <select name="jurusan" class="form-control" required>
+                            <option value="">-- Pilih Jurusan --</option>
+                            <option value="TKJ">Teknik Komputer Jaringan</option>
+                            <option value="TKR">Teknik Kendaraan Ringan</option>
+                        </select>
+                    </div>
 
-                <!-- Token CSRF -->
-                <input type="hidden" name="<?= csrf_token() ?>" value="<?= csrf_hash() ?>">
+                    <!-- Token CSRF -->
+                    <input type="hidden" name="<?= csrf_token() ?>" value="<?= csrf_hash() ?>">
 
-                <button type="submit" id="btnSubmit" class="btn btn-primary w-100 py-2">
-                    <i class="fa fa-paper-plane me-2"></i>Kirim Pendaftaran
-                </button>
-            </form>
+                    <button type="submit" id="btnSubmit" class="btn btn-primary w-100 py-2">
+                        <i class="fa fa-paper-plane me-2"></i>Kirim Pendaftaran
+                    </button>
+                </form>
 
+            </div>
         </div>
     </div>
-</div>
 
-<!-- Script Popup & AJAX -->
-<script>
-// Auto tampil setelah 2 detik
-window.onload = () => {
-    setTimeout(() => {
-        document.getElementById('brosurPopup').style.display = 'flex';
-    }, 2000);
-};
+    <!-- Script Popup & AJAX -->
+    <script>
+    // Auto tampil setelah 2 detik
+    window.onload = () => {
+        setTimeout(() => {
+            document.getElementById('brosurPopup').style.display = 'flex';
+        }, 2000);
+    };
 
-// Submit AJAX
-document.getElementById("formPendaftaran").addEventListener("submit", function(e) {
-    e.preventDefault();
+    // Submit AJAX
+    document.getElementById("formPendaftaran").addEventListener("submit", function(e) {
+        e.preventDefault();
 
-    let form = new FormData(this);
-    let alertBox = document.getElementById("alertContainer");
-    let btn = document.getElementById("btnSubmit");
+        let form = new FormData(this);
+        let alertBox = document.getElementById("alertContainer");
+        let btn = document.getElementById("btnSubmit");
 
-    btn.disabled = true;
-    btn.innerHTML = '<i class="fa fa-spinner fa-spin me-2"></i>Mengirim...';
+        btn.disabled = true;
+        btn.innerHTML = '<i class="fa fa-spinner fa-spin me-2"></i>Mengirim...';
 
-    fetch("<?= base_url('pendaftaran/submit') ?>", {
-        method: "POST",
-        body: form
-    })
-    .then(r => r.json())
-    .then(res => {
-        btn.disabled = false;
-        btn.innerHTML = '<i class="fa fa-paper-plane me-2"></i>Kirim Pendaftaran';
+        fetch("<?= base_url('pendaftaran/submit') ?>", {
+            method: "POST",
+            body: form
+        })
+        .then(r => r.json())
+        .then(res => {
+            btn.disabled = false;
+            btn.innerHTML = '<i class="fa fa-paper-plane me-2"></i>Kirim Pendaftaran';
 
-        if (res.success) {
-            alertBox.innerHTML = `
-                <div class="alert alert-success">
-                    <b>Berhasil!</b><br>${res.message}
-                </div>
-            `;
-            document.getElementById("formPendaftaran").reset();
-            setTimeout(() => location.reload(), 2000);
-        } else {
-            let errorList = "";
-            for (let i in res.errors) {
-                errorList += `<li>${res.errors[i]}</li>`;
+            if (res.success) {
+                alertBox.innerHTML = `
+                    <div class="alert alert-success">
+                        <b>Berhasil!</b><br>${res.message}
+                    </div>
+                `;
+                document.getElementById("formPendaftaran").reset();
+                setTimeout(() => location.reload(), 2000);
+            } else {
+                let errorList = "";
+                for (let i in res.errors) {
+                    errorList += `<li>${res.errors[i]}</li>`;
+                }
+                alertBox.innerHTML = `
+                    <div class="alert alert-danger">
+                        <b>Gagal mengirim!</b><br><ul>${errorList}</ul>
+                    </div>
+                `;
             }
+        })
+        .catch(() => {
+            btn.disabled = false;
+            btn.innerHTML = '<i class="fa fa-paper-plane me-2"></i>Kirim Pendaftaran';
             alertBox.innerHTML = `
                 <div class="alert alert-danger">
-                    <b>Gagal mengirim!</b><br><ul>${errorList}</ul>
+                    ❌ Kesalahan koneksi. Coba lagi nanti.
                 </div>
             `;
-        }
-    })
-    .catch(() => {
-        btn.disabled = false;
-        btn.innerHTML = '<i class="fa fa-paper-plane me-2"></i>Kirim Pendaftaran';
-        alertBox.innerHTML = `
-            <div class="alert alert-danger">
-                ❌ Kesalahan koneksi. Coba lagi nanti.
-            </div>
-        `;
+        });
     });
-});
-</script>
-<!-- POP UP BROSUR END -->
+    </script>
+    <!-- POP UP BROSUR END -->
 
 
 
@@ -192,7 +192,7 @@ document.getElementById("formPendaftaran").addEventListener("submit", function(e
 
 <!-- Navbar Start -->
 <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-     <a href="#" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+     <a href="index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
         <img src="<?= base_url('assets/SMK/img/logo.png') ?>" alt="Logo" style="height: 45px; width: auto;" class="me-3">
         <h2 class="m-0 text-primary">SMK Mitra Permata</h2>
     </a>

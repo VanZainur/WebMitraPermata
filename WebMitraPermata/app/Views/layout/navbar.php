@@ -19,11 +19,7 @@
       <img src="<?= base_url('assets/images/logo.png') ?>" alt="Logo Mitra Permata" class="navbar-logo">
       <span>Mitra Permata</span>
     </a>
-
-      
       <ul class="navbar-nav">
-
-
          <li class="dropdown">
           <a href="/profil" class="dropdown-toggle">
             Profil
@@ -51,7 +47,6 @@
         <li class="dropdown">
           <a href="/akademik" class="dropdown-toggle">
             Akademik
-           
           </a>
         </li>
         
@@ -66,8 +61,6 @@
             <a href="<?= base_url('sd') ?>">SD</a>
             <a href="<?= base_url('smp') ?>">SMP</a>
             <a href="<?= base_url('smk') ?>">SMK</a>
-
-           
           </div>
         </li>
       </ul>
@@ -135,9 +128,9 @@
     </a>
     <div class="mobile-dropdown-content">
       <a href="<?= base_url('tk') ?>">TK</a>
-            <a href="<?= base_url('sd') ?>">SD</a>
-            <a href="<?= base_url('smp') ?>">SMP</a>
-            <a href="<?= base_url('smk') ?>">SMK</a>
+      <a href="<?= base_url('sd') ?>">SD</a>
+      <a href="<?= base_url('smp') ?>">SMP</a>
+      <a href="<?= base_url('smk') ?>">SMK</a>
     </div>
   </div>
 </div>

@@ -59,7 +59,7 @@ class Home extends BaseController
     }
 
     // Method SMK: kirim data berita, kegiatan, DAN prestasi ke view
-  public function SMK(): string
+    public function SMK(): string
         {
             $beritaModel = new BeritaModel();
             $kegiatanModel = new KegiatanModel();
@@ -87,5 +87,35 @@ class Home extends BaseController
         ];
 
         return view('smp/index', $data);
+    }
+
+    public function SD(): string
+    {
+        $beritaModel = new BeritaModel();
+        $kegiatanModel = new KegiatanModel();
+        $prestasiModel = new PrestasiModel();
+
+        $data = [
+            'berita' => $beritaModel->orderBy('tanggal', 'DESC')->findAll(),
+            'kegiatan' => $kegiatanModel->orderBy('tanggal', 'DESC')->findAll(),
+            'prestasi' => $prestasiModel->orderBy('tanggal', 'DESC')->findAll()
+        ];
+
+        return view('sd/index', $data);
+    }
+
+        public function TK(): string
+    {
+        $beritaModel = new BeritaModel();
+        $kegiatanModel = new KegiatanModel();
+        $prestasiModel = new PrestasiModel();
+
+        $data = [
+            'berita' => $beritaModel->orderBy('tanggal', 'DESC')->findAll(),
+            'kegiatan' => $kegiatanModel->orderBy('tanggal', 'DESC')->findAll(),
+            'prestasi' => $prestasiModel->orderBy('tanggal', 'DESC')->findAll()
+        ];
+
+        return view('tk/index', $data);
     }
 }

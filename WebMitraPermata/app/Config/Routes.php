@@ -31,6 +31,8 @@ $routes->get('/akademik', 'Home::akademik');
 // --------------------------------------------------------------------
 $routes->get('/smk', 'Home::SMK');
 $routes->get('/smp', 'Home::SMP');
+$routes->get('/sd', 'Home::sd');
+$routes->get('/tk', 'Home::tk');
 
 // --------------------------------------------------------------------
 // Routes untuk Berita
