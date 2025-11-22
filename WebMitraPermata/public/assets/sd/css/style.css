@@ -117,6 +117,11 @@
   outline: none;
 }
 
+.navbar-light.sticky-top {
+  top: 0 !important;
+  transition: 0.5s;
+}
+
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link.active {
   color: var(--primary);
