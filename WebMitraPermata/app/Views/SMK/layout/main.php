@@ -119,16 +119,10 @@ $uri = service('uri');
     </div>
     <!-- Spinner End -->
 
-
-    <!-- Navbar Start -->
-   <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-    <a href="<?= base_url('index.php'); ?>"  class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-
-        <!-- LOGO -->
-        <img src="<?= base_url('assets/SMK/img/logo.png') ?>" 
-             alt="Logo" 
-             style="height: 45px; width: auto;" 
-             class="me-3">
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+     <a href="#" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <img src="<?= base_url('assets/SMK/img/logo.png') ?>" alt="Logo" style="height: 45px; width: auto;" class="me-3">
         <h2 class="m-0 text-primary">SMK Mitra Permata</h2>
     </a>
 
@@ -136,38 +130,29 @@ $uri = service('uri');
         <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarCollapse">
+   <div class="collapse navbar-collapse" id="navbarCollapse">
     <div class="navbar-nav ms-auto p-4 p-lg-0">
-        <a href="<?= base_url('smk'); ?>" 
-            class="nav-item nav-link <?= ($uri->getSegment(1) == 'smk' && $uri->getTotalSegments() == 1 ? 'active' : '') ?>">
-            Beranda
-            </a>
-
-       <a href="#about" class="nav-item nav-link">Tentang Kami</a>
+        <a href="#about" class="nav-item nav-link">Tentang Kami</a>
         <a href="#jurusan" class="nav-item nav-link">Kejuruan</a>
-            <div class="nav-item dropdown">
-            <a href="#kegiatan" 
-            class="nav-link dropdown-toggle" 
-            data-bs-toggle="dropdown">
-            Kegiatan
-            </a>
-
+        
+        <div class="nav-item dropdown">
+            <a href="#kegiatan" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Kegiatan</a>
             <div class="dropdown-menu">
                 <a href="#prestasi" class="dropdown-item">Prestasi</a>
                 <a href="#eskul" class="dropdown-item">Extrakulikuler</a>
                 <a href="#berita" class="dropdown-item">Berita</a>
             </div>
-            </div>
-
-            <a href="#kontak" class="nav-item nav-link">Kontak</a>
-
-            <!-- <a href="#" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">
-                Daftar Sekarang<i class="fa fa-arrow-right ms-3"></i>
-            </a> -->
-            </div>
         </div>
-    </nav>
-    <!-- Navbar End -->
+
+        <a href="#kontak" class="nav-item nav-link">Kontak</a>
+        
+        <!-- PINDAHKAN BUTTON KE DALAM NAVBAR-NAV -->
+        <a href="<?= base_url('smk/pendaftaran'); ?>" class="btn-daftar ms-lg-3">
+            PENDAFTARAN <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+</nav>
+<!-- Navbar End -->
 
     <!-- Content Section -->
     <?= $this->renderSection('content') ?>
@@ -232,6 +217,8 @@ $uri = service('uri');
     </div>
 </div>
     <!-- Footer End -->
+
+
 
 
 
@@ -399,6 +386,35 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
+
+<script>
+// Ambil semua menu navbar yang pakai anchor #
+const navLinks = document.querySelectorAll('.navbar a[href^="#"]');
+
+// Ambil semua section yang punya ID
+const sections = document.querySelectorAll("section[id], div[id]");
+
+function setActiveNav() {
+    let scrollPos = window.scrollY + 120; // tambahan offset biar pas
+
+    sections.forEach(sec => {
+        if (sec.offsetTop <= scrollPos && (sec.offsetTop + sec.offsetHeight) > scrollPos) {
+            let id = sec.getAttribute("id");
+
+            navLinks.forEach(link => {
+                link.classList.remove("active");
+
+                if (link.getAttribute("href") === "#" + id) {
+                    link.classList.add("active");
+                }
+            });
+        }
+    });
+}
+
+window.addEventListener("scroll", setActiveNav);
+</script>
+
 </body>
 
 </html>

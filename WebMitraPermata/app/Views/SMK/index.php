@@ -48,8 +48,8 @@
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="section-title bg-white text-center text-primary px-3">Kerja Sama</h6>
-                <h1 class="mb-4">Mitra Kerjasama Kami</h1>
-                <p class="text-muted mb-5">Bersama industri dan universitas terkemuka untuk menghasilkan lulusan berkualitas</p>
+                <h1 class="mb-3">Mitra Kerjasama Kami</h1>
+                <p class="text-muted mb-4">Kami menjalin kerja sama strategis dengan berbagai perusahaan, industri, serta institusi pendidikan untuk mendukung pengembangan kompetensi siswa. Kolaborasi ini menjadi landasan penting dalam menciptakan lingkungan belajar yang relevan, inovatif, dan siap menghadapi kebutuhan dunia kerja</p>
             </div>
 
             <!-- Partner Slider Modern -->
@@ -423,7 +423,8 @@
 
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="section-title bg-white text-center text-primary px-3">Prestasi</h6>
-                <h1 class="mb-5">Prestasi Terbaik Siswa</h1>
+                <h1 class="mb-3">Terbaik Siswa</h1>
+                <p class="text-muted mb-4">Siswa-siswi kami berhasil meraih berbagai prestasi yang membanggakan, baik di bidang akademik, olahraga, maupun seni. Setiap pencapaian ini menunjukkan kerja keras, disiplin, serta semangat mereka dalam mengembangkan potensi terbaik</p>
             </div>
 
             <div class="row g-4">
@@ -528,8 +529,9 @@
     <div id="eskul" class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Ekstrakurikuler</h6>
-                <h1 class="mb-2">Kegiatan Ekstrakurikuler</h1>
+                <h6 class="section-title bg-white text-center text-primary px-3">Kegiatan</h6>
+                <h1 class="mb-2">Ekstrakurikuler</h1>
+                <p class="text-muted mb-4">Di sekolah kami, kegiatan ekstrakurikuler menjadi wadah untuk mengembangkan bakat, minat, dan kreativitas siswa. Melalui berbagai kegiatan yang seru dan bermanfaat, siswa dapat belajar hal baru, melatih kedisiplinan, serta membangun kerja sama dalam tim. Setiap kegiatan dirancang agar mendukung perkembangan karakter sekaligus memberikan pengalaman belajar yang menyenangkan di luar kelas.</p>
             </div>
 
             <!-- Eskul Slider Container -->
@@ -636,7 +638,8 @@
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="section-title bg-white text-center text-primary px-3">Acara</h6>
-                <h1 class="mb-5">Kegiatan Sekolah</h1>
+                <h1 class="mb-3">Kegiatan Sekolah</h1>
+                <p class="text-muted mb-4">Kegiatan sekolah kami mencakup berbagai program yang edukatif, kreatif, dan membangun karakter. Mulai dari kegiatan rutin hingga acara khusus, semuanya dirancang untuk memberikan pengalaman belajar yang menyenangkan sekaligus memperkuat kebersamaan di lingkungan sekolah</p>
             </div>
 
             <div class="row g-4">

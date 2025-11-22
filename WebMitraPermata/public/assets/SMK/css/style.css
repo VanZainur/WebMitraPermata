@@ -106,6 +106,11 @@
   font-weight: 900;
   vertical-align: middle;
   margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.navbar .dropdown:hover .dropdown-toggle::after {
+  transform: rotate(180deg);
 }
 
 /*** Navbar sticky ***/
@@ -139,6 +144,34 @@
   .navbar-light .navbar-nav {
     border-top: 1px solid #eeeeee;
   }
+
+  /* Mobile Dropdown Style */
+  .navbar .dropdown-menu {
+    background: #f8f9fa;
+    border: none;
+    border-radius: 8px;
+    margin-top: 8px;
+    padding: 8px 0;
+  }
+
+  .navbar .dropdown-menu .dropdown-item {
+    padding: 10px 20px;
+    color: #2c3e50;
+    font-size: 14px;
+    border-left: 3px solid transparent;
+    transition: all 0.3s ease;
+  }
+
+  .navbar .dropdown-menu .dropdown-item:hover {
+    background: #ffffff;
+    border-left-color: #06a34e;
+    color: #06a34e;
+    padding-left: 24px;
+  }
+
+  .navbar .dropdown-menu .dropdown-item + .dropdown-item {
+    border-top: 1px solid #e9ecef;
+  }
 }
 
 .navbar-light .navbar-brand,
@@ -156,27 +189,67 @@
   transition: 0.5s;
 }
 
+
+.navbar .dropdown-menu .dropdown-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, rgba(6, 163, 78, 0.08) 0%, transparent 100%);
+    transition: width 0.3s ease;
+  }
+
+
 @media (min-width: 992px) {
   .navbar .nav-item .dropdown-menu {
     display: block;
     margin-top: 0;
     opacity: 0;
     visibility: hidden;
-    transition: 0.5s;
-  }
-
-  .navbar .dropdown-menu.fade-down {
+    transition: all 0.3s ease;
+    background: #ffffff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+    padding: 8px 0;
+    min-width: 200px;
+    overflow: hidden;
     top: 100%;
-    transform: rotateX(-75deg);
-    transform-origin: 0% 0%;
+    transform: translateY(-10px);
   }
 
   .navbar .nav-item:hover .dropdown-menu {
-    top: 100%;
-    transform: rotateX(0deg);
+    transform: translateY(0);
     visibility: visible;
-    transition: 0.5s;
     opacity: 1;
+  }
+
+  /* Dropdown Item Style - Clean & Minimal */
+  .navbar .dropdown-menu .dropdown-item {
+    padding: 10px 20px;
+    color: #2c3e50;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all 0.25s ease;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-left: 2px solid transparent;
+  }
+
+  /* Hover effect - subtle & elegant */
+  .navbar .dropdown-menu .dropdown-item:hover {
+    background: #f8f9fa;
+    border-left-color: #06a34e;
+    color: #06a34e;
+    padding-left: 24px;
+  }
+
+  /* Separator antara item */
+  .navbar .dropdown-menu .dropdown-item + .dropdown-item {
+    border-top: 1px solid #f0f0f0;
   }
 }
 
@@ -1186,5 +1259,97 @@ html {
     .partner-modern-slider::after {
         width: 80px;
     }
+}
+
+/* ========================================
+   BUTTON PENDAFTARAN — CLEAN & PREMIUM
+   ======================================== */
+
+.btn-daftar {
+    background: linear-gradient(135deg, #06a34e, #039e45) !important;
+    color: #fff !important;
+    padding:30px 30px !important;
+    height: 50px !important;        /* atur tinggi fix */
+    line-height: 38px !important;   /* biar teks ketengah */
+    border-radius: 50px !important;
+    font-weight: 800 !important;
+    font-size: 14px !important;
+    border: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    box-shadow: 0 5px 14px rgba(6, 163, 78, 0.25) !important;
+    text-decoration: none !important;
+    transition: 0.25s ease-in-out !important;
+    margin-top: 5px !important; /* TURUNIN DI SINI */
+    margin-right: 10px !important; /* TURUNIN DI SINI */
+}
+
+.btn-daftar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(6, 163, 78, 0.35) !important;
+}
+
+
+/* Active (tekan) */
+.btn-daftar:active {
+    transform: translateY(0) !important;
+    box-shadow: 0 3px 8px rgba(6, 163, 78, 0.22) !important;
+}
+
+/* Icon movement minimal */
+.btn-daftar i {
+    transition: transform 0.25s ease !important;
+}
+
+.btn-daftar:hover i {
+    transform: translateX(3px) !important;
+}
+
+/* Desktop — tampil sejajar dengan menu */
+@media (min-width: 992px) {
+    .navbar-collapse {
+        display: flex !important;
+        align-items: center !important;
+        
+    }
+
+    .btn-daftar {
+        margin-left: 0 !important;
+    }
+}
+
+/* Tablet & Mobile — full width */
+@media (max-width: 991.98px) {
+    .btn-daftar {
+        width: calc(100% - 30px) !important;
+        margin: 15px auto 10px auto !important;
+        justify-content: center !important;
+        display: flex !important;
+    }
+}
+
+/* Very small phones */
+@media (max-width: 576px) {
+    .btn-daftar {
+        font-size: 13px !important;
+        padding: 10px 20px !important;
+    }
+}
+
+/* Hilangkan biru pada dropdown item */
+.navbar .dropdown-menu .dropdown-item,
+.navbar .dropdown-menu .dropdown-item:active,
+.navbar .dropdown-menu .dropdown-item:focus {
+    color: #2c3e50 !important;      /* warna teks normal */
+    background-color: transparent !important; /* tidak biru */
+    outline: none !important;
+}
+
+/* Hover tetap hijau */
+.navbar .dropdown-menu .dropdown-item:hover {
+    background: #f8f9fa !important;
+    color: #06a34e !important;
+    border-left-color: #06a34e;
 }
 
