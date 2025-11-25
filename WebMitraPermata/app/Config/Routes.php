@@ -66,6 +66,10 @@ $routes->get('/prestasi/all', 'PrestasiController::index');
 // Route untuk Admin Dashboard
 $routes->get('admin', 'Admin::index');
 $routes->get('admin/dashboard', 'Admin::index');
+
+// API Routes untuk Admin (untuk fetch data dari database)
+$routes->get('admin/api/pendaftaran', 'Admin::getPendaftaran');
+$routes->get('admin/api/pendaftaran/(:segment)', 'Admin::getPendaftaran/$1');
 // --------------------------------------------------------------------
 // Additional Routes
 // --------------------------------------------------------------------
