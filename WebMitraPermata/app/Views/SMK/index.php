@@ -43,8 +43,8 @@
     </div>
     <!-- Carousel End -->
 
-        <!-- Kemitraan Start -->
-        <div class="container-xxl py-5">
+    <!-- Kemitraan Start -->
+    <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="section-title bg-white text-center text-primary px-3">Kerja Sama</h6>
@@ -199,49 +199,49 @@
 
     <!-- Service Start -->
     <div class="container-xxl py-5">
-            <div class="container">
-                <div class="row g-4">
+        <div class="container">
+            <div class="row g-4">
 
-                <!-- Guru Kompeten -->
+                <!-- Guru Profesional -->
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item text-center pt-3">
                         <div class="p-4">
-                            <i class="fa fa-3x fa-chalkboard-teacher text-primary mb-4"></i>
-                            <h5 class="mb-3">Guru Kompeten</h5>
-                            <p>Guru yang memiliki keahlian sesuai bidangnya dan mampu membimbing siswa dengan baik.</p>
+                            <i class="fa fa-3x fa-user-tie text-primary mb-4"></i>
+                            <h5 class="mb-3">Guru Profesional & Berpengalaman</h5>
+                            <p>Tenaga pendidik berkualifikasi tinggi dan berpengalaman di bidangnya untuk memastikan kualitas pembelajaran terbaik.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Prakerin -->
+                <!-- Kurikulum Nasional -->
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item text-center pt-3">
                         <div class="p-4">
-                            <i class="fa fa-3x fa-industry text-primary mb-4"></i>
-                            <h5 class="mb-3">Praktik Kerja Lapangan</h5>
-                            <p>Program magang di dunia industri yang memberikan pengalaman kerja nyata.</p>
+                            <i class="fa fa-3x fa-book-open text-primary mb-4"></i>
+                            <h5 class="mb-3">Kurikulum Nasional</h5>
+                            <p>Menggunakan kurikulum resmi Kemendikbud yang selalu diperbarui agar sesuai dengan perkembangan dunia pendidikan serta kebutuhan peserta didik.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Bengkel / Workshop -->
+                <!-- Fasilitas Lengkap & Modern -->
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item text-center pt-3">
                         <div class="p-4">
-                            <i class="fa fa-3x fa-tools text-primary mb-4"></i>
-                            <h5 class="mb-3">Bengkel Praktik</h5>
-                            <p>Fasilitas praktik lengkap untuk melatih keterampilan siswa sesuai jurusan yang mereka pelajari.</p>
+                            <i class="fa fa-3x fa-school text-primary mb-4"></i>
+                            <h5 class="mb-3">Fasilitas Lengkap & Modern</h5>
+                            <p>Dilengkapi ruang kelas nyaman, laboratorium, area bermain, serta sarana pembelajaran yang mendukung siswa.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Bursa Kerja Khusus -->
+                <!-- Terakreditasi -->
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
                     <div class="service-item text-center pt-3">
                         <div class="p-4">
-                            <i class="fa fa-3x fa-briefcase text-primary mb-4"></i>
-                            <h5 class="mb-3">Bursa Kerja Khusus</h5>
-                            <p>Layanan sekolah untuk membantu siswa dan alumni mendapatkan informasi lowongan kerja.</p>
+                            <i class="fa fa-3x fa-certificate text-primary mb-4"></i>
+                            <h5 class="mb-3">Terakreditasi</h5>
+                            <p>Sekolah dengan status akreditasi resmi yang menjamin mutu dan kualitas pendidikan serta memastikan proses pembelajaran berjalan amandan terpercaya.</p>
                         </div>
                     </div>
                 </div>
