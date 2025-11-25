@@ -64,10 +64,10 @@
                 
                 <div class="trending-card small">
                     <div class="trending-image">
-                        <img src="<?= base_url('assets/images/news/trending-3.jpg') ?>" alt="Trending News">
+                        <img src="<?= base_url('assets/images/berita/spnb.png') ?>" alt="Trending News">
                         <div class="trending-overlay">
                             <span class="category pengumuman">Pengumuman</span>
-                            <h4>PPDB Gelombang 3 Dibuka! Dapatkan Beasiswa Hingga 100%</h4>
+                            <h4>Sistem Penerimaan Murid Baru Tahun Ajaran 2025/2026</h4>
                             <span class="date">22 Sept 2025</span>
                         </div>
                     </div>

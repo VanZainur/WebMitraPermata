@@ -299,7 +299,7 @@
     <div class="news-grid">
       <article class="news-card">
         <div class="news-image-wrapper">
-          <img src="<?= base_url('assets/images/news/ppdb.jpg') ?>" 
+          <img src="<?= base_url('assets/images/berita/spnb.png') ?>" 
                alt="PPDB 2025" 
                class="news-img">
           <div class="news-category">Pendaftaran</div>
@@ -325,7 +325,7 @@
       
       <article class="news-card">
         <div class="news-image-wrapper">
-          <img src="<?= base_url('assets/images/news/smk.jpg') ?>" 
+          <img src="<?= base_url('assets/images/berita/Juara 1 Badminton.jpg') ?>" 
                alt="SMK Akreditasi B" 
                class="news-img">
           <div class="news-category">Prestasi</div>
@@ -351,7 +351,7 @@
       
       <article class="news-card">
         <div class="news-image-wrapper">
-          <img src="<?= base_url('assets/images/news/pkbm.jpg') ?>" 
+          <img src="<?= base_url('assets/images/jenjang/PKBM.jpg') ?>" 
                alt="PKBM & LKP" 
                class="news-img">
           <div class="news-category">Fasilitas</div>
