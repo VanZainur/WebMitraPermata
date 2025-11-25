@@ -33,6 +33,7 @@ $routes->get('/smk', 'Home::SMK');
 $routes->get('/smp', 'Home::SMP');
 $routes->get('/sd', 'Home::sd');
 $routes->get('/tk', 'Home::tk');
+$routes->get('tk2', 'TK2::index');//buat tk2
 
 // --------------------------------------------------------------------
 // Routes untuk Berita
