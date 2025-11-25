@@ -119,65 +119,78 @@ $uri = service('uri');
     </div>
 
     <!-- Script Popup & AJAX -->
-    <script>
-    // Auto tampil setelah 2 detik
-    window.onload = () => {
+   <script>
+// Tampilkan popup setelah 2 detik (jika tidak ada session error/success)
+window.addEventListener("load", function () {
+
+    <?php if (session()->has('popup_errors') || session()->has('popup_success')): ?>
+        document.getElementById('brosurPopup').style.display = 'flex';
+    <?php else: ?>
         setTimeout(() => {
             document.getElementById('brosurPopup').style.display = 'flex';
         }, 2000);
-    };
+    <?php endif ?>
+});
+</script>
 
-    // Submit AJAX
-    document.getElementById("formPendaftaran").addEventListener("submit", function(e) {
-        e.preventDefault();
 
-        let form = new FormData(this);
-        let alertBox = document.getElementById("alertContainer");
-        let btn = document.getElementById("btnSubmit");
+<script>
+// Submit AJAX
+document.getElementById("formPendaftaran").addEventListener("submit", function(e) {
+    e.preventDefault();
 
-        btn.disabled = true;
-        btn.innerHTML = '<i class="fa fa-spinner fa-spin me-2"></i>Mengirim...';
+    let form = new FormData(this);
+    let alertBox = document.getElementById("alertContainer");
+    let btn = document.getElementById("btnSubmit");
 
-        fetch("<?= base_url('pendaftaran/submit') ?>", {
-            method: "POST",
-            body: form
-        })
-        .then(r => r.json())
-        .then(res => {
-            btn.disabled = false;
-            btn.innerHTML = '<i class="fa fa-paper-plane me-2"></i>Kirim Pendaftaran';
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fa fa-spinner fa-spin me-2"></i>Mengirim...';
 
-            if (res.success) {
-                alertBox.innerHTML = `
-                    <div class="alert alert-success">
-                        <b>Berhasil!</b><br>${res.message}
-                    </div>
-                `;
-                document.getElementById("formPendaftaran").reset();
-                setTimeout(() => location.reload(), 2000);
-            } else {
-                let errorList = "";
-                for (let i in res.errors) {
-                    errorList += `<li>${res.errors[i]}</li>`;
-                }
-                alertBox.innerHTML = `
-                    <div class="alert alert-danger">
-                        <b>Gagal mengirim!</b><br><ul>${errorList}</ul>
-                    </div>
-                `;
-            }
-        })
-        .catch(() => {
-            btn.disabled = false;
-            btn.innerHTML = '<i class="fa fa-paper-plane me-2"></i>Kirim Pendaftaran';
+   fetch("<?= base_url('pendaftaran/submit/smk') ?>", {
+    method: "POST",
+    body: form,
+    headers: {
+        "X-Requested-With": "XMLHttpRequest"
+    }
+})
+
+    .then(r => r.json())
+    .then(res => {
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fa fa-paper-plane me-2"></i>Kirim Pendaftaran';
+
+        if (res.success) {
             alertBox.innerHTML = `
-                <div class="alert alert-danger">
-                    ❌ Kesalahan koneksi. Coba lagi nanti.
+                <div class="alert alert-success">
+                    <b>Berhasil!</b><br>${res.message}
                 </div>
             `;
-        });
+            document.getElementById("formPendaftaran").reset();
+            setTimeout(() => location.reload(), 2000);
+        } else {
+            let errorList = "";
+            for (let i in res.errors) {
+                errorList += `<li>${res.errors[i]}</li>`;
+            }
+            alertBox.innerHTML = `
+                <div class="alert alert-danger">
+                    <b>Gagal mengirim!</b><br><ul>${errorList}</ul>
+                </div>
+            `;
+        }
+    })
+    .catch(() => {
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fa fa-paper-plane me-2"></i>Kirim Pendaftaran';
+        alertBox.innerHTML = `
+            <div class="alert alert-danger">
+                ❌ Kesalahan koneksi. Coba lagi nanti.
+            </div>
+        `;
     });
-    </script>
+});
+</script>
+
     <!-- POP UP BROSUR END -->
 
 

@@ -2,50 +2,22 @@
 
 namespace App\Controllers;
 
+use App\Models\BeritaModel;
+use App\Models\KegiatanModel;
+use App\Models\PrestasiModel;
+
 class Smk extends BaseController
 {
-    public function __construct()
-    {
-        helper(['url']); // Load URL helper
-    }
-
     public function index()
     {
-        return view('smk/index');
-    }
+        $berita = (new BeritaModel())->where('jenjang', 'smk')->findAll();
+        $kegiatan = (new KegiatanModel())->where('jenjang', 'smk')->findAll();
+        $prestasi = (new PrestasiModel())->where('jenjang', 'smk')->findAll();
 
-    public function about()
-    {
-        return view('smk/about');
-    }
-
-    public function courses()
-    {
-        return view('smk/courses');
-    }
-
-    public function kegiatan()
-    {
-        return view('smk/kegiatan');
-    }
-
-    public function prestasi()
-    {
-        return view('smk/prestasi');
-    }
-
-     public function berita()
-    {
-        return view('smk/berita');
-    }
-
-    public function notfound()
-    {
-        return view('smk/404');
-    }
-
-    public function contact()
-    {
-        return view('smk/contact');
+        return view('smk/index', [
+            'berita' => $berita,
+            'kegiatan' => $kegiatan,
+            'prestasi' => $prestasi
+        ]);
     }
 }

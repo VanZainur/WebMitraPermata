@@ -6,36 +6,52 @@ use App\Models\PendaftaranModel;
 
 class Pendaftaran extends BaseController
 {
-    public function index()
+    public function submit($jenjang)
     {
-        return "OK";
-    }
+        // valid jenjang
+        $allowed = ['smk', 'smp', 'sd', 'tk'];
+        if (!in_array($jenjang, $allowed)) {
+            return $this->response->setJSON([
+                'success' => false,
+                'message' => 'Jenjang tidak valid.'
+            ]);
+        }
 
-    public function submit()
-    {
+        // cek AJAX
+        if (!$this->request->isAJAX()) {
+            return $this->response->setJSON([
+                'success' => false,
+                'message' => 'Invalid request.'
+            ]);
+        }
+
         $model = new PendaftaranModel();
 
         try {
+
             $data = [
-                'nama' => $this->request->getPost('nama'),
-                'alamat' => $this->request->getPost('alamat'),
-                'asal_sekolah' => $this->request->getPost('asal_sekolah'),
-                'no_hp' => $this->request->getPost('no_hp'),
-                'jurusan' => $this->request->getPost('jurusan'),
-                'created_at' => date('Y-m-d H:i:s') // <— WAJIB
+                'nama'          => $this->request->getPost('nama'),
+                'alamat'        => $this->request->getPost('alamat'),
+                'asal_sekolah'  => $this->request->getPost('asal_sekolah'),
+                'no_hp'         => $this->request->getPost('no_hp'),
+                'jurusan'       => $this->request->getPost('jurusan'),
+                'jenjang'       => $jenjang,
+                'created_at'    => date('Y-m-d H:i:s'),
             ];
 
             $model->insert($data);
 
             return $this->response->setJSON([
                 'success' => true,
-                'message' => 'Pendaftaran berhasil!'
+                'message' => 'Pendaftaran berhasil dikirim.'
             ]);
 
         } catch (\Throwable $e) {
+
             return $this->response->setJSON([
                 'success' => false,
-                'errors' => [$e->getMessage()] // supaya JS gak nge-loop huruf satu2
+                'message' => 'Gagal menyimpan data.',
+                'error'   => $e->getMessage()
             ]);
         }
     }

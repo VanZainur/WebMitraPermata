@@ -12,14 +12,23 @@ class KegiatanController extends BaseController
         $this->kegiatanModel = new KegiatanModel();
     }
 
-    public function detail($id)
+    // Detail kegiatan berdasarkan jenjang
+    public function detail($jenjang, $id)
     {
-        $data['kegiatan'] = $this->kegiatanModel->find($id);
+        $allowed = ['smk', 'smp', 'sd', 'tk'];
+        if (!in_array($jenjang, $allowed)) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Jenjang tidak valid');
+        }
+
+        $data['kegiatan'] = $this->kegiatanModel
+            ->where('id', $id)
+            ->where('jenjang', $jenjang)
+            ->first();
 
         if (!$data['kegiatan']) {
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Kegiatan tidak ditemukan');
         }
 
-        return view('smk/detail_kegiatan', $data);
+        return view("$jenjang/detail_kegiatan", $data);
     }
 }

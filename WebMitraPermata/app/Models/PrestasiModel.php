@@ -6,8 +6,9 @@ use CodeIgniter\Model;
 
 class PrestasiModel extends Model
 {
-    protected $table = 'prestasi';
-    protected $primaryKey = 'id';
-    protected $allowedFields = ['judul', 'deskripsi', 'gambar', 'tanggal'];
+    protected $table            = 'prestasi';
+    protected $primaryKey       = 'id';
+    protected $allowedFields    = ['jenjang', 'judul', 'deskripsi', 'gambar', 'tanggal'];
+
     protected $useTimestamps = false;
 }

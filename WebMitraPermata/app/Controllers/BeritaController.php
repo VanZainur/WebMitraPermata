@@ -13,23 +13,39 @@ class BeritaController extends BaseController
         $this->beritaModel = new BeritaModel();
     }
 
-    // Menampilkan semua berita
-    public function index()
+    // Menampilkan berita berdasarkan jenjang
+    public function index($jenjang)
     {
-        $data['berita'] = $this->beritaModel->findAll();
-        
-        return view('berita/list', $data);
+        // Validasi jenjang
+        $allowed = ['smk', 'smp', 'sd', 'tk'];
+        if (!in_array($jenjang, $allowed)) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException("Jenjang tidak valid");
+        }
+
+        $data['jenjang'] = $jenjang;
+
+        // Filter berdasarkan jenjang
+        $data['berita'] = $this->beritaModel
+            ->where('jenjang', $jenjang)
+            ->orderBy('tanggal', 'DESC')
+            ->findAll();
+
+        return view("$jenjang/berita_list", $data);
     }
 
     // Menampilkan detail berita
-    public function detail($id)
+    public function detail($jenjang, $id)
     {
-        $data['berita'] = $this->beritaModel->find($id);
-        
+        // Ambil berita berdasarkan id + jenjang
+        $data['berita'] = $this->beritaModel
+            ->where('id', $id)
+            ->where('jenjang', $jenjang)
+            ->first();
+
         if (!$data['berita']) {
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Berita tidak ditemukan');
         }
-        
-        return view('smk/detail_berita', $data);
+
+        return view("$jenjang/detail_berita", $data);
     }
 }
