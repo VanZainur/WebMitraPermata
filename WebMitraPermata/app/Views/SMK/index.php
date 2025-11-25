@@ -172,7 +172,7 @@
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
-                    <img class="img-fluid position-absolute w-100 h-100" src="<?= base_url('assets/SMK/img/rektor.jpg') ?>" alt="" style="object-fit: cover;">
+                    <img class="img-fluid position-absolute w-100 h-100" src="<?= base_url('assets/SMK/img/kepsek.png') ?>" alt="" style="object-fit: cover;">
 
                     </div>
                 </div>
@@ -285,9 +285,7 @@
                                 teknologi otomotif modern dan siap bekerja di industri perbengkelan maupun manufaktur.</h5>
                         </div>
                         <div class="d-flex border-top">
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>Muhamad Rodiyansah</small>
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>08.00 - 10.00</small>
-                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>30 Murid</small>
+                           
                         </div>
                     </div>
                 </div>
@@ -316,9 +314,7 @@
                                 teknologi informasi modern dan siap bekerja di bidang teknisi IT maupun administrasi jaringan.</h5>
                         </div>
                         <div class="d-flex border-top">
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>Dwi Bayu Nugraha</small>
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>08.00 - 10.00</small>
-                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>35 Murid</small>
+                          
                         </div>
                     </div>
                 </div>
@@ -338,7 +334,7 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item bg-light">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="<?= base_url('assets/SMK/img/team-1.jpg') ?>" alt="">
+                            <img class="img-fluid" src="<?= base_url('assets/SMK/img/i1.jpg') ?>" alt="">
 
                         </div>
                         <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
@@ -349,65 +345,59 @@
                             </div>
                         </div>
                         <div class="text-center p-4">
-                            <h5 class="mb-0">Muhamad Rodiyansah</h5>
-                            <small>Guru Bahasa Batin</small>
+                            <h5 class="mb-0">Aan Hasanah, S.Pd</h5>
+                            <small>Kurikulum</small>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="team-item bg-light">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="<?= base_url('assets/SMK/img/team-2.jpg') ?>" alt="">
+                            <img class="img-fluid" src="<?= base_url('assets/SMK/img/i2.jpg') ?>" alt="">
 
                         </div>
                         <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
                             <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                              
                             </div>
                         </div>
                         <div class="text-center p-4">
-                            <h5 class="mb-0">Instructor Name</h5>
-                            <small>Designation</small>
+                            <h5 class="mb-0">Muhamad Habibi, S.Kom</h5>
+                            <small>Pengajar Teknologi Komputer Jaringan</small>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="team-item bg-light">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="<?= base_url('assets/SMK/img/team-3.jpg') ?>" alt="">
+                            <img class="img-fluid" src="<?= base_url('assets/SMK/img/i2.jpg') ?>" alt="">
 
                         </div>
                         <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
                             <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+
                             </div>
                         </div>
                         <div class="text-center p-4">
-                            <h5 class="mb-0">Dwi Bayu Nugraha</h5>
-                            <small>Guru Agama</small>
+                            <h5 class="mb-0">Dwi Indrianto, S.T</h5>
+                            <small>Pengajar Teknik Kendaraan Ringan</small>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                     <div class="team-item bg-light">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="<?= base_url('assets/SMK/img/team-4.jpg') ?>" alt="">
+                            <img class="img-fluid" src="<?= base_url('assets/SMK/img/i3.jpg') ?>" alt="">
 
                         </div>
                         <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
                             <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                               
                             </div>
                         </div>
                         <div class="text-center p-4">
-                            <h5 class="mb-0">Instructor Name</h5>
-                            <small>Designation</small>
+                            <h5 class="mb-0">Ferdy Alfiansyah Husnain, S.Pd</h5>
+                            <small>Kesiswaan</small>
                         </div>
                     </div>
                 </div>
@@ -723,7 +713,7 @@
                         </div>
                         <div class="ms-3">
                             <h5 class="text-primary">No Telepon</h5>
-                            <p class="mb-1  ">(021) 123456</p>
+                            <p class="mb-1  ">0858-4632-5633 (Miss. Tita) - Staff</p>
                         </div>
                     </div>
                     <div class="d-flex align-items-center">
