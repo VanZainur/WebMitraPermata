@@ -104,7 +104,7 @@
 
          <!-- Ruang TU -->
         <div class="fasilitas-item">
-            <img src="<?= base_url('assets/images/fasilitas/.jpg') ?>" alt="Musholla">
+            <img src="<?= base_url('assets/images/fasilitas/Tu.jpg') ?>" alt="Musholla">
             <div class="content">
                 <h3>Ruang TU</h3>
                 <p>...</p>
@@ -113,7 +113,7 @@
 
          <!-- Ruang Yayasan -->
         <div class="fasilitas-item">
-            <img src="<?= base_url('assets/images/fasilitas/.jpg') ?>" alt="Musholla">
+            <img src="<?= base_url('assets/images/fasilitas/Yayasan.jpg') ?>" alt="Musholla">
             <div class="content">
                 <h3>Ruang Yayasan</h3>
                 <p>...</p>
