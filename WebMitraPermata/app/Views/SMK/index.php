@@ -334,7 +334,7 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item bg-light">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="<?= base_url('assets/SMK/img/i1.jpg') ?>" alt="">
+                            <img class="img-fluid" src="<?= base_url('assets/SMK/img/dwi.jpg') ?>" alt="">
 
                         </div>
                         <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
@@ -353,7 +353,7 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="team-item bg-light">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="<?= base_url('assets/SMK/img/i2.jpg') ?>" alt="">
+                            <img class="img-fluid" src="<?= base_url('assets/SMK/img/alfin.jpg') ?>" alt="">
 
                         </div>
                         <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
@@ -370,7 +370,7 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="team-item bg-light">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="<?= base_url('assets/SMK/img/i2.jpg') ?>" alt="">
+                            <img class="img-fluid" src="<?= base_url('assets/SMK/img/dwi.png') ?>" alt="">
 
                         </div>
                         <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
@@ -387,7 +387,7 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                     <div class="team-item bg-light">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="<?= base_url('assets/SMK/img/i3.jpg') ?>" alt="">
+                            <img class="img-fluid" src="<?= base_url('assets/SMK/img/alfin.png') ?>" alt="">
 
                         </div>
                         <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">

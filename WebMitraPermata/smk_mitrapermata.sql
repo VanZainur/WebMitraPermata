@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 25 Nov 2025 pada 18.50
+-- Waktu pembuatan: 26 Nov 2025 pada 05.56
 -- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.2.12
 
@@ -85,6 +85,22 @@ CREATE TABLE `pendaftaran` (
   `jurusan` varchar(50) NOT NULL,
   `created_at` datetime DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `pendaftaran`
+--
+
+INSERT INTO `pendaftaran` (`id`, `jenjang`, `nama`, `alamat`, `asal_sekolah`, `no_hp`, `jurusan`, `created_at`) VALUES
+(1, 'smk', 'Ahmad Fauzan', 'Jl. Melati No. 12, Jakarta', 'SMPN 5 Jakarta', '081200000001', 'Teknik Komputer dan Jaringan', '2025-01-10 08:30:00'),
+(2, 'smk', 'Budi Santoso', 'Jl. Kenanga No. 7, Bandung', 'SMPN 3 Bandung', '081200000002', 'Teknik Kendaraan Ringan', '2025-01-10 08:35:00'),
+(3, 'smk', 'Citra Ayu', 'Jl. Mawar No. 21, Surabaya', 'SMPN 12 Surabaya', '081200000003', 'Teknik Komputer dan Jaringan', '2025-01-10 08:40:00'),
+(4, 'smk', 'Dewi Rahma', 'Jl. Anggrek No. 15, Bekasi', 'SMPN 7 Bekasi', '081200000004', 'Teknik Kendaraan Ringan', '2025-01-10 08:45:00'),
+(5, 'smk', 'Eko Prasetyo', 'Jl. Dahlia No. 9, Depok', 'SMPN 2 Depok', '081200000005', 'Teknik Komputer dan Jaringan', '2025-01-10 08:50:00'),
+(6, 'smk', 'Farhan Maulana', 'Jl. Cempaka No. 6, Bogor', 'SMPN 4 Bogor', '081200000006', 'Teknik Kendaraan Ringan', '2025-01-10 08:55:00'),
+(7, 'smk', 'Gita Lestari', 'Jl. Seruni No. 30, Tangerang', 'SMPN 8 Tangerang', '081200000007', 'Teknik Komputer dan Jaringan', '2025-01-10 09:00:00'),
+(8, 'smk', 'Hendra Wijaya', 'Jl. Flamboyan No. 11, Malang', 'SMPN 10 Malang', '081200000008', 'Teknik Kendaraan Ringan', '2025-01-10 09:05:00'),
+(9, 'smk', 'Indah Permata', 'Jl. Kamboja No. 17, Semarang', 'SMPN 6 Semarang', '081200000009', 'Teknik Komputer dan Jaringan', '2025-01-10 09:10:00'),
+(10, 'smk', 'Joko Saputra', 'Jl. Teratai No. 25, Yogyakarta', 'SMPN 1 Yogyakarta', '081200000010', 'Teknik Kendaraan Ringan', '2025-01-10 09:15:00');
 
 -- --------------------------------------------------------
 
@@ -192,7 +208,7 @@ ALTER TABLE `kegiatan`
 -- AUTO_INCREMENT untuk tabel `pendaftaran`
 --
 ALTER TABLE `pendaftaran`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT untuk tabel `prestasi`

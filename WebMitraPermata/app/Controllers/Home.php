@@ -14,11 +14,6 @@ class Home extends BaseController
         return view('profil');
     }
 
-    public function kontak()
-    {
-        return view('kontak');
-    }
-
     public function struktur()
     {
         return view('struktur');
@@ -52,5 +47,10 @@ class Home extends BaseController
     public function akademik()
     {
         return view('akademik');
+    }
+
+    public function kontak()
+    {
+        return view('kontak');
     }
 }
