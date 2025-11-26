@@ -271,14 +271,14 @@
                             </div>
                         </div>
                         <div class="text-center p-4 pb-0">
-                            <h3 class="mb-0">Teknik Kendaraan Ringan</h3>
+                            <h3 class="mb-0">Teknik Kendaraan Ringan Otomotif</h3>
                             <div class="mb-3">
                                 <small class="fa fa-star text-primary"></small>
                                 <small class="fa fa-star text-primary"></small>
                                 <small class="fa fa-star text-primary"></small>
                                 <small class="fa fa-star text-primary"></small>
                                 <small class="fa fa-star text-primary"></small>
-                                <small>(123)</small>
+                                <small>(5)</small>
                             </div>
                             <h5 class="mb-4" style="font-weight: normal; font-size: 16px;">Teknik Kendaraan Ringan adalah jurusan yang mempelajari perawatan, 
                                 perbaikan, dan diagnosa sistem pada kendaraan bermotor, sehingga siswa mampu memahami 
@@ -300,14 +300,14 @@
                             </div>
                         </div>
                         <div class="text-center p-4 pb-0">
-                            <h3 class="mb-0">Teknik Komputer dan Jaringan</h3>
+                            <h3 class="mb-0">Teknik Jaringan dan Komputer</h3>
                             <div class="mb-3">
                                 <small class="fa fa-star text-primary"></small>
                                 <small class="fa fa-star text-primary"></small>
                                 <small class="fa fa-star text-primary"></small>
                                 <small class="fa fa-star text-primary"></small>
                                 <small class="fa fa-star text-primary"></small>
-                                <small>(123)</small>
+                                <small>(5)</small>
                             </div>
                             <h5 class="mb-4" style="font-weight: normal; font-size: 16px;">Teknik Komputer dan Jaringan adalah jurusan yang mempelajari instalasi, 
                                 perakitan, dan pengelolaan jaringan komputer, sehingga siswa memiliki kemampuan dalam 
@@ -331,10 +331,31 @@
                 <h1 class="mb-5">Tenaga Pendidik Dan Kependidikan</h1>
             </div>
             <div class="row g-4">
+
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item bg-light">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="<?= base_url('assets/SMK/img/dwi.jpg') ?>" alt="">
+                            <img class="img-fluid" src="<?= base_url('assets/SMK/img/guru-1-removebg-preview.png') ?>" alt="">
+
+                        </div>
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Habibi, S.Pd</h5>
+                            <small>Kurikulum</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item bg-light">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="<?= base_url('assets/SMK/img/guru-2-removebg-preview.png') ?>" alt="">
 
                         </div>
                         <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
@@ -350,54 +371,103 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item bg-light">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="<?= base_url('assets/SMK/img/alfin.jpg') ?>" alt="">
+                            <img class="img-fluid" src="<?= base_url('assets/SMK/img/guru-3-removebg-preview.png') ?>" alt="">
 
                         </div>
                         <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
                             <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                              
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
                             </div>
                         </div>
                         <div class="text-center p-4">
-                            <h5 class="mb-0">Muhamad Habibi, S.Kom</h5>
-                            <small>Pengajar Teknologi Komputer Jaringan</small>
+                            <h5 class="mb-0">Aan Hasanah, S.Pd</h5>
+                            <small>Kurikulum</small>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item bg-light">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="<?= base_url('assets/SMK/img/dwi.png') ?>" alt="">
+                            <img class="img-fluid" src="<?= base_url('assets/SMK/img/guru-4-removebg-preview.png') ?>" alt="">
 
                         </div>
                         <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
                             <div class="bg-light d-flex justify-content-center pt-2 px-1">
-
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
                             </div>
                         </div>
                         <div class="text-center p-4">
-                            <h5 class="mb-0">Dwi Indrianto, S.T</h5>
-                            <small>Pengajar Teknik Kendaraan Ringan</small>
+                            <h5 class="mb-0">Aan Hasanah, S.Pd</h5>
+                            <small>Kurikulum</small>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item bg-light">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="<?= base_url('assets/SMK/img/alfin.png') ?>" alt="">
+                            <img class="img-fluid" src="<?= base_url('assets/SMK/img/guru-5-removebg-preview.png') ?>" alt="">
 
                         </div>
                         <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
                             <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                               
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
                             </div>
                         </div>
                         <div class="text-center p-4">
-                            <h5 class="mb-0">Ferdy Alfiansyah Husnain, S.Pd</h5>
-                            <small>Kesiswaan</small>
+                            <h5 class="mb-0">Siti Nurjannah, S.Pd</h5>
+                            <small>Kurikulum</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item bg-light">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="<?= base_url('assets/SMK/img/guru-6-removebg-preview.png') ?>" alt="">
+
+                        </div>
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Erika Juli Agustin, S.Pd</h5>
+                            <small>Kurikulum</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item bg-light">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="<?= base_url('assets/SMK/img/guru-7-removebg-preview.png') ?>" alt="">
+
+                        </div>
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Vita Nuraina, S.Pd</h5>
+                            <small>Kurikulum</small>
                         </div>
                     </div>
                 </div>
@@ -407,49 +477,49 @@
     <!-- Guru End -->
 
    <!-- Prestasi Start -->
-<div id="prestasi" class="container-xxl py-5 category">
-    <div class="container">
+    <div id="prestasi" class="container-xxl py-5 category">
+        <div class="container">
 
-        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title bg-white text-center text-primary px-3">Prestasi</h6>
-            <h1 class="mb-3">Terbaik Siswa</h1>
-            <p class="text-muted mb-4">Siswa-siswi kami berhasil meraih berbagai prestasi yang membanggakan, baik di bidang akademik, olahraga, maupun seni. Setiap pencapaian ini menunjukkan kerja keras, disiplin, serta semangat mereka dalam mengembangkan potensi terbaik</p>
-        </div>
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Prestasi</h6>
+                <h1 class="mb-3">Terbaik Siswa</h1>
+                <p class="text-muted mb-4">Siswa-siswi kami berhasil meraih berbagai prestasi yang membanggakan, baik di bidang akademik, olahraga, maupun seni. Setiap pencapaian ini menunjukkan kerja keras, disiplin, serta semangat mereka dalam mengembangkan potensi terbaik</p>
+            </div>
 
-        <div class="row g-4">
-            <?php if (!empty($prestasi)): ?>
-                <?php foreach ($prestasi as $item): ?>
-                    <!-- Prestasi Card -->
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="prestasi-card shadow-lg rounded overflow-hidden">
-                            <div class="prestasi-img">
-                                <img src="<?= base_url('assets/images/achievements/' . $item['gambar']) ?>" 
-                                     class="img-fluid" 
-                                     alt="<?= esc($item['judul']) ?>">
-                            </div>
-                            <div class="prestasi-body p-4">
-                                <h5 class="fw-bold mb-2"><?= esc($item['judul']) ?></h5>
-                                <p class="text-muted mb-0">
-                                    <?= esc($item['deskripsi']) ?>
-                                </p>
-                                <small class="text-muted d-block mt-2">
-                                    <i class="fa fa-calendar"></i> 
-                                    <?= date('d M Y', strtotime($item['tanggal'])) ?>
-                                </small>
+            <div class="row g-4">
+                <?php if (!empty($prestasi)): ?>
+                    <?php foreach ($prestasi as $item): ?>
+                        <!-- Prestasi Card -->
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="prestasi-card shadow-lg rounded overflow-hidden">
+                                <div class="prestasi-img">
+                                    <img src="<?= base_url('assets/images/achievements/' . $item['gambar']) ?>" 
+                                        class="img-fluid" 
+                                        alt="<?= esc($item['judul']) ?>">
+                                </div>
+                                <div class="prestasi-body p-4">
+                                    <h5 class="fw-bold mb-2"><?= esc($item['judul']) ?></h5>
+                                    <p class="text-muted mb-0">
+                                        <?= esc($item['deskripsi']) ?>
+                                    </p>
+                                    <small class="text-muted d-block mt-2">
+                                        <i class="fa fa-calendar"></i> 
+                                        <?= date('d M Y', strtotime($item['tanggal'])) ?>
+                                    </small>
+                                </div>
                             </div>
                         </div>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <div class="col-12">
+                        <p class="text-center text-muted">Belum ada prestasi tersedia.</p>
                     </div>
-                <?php endforeach; ?>
-            <?php else: ?>
-                <div class="col-12">
-                    <p class="text-center text-muted">Belum ada prestasi tersedia.</p>
-                </div>
-            <?php endif; ?>
-        </div>
+                <?php endif; ?>
+            </div>
 
+        </div>
     </div>
-</div>
-<!-- Prestasi End -->
+    <!-- Prestasi End -->
 
     <!-- Ekstrakurikuler Start -->
     <div id="eskul" class="container-xxl py-5">
@@ -600,45 +670,45 @@
     </div>
     <!-- Kegiatan End-->
 
- <!-- Berita Start-->
-<div id="berita" class="container-xxl py-5">
-    <div class="container">
-        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title bg-white text-center text-primary px-3">Informasi</h6>
-            <h1 class="mb-5">Berita Terkini</h1>
-        </div>
+    <!-- Berita Start-->
+    <div id="berita" class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Informasi</h6>
+                <h1 class="mb-5">Berita Terkini</h1>
+            </div>
 
-        <div class="row g-4">
-            <?php if (!empty($berita)): ?>
-                <?php foreach ($berita as $item): ?>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="berita-card">
-                            <div class="berita-image">
-                                <img src="<?= base_url('assets/images/berita/' . $item['gambar']) ?>" alt="<?= $item['judul'] ?>">
-                                <div class="berita-badge">
-                                    <i class="fa fa-calendar"></i> 
-                                    <?= date('d M Y', strtotime($item['tanggal'])) ?>
+            <div class="row g-4">
+                <?php if (!empty($berita)): ?>
+                    <?php foreach ($berita as $item): ?>
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="berita-card">
+                                <div class="berita-image">
+                                    <img src="<?= base_url('assets/images/berita/' . $item['gambar']) ?>" alt="<?= $item['judul'] ?>">
+                                    <div class="berita-badge">
+                                        <i class="fa fa-calendar"></i> 
+                                        <?= date('d M Y', strtotime($item['tanggal'])) ?>
+                                    </div>
+                                </div>
+                                <div class="berita-content">
+                                    <h5 class="berita-title"><?= esc($item['judul']) ?></h5>
+                                    <p class="berita-desc"><?= esc($item['deskripsi']) ?></p>
+                                    <a href="<?= base_url('berita/detail/' . $item['id']) ?>" class="berita-link">
+                                        Baca Selengkapnya <i class="fa fa-arrow-right"></i>
+                                    </a>
                                 </div>
                             </div>
-                            <div class="berita-content">
-                                <h5 class="berita-title"><?= esc($item['judul']) ?></h5>
-                                <p class="berita-desc"><?= esc($item['deskripsi']) ?></p>
-                                <a href="<?= base_url('berita/detail/' . $item['id']) ?>" class="berita-link">
-                                    Baca Selengkapnya <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </div>
                         </div>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <div class="col-12">
+                        <p class="text-center text-muted">Belum ada berita tersedia.</p>
                     </div>
-                <?php endforeach; ?>
-            <?php else: ?>
-                <div class="col-12">
-                    <p class="text-center text-muted">Belum ada berita tersedia.</p>
-                </div>
-            <?php endif; ?>
+                <?php endif; ?>
+            </div>
         </div>
     </div>
-</div>
-<!-- Berita End-->
+    <!-- Berita End-->
     
     <!-- Testimonial Start -->
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">

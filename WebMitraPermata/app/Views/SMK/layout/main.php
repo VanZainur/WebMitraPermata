@@ -101,8 +101,8 @@ $uri = service('uri');
                         <label class="form-label">Jurusan *</label>
                         <select name="jurusan" class="form-control" required>
                             <option value="">-- Pilih Jurusan --</option>
-                            <option value="TKJ">Teknik Komputer Jaringan</option>
-                            <option value="TKR">Teknik Kendaraan Ringan</option>
+                            <option value="TKJ">Teknik Jaringan dan Komputer</option>
+                            <option value="TKR">Teknik Kendaraan Ringan Otomotif</option>
                         </select>
                     </div>
 
