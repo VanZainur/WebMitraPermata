@@ -129,6 +129,22 @@
                             <div class="partner-name">Universitas Salakanagara</div>
                         </div>
 
+                        <!-- Partner Card 10 -->
+                        <div class="partner-card">
+                            <div class="partner-logo-box">
+                                <img src="<?= base_url('assets/images/partners/pt mitsuba.png') ?>" alt="PT Mitsuba">
+                            </div>
+                            <div class="partner-name">PT Mitsuba</div>
+                        </div>
+
+                        <!-- Partner Card 11 -->
+                        <div class="partner-card">
+                            <div class="partner-logo-box">
+                                <img src="<?= base_url('assets/images/partners/pt belindo.png') ?>" alt="PT Belindo">
+                            </div>
+                            <div class="partner-name">PT Belindo</div>
+                        </div>
+
                         <!-- Duplicate untuk seamless loop -->
                         <div class="partner-card">
                             <div class="partner-logo-box">
@@ -156,6 +172,22 @@
                                 <img src="<?= base_url('assets/images/partners/Pt. Indostation.png') ?>" alt="PT. Sentra Trada Indostation">
                             </div>
                             <div class="partner-name">PT. Sentra Trada Indostation</div>
+                        </div>
+
+                        <!-- Partner Card 10 -->
+                        <div class="partner-card">
+                            <div class="partner-logo-box">
+                                <img src="<?= base_url('assets/images/partners/pt mitsuba.png') ?>" alt="PT Mitsuba">
+                            </div>
+                            <div class="partner-name">PT Mitsuba</div>
+                        </div>
+
+                        <!-- Partner Card 11 -->
+                        <div class="partner-card">
+                            <div class="partner-logo-box">
+                                <img src="<?= base_url('assets/images/partners/pt belindo.png') ?>" alt="PT Belindo">
+                            </div>
+                            <div class="partner-name">PT Belindo</div>
                         </div>
 
                     </div>

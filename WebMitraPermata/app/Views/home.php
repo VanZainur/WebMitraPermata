@@ -87,6 +87,12 @@
         <div class="partner-box">
           <img src="<?= base_url('assets/images/partners/Universitas Unsaka.png') ?>" alt="Universitas Salakanagara">
         </div>
+        <div class="partner-box">
+          <img src="<?= base_url('assets/images/partners/pt mitsuba.png') ?>" alt="PT Mitsuba">
+        </div>
+        <div class="partner-box">
+          <img src="<?= base_url('assets/images/partners/pt belindo.png') ?>" alt="PT Belindo">
+        </div>
         
         <!-- Duplicate Set for Seamless Loop -->
         <div class="partner-box">
@@ -118,6 +124,12 @@
         </div>
         <div class="partner-box">
           <img src="<?= base_url('assets/images/partners/Universitas Unsaka.png') ?>" alt="Universitas Salakanagara">
+        </div>
+        <div class="partner-box">
+          <img src="<?= base_url('assets/images/partners/pt mitsuba.png') ?>" alt="PT Mitsuba">
+        </div>
+        <div class="partner-box">
+          <img src="<?= base_url('assets/images/partners/pt belindo.png') ?>" alt="PT Belindo">
         </div>
       </div>
     </div>
@@ -278,11 +290,11 @@
         <div class="stat-label">Jenjang Pendidikan</div>
       </div>
       <div class="stat-item">
-        <div class="stat-number">10</div>
+        <div class="stat-number">100+</div>
         <div class="stat-label">Prestasi</div>
       </div>
       <div class="stat-item">
-        <div class="stat-number">500</div>
+        <div class="stat-number">1000+</div>
         <div class="stat-label">Alumni Sukses</div>
       </div>
     </div>
