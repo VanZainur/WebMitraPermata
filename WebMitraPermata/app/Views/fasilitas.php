@@ -62,7 +62,61 @@
             <img src="<?= base_url('assets/images/fasilitas/Musholla.png') ?>" alt="Musholla">
             <div class="content">
                 <h3>Musholla</h3>
-                <p>Musholla yang bersih dan nyaman dengan fasilitas ibadah lengkap untuk mendukung kegiatan keagamaan civitas akademika..</p>
+                <p>Musholla yang bersih dan nyaman dengan fasilitas ibadah lengkap untuk mendukung kegiatan keagamaan civitas akademika.</p>
+            </div>
+        </div>
+
+          <!-- UKS -->
+        <div class="fasilitas-item">
+            <img src="<?= base_url('assets/images/fasilitas/UKS.jpg') ?>" alt="UKS">
+            <div class="content">
+                <h3>Ruang UKS</h3>
+                <p>Ruang UKS yang bersih, nyaman, dan dilengkapi fasilitas pemeriksaan kesehatan dasar untuk menangani siswa yang membutuhkan pertolongan pertama.</p>
+            </div>
+        </div>
+
+        <!-- Lab Ipa -->
+        <div class="fasilitas-item">
+            <img src="<?= base_url('assets/images/fasilitas/IPA.jpeg') ?>" alt="Kantin">
+            <div class="content">
+                <h3>Laboratorium IPA</h3>
+                <p>Laboratorium IPA yang lengkap dengan berbagai alat praktikum fisika, kimia, dan biologi untuk menunjang kegiatan eksperimen dan pembelajaran ilmiah.</p>
+            </div>
+        </div>
+
+        <!-- Toilet -->
+        <div class="fasilitas-item">
+            <img src="<?= base_url('assets/images/fasilitas/toilet.jpg') ?>" alt="Musholla">
+            <div class="content">
+                <h3>Toilet</h3>
+                <p>Toilet yang bersih, terawat, dan memiliki fasilitas sanitasi yang baik untuk kenyamanan seluruh warga sekolah.</p>
+            </div>
+        </div>
+
+         <!-- Lapangan Upacara -->
+        <div class="fasilitas-item">
+            <img src="<?= base_url('assets/images/fasilitas/Lapangan2.jpg') ?>" alt="Musholla">
+            <div class="content">
+                <h3>Lapangan Upacara</h3>
+                <p>Lapangan upacara yang luas dan rapi digunakan untuk berbagai kegiatan seperti upacara bendera, latihan baris-berbaris, dan acara sekolah lainnya.</p>
+            </div>
+        </div>
+
+         <!-- Ruang TU -->
+        <div class="fasilitas-item">
+            <img src="<?= base_url('assets/images/fasilitas/.jpg') ?>" alt="Musholla">
+            <div class="content">
+                <h3>Ruang TU</h3>
+                <p>...</p>
+            </div>
+        </div>
+
+         <!-- Ruang Yayasan -->
+        <div class="fasilitas-item">
+            <img src="<?= base_url('assets/images/fasilitas/.jpg') ?>" alt="Musholla">
+            <div class="content">
+                <h3>Ruang Yayasan</h3>
+                <p>...</p>
             </div>
         </div>
     </div>
