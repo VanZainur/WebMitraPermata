@@ -3,242 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin | <?= strtoupper($jenjang) ?></title>
-      <link rel="icon" type="image/png" href="<?= base_url('assets/images/logo.png') ?>">
+    <title>Admin Dashboard | <?= strtoupper($jenjang) ?></title>
+    <link rel="icon" type="image/png" href="<?= base_url('assets/images/logo.png') ?>">
 
-    <!-- CSS KAMU SENDIRI -->
-    <link rel="stylesheet" href="<?= base_url('assets/admin/css/admin-dashboard.css') ?>">
-
-    <style>
-        body { margin:0; font-family:Arial, sans-serif; background:#f1f5f9; }
-
-        .dashboard-container { display:flex; min-height:100vh; }
-
-        /* SIDEBAR */
-        .sidebar { 
-            width:260px; 
-            background:#0f172a; 
-            color:white; 
-            display:flex; 
-            flex-direction:column; 
-            box-shadow:2px 0 10px rgba(0,0,0,0.2); 
-        }
-
-        .sidebar-header { 
-            padding:24px; 
-            border-bottom:1px solid #1e293b; 
-        }
-
-        .sidebar-header h1 { 
-            font-size:22px; 
-            font-weight:bold; 
-            margin:0; 
-        }
-
-        .sidebar-header p { 
-            margin:4px 0 0; 
-            color:#94a3b8; 
-            font-size:13px; 
-        }
-
-        .sidebar-menu { 
-            flex-grow:1; 
-            padding-top:15px; 
-        }
-
-        .menu-item {
-            display:block;
-            padding:14px 22px;
-            color:#cbd5e1;
-            text-decoration:none;
-            font-size:15px;
-            transition:0.25s;
-            position:relative;
-        }
-
-        .menu-item:hover {
-            background:#1e293b;
-            color:#fff;
-            padding-left:28px;
-        }
-
-        .menu-item::before {
-            content:"";
-            position:absolute;
-            left:0;
-            top:0;
-            height:100%;
-            width:4px;
-            background:#3b82f6;
-            opacity:0;
-            transition:0.25s;
-        }
-
-        .menu-item:hover::before {
-            opacity:1;
-        }
-
-        /* FOOTER USER */
-        .sidebar-footer {
-            padding:20px;
-            border-top:1px solid #1e293b;
-        }
-
-        .user-profile {
-            display:flex;
-            align-items:center;
-        }
-
-        .user-avatar {
-            width:45px;
-            height:45px;
-            border-radius:12px;
-            background:#334155;
-            color:white;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            font-weight:bold;
-            font-size:20px;
-            margin-right:12px;
-            box-shadow:0 3px 6px rgba(0,0,0,0.25);
-        }
-
-        /* MAIN CONTENT */
-        .main-content {
-            flex-grow:1; 
-            padding:30px; 
-        }
-
-        .topbar {
-            display:flex; 
-            justify-content:space-between; 
-            align-items:center; 
-            margin-bottom:30px;
-        }
-
-        .topbar h2 {
-            margin:0;
-            font-size:26px;
-            font-weight:bold;
-            color:#0f172a;
-        }
-
-        /* CARDS */
-        .stats-grid { 
-            display:grid; 
-            grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); 
-            gap:20px; 
-            margin-bottom:28px; 
-        }
-
-        .stat-card {
-            background:white; 
-            padding:24px; 
-            border-radius:14px; 
-            box-shadow:0 5px 15px rgba(0,0,0,0.06); 
-            display:flex; 
-            justify-content:space-between; 
-            align-items:center;
-            transition:0.25s;
-        }
-
-        .stat-card:hover {
-            transform:translateY(-4px);
-            box-shadow:0 8px 18px rgba(0,0,0,0.12);
-        }
-
-        .stat-value {
-            font-size:36px; 
-            font-weight:800; 
-            color:#0f172a;
-        }
-
-        .icon-wrapper {
-            font-size:48px; 
-            opacity:0.5;
-        }
-
-        /* TABLE */
-        table { 
-            width:100%; 
-            border-collapse:collapse; 
-            margin-top:15px; 
-            background:white; 
-            border-radius:12px; 
-            overflow:hidden; 
-            box-shadow:0 3px 10px rgba(0,0,0,0.08);
-        }
-
-        th { 
-            background:#f8fafc; 
-            font-weight:bold; 
-            padding:14px; 
-            font-size:14px; 
-            color:#475569; 
-        }
-
-        td { 
-            padding:13px; 
-            border-bottom:1px solid #e2e8f0; 
-            font-size:14px; 
-        }
-
-        tr:hover td {
-            background:#f1f5f9;
-        }
-
-        /* LOGOUT BUTTON */
-        .logout-btn {
-            display:block; 
-            margin-top:15px; 
-            background:#ef4444; 
-            color:white; 
-            text-align:center; 
-            padding:11px; 
-            border-radius:10px; 
-            font-weight:bold; 
-            text-decoration:none;
-            transition:0.25s;
-        }
-
-        .logout-btn:hover {
-            background:#dc2626;
-            transform:scale(1.03);
-        }
-
-            /* BUTTON EXPORT */
-.btn-export {
-    padding: 10px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 14px;
-    transition: 0.25s;
-    display: inline-block;
-}
-
-.btn-excel {
-    background: #10b981;
-    color: white;
-}
-
-.btn-excel:hover {
-    background: #059669;
-    transform: translateY(-2px);
-}
-
-.btn-pdf {
-    background: #ef4444;
-    color: white;
-}
-
-.btn-pdf:hover {
-    background: #dc2626;
-    transform: translateY(-2px);
-}
-    </style>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
+    <!-- CSS -->
+    <link rel="stylesheet" href="<?= base_url('assets/admin/css/admin-dashboard.css') ?>">
 </head>
 
 <body>
@@ -246,116 +18,213 @@
 <div class="dashboard-container">
 
     <!-- SIDEBAR -->
-    <aside class="sidebar">
-        <div class="sidebar-header">
-            <h1><?= strtoupper($jenjang) ?> ADMIN</h1>
-            <p>Panel <?= strtoupper($jenjang) ?></p>
-        </div>
-
-       <div class="sidebar-menu">
-    <a href="<?= base_url('admin') ?>" class="menu-item">Dashboard</a>
-    <a href="<?= base_url('admin/berita') ?>" class="menu-item">Data Berita</a>
-    <a href="<?= base_url('admin/kegiatan') ?>" class="menu-item">Data Kegiatan</a>
-    <a href="<?= base_url('admin/prestasi') ?>" class="menu-item">Data Prestasi</a>
-    </div>
-
-        <div class="sidebar-footer">
-            <div class="user-profile">
-                <div class="user-avatar"><?= strtoupper(substr($nama,0,1)) ?></div>
-                <div>
-                    <div style="font-weight:bold;"><?= $nama ?></div>
-                    <div style="font-size:12px; color:#94a3b8;"><?= strtoupper($jenjang) ?></div>
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-overlay" onclick="toggleSidebar()"></div>
+        
+        <div class="sidebar-content">
+            <!-- Header -->
+            <div class="sidebar-header">
+                <div class="logo-section">
+                    <div class="logo-icon"><?= strtoupper(substr($jenjang,0,2)) ?></div>
+                    <div class="logo-text">
+                        <h1><?= strtoupper($jenjang) ?> ADMIN</h1>
+                        <p>Panel <?= strtoupper($jenjang) ?></p>
+                    </div>
                 </div>
+                <button class="close-sidebar" onclick="toggleSidebar()">✕</button>
             </div>
 
-           <a href="<?= base_url('admin/logout') ?>" class="logout-btn">Logout</a>
+            <!-- Menu -->
+            <nav class="sidebar-menu">
+                <a href="<?= base_url('admin') ?>" class="menu-item active">
+                    <span class="menu-icon">📊</span>
+                    <span class="menu-label">Dashboard</span>
+                </a>
+                <a href="<?= base_url('admin/berita') ?>" class="menu-item">
+                    <span class="menu-icon">📰</span>
+                    <span class="menu-label">Data Berita</span>
+                </a>
+                <a href="<?= base_url('admin/kegiatan') ?>" class="menu-item">
+                    <span class="menu-icon">📅</span>
+                    <span class="menu-label">Data Kegiatan</span>
+                </a>
+                <a href="<?= base_url('admin/prestasi') ?>" class="menu-item">
+                    <span class="menu-icon">🏆</span>
+                    <span class="menu-label">Data Prestasi</span>
+                </a>
+            </nav>
+
+            <!-- Footer -->
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <div class="user-avatar">
+                        <span><?= strtoupper(substr($nama,0,1)) ?></span>
+                    </div>
+                    <div class="user-info">
+                        <div class="user-name"><?= $nama ?></div>
+                        <div class="user-role"><?= strtoupper($jenjang) ?></div>
+                    </div>
+                </div>
+                <a href="<?= base_url('admin/logout') ?>" class="logout-btn">
+                    <span>🚪</span>
+                    <span>Logout</span>
+                </a>
+            </div>
         </div>
     </aside>
 
     <!-- MAIN CONTENT -->
     <main class="main-content">
 
+        <!-- Topbar -->
         <div class="topbar">
-            <h2>Dashboard <?= strtoupper($jenjang) ?></h2>
-            <div><?= date('l, d F Y') ?></div>
-        </div>
-
-        <!-- STAT CARDS -->
-        <div class="stats-grid">
-
-            <div class="stat-card">
-                <div>
-                    <div>Total Pendaftar</div>
-                    <div class="stat-value"><?= $totalAll ?></div>
+            <div class="topbar-left">
+                <button class="menu-toggle" onclick="toggleSidebar()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <h2>Dashboard <?= strtoupper($jenjang) ?></h2>
+            </div>
+            <div class="topbar-right">
+                <div class="date-display">
+                    <span class="date-icon">📅</span>
+                    <span><?= date('l, d F Y') ?></span>
                 </div>
-                <div class="icon-wrapper">👥</div>
             </div>
+        </div>
 
-            <?php foreach($totalBy as $key => $val): ?>
-            <div class="stat-card">
-                <div>
-                    <div><?= strtoupper($key) ?></div>
-                    <div class="stat-value"><?= $val ?></div>
+        <!-- Content Area -->
+        <div class="content-area">
+            
+            <!-- Welcome Banner -->
+            <div class="welcome-banner">
+                <div class="banner-content">
+                    <h3>Selamat Datang, <?= $nama ?> 👋</h3>
+                    <p>Kelola data pendaftaran dan konten dengan mudah</p>
                 </div>
-                <div class="icon-wrapper">🏫</div>
-            </div>
-            <?php endforeach; ?>
-
-        </div>
-
-    <div style="display:flex; justify-content:space-between; align-items:center; margin-top:20px; margin-bottom:10px;">
-    
-    <!-- Title -->
-    <h3 style="margin:0;">Data Pendaftar <?= strtoupper($jenjang) ?></h3>
-
-            <!-- Buttons -->
-            <div style="display:flex; gap:10px;">
-                <a href="<?= base_url('admin/export-excel') ?>" class="btn-export btn-excel">
-                    📊 Export Excel
-                </a>
-                <a href="<?= base_url('admin/export-pdf') ?>" class="btn-export btn-pdf" target="_blank">
-                    📄 Export PDF
-                </a>
+                <div class="banner-decoration">
+                    <div class="decoration-circle"></div>
+                    <div class="decoration-circle"></div>
+                </div>
             </div>
 
+            <!-- Stats Grid -->
+            <div class="stats-grid">
+                <div class="stat-card stat-primary">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-info">
+                        <div class="stat-label">Total Pendaftar</div>
+                        <div class="stat-value"><?= $totalAll ?></div>
+                    </div>
+                    <div class="stat-trend positive">
+                        <span>↑</span>
+                        <span>12%</span>
+                    </div>
+                </div>
+
+                <?php 
+                $colors = ['success', 'warning', 'info', 'danger'];
+                $icons = ['🏫', '📚', '🎓', '✨'];
+                $index = 0;
+                foreach($totalBy as $key => $val): 
+                ?>
+                <div class="stat-card stat-<?= $colors[$index % 4] ?>">
+                    <div class="stat-icon"><?= $icons[$index % 4] ?></div>
+                    <div class="stat-info">
+                        <div class="stat-label"><?= strtoupper($key) ?></div>
+                        <div class="stat-value"><?= $val ?></div>
+                    </div>
+                </div>
+                <?php 
+                $index++;
+                endforeach; 
+                ?>
+            </div>
+
+            <!-- Table Section -->
+            <div class="table-section">
+                <div class="table-header">
+                    <div class="table-title">
+                        <h3>Data Pendaftar <?= strtoupper($jenjang) ?></h3>
+                        <span class="data-count"><?= count($pendaftaran) ?> data</span>
+                    </div>
+                    <div class="table-actions">
+                        <button class="btn-action btn-search" onclick="toggleSearch()">
+                            <span>🔍</span>
+                            <span>Cari</span>
+                        </button>
+                        <a href="<?= base_url('admin/export-excel') ?>" class="btn-action btn-excel">
+                            <span>📊</span>
+                            <span>Excel</span>
+                        </a>
+                        <a href="<?= base_url('admin/export-pdf') ?>" class="btn-action btn-pdf" target="_blank">
+                            <span>📄</span>
+                            <span>PDF</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Search Bar (Hidden by default) -->
+                <div class="search-container" id="searchContainer" style="display: none;">
+                    <input type="text" class="search-input" placeholder="Cari nama, asal sekolah, atau jurusan..." onkeyup="filterTable(this.value)">
+                </div>
+
+                <!-- Table -->
+                <div class="table-container">
+                    <table class="data-table" id="dataTable">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Nama</th>
+                                <th>Asal Sekolah</th>
+                                <th>Jurusan</th>
+                                <th>No HP</th>
+                                <th>Tanggal Daftar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php if(!empty($pendaftaran)): $no=1; foreach($pendaftaran as $p): ?>
+                            <tr>
+                                <td><span class="cell-number"><?= $no++ ?></span></td>
+                                <td>
+                                    <div class="user-cell">
+                                        <div class="user-avatar-small"><?= strtoupper(substr($p['nama'],0,1)) ?></div>
+                                        <span class="user-name"><?= esc($p['nama']) ?></span>
+                                    </div>
+                                </td>
+                                <td><?= esc($p['asal_sekolah']) ?></td>
+                                <td><span class="badge badge-jurusan"><?= esc($p['jurusan']) ?></span></td>
+                                <td><?= esc($p['no_hp']) ?></td>
+                                <td>
+                                    <div class="date-cell">
+                                        <span class="date-icon-small">📅</span>
+                                        <span><?= date('d M Y', strtotime($p['created_at'])) ?></span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <?php endforeach; else: ?>
+                            <tr>
+                                <td colspan="6" class="empty-state">
+                                    <div class="empty-content">
+                                        <span class="empty-icon">📋</span>
+                                        <p>Belum ada data pendaftar</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <?php endif; ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
         </div>
-
-
-        <table>
-            <thead>
-                <tr>
-                    <th>No</th>
-                    <th>Nama</th>
-                    <th>Asal Sekolah</th>
-                    <th>Jurusan</th>
-                    <th>No HP</th>
-                    <th>Tanggal Daftar</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                <?php if(!empty($pendaftaran)): $no=1; foreach($pendaftaran as $p): ?>
-                <tr>
-                    <td><?= $no++ ?></td>
-                    <td><?= esc($p['nama']) ?></td>
-                    <td><?= esc($p['asal_sekolah']) ?></td>
-                    <td><?= esc($p['jurusan']) ?></td>
-                    <td><?= esc($p['no_hp']) ?></td>
-                    <td><?= date('d-m-Y H:i', strtotime($p['created_at'])) ?></td>
-                </tr>
-                <?php endforeach; else: ?>
-                <tr>
-                    <td colspan="7" style="text-align:center; padding:20px; color:#6b7280;">Belum Ada Data</td>
-                </tr>
-                <?php endif; ?>
-            </tbody>
-        </table>
 
     </main>
 
 </div>
 
-<!-- JS KAMU SENDIRI -->
+<!-- JavaScript -->
 <script src="<?= base_url('assets/admin/js/admin-dashboard.js') ?>"></script>
 
 </body>
