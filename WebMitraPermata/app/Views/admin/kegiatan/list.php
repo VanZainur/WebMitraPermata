@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Berita - <?= strtoupper($jenjang) ?></title>
+    <title>Data kegiatan - <?= strtoupper($jenjang) ?></title>
     
     <style>
         body { margin:0; font-family:Arial, sans-serif; background:#f1f5f9; }
@@ -20,6 +20,7 @@
         .menu-item.active { background:#1e293b; color:#fff; }
         .menu-item::before { content:""; position:absolute; left:0; top:0; height:100%; width:4px; background:#3b82f6; opacity:0; transition:0.25s; }
         .menu-item:hover::before, .menu-item.active::before { opacity:1; }
+        
 
         .sidebar-footer { padding:20px; border-top:1px solid #1e293b; }
         .user-profile { display:flex; align-items:center; }
@@ -63,8 +64,8 @@
 
         <div class="sidebar-menu">
             <a href="<?= base_url('admin') ?>" class="menu-item">Dashboard</a>
-            <a href="<?= base_url('admin/berita') ?>" class="menu-item active">Data Berita</a>
-            <a href="<?= base_url('admin/kegiatan') ?>" class="menu-item">Data Kegiatan</a>
+            <a href="<?= base_url('admin/berita') ?>" class="menu-item">Data Berita</a>
+            <a href="<?= base_url('admin/kegiatan') ?>" class="menu-item active">Data Kegiatan</a>
             <a href="<?= base_url('admin/prestasi') ?>" class="menu-item">Data Prestasi</a>
         </div>
 
@@ -84,8 +85,8 @@
     <main class="main-content">
 
         <div class="topbar">
-            <h2>Data Berita <?= strtoupper($jenjang) ?></h2>
-            <a href="<?= base_url('admin/berita/create') ?>" class="btn btn-primary">+ Tambah Berita</a>
+            <h2>Data kegiatan <?= strtoupper($jenjang) ?></h2>
+            <a href="<?= base_url('admin/kegiatan/create') ?>" class="btn btn-primary">+ Tambah kegiatan</a>
         </div>
 
         <?php if(session()->getFlashdata('success')): ?>
@@ -109,14 +110,14 @@
                 </tr>
             </thead>
             <tbody>
-                <?php if(!empty($berita)): $no=1; foreach($berita as $b): ?>
+                <?php if(!empty($kegiatan)): $no=1; foreach($kegiatan as $b): ?>
                 <tr>
                     <td><?= $no++ ?></td>
                     
                     <!-- TAMPILKAN GAMBAR -->
                    <!-- TAMPILKAN GAMBAR -->
                     <td>
-                        <img src="<?= base_url('uploads/' . strtolower($b['jenjang']) . '/berita/' . $b['gambar']) ?>" 
+                        <img src="<?= base_url('uploads/' . strtolower($b['jenjang']) . '/kegiatan/' . $b['gambar']) ?>" 
                             alt="<?= esc($b['judul']) ?>" 
                             style="width:80px; height:60px; object-fit:cover; border-radius:6px;">
                     </td>
@@ -126,13 +127,13 @@
                     <td><?= esc(substr($b['deskripsi'], 0, 60)) ?>...</td>
                     <td><?= date('d-m-Y', strtotime($b['tanggal'])) ?></td>
                     <td>
-                        <a href="<?= base_url('admin/berita/edit/'.$b['id']) ?>" class="btn btn-warning">Edit</a>
-                        <a href="<?= base_url('admin/berita/delete/'.$b['id']) ?>" class="btn btn-danger" onclick="return confirm('Yakin hapus berita ini?')">Hapus</a>
+                        <a href="<?= base_url('admin/kegiatan/edit/'.$b['id']) ?>" class="btn btn-warning">Edit</a>
+                        <a href="<?= base_url('admin/kegiatan/delete/'.$b['id']) ?>" class="btn btn-danger" onclick="return confirm('Yakin hapus kegiatan ini?')">Hapus</a>
                     </td>
                 </tr>
                 <?php endforeach; else: ?>
                 <tr>
-                    <td colspan="7" style="text-align:center; padding:20px; color:#6b7280;">Belum Ada Data Berita</td>
+                    <td colspan="7" style="text-align:center; padding:20px; color:#6b7280;">Belum Ada Data kegiatan</td>
                 </tr>
                 <?php endif; ?>
             </tbody>

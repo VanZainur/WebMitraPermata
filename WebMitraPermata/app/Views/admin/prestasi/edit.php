@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Berita</title>
+    <title>Edit prestasi</title>
     
     <style>
         body { margin:0; font-family:Arial, sans-serif; background:#f1f5f9; }
@@ -53,9 +53,9 @@
         </div>
         <div class="sidebar-menu">
             <a href="<?= base_url('admin') ?>" class="menu-item">Dashboard</a>
-            <a href="<?= base_url('admin/berita') ?>" class="menu-item active">Data Berita</a>
+            <a href="<?= base_url('admin/berita') ?>" class="menu-item">Data Berita</a>
             <a href="<?= base_url('admin/kegiatan') ?>" class="menu-item">Data Kegiatan</a>
-            <a href="<?= base_url('admin/prestasi') ?>" class="menu-item">Data Prestasi</a>
+            <a href="<?= base_url('admin/prestasi') ?>" class="menu-item active">Data Prestasi</a>
         </div>
         <div class="sidebar-footer">
             <div class="user-profile">
@@ -71,10 +71,10 @@
 
     <!-- MAIN CONTENT -->
     <main class="main-content">
-        <h2>Edit Berita</h2>
+        <h2>Edit prestasi</h2>
 
         <div class="form-container">
-            <form action="<?= base_url('admin/berita/update/'.$berita['id']) ?>" method="POST" enctype="multipart/form-data">
+            <form action="<?= base_url('admin/prestasi/update/'.$prestasi['id']) ?>" method="POST" enctype="multipart/form-data">
                   <?= csrf_field() ?>  <!-- ✅ TAMBAHKAN INI -->
                   
                 <!-- JIKA SUPERADMIN, TAMPILKAN DROPDOWN JENJANG -->
@@ -82,37 +82,37 @@
                 <div class="form-group">
                     <label>Jenjang</label>
                     <select name="jenjang" required>
-                        <option value="smk" <?= $berita['jenjang'] === 'smk' ? 'selected' : '' ?>>SMK</option>
-                        <option value="smp" <?= $berita['jenjang'] === 'smp' ? 'selected' : '' ?>>SMP</option>
-                        <option value="sd" <?= $berita['jenjang'] === 'sd' ? 'selected' : '' ?>>SD</option>
-                        <option value="tk" <?= $berita['jenjang'] === 'tk' ? 'selected' : '' ?>>TK</option>
+                        <option value="smk" <?= $prestasi['jenjang'] === 'smk' ? 'selected' : '' ?>>SMK</option>
+                        <option value="smp" <?= $prestasi['jenjang'] === 'smp' ? 'selected' : '' ?>>SMP</option>
+                        <option value="sd" <?= $prestasi['jenjang'] === 'sd' ? 'selected' : '' ?>>SD</option>
+                        <option value="tk" <?= $prestasi['jenjang'] === 'tk' ? 'selected' : '' ?>>TK</option>
                     </select>
                 </div>
                 <?php else: ?>
                 <!-- JIKA ADMIN BIASA, TAMPILKAN JENJANG READONLY -->
                 <div class="form-group">
                     <label>Jenjang</label>
-                    <input type="text" value="<?= strtoupper($berita['jenjang']) ?>" readonly style="background:#f1f5f9; cursor:not-allowed;">
+                    <input type="text" value="<?= strtoupper($prestasi['jenjang']) ?>" readonly style="background:#f1f5f9; cursor:not-allowed;">
                 </div>
                 <?php endif; ?>
 
                 <div class="form-group">
                     <label>Judul</label>
-                    <input type="text" name="judul" value="<?= esc($berita['judul']) ?>" required>
+                    <input type="text" name="judul" value="<?= esc($prestasi['judul']) ?>" required>
                 </div>
 
                 <div class="form-group">
                     <label>Deskripsi</label>
-                    <textarea name="deskripsi" required><?= esc($berita['deskripsi']) ?></textarea>
+                    <textarea name="deskripsi" required><?= esc($prestasi['deskripsi']) ?></textarea>
                 </div>
 
                 <div class="form-group">
                     <label>Gambar</label>
                     
                    <!-- Tampilkan gambar lama -->
-                    <?php if(!empty($berita['gambar'])): ?>
+                    <?php if(!empty($prestasi['gambar'])): ?>
                         <div style="margin-bottom:10px;">
-                            <img src="<?= base_url('uploads/' . strtolower($berita['jenjang']) . '/berita/' . $berita['gambar']) ?>" 
+                            <img src="<?= base_url('uploads/' . strtolower($prestasi['jenjang']) . '/prestasi/' . $prestasi['gambar']) ?>" 
                                 alt="Gambar Lama" 
                                 style="max-width:200px; border-radius:8px;">
                             <p style="font-size:12px; color:#6b7280;">Gambar saat ini</p>
@@ -127,11 +127,11 @@
 
                 <div class="form-group">
                     <label>Tanggal</label>
-                    <input type="date" name="tanggal" value="<?= $berita['tanggal'] ?>" required>
+                    <input type="date" name="tanggal" value="<?= $prestasi['tanggal'] ?>" required>
                 </div>
 
-                <button type="submit" class="btn btn-primary">Update Berita</button>
-                <a href="<?= base_url('admin/berita') ?>" class="btn btn-secondary">Batal</a>
+                <button type="submit" class="btn btn-primary">Update prestasi</button>
+                <a href="<?= base_url('admin/prestasi') ?>" class="btn btn-secondary">Batal</a>
 
             </form>
         </div>

@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Admin - <?= strtoupper($jenjang) ?></title>
+    <title>Admin | <?= strtoupper($jenjang) ?></title>
+      <link rel="icon" type="image/png" href="<?= base_url('assets/images/logo.png') ?>">
 
     <!-- CSS KAMU SENDIRI -->
     <link rel="stylesheet" href="<?= base_url('assets/admin/css/admin-dashboard.css') ?>">
@@ -205,7 +206,39 @@
             background:#dc2626;
             transform:scale(1.03);
         }
+
+            /* BUTTON EXPORT */
+.btn-export {
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.25s;
+    display: inline-block;
+}
+
+.btn-excel {
+    background: #10b981;
+    color: white;
+}
+
+.btn-excel:hover {
+    background: #059669;
+    transform: translateY(-2px);
+}
+
+.btn-pdf {
+    background: #ef4444;
+    color: white;
+}
+
+.btn-pdf:hover {
+    background: #dc2626;
+    transform: translateY(-2px);
+}
     </style>
+    
 </head>
 
 <body>
@@ -221,7 +254,6 @@
 
        <div class="sidebar-menu">
     <a href="<?= base_url('admin') ?>" class="menu-item">Dashboard</a>
-    <a href="<?= base_url('admin/pendaftaran') ?>" class="menu-item">Data Pendaftaran</a>
     <a href="<?= base_url('admin/berita') ?>" class="menu-item">Data Berita</a>
     <a href="<?= base_url('admin/kegiatan') ?>" class="menu-item">Data Kegiatan</a>
     <a href="<?= base_url('admin/prestasi') ?>" class="menu-item">Data Prestasi</a>
@@ -271,8 +303,23 @@
 
         </div>
 
-        <!-- TABLE -->
-        <h3 style="margin-top:20px;">Data Pendaftar <?= strtoupper($jenjang) ?></h3>
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-top:20px; margin-bottom:10px;">
+    
+    <!-- Title -->
+    <h3 style="margin:0;">Data Pendaftar <?= strtoupper($jenjang) ?></h3>
+
+            <!-- Buttons -->
+            <div style="display:flex; gap:10px;">
+                <a href="<?= base_url('admin/export-excel') ?>" class="btn-export btn-excel">
+                    📊 Export Excel
+                </a>
+                <a href="<?= base_url('admin/export-pdf') ?>" class="btn-export btn-pdf" target="_blank">
+                    📄 Export PDF
+                </a>
+            </div>
+
+        </div>
+
 
         <table>
             <thead>

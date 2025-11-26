@@ -525,9 +525,9 @@
                         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                             <div class="prestasi-card shadow-lg rounded overflow-hidden">
                                 <div class="prestasi-img">
-                                    <img src="<?= base_url('assets/images/achievements/' . $item['gambar']) ?>" 
-                                        class="img-fluid" 
-                                        alt="<?= esc($item['judul']) ?>">
+                                   <!-- Untuk Berita -->
+                                <img src="<?= base_url('uploads/' . strtolower($item['jenjang']) . '/prestasi/' . $item['gambar']) ?>" 
+                                    alt="<?= esc($item['judul']) ?>">
                                 </div>
                                 <div class="prestasi-body p-4">
                                     <h5 class="fw-bold mb-2"><?= esc($item['judul']) ?></h5>
@@ -677,7 +677,9 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="kegiatan-card">
                         <div class="kegiatan-image">
-                            <img src="<?= base_url('assets/images/kegiatan/' . $item['gambar']) ?>" alt="<?= esc($item['judul']) ?>">
+                             <!-- Untuk Berita -->
+                                <img src="<?= base_url('uploads/' . strtolower($item['jenjang']) . '/kegiatan/' . $item['gambar']) ?>" 
+                                alt="<?= esc($item['judul']) ?>">
                             <div class="kegiatan-date">
                                 <?= date('d M Y', strtotime($item['tanggal'])) ?>
                             </div>
@@ -716,7 +718,10 @@
                         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                             <div class="berita-card">
                                 <div class="berita-image">
-                                    <img src="<?= base_url('assets/images/berita/' . $item['gambar']) ?>" alt="<?= $item['judul'] ?>">
+                               <!-- Untuk Berita -->
+                                <img src="<?= base_url('uploads/' . strtolower($item['jenjang']) . '/berita/' . $item['gambar']) ?>" 
+                                    alt="<?= esc($item['judul']) ?>">
+
                                     <div class="berita-badge">
                                         <i class="fa fa-calendar"></i> 
                                         <?= date('d M Y', strtotime($item['tanggal'])) ?>

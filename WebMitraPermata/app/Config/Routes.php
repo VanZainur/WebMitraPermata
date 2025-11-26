@@ -18,6 +18,9 @@ $routes->setAutoRoute(false);
 // ===========================
 $routes->get('/', 'Home::index');
 
+  // Route untuk serve uploaded files
+$routes->get('uploads/(:segment)/(:segment)/(:segment)', 'FileController::serve/$1/$2/$3');
+
 // ===========================
 // ROUTE HALAMAN NAVBAR
 // ===========================
@@ -86,4 +89,10 @@ $routes->group('admin', ['filter' => 'auth'], function($routes) {
     $routes->get('prestasi/edit/(:num)', 'Admin::prestasiEdit/$1');
     $routes->post('prestasi/update/(:num)', 'Admin::prestasiUpdate/$1');
     $routes->get('prestasi/delete/(:num)', 'Admin::prestasiDelete/$1');
+
+    // EXPORT FILE
+    $routes->get('export-excel', 'Admin::exportExcel');
+    $routes->get('export-pdf', 'Admin::exportPdf');
+
+  
 });

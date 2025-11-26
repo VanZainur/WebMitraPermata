@@ -17,6 +17,9 @@
         .sidebar-menu { flex-grow:1; padding-top:15px; }
         .menu-item { display:block; padding:14px 22px; color:#cbd5e1; text-decoration:none; font-size:15px; transition:0.25s; }
         .menu-item:hover { background:#1e293b; color:#fff; }
+         .menu-item:hover::before, .menu-item.active::before { opacity:1; }
+        .menu-item.active { background:#1e293b; color:#fff; }
+
         .sidebar-footer { padding:20px; border-top:1px solid #1e293b; }
         .user-profile { display:flex; align-items:center; }
         .user-avatar { width:45px; height:45px; border-radius:12px; background:#334155; color:white; display:flex; justify-content:center; align-items:center; font-weight:bold; font-size:20px; margin-right:12px; }
@@ -50,7 +53,7 @@
         </div>
         <div class="sidebar-menu">
             <a href="<?= base_url('admin') ?>" class="menu-item">Dashboard</a>
-            <a href="<?= base_url('admin/berita') ?>" class="menu-item">Data Berita</a>
+            <a href="<?= base_url('admin/berita') ?>" class="menu-item active">Data Berita</a>
             <a href="<?= base_url('admin/kegiatan') ?>" class="menu-item">Data Kegiatan</a>
             <a href="<?= base_url('admin/prestasi') ?>" class="menu-item">Data Prestasi</a>
         </div>
