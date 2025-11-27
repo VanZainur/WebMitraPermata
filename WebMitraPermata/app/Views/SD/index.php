@@ -43,7 +43,6 @@
     </div>
     <!-- Carousel End -->
 
-
     <!-- About Start -->
     <div id="about" class="container-xxl py-5 category">
         <div class="container">

@@ -57,7 +57,7 @@
             Jenjang Pendidikan
           </a>
           <div class="dropdown-content">
-            <a href="<?= base_url('tk') ?>">TK</a>
+            <a href="<?= base_url('tk2') ?>">TK</a>
             <a href="<?= base_url('sd') ?>">SD</a>
             <a href="<?= base_url('smp') ?>">SMP</a>
             <a href="<?= base_url('smk') ?>">SMK</a>
@@ -127,7 +127,7 @@
       <span class="arrow">▼</span>
     </a>
     <div class="mobile-dropdown-content">
-      <a href="<?= base_url('tk') ?>">TK</a>
+      <a href="<?= base_url('tk2') ?>">TK</a>
       <a href="<?= base_url('sd') ?>">SD</a>
       <a href="<?= base_url('smp') ?>">SMP</a>
       <a href="<?= base_url('smk') ?>">SMK</a>
