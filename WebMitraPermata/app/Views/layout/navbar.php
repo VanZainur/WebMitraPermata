@@ -142,9 +142,10 @@
   </main>
 
   <!-- Footer -->
-  <footer>
-    © 2025 Sekolah Mitra Permata. All Rights Reserved.
-  </footer>
+<footer class="site-footer">
+    <p>© 2025 Sekolah Mitra Permata. All Rights Reserved</p>
+    <p>By ShōtenLab</p>
+</footer>
 
   <!-- Navbar JavaScript -->
   <script src="<?= base_url('assets/js/navbar.js') ?>"></script>

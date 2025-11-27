@@ -296,7 +296,8 @@ document.getElementById("formPendaftaran").addEventListener("submit", function(e
         <!-- COPYRIGHT -->
         <div class="container">
         <div class="copyright text-center">
-            &copy; 2025 Sekolah Mitra Permata. All Rights Reserved.
+            &copy; 2025 Sekolah Mitra Permata. All Rights Reserved
+            <p>By ShōtenLab</p>
         </div>
     </div>
 </div>
