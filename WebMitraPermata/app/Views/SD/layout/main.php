@@ -32,6 +32,7 @@ $uri = service('uri');
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="<?= base_url('assets/sd/css/bootstrap.min.css') ?>" rel="stylesheet">
+
     <!-- Template Stylesheet -->
     <link href="<?= base_url('assets/sd/css/style.css') ?>" rel="stylesheet">
 
@@ -39,68 +40,69 @@ $uri = service('uri');
 
 <body>
 
- <!-- Popup Pendaftaran PPDB - SD Version -->
-<div id="brosurPopup">
-    <div id="popupContainer">
+   <!-- Popup Pendaftaran PPDB - SMP Ocean Blue -->
+<div id="brosurPopupSMP">
+    <div id="popupContainerSMP">
         
         <!-- Tombol Close -->
-        <button onclick="document.getElementById('brosurPopup').style.display='none'" id="btnClose">
+        <button onclick="document.getElementById('brosurPopupSMP').style.display='none'" id="btnCloseSMP">
             ✕
         </button>
 
         <!-- Header Popup -->
-        <div class="popup-header">
-            <div class="header-icon">
-                <i class="fa fa-graduation-cap"></i>
+        <div class="popup-header-smp">
+            <!-- Logo Sekolah - Ganti src dengan logo SMP Anda -->
+            <div class="header-logo-smp">
+                <img src="<?= base_url('assets/images/logo.png') ?>" alt="Logo SMP">
             </div>
-            <h3 class="form-title">Pendaftaran Peserta Didik Baru</h3>
-            <p class="form-subtitle">Tahun Ajaran 2025/2026</p>
+            <h3 class="form-title-smp">Pendaftaran Peserta Didik Baru</h3>
+            <p class="form-subtitle-smp">SD - Tahun Ajaran 2025/2026</p>
         </div>
 
         <!-- Form Content -->
-        <div id="formSection">
+        <div id="formSectionSMP">
             
             <!-- NOTIF / ALERT -->
-            <div id="alertContainer"></div>
+            <div id="alertContainerSMP"></div>
 
-            <form id="formPendaftaran">
+            <form id="formPendaftaranSMP">
                 
                 <!-- Nama Lengkap -->
-                <div class="form-group">
-                    <label class="form-label">
-                        <i class="fa fa-user icon-label"></i>
-                        Nama Lengkap <span class="required">*</span>
+                <div class="form-group-smp">
+                    <label class="form-label-smp">
+                        <i class="fa fa-user icon-label-smp"></i>
+                        Nama Lengkap <span class="required-smp">*</span>
                     </label>
-                    <input type="text" name="nama" class="form-control" 
+                    <input type="text" name="nama" class="form-control-smp" 
                         placeholder="Contoh: Ahmad Rizki Maulana" required>
                 </div>
 
                 <!-- Tempat Lahir & Tanggal Lahir -->
-                <div class="row">
-                    <div class="col-md-6 form-group">
-                        <label class="form-label">
-                            <i class="fa fa-map-marker-alt icon-label"></i>
-                            Tempat Lahir <span class="required">*</span>
+                <div class="row-smp">
+                    <div class="col-md-6-smp form-group-smp">
+                        <label class="form-label-smp">
+                            <i class="fa fa-map-marker-alt icon-label-smp"></i>
+                            Tempat Lahir <span class="required-smp">*</span>
                         </label>
-                        <input type="text" name="tempat_lahir" class="form-control" 
+                        <input type="text" name="tempat_lahir" class="form-control-smp" 
                             placeholder="Contoh: Jakarta" required>
                     </div>
-                    <div class="col-md-6 form-group">
-                        <label class="form-label">
-                            <i class="fa fa-calendar icon-label"></i>
-                            Tanggal Lahir <span class="required">*</span>
+                    <div class="col-md-6-smp form-group-smp">
+                        <label class="form-label-smp">
+                            <i class="fa fa-calendar icon-label-smp"></i>
+                            Tanggal Lahir <span class="required-smp">*</span>
                         </label>
-                        <input type="date" name="tanggal_lahir" class="form-control" required>
+                        <input type="date" name="tanggal_lahir" class="form-control-smp" required>
                     </div>
                 </div>
 
                 <!-- Jenis Kelamin -->
-                <div class="form-group">
-                    <label class="form-label">
-                        <i class="fa fa-venus-mars icon-label"></i>
-                        Jenis Kelamin <span class="required">*</span>
+                <div class="form-group-smp">
+                    <label class="form-label-smp">
+                        <i class="fa fa-venus-mars icon-label-smp"></i>
+                        Jenis Kelamin <span class="required-smp">*</span>
                     </label>
-                    <select name="jenis_kelamin" class="form-control" required>
+                    <select name="jenis_kelamin" class="form-control-smp" required>
                         <option value="">-- Pilih Jenis Kelamin --</option>
                         <option value="Laki-laki">Laki-laki</option>
                         <option value="Perempuan">Perempuan</option>
@@ -108,32 +110,32 @@ $uri = service('uri');
                 </div>
 
                 <!-- Nama Ayah & Nama Ibu -->
-                <div class="row">
-                    <div class="col-md-6 form-group">
-                        <label class="form-label">
-                            <i class="fa fa-male icon-label"></i>
-                            Nama Ayah <span class="required">*</span>
+                <div class="row-smp">
+                    <div class="col-md-6-smp form-group-smp">
+                        <label class="form-label-smp">
+                            <i class="fa fa-male icon-label-smp"></i>
+                            Nama Ayah <span class="required-smp">*</span>
                         </label>
-                        <input type="text" name="nama_ayah" class="form-control" 
+                        <input type="text" name="nama_ayah" class="form-control-smp" 
                             placeholder="Contoh: Budi Santoso" required>
                     </div>
-                    <div class="col-md-6 form-group">
-                        <label class="form-label">
-                            <i class="fa fa-female icon-label"></i>
-                            Nama Ibu <span class="required">*</span>
+                    <div class="col-md-6-smp form-group-smp">
+                        <label class="form-label-smp">
+                            <i class="fa fa-female icon-label-smp"></i>
+                            Nama Ibu <span class="required-smp">*</span>
                         </label>
-                        <input type="text" name="nama_ibu" class="form-control" 
+                        <input type="text" name="nama_ibu" class="form-control-smp" 
                             placeholder="Contoh: Siti Aminah" required>
                     </div>
                 </div>
 
                 <!-- Agama -->
-                <div class="form-group">
-                    <label class="form-label">
-                        <i class="fa fa-book icon-label"></i>
-                        Agama <span class="required">*</span>
+                <div class="form-group-smp">
+                    <label class="form-label-smp">
+                        <i class="fa fa-book icon-label-smp"></i>
+                        Agama <span class="required-smp">*</span>
                     </label>
-                    <select name="agama" class="form-control" required>
+                    <select name="agama" class="form-control-smp" required>
                         <option value="">-- Pilih Agama --</option>
                         <option value="Islam">Islam</option>
                         <option value="Kristen">Kristen</option>
@@ -145,47 +147,47 @@ $uri = service('uri');
                 </div>
 
                 <!-- Alamat Lengkap -->
-                <div class="form-group">
-                    <label class="form-label">
-                        <i class="fa fa-home icon-label"></i>
-                        Alamat Lengkap <span class="required">*</span>
+                <div class="form-group-smp">
+                    <label class="form-label-smp">
+                        <i class="fa fa-home icon-label-smp"></i>
+                        Alamat Lengkap <span class="required-smp">*</span>
                     </label>
-                    <textarea name="alamat" class="form-control" rows="3" 
+                    <textarea name="alamat" class="form-control-smp" rows="3" 
                         placeholder="Contoh: Jl. Merdeka No. 123, RT 01/RW 05, Kelurahan ABC, Kecamatan XYZ" required></textarea>
                 </div>
 
                 <!-- Nomor WhatsApp -->
-                <div class="form-group">
-                    <label class="form-label">
-                        <i class="fa fa-phone icon-label"></i>
-                        Nomor WhatsApp <span class="required">*</span>
+                <div class="form-group-smp">
+                    <label class="form-label-smp">
+                        <i class="fa fa-phone icon-label-smp"></i>
+                        Nomor WhatsApp <span class="required-smp">*</span>
                     </label>
-                    <input type="tel" name="no_hp" class="form-control" 
+                    <input type="tel" name="no_hp" class="form-control-smp" 
                         placeholder="Contoh: 081234567890" required>
-                    <small class="form-text">Gunakan format: 08xxxxxxxxxx</small>
+                    <small class="form-text-smp">Gunakan format: 08xxxxxxxxxx</small>
                 </div>
 
                 <!-- Sekolah Asal -->
-                <div class="form-group">
-                    <label class="form-label">
-                        <i class="fa fa-school icon-label"></i>
-                        Sekolah Asal (TK/PAUD)
+                <div class="form-group-smp">
+                    <label class="form-label-smp">
+                        <i class="fa fa-school icon-label-smp"></i>
+                        Sekolah Asal (TK)
                     </label>
-                    <input type="text" name="asal_sekolah" class="form-control" 
-                        placeholder="Contoh: TK Harapan Bangsa">
-                    <small class="form-text">Opsional, kosongkan jika belum sekolah</small>
+                    <input type="text" name="asal_sekolah" class="form-control-smp" 
+                        placeholder="Contoh: TK CERIA Rajeg">
+                    <small class="form-text-smp">Opsional, kosongkan jika belum pasti</small>
                 </div>
 
                 <!-- Token CSRF -->
                 <input type="hidden" name="<?= csrf_token() ?>" value="<?= csrf_hash() ?>">
 
                 <!-- Tombol Submit -->
-                <button type="submit" id="btnSubmit" class="btn-submit">
+                <button type="submit" id="btnSubmitSMP" class="btn-submit-smp">
                     <i class="fa fa-paper-plane me-2"></i>Kirim Pendaftaran
                 </button>
 
-                <p class="form-footer">
-                    <span class="required">*</span> Wajib diisi
+                <p class="form-footer-smp">
+                    <span class="required-smp">*</span> Wajib diisi
                 </p>
             </form>
 
@@ -198,16 +200,16 @@ $uri = service('uri');
 // Tampilkan popup setelah 2 detik
 window.addEventListener("load", function () {
     <?php if (session()->has('popup_errors') || session()->has('popup_success')): ?>
-        document.getElementById('brosurPopup').style.display = 'flex';
+        document.getElementById('brosurPopupSMP').style.display = 'flex';
     <?php else: ?>
         setTimeout(() => {
-            document.getElementById('brosurPopup').style.display = 'flex';
+            document.getElementById('brosurPopupSMP').style.display = 'flex';
         }, 2000);
     <?php endif ?>
 });
 
 // Validasi nomor WhatsApp
-document.querySelector('input[name="no_hp"]').addEventListener('input', function(e) {
+document.querySelector('#formPendaftaranSMP input[name="no_hp"]').addEventListener('input', function(e) {
     this.value = this.value.replace(/[^0-9]/g, '');
     
     if (this.value.length > 0 && !this.value.startsWith('08')) {
@@ -220,10 +222,10 @@ document.querySelector('input[name="no_hp"]').addEventListener('input', function
 });
 
 // Submit form dengan AJAX
-document.getElementById('formPendaftaran').addEventListener('submit', function(e) {
+document.getElementById('formPendaftaranSMP').addEventListener('submit', function(e) {
     e.preventDefault();
     
-    const btnSubmit = document.getElementById('btnSubmit');
+    const btnSubmit = document.getElementById('btnSubmitSMP');
     const originalText = btnSubmit.innerHTML;
     
     btnSubmit.disabled = true;
@@ -237,7 +239,7 @@ document.getElementById('formPendaftaran').addEventListener('submit', function(e
     })
     .then(response => response.json())
     .then(data => {
-        const alertContainer = document.getElementById('alertContainer');
+        const alertContainer = document.getElementById('alertContainerSMP');
         
         if (data.success) {
             alertContainer.innerHTML = `
@@ -246,10 +248,10 @@ document.getElementById('formPendaftaran').addEventListener('submit', function(e
                     <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
                 </div>
             `;
-            document.getElementById('formPendaftaran').reset();
+            document.getElementById('formPendaftaranSMP').reset();
             
             setTimeout(() => {
-                document.getElementById('brosurPopup').style.display = 'none';
+                document.getElementById('brosurPopupSMP').style.display = 'none';
             }, 3000);
         } else {
             alertContainer.innerHTML = `
@@ -269,7 +271,7 @@ document.getElementById('formPendaftaran').addEventListener('submit', function(e
         btnSubmit.disabled = false;
         btnSubmit.innerHTML = originalText;
         
-        document.getElementById('alertContainer').innerHTML = `
+        document.getElementById('alertContainerSMP').innerHTML = `
             <div class="alert alert-danger alert-dismissible fade show" role="alert">
                 <i class="fa fa-exclamation-circle me-2"></i>Terjadi kesalahan. Silakan coba lagi.
                 <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
@@ -279,7 +281,7 @@ document.getElementById('formPendaftaran').addEventListener('submit', function(e
 });
 
 // Tutup popup saat klik di luar
-document.getElementById('brosurPopup').addEventListener('click', function(e) {
+document.getElementById('brosurPopupSMP').addEventListener('click', function(e) {
     if (e.target === this) {
         this.style.display = 'none';
     }
@@ -288,10 +290,11 @@ document.getElementById('brosurPopup').addEventListener('click', function(e) {
 // Tutup dengan tombol ESC
 document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') {
-        document.getElementById('brosurPopup').style.display = 'none';
+        document.getElementById('brosurPopupSMP').style.display = 'none';
     }
 });
 </script>
+    <!-- POP UP BROSUR END -->
 
 
     <!-- Spinner Start -->
@@ -305,7 +308,7 @@ document.addEventListener('keydown', function(e) {
 <!-- Navbar Start -->
 <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
      <a href="index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-        <img src="<?= base_url('assets/SD/img/logo.png') ?>" alt="Logo" style="height: 45px; width: auto;" class="me-3">
+        <img src="<?= base_url('assets/sd/img/logo.png') ?>" alt="Logo" style="height: 45px; width: auto;" class="me-3">
         <h2 class="m-0 text-primary">SD Mitra Permata</h2>
     </a>
 
@@ -316,7 +319,6 @@ document.addEventListener('keydown', function(e) {
    <div class="collapse navbar-collapse" id="navbarCollapse">
     <div class="navbar-nav ms-auto p-4 p-lg-0">
         <a href="#about" class="nav-item nav-link">Tentang Kami</a>
-        <a href="#jurusan" class="nav-item nav-link">Kejuruan</a>
         
         <div class="nav-item dropdown">
             <a href="#kegiatan" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Kegiatan</a>
@@ -355,7 +357,6 @@ document.addEventListener('keydown', function(e) {
                 <a class="btn btn-link" href="<?= base_url('sd'); ?>">Beranda</a>
                 <a class="btn btn-link" href="<?= base_url('sd/about'); ?>">Tentang</a>
                 <a class="btn btn-link" href="<?= base_url('sd/about'); ?>">Ekstrakulikuler</a>
-                <a class="btn btn-link" href="<?= base_url('sd/about'); ?>">Jurusan</a>
                 <a class="btn btn-link" href="<?= base_url('sd/about'); ?>">Prestasi</a>
                 <a class="btn btn-link" href="<?= base_url('sd/contact'); ?>">Kontak</a>
                 <!-- <a class="btn btn-link" href="#">Pendaftaran</a> -->

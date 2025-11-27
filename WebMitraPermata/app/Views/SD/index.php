@@ -1,4 +1,4 @@
-<?= $this->extend('sd/layout/main') ?>
+<?= $this->extend('SD/layout/main') ?>
 
 <?= $this->section('title') ?>SD Mitra Permata<?= $this->endSection() ?>
 
@@ -43,197 +43,33 @@
     </div>
     <!-- Carousel End -->
 
-    <!-- Kemitraan Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Kerja Sama</h6>
-                <h1 class="mb-3">Mitra Kerjasama Kami</h1>
-                <p class="text-muted mb-4">Kami menjalin kerja sama strategis dengan berbagai perusahaan, industri, serta institusi pendidikan untuk mendukung pengembangan kompetensi siswa. Kolaborasi ini menjadi landasan penting dalam menciptakan lingkungan belajar yang relevan, inovatif, dan siap menghadapi kebutuhan dunia kerja</p>
-            </div>
-
-            <!-- Partner Slider Modern -->
-            <div class="partner-modern-slider">
-                <div class="partner-track-wrapper">
-                    <div class="partner-track" id="partnerTrack">
-                        
-                        <!-- Partner Card 1 -->
-                        <div class="partner-card">
-                            <div class="partner-logo-box">
-                                <img src="<?= base_url('assets/images/partners/Pt Auto2000.jpg') ?>" alt="PT. AUTO2000">
-                            </div>
-                            <div class="partner-name">PT. AUTO2000</div>
-                        </div>
-
-                        <!-- Partner Card 2 -->
-                        <div class="partner-card">
-                            <div class="partner-logo-box">
-                                <img src="<?= base_url('assets/images/partners/Pt Sumber Alfaria Trijaya.png') ?>" alt="PT. Alfamart">
-                            </div>
-                            <div class="partner-name">PT. Sumber Alfaria Trijaya</div>
-                        </div>
-
-                        <!-- Partner Card 3 -->
-                        <div class="partner-card">
-                            <div class="partner-logo-box">
-                                <img src="<?= base_url('assets/images/partners/Pt Dynaplast.jpg') ?>" alt="PT. Dynaplast">
-                            </div>
-                            <div class="partner-name">PT. Dynaplast</div>
-                        </div>
-
-                        <!-- Partner Card 4 -->
-                        <div class="partner-card">
-                            <div class="partner-logo-box">
-                                <img src="<?= base_url('assets/images/partners/Pt. Indostation.png') ?>" alt="PT. Sentra Trada Indostation">
-                            </div>
-                            <div class="partner-name">PT. Sentra Trada Indostation</div>
-                        </div>
-
-                        <!-- Partner Card 5 -->
-                        <div class="partner-card">
-                            <div class="partner-logo-box">
-                                <img src="<?= base_url('assets/images/partners/Universitas Yatsi Madani.png') ?>" alt="Universitas Yatsi Madani">
-                            </div>
-                            <div class="partner-name">Universitas Yatsi Madani</div>
-                        </div>
-
-                        <!-- Partner Card 6 -->
-                        <div class="partner-card">
-                            <div class="partner-logo-box">
-                                <img src="<?= base_url('assets/images/partners/Global Institute.png') ?>" alt="ITB Bina Sarana Global">
-                            </div>
-                            <div class="partner-name">ITB Bina Sarana Global</div>
-                        </div>
-
-                        <!-- Partner Card 7 -->
-                        <div class="partner-card">
-                            <div class="partner-logo-box">
-                                <img src="<?= base_url('assets/images/partners/UMT.png') ?>" alt="Universitas Muhammadiyah Tangerang">
-                            </div>
-                            <div class="partner-name">Universitas Muhammadiyah Tangerang</div>
-                        </div>
-
-                        <!-- Partner Card 8 -->
-                        <div class="partner-card">
-                            <div class="partner-logo-box">
-                                <img src="<?= base_url('assets/images/partners/Universitas Raharja.png') ?>" alt="Universitas Raharja">
-                            </div>
-                            <div class="partner-name">Universitas Raharja</div>
-                        </div>
-
-                        <!-- Partner Card 9 -->
-                        <div class="partner-card">
-                            <div class="partner-logo-box">
-                                <img src="<?= base_url('assets/images/partners/Universitas Unsaka.png') ?>" alt="Universitas Salakanagara">
-                            </div>
-                            <div class="partner-name">Universitas Salakanagara</div>
-                        </div>
-
-                        <!-- Partner Card 10 -->
-                        <div class="partner-card">
-                            <div class="partner-logo-box">
-                                <img src="<?= base_url('assets/images/partners/pt mitsuba.png') ?>" alt="PT Mitsuba">
-                            </div>
-                            <div class="partner-name">PT Mitsuba</div>
-                        </div>
-
-                        <!-- Partner Card 11 -->
-                        <div class="partner-card">
-                            <div class="partner-logo-box">
-                                <img src="<?= base_url('assets/images/partners/pt belindo.png') ?>" alt="PT Belindo">
-                            </div>
-                            <div class="partner-name">PT Belindo</div>
-                        </div>
-
-                        <!-- Duplicate untuk seamless loop -->
-                        <div class="partner-card">
-                            <div class="partner-logo-box">
-                                <img src="<?= base_url('assets/images/partners/Pt Auto2000.jpg') ?>" alt="PT. AUTO2000">
-                            </div>
-                            <div class="partner-name">PT. AUTO2000</div>
-                        </div>
-
-                        <div class="partner-card">
-                            <div class="partner-logo-box">
-                                <img src="<?= base_url('assets/images/partners/Pt Sumber Alfaria Trijaya.png') ?>" alt="PT. Alfamart">
-                            </div>
-                            <div class="partner-name">PT. Sumber Alfaria Trijaya</div>
-                        </div>
-
-                        <div class="partner-card">
-                            <div class="partner-logo-box">
-                                <img src="<?= base_url('assets/images/partners/Pt Dynaplast.jpg') ?>" alt="PT. Dynaplast">
-                            </div>
-                            <div class="partner-name">PT. Dynaplast</div>
-                        </div>
-
-                        <div class="partner-card">
-                            <div class="partner-logo-box">
-                                <img src="<?= base_url('assets/images/partners/Pt. Indostation.png') ?>" alt="PT. Sentra Trada Indostation">
-                            </div>
-                            <div class="partner-name">PT. Sentra Trada Indostation</div>
-                        </div>
-
-                        <!-- Partner Card 10 -->
-                        <div class="partner-card">
-                            <div class="partner-logo-box">
-                                <img src="<?= base_url('assets/images/partners/pt mitsuba.png') ?>" alt="PT Mitsuba">
-                            </div>
-                            <div class="partner-name">PT Mitsuba</div>
-                        </div>
-
-                        <!-- Partner Card 11 -->
-                        <div class="partner-card">
-                            <div class="partner-logo-box">
-                                <img src="<?= base_url('assets/images/partners/pt belindo.png') ?>" alt="PT Belindo">
-                            </div>
-                            <div class="partner-name">PT Belindo</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Kemitraan End -->
 
     <!-- About Start -->
     <div id="about" class="container-xxl py-5 category">
         <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                    <img class="img-fluid position-absolute w-100 h-100" src="<?= base_url('assets/sd/img/kepsek.png') ?>" alt="" style="object-fit: cover;">
 
-            <div class="about-wrapper">
-
-                <!-- GAMBAR -->
-                <div class="about-image">
-                    <img class="img-fluid w-100" src="<?= base_url('assets/sd/img/kepsek2.png') ?> "style="object-fit: contain;">
+                    </div>
                 </div>
-
-                <!-- TEKS -->
-                <div class="about-text">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <!-- <h6 class="section-title bg-white text-start text-primary pe-3">About Us</h6> -->
                     <h1 class="mb-4">Sambutan Kepala Sekolah</h1>
-
-                    <p style="text-align: justify;">
-                        Dengan penuh rasa syukur, kami menyambut Anda di SD Mitra Permata, sebuah lembaga
-                        pendidikan yang berkomitmen membentuk generasi muda yang unggul, berkarakter, dan siap
-                        bersaing di dunia kerja. Melalui pembelajaran berbasis kompetensi, fasilitas yang mendukung,
-                        serta kemitraan dengan berbagai industri, kami berupaya menghadirkan lingkungan belajar yang
-                        inovatif dan inspiratif bagi seluruh peserta didik.
-                    </p>
-
-                    <p style="text-align: justify;">
-                        Kami percaya bahwa setiap siswa memiliki potensi besar yang harus dikembangkan melalui
-                        pendidikan yang tepat. Oleh karena itu, SD Mitra Permata terus bertransformasi untuk
-                        menghadirkan pengalaman belajar yang relevan, berdaya guna, dan sejalan dengan kebutuhan
-                        perkembangan teknologi serta industri masa kini.
-                    </p>
-
-                    <p style="text-align: justify;">
-                        Semoga website ini dapat menjadi jembatan informasi bagi siswa, orang tua, mitra industri,
-                        dan masyarakat dalam mengenal lebih dekat SD Mitra Permata.
-                    </p>
-
+                    <p class="mb-4" style="text-align: justify;">Dengan penuh rasa syukur, kami menyambut Anda di SD Mitra Permata, sebuah 
+                        lembaga pendidikan yang berkomitmen membentuk generasi muda yang unggul, berkarakter, 
+                        dan siap bersaing di dunia kerja. Melalui pembelajaran berbasis kompetensi, fasilitas 
+                        yang mendukung, serta kemitraan dengan berbagai industri, kami berupaya menghadirkan 
+                        lingkungan belajar yang inovatif dan inspiratif bagi seluruh peserta didik.</p>
+                    <p class="mb-4" style="text-align: justify;">Kami percaya bahwa setiap siswa memiliki potensi besar yang harus 
+                        dikembangkan melalui pendidikan yang tepat. Oleh karena itu, SD Mitra Permata 
+                        terus bertransformasi untuk menghadirkan pengalaman belajar yang relevan, berdaya 
+                        guna, dan sejalan dengan kebutuhan perkembangan teknologi serta industri masa kini.</p>
+                    <p class="mb-4" style="text-align: justify;">Semoga website ini dapat menjadi jembatan informasi bagi siswa, 
+                        orang tua, mitra industri, dan masyarakat dalam mengenal lebih dekat SD Mitra Permata.</p>
                     <a class="btn btn-primary py-3 px-5 mt-2" href="">Lihat Selengkapnya</a>
                 </div>
-
             </div>
         </div>
     </div>
@@ -245,8 +81,8 @@
             <div class="row g-4">
 
                 <!-- Guru Profesional -->
-                <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item text-center pt-3 h-100">
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item text-center pt-3">
                         <div class="p-4">
                             <i class="fa fa-3x fa-user-tie text-primary mb-4"></i>
                             <h5 class="mb-3">Guru Profesional & Berpengalaman</h5>
@@ -256,8 +92,8 @@
                 </div>
 
                 <!-- Kurikulum Nasional -->
-                <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item text-center pt-3 h-100">
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item text-center pt-3">
                         <div class="p-4">
                             <i class="fa fa-3x fa-book-open text-primary mb-4"></i>
                             <h5 class="mb-3">Kurikulum Nasional</h5>
@@ -266,9 +102,9 @@
                     </div>
                 </div>
 
-                <!-- Fasilitas Lengkap -->
-                <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item text-center pt-3 h-100">
+                <!-- Fasilitas Lengkap & Modern -->
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item text-center pt-3">
                         <div class="p-4">
                             <i class="fa fa-3x fa-school text-primary mb-4"></i>
                             <h5 class="mb-3">Fasilitas Lengkap & Modern</h5>
@@ -278,12 +114,12 @@
                 </div>
 
                 <!-- Terakreditasi -->
-                <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="service-item text-center pt-3 h-100">
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="service-item text-center pt-3">
                         <div class="p-4">
                             <i class="fa fa-3x fa-certificate text-primary mb-4"></i>
                             <h5 class="mb-3">Terakreditasi</h5>
-                            <p>Sekolah dengan status akreditasi resmi yang menjamin mutu dan kualitas pendidikan serta memastikan proses pembelajaran berjalan aman dan terpercaya.</p>
+                            <p>Sekolah dengan status akreditasi resmi yang menjamin mutu dan kualitas pendidikan serta memastikan proses pembelajaran berjalan amandan terpercaya.</p>
                         </div>
                     </div>
                 </div>

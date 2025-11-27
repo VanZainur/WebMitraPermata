@@ -394,12 +394,59 @@
 }
 
 /*** Team ***/
+.team-item .overflow-hidden {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  background: #f8f9fa !important;
+  padding: 20px 0 !important;
+}
+
 .team-item img {
   transition: 0.5s;
+  width: 50% !important;
+  height: 175px !important;
+  object-fit: cover !important;
+  object-position: center top !important;
+  margin: 0 auto !important;
+  display: block !important;
 }
 
 .team-item:hover img {
   transform: scale(1.1);
+}
+
+/* Responsive foto guru */
+@media (max-width: 991px) {
+  .team-item img {
+    width: 45% !important;
+    height: 200px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-item img {
+    width: 40% !important;
+    height: 220px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .team-item img {
+    width: 50% !important;
+    height: 240px !important;
+  }
+
+  .team-item .overflow-hidden {
+    padding: 30px 0 !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .team-item img {
+    width: 60% !important;
+    height: 260px !important;
+  }
 }
 
 /*** Testimonial ***/
@@ -1362,11 +1409,10 @@ html {
 }
 
 /* ========================================
-   POPUP PENDAFTARAN PPDB - SD VERSION (MERAH)
+   POPUP PENDAFTARAN PPDB - OCEAN BLUE
    ======================================== */
 
-/* Popup Overlay */
-#brosurPopup {
+#brosurPopupSMP {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.75);
@@ -1378,8 +1424,7 @@ html {
   padding: 20px;
 }
 
-/* Container Popup - Form Only */
-#popupContainer {
+#popupContainerSMP {
   background: #fff;
   width: 100%;
   max-width: 600px;
@@ -1390,11 +1435,10 @@ html {
   max-height: 90vh;
   display: flex;
   flex-direction: column;
-  animation: slideUp 0.4s ease-out;
+  animation: slideUpSMP 0.4s ease-out;
 }
 
-/* Tombol Close */
-#btnClose {
+#btnCloseSMP {
   position: absolute;
   top: 15px;
   right: 15px;
@@ -1415,16 +1459,15 @@ html {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-#btnClose:hover {
-  background: #e74c3c;
+#btnCloseSMP:hover {
+  background: #1e90ff;
   color: white;
-  border-color: #e74c3c;
+  border-color: #1e90ff;
   transform: rotate(90deg) scale(1.1);
 }
 
-/* Header Popup - WARNA MERAH SD */
-.popup-header {
-  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+.popup-header-smp {
+  background: linear-gradient(135deg, #1e90ff 0%, #0066cc 100%);
   padding: 35px 30px 30px;
   text-align: center;
   color: white;
@@ -1432,72 +1475,70 @@ html {
   flex-shrink: 0;
 }
 
-.header-icon {
-  width: 70px;
-  height: 70px;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
+.header-logo-smp {
+  width: 80px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 15px;
-  font-size: 32px;
-  backdrop-filter: blur(10px);
-  border: 3px solid rgba(255, 255, 255, 0.3);
 }
 
-.form-title {
+.header-logo-smp img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+.form-title-smp {
   margin: 0 0 8px;
   font-size: 24px;
   font-weight: 800;
   color: white;
 }
 
-.form-subtitle {
+.form-subtitle-smp {
   margin: 0;
   font-size: 15px;
   color: rgba(255, 255, 255, 0.9);
   font-weight: 400;
 }
 
-/* Form Section - FIXED SCROLL */
-#formSection {
+#formSectionSMP {
   padding: 25px 30px 30px;
   overflow-y: auto;
   flex: 1;
   background: #fafafa;
 }
 
-/* IMPORTANT: Add padding bottom for button visibility */
-#formSection form {
+#formSectionSMP form {
   padding-bottom: 20px;
 }
 
-/* Custom Scrollbar - MERAH */
-#formSection::-webkit-scrollbar {
+#formSectionSMP::-webkit-scrollbar {
   width: 8px;
 }
 
-#formSection::-webkit-scrollbar-track {
+#formSectionSMP::-webkit-scrollbar-track {
   background: #f1f1f1;
   border-radius: 10px;
 }
 
-#formSection::-webkit-scrollbar-thumb {
-  background: #e74c3c;
+#formSectionSMP::-webkit-scrollbar-thumb {
+  background: #1e90ff;
   border-radius: 10px;
 }
 
-#formSection::-webkit-scrollbar-thumb:hover {
-  background: #c0392b;
+#formSectionSMP::-webkit-scrollbar-thumb:hover {
+  background: #0066cc;
 }
 
-/* Form Group */
-.form-group {
+.form-group-smp {
   margin-bottom: 16px;
 }
 
-.form-label {
+.form-label-smp {
   display: block;
   margin-bottom: 7px;
   font-weight: 600;
@@ -1505,20 +1546,18 @@ html {
   font-size: 13px;
 }
 
-/* Icon Label - MERAH */
-.icon-label {
-  color: #e74c3c;
+.icon-label-smp {
+  color: #1e90ff;
   margin-right: 5px;
   font-size: 12px;
 }
 
-.required {
-  color: #e74c3c;
+.required-smp {
+  color: #1e90ff;
   font-weight: bold;
 }
 
-/* Form Control */
-.form-control {
+.form-control-smp {
   width: 100%;
   padding: 11px 14px;
   border-radius: 10px;
@@ -1529,19 +1568,18 @@ html {
   font-family: inherit;
 }
 
-/* Form Control Focus - MERAH */
-.form-control:focus {
+.form-control-smp:focus {
   outline: none;
-  border-color: #e74c3c;
-  box-shadow: 0 0 0 4px rgba(231, 76, 60, 0.1);
+  border-color: #1e90ff;
+  box-shadow: 0 0 0 4px rgba(30, 144, 255, 0.1);
   background: #fff;
 }
 
-.form-control::placeholder {
+.form-control-smp::placeholder {
   color: #adb5bd;
 }
 
-.form-text {
+.form-text-smp {
   display: block;
   margin-top: 5px;
   font-size: 11px;
@@ -1549,25 +1587,22 @@ html {
   font-style: italic;
 }
 
-/* Textarea */
-textarea.form-control {
+textarea.form-control-smp {
   resize: vertical;
   min-height: 80px;
   font-family: inherit;
 }
 
-/* Select - MERAH */
-select.form-control {
+select.form-control-smp {
   cursor: pointer;
   appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23e74c3c' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%231e90ff' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 12px center;
   padding-right: 35px;
 }
 
-/* Row untuk 2 kolom */
-.row {
+.row-smp {
   display: flex;
   gap: 12px;
   margin-left: 0;
@@ -1575,46 +1610,44 @@ select.form-control {
   margin-bottom: 0;
 }
 
-.row .col-md-6 {
+.row-smp .col-md-6-smp {
   flex: 1;
   padding: 0;
 }
 
-/* Button Submit - MERAH SD */
-.btn-submit {
+.btn-submit-smp {
   width: 100%;
   padding: 14px;
   margin-top: 15px;
   border-radius: 12px;
   font-weight: 700;
   font-size: 15px;
-  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+  background: linear-gradient(135deg, #1e90ff 0%, #0066cc 100%);
   color: white;
   border: none;
-  box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+  box-shadow: 0 6px 20px rgba(30, 144, 255, 0.4);
   transition: all 0.3s;
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
-.btn-submit:hover {
+.btn-submit-smp:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(231, 76, 60, 0.5);
+  box-shadow: 0 10px 30px rgba(30, 144, 255, 0.5);
 }
 
-.btn-submit:active {
+.btn-submit-smp:active {
   transform: translateY(-1px);
 }
 
-.btn-submit:disabled {
+.btn-submit-smp:disabled {
   opacity: 0.6;
   cursor: not-allowed;
   transform: none;
 }
 
-/* Form Footer */
-.form-footer {
+.form-footer-smp {
   text-align: center;
   margin-top: 12px;
   margin-bottom: 0;
@@ -1622,12 +1655,11 @@ select.form-control {
   color: #6c757d;
 }
 
-/* Alert Container */
-#alertContainer {
+#alertContainerSMP {
   margin-bottom: 18px;
 }
 
-#alertContainer .alert {
+#alertContainerSMP .alert {
   padding: 11px 14px;
   border-radius: 10px;
   margin-bottom: 0;
@@ -1645,8 +1677,7 @@ select.form-control {
   color: #721c24;
 }
 
-/* Animasi Slide Up */
-@keyframes slideUp {
+@keyframes slideUpSMP {
   from {
     opacity: 0;
     transform: translateY(50px) scale(0.95);
@@ -1658,87 +1689,83 @@ select.form-control {
 }
 
 /* ========================================
- RESPONSIVE DESIGN
+ RESPONSIVE DESIGN - SMP
  ======================================== */
 
-/* Tablet */
 @media (max-width: 768px) {
-  #brosurPopup {
+  #brosurPopupSMP {
     padding: 15px;
   }
 
-  #popupContainer {
+  #popupContainerSMP {
     max-width: 100%;
     border-radius: 15px;
   }
 
-  .popup-header {
+  .popup-header-smp {
     padding: 28px 20px 24px;
   }
 
-  .header-icon {
-    width: 60px;
-    height: 60px;
-    font-size: 28px;
+  .header-logo-smp {
+    width: 65px;
+    height: 65px;
   }
 
-  .form-title {
+  .form-title-smp {
     font-size: 20px;
   }
 
-  .form-subtitle {
+  .form-subtitle-smp {
     font-size: 13px;
   }
 
-  #formSection {
+  #formSectionSMP {
     padding: 20px;
   }
 
-  .row {
+  .row-smp {
     flex-direction: column;
     gap: 0;
   }
 
-  .row .col-md-6 {
+  .row-smp .col-md-6-smp {
     width: 100%;
   }
 }
 
-/* Mobile */
 @media (max-width: 480px) {
-  #brosurPopup {
+  #brosurPopupSMP {
     padding: 8px;
   }
 
-  #popupContainer {
+  #popupContainerSMP {
     max-height: 95vh;
     border-radius: 12px;
   }
 
-  .popup-header {
+  .popup-header-smp {
     padding: 22px 15px 18px;
   }
 
-  .header-icon {
-    width: 50px;
-    height: 50px;
-    font-size: 24px;
+  .header-logo-smp {
+    width: 55px;
+    height: 55px;
     margin-bottom: 12px;
   }
 
-  .form-title {
+  .form-title-smp {
     font-size: 17px;
   }
 
-  .form-subtitle {
+  .form-subtitle-smp {
     font-size: 12px;
   }
 
-  #formSection {
+  #formSectionSMP {
     padding: 18px 15px 25px;
   }
 
-  #btnClose {
+  #btnCloseSMP {
     width: 35px;
     height: 35px;
     font-size: 18px;
@@ -1746,64 +1773,41 @@ select.form-control {
     right: 10px;
   }
 
-  .form-group {
+  .form-group-smp {
     margin-bottom: 13px;
   }
 
-  .form-label {
+  .form-label-smp {
     font-size: 12px;
     margin-bottom: 5px;
   }
 
-  .form-control {
+  .form-control-smp {
     padding: 9px 11px;
     font-size: 13px;
   }
 
-  .btn-submit {
+  .btn-submit-smp {
     padding: 11px;
     font-size: 13px;
   }
 }
 
-/* Very Small Mobile */
 @media (max-width: 360px) {
-  .popup-header {
+  .popup-header-smp {
     padding: 20px 12px 16px;
   }
 
-  .header-icon {
-    width: 45px;
-    height: 45px;
-    font-size: 22px;
+  .header-logo-smp {
+    width: 50px;
+    height: 50px;
   }
 
-  .form-title {
+  .form-title-smp {
     font-size: 16px;
   }
 
-  #formSection {
+  #formSectionSMP {
     padding: 15px 12px 20px;
   }
-}
-
-/* Perbaikan layout about */
-#about .about-wrapper {
-    display: flex;
-    align-items: flex-start;
-    gap: 40px;
-}
-
-#about .about-image img {
-    height: 500px;
-    object-fit: contain;
-}
-
-#about .about-text {
-    flex: 1;
-}
-
-#about .row {
-    display: flex;
-    align-items: flex-start;
 }
