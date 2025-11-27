@@ -1,33 +1,33 @@
-/********** Template CSS **********/
+/********** Template CSS - OCEAN BLUE THEME **********/
 :root {
-  --primary: #03b940 !important;
-  --secondary: #8b5cf6 !important;
-  --light: #f0fdf4 !important;
-  --dark: #1b4332 !important;
+  --primary: #1e90ff !important;
+  --secondary: #0066cc !important;
+  --light: #e3f2fd !important;
+  --dark: #0d47a1 !important;
 }
 
 /* Override Bootstrap colors */
 .bg-primary {
-  background-color: #2d6a4f !important;
+  background-color: #0066cc !important;
 }
 
 .text-primary {
-  color: #03b940 !important;
+  color: #1e90ff !important;
 }
 
 .btn-primary {
-  background-color: #8b5cf6 !important;
-  border-color: #8b5cf6 !important;
+  background: linear-gradient(135deg, #1e90ff 0%, #0066cc 100%) !important;
+  border-color: #1e90ff !important;
 }
 
 .btn-primary:hover {
-  background-color: #2d6a4f !important;
-  border-color: #2d6a4f !important;
+  background: linear-gradient(135deg, #0066cc 0%, #004c99 100%) !important;
+  border-color: #0066cc !important;
 }
 
-/* Accent purple untuk elemen tertentu */
+/* Accent blue untuk elemen tertentu */
 .text-secondary {
-  color: #8b5cf6 !important;
+  color: #0066cc !important;
 }
 
 .fw-medium {
@@ -98,7 +98,20 @@
   border-radius: 0px;
 }
 
-/*** Navbar ***/
+/*** Navbar - BIRU DENGAN TEXT PUTIH ***/
+.navbar {
+  position: fixed !important;
+  top: 0 !important;
+  width: 100% !important;
+  z-index: 999 !important;
+  background: linear-gradient(135deg, #1e90ff 0%, #0066cc 100%) !important;
+  box-shadow: 0 2px 20px rgba(30, 144, 255, 0.3) !important;
+}
+
+.navbar-light .navbar-brand h2 {
+  color: #ffffff !important;
+}
+
 .navbar .dropdown-toggle::after {
   border: none;
   content: "\f107";
@@ -107,47 +120,43 @@
   vertical-align: middle;
   margin-left: 8px;
   transition: transform 0.3s ease;
+  color: #ffffff;
 }
 
 .navbar .dropdown:hover .dropdown-toggle::after {
   transform: rotate(180deg);
 }
 
-/*** Navbar sticky ***/
-.navbar {
-  position: fixed !important;
-  top: 0 !important;
-  width: 100% !important;
-  z-index: 999 !important;
-}
-
 .navbar-light .navbar-nav .nav-link {
   margin-right: 30px;
   padding: 25px 0;
-  color: #ffffff;
+  color: #ffffff !important;
   font-size: 15px;
   text-transform: uppercase;
   outline: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link.active {
-  color: var(--primary);
+  color: #ffffff !important;
 }
 
 @media (max-width: 991.98px) {
   .navbar-light .navbar-nav .nav-link {
     margin-right: 0;
     padding: 10px 0;
+    color: #ffffff !important;
   }
 
   .navbar-light .navbar-nav {
-    border-top: 1px solid #eeeeee;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
   }
 
   /* Mobile Dropdown Style */
   .navbar .dropdown-menu {
-    background: #f8f9fa;
+    background: rgba(255, 255, 255, 0.95) !important;
     border: none;
     border-radius: 8px;
     margin-top: 8px;
@@ -156,21 +165,21 @@
 
   .navbar .dropdown-menu .dropdown-item {
     padding: 10px 20px;
-    color: #2c3e50;
+    color: #0066cc !important;
     font-size: 14px;
     border-left: 3px solid transparent;
     transition: all 0.3s ease;
   }
 
   .navbar .dropdown-menu .dropdown-item:hover {
-    background: #ffffff;
-    border-left-color: #06a34e;
-    color: #06a34e;
+    background: #1e90ff !important;
+    border-left-color: #ffffff;
+    color: #ffffff !important;
     padding-left: 24px;
   }
 
   .navbar .dropdown-menu .dropdown-item + .dropdown-item {
-    border-top: 1px solid #e9ecef;
+    border-top: 1px solid rgba(30, 144, 255, 0.1);
   }
 }
 
@@ -179,28 +188,34 @@
   height: 75px;
 }
 
-.navbar-light .navbar-nav .nav-link {
-  color: var(--dark);
-  font-weight: 500;
+.navbar-light .navbar-brand h2 {
+  color: #ffffff !important;
 }
 
 .navbar-light.sticky-top {
   top: 0 !important;
   transition: 0.5s;
+  background: linear-gradient(135deg, #1e90ff 0%, #0066cc 100%) !important;
 }
 
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
 
 .navbar .dropdown-menu .dropdown-item::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 0;
-    background: linear-gradient(90deg, rgba(6, 163, 78, 0.08) 0%, transparent 100%);
-    transition: width 0.3s ease;
-  }
-
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, rgba(30, 144, 255, 0.1) 0%, transparent 100%);
+  transition: width 0.3s ease;
+}
 
 @media (min-width: 992px) {
   .navbar .nav-item .dropdown-menu {
@@ -212,7 +227,7 @@
     background: #ffffff;
     border: none;
     border-radius: 10px;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 5px 25px rgba(30, 144, 255, 0.2);
     padding: 8px 0;
     min-width: 200px;
     overflow: hidden;
@@ -226,10 +241,9 @@
     opacity: 1;
   }
 
-  /* Dropdown Item Style - Clean & Minimal */
   .navbar .dropdown-menu .dropdown-item {
     padding: 10px 20px;
-    color: #2c3e50;
+    color: #0066cc;
     font-weight: 500;
     font-size: 14px;
     transition: all 0.25s ease;
@@ -239,17 +253,15 @@
     border-left: 2px solid transparent;
   }
 
-  /* Hover effect - subtle & elegant */
   .navbar .dropdown-menu .dropdown-item:hover {
-    background: #f8f9fa;
-    border-left-color: #06a34e;
-    color: #06a34e;
+    background: #1e90ff;
+    border-left-color: #ffffff;
+    color: #ffffff;
     padding-left: 24px;
   }
 
-  /* Separator antara item */
   .navbar .dropdown-menu .dropdown-item + .dropdown-item {
-    border-top: 1px solid #f0f0f0;
+    border-top: 1px solid rgba(30, 144, 255, 0.1);
   }
 }
 
@@ -385,8 +397,8 @@
 
 .course-item img {
   width: 100%;
-  height: 250px; /* Sesuaikan tinggi gambar card */
-  object-fit: cover; /* Biar foto memotong rapi tanpa ketarik */
+  height: 250px;
+  object-fit: cover;
   object-position: center;
   border-radius: 0;
 }
@@ -546,7 +558,7 @@
   border-right: none;
 }
 
-/* Prestasi Modern Card */
+/* Prestasi Modern Card - OCEAN BLUE */
 .prestasi-card {
   background: #ffffff;
   border-radius: 15px;
@@ -562,7 +574,7 @@
 
 .prestasi-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 40px rgba(30, 144, 255, 0.2);
 }
 
 .prestasi-card:hover img {
@@ -570,19 +582,27 @@
 }
 
 .prestasi-body h5 {
-  color: var(--dark);
+  color: #1e90ff;
   text-align: center;
+  font-weight: 700;
 }
 
 .prestasi-body p {
   font-size: 14px;
 }
 
+/* Card Title Umum - Biru Cerah */
+.card-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1e90ff;
+  margin-bottom: 8px;
+}
+
 /* ========================================
    SECTION JURUSAN - RESPONSIVE PROPER
    ======================================== */
 
-/* Desktop - 2 Kolom Samping */
 @media (min-width: 992px) {
   #jurusan .row.g-4.justify-content-center > div.col-lg-4 {
       width: 48% !important;
@@ -590,14 +610,12 @@
   }
 }
 
-/* Tablet - 2 Kolom */
 @media (min-width: 768px) and (max-width: 991px) {
   #jurusan .row.g-4.justify-content-center > div.col-lg-4 {
       width: 48% !important;
   }
 }
 
-/* Mobile - 1 KOLOM PENUH (ATAS BAWAH) */
 @media (max-width: 767px) {
   #jurusan .row.g-4.justify-content-center > div.col-lg-4 {
       width: 100% !important;
@@ -605,12 +623,10 @@
       margin-bottom: 2rem;
   }
 
-  /* Card jadi full width */
   #jurusan .course-item {
       width: 100%;
   }
 
-  /* Adjust font size di mobile */
   #jurusan .course-item h3 {
       font-size: 1.4rem;
   }
@@ -620,19 +636,16 @@
       line-height: 1.6;
   }
 
-  /* Button lebih gede di mobile */
   #jurusan .course-item .btn-sm {
       padding: 10px 20px;
       font-size: 13px;
   }
 
-  /* Footer info */
   #jurusan .course-item .d-flex.border-top small {
       font-size: 12px;
       padding: 10px 5px !important;
   }
 
-  /* Gambar optimal di mobile */
   #jurusan .course-item img {
       height: 220px !important;
       object-fit: cover;
@@ -643,7 +656,6 @@
    FOOTER FULL WIDTH FIX - ULTIMATE
    ======================================== */
 
-/* Force footer keluar dari container parent */
 .footer {
   width: 100vw !important;
   position: relative !important;
@@ -656,7 +668,6 @@
   padding: 0 !important;
 }
 
-/* Container di dalam footer biar konten tetap rapi */
 .footer .container {
   max-width: 1200px !important;
   margin: 0 auto !important;
@@ -664,7 +675,6 @@
   padding-right: 15px !important;
 }
 
-/* Copyright section */
 .footer .copyright {
   width: 100% !important;
   margin: 0 !important;
@@ -680,7 +690,6 @@
   margin-bottom: 0 !important;
 }
 
-/* Hapus overflow dan margin body */
 body,
 html {
   margin: 0 !important;
@@ -689,13 +698,12 @@ html {
   width: 100% !important;
 }
 
-/* Fix back to top button */
 .back-to-top {
   z-index: 9999 !important;
 }
 
 /* ========================================
-   SECTION KEGIATAN - MODERN SIMPLE (HIJAU)
+   SECTION KEGIATAN - OCEAN BLUE
    ======================================== */
 
 .kegiatan-card {
@@ -711,7 +719,7 @@ html {
 
 .kegiatan-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 40px rgba(6, 163, 78, 0.15);
+  box-shadow: 0 12px 40px rgba(30, 144, 255, 0.2);
 }
 
 .kegiatan-image {
@@ -736,13 +744,13 @@ html {
   position: absolute;
   top: 20px;
   left: 20px;
-  background: #06a34e;
+  background: #1e90ff;
   color: white;
   padding: 8px 16px;
   border-radius: 50px;
   font-size: 13px;
   font-weight: 600;
-  box-shadow: 0 4px 12px rgba(6, 163, 78, 0.3);
+  box-shadow: 0 4px 12px rgba(30, 144, 255, 0.4);
 }
 
 .kegiatan-content {
@@ -755,7 +763,7 @@ html {
 .kegiatan-title {
   font-size: 20px;
   font-weight: 700;
-  color: #191919;
+  color: #1e90ff;
   margin-bottom: 12px;
   line-height: 1.4;
 }
@@ -772,7 +780,7 @@ html {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: #06a34e;
+  color: #1e90ff;
   font-weight: 600;
   font-size: 14px;
   text-decoration: none;
@@ -781,14 +789,13 @@ html {
 
 .kegiatan-link:hover {
   gap: 12px;
-  color: #06a34e;
+  color: #0066cc;
 }
 
 .kegiatan-link i {
   font-size: 12px;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .kegiatan-image {
     height: 200px;
@@ -804,7 +811,7 @@ html {
 }
 
 /* ========================================
-   SECTION BERITA - MODERN SIMPLE (HIJAU)
+   SECTION BERITA - OCEAN BLUE
    ======================================== */
 
 .berita-card {
@@ -820,7 +827,7 @@ html {
 
 .berita-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 40px rgba(6, 163, 78, 0.15);
+  box-shadow: 0 12px 40px rgba(30, 144, 255, 0.2);
 }
 
 .berita-image {
@@ -845,7 +852,7 @@ html {
   position: absolute;
   top: 20px;
   left: 20px;
-  background: #06a34e;
+  background: #1e90ff;
   color: white;
   padding: 8px 16px;
   border-radius: 50px;
@@ -854,7 +861,7 @@ html {
   display: flex;
   align-items: center;
   gap: 6px;
-  box-shadow: 0 4px 12px rgba(6, 163, 78, 0.3);
+  box-shadow: 0 4px 12px rgba(30, 144, 255, 0.4);
 }
 
 .berita-badge i {
@@ -871,7 +878,7 @@ html {
 .berita-title {
   font-size: 18px;
   font-weight: 700;
-  color: #191919;
+  color: #1e90ff;
   margin-bottom: 12px;
   line-height: 1.4;
 }
@@ -888,7 +895,7 @@ html {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: #06a34e;
+  color: #1e90ff;
   font-weight: 600;
   font-size: 14px;
   text-decoration: none;
@@ -897,14 +904,13 @@ html {
 
 .berita-link:hover {
   gap: 12px;
-  color: #06a34e;
+  color: #0066cc;
 }
 
 .berita-link i {
   font-size: 12px;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .berita-image {
     height: 200px;
@@ -920,7 +926,7 @@ html {
 }
 
 /* ========================================
-   SECTION EKSTRAKURIKULER - SLIDER STYLE (GAMBAR)
+   SECTION EKSTRAKURIKULER - SLIDER (OCEAN BLUE)
    ======================================== */
 
 .eskul-slider-wrapper {
@@ -932,8 +938,8 @@ html {
 .eskul-cards-container {
   overflow: hidden;
   margin: 0 auto;
-  padding-top: 10px; /* TAMBAH padding atas */
-  padding-bottom: 10px; /* TAMBAH padding bawah */
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .eskul-cards-track {
@@ -955,25 +961,24 @@ html {
 
 .eskul-slider-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  border-color: #06a34e;
+  box-shadow: 0 10px 30px rgba(30, 144, 255, 0.15);
+  border-color: #1e90ff;
 }
 
-/* Image Style (Ganti Icon) */
 .eskul-slider-image {
   width: 100px;
   height: 100px;
   border-radius: 50%;
   overflow: hidden;
   margin: 0 auto 25px;
-  border: 4px solid #06a34e;
+  border: 4px solid #1e90ff;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(6, 163, 78, 0.2);
+  box-shadow: 0 4px 15px rgba(30, 144, 255, 0.3);
 }
 
 .eskul-slider-card:hover .eskul-slider-image {
   transform: scale(1.1);
-  box-shadow: 0 8px 25px rgba(6, 163, 78, 0.3);
+  box-shadow: 0 8px 25px rgba(30, 144, 255, 0.4);
 }
 
 .eskul-slider-image img {
@@ -990,7 +995,7 @@ html {
 .eskul-slider-title {
   font-size: 22px;
   font-weight: 700;
-  color: #191919;
+  color: #1e90ff;
   margin-bottom: 15px;
 }
 
@@ -1004,19 +1009,19 @@ html {
 
 .eskul-slider-schedule {
   font-size: 14px;
-  color: #06a34e;
+  color: #1e90ff;
   font-weight: 600;
   margin: 0;
 }
 
-/* Navigation Buttons */
+/* Navigation Buttons - OCEAN BLUE */
 .eskul-nav {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   width: 50px;
   height: 50px;
-  background: #1a2c5b;
+  background: #0066cc;
   color: white;
   border: none;
   border-radius: 50%;
@@ -1026,11 +1031,11 @@ html {
   cursor: pointer;
   transition: all 0.3s ease;
   z-index: 10;
-  box-shadow: 0 4px 15px rgba(26, 44, 91, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 102, 204, 0.3);
 }
 
 .eskul-nav:hover {
-  background: #06a34e;
+  background: #1e90ff;
   transform: translateY(-50%) scale(1.1);
 }
 
@@ -1046,7 +1051,7 @@ html {
   font-size: 18px;
 }
 
-/* Slider Dots */
+/* Slider Dots - OCEAN BLUE */
 .eskul-dots {
   display: flex;
   justify-content: center;
@@ -1064,12 +1069,11 @@ html {
 }
 
 .eskul-dot.active {
-  background: #06a34e;
+  background: #1e90ff;
   width: 30px;
   border-radius: 5px;
 }
 
-/* Responsive */
 @media (max-width: 1200px) {
   .eskul-slider-card {
     flex: 0 0 calc(33.333% - 20px);
@@ -1123,241 +1127,230 @@ html {
    KEMITRAAN SLIDER - WHITE CLEAN
    ======================================== */
 
-   .partner-modern-slider {
-    position: relative;
-    padding: 10px 0 60px;
-    overflow: hidden;
-    background: white; /* UBAH JADI PUTIH */
+.partner-modern-slider {
+  position: relative;
+  padding: 10px 0 60px;
+  overflow: hidden;
+  background: white;
 }
 
 .partner-track-wrapper {
-    overflow: hidden;
-    padding: 20px 0;
+  overflow: hidden;
+  padding: 20px 0;
 }
 
 .partner-track {
-    display: flex;
-    gap: 40px;
-    animation: smoothPartnerSlide 45s linear infinite;
-    width: fit-content;
-    align-items: center;
+  display: flex;
+  gap: 40px;
+  animation: smoothPartnerSlide 45s linear infinite;
+  width: fit-content;
+  align-items: center;
 }
 
-/* Pause on hover */
 .partner-track:hover {
-    animation-play-state: paused;
+  animation-play-state: paused;
 }
 
 .partner-card {
-    flex: 0 0 auto;
-    background: white;
-    border-radius: 12px;
-    padding: 30px 40px;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  flex: 0 0 auto;
+  background: white;
+  border-radius: 12px;
+  padding: 30px 40px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .partner-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(30, 144, 255, 0.15);
 }
 
 .partner-logo-box {
-    width: 180px;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: transparent;
+  width: 180px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
 }
 
 .partner-logo-box img {
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    transition: transform 0.3s ease;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
 }
 
 .partner-card:hover .partner-logo-box img {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .partner-name {
-    display: none;
+  display: none;
 }
 
-/* Smooth Animation */
 @keyframes smoothPartnerSlide {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
-/* Gradient Fade - WHITE VERSION */
 .partner-modern-slider::before,
 .partner-modern-slider::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    width: 120px;
-    height: 100%;
-    z-index: 2;
-    pointer-events: none;
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 120px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
 }
 
 .partner-modern-slider::before {
-    left: 0;
-    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%); /* WHITE FADE */
+  left: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 .partner-modern-slider::after {
-    right: 0;
-    background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%); /* WHITE FADE */
+  right: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
-/* Responsive */
 @media (max-width: 768px) {
-    .partner-track {
-        gap: 30px;
-        animation: smoothPartnerSlide 35s linear infinite;
-    }
+  .partner-track {
+    gap: 30px;
+    animation: smoothPartnerSlide 35s linear infinite;
+  }
 
-    .partner-card {
-        padding: 20px 30px;
-    }
+  .partner-card {
+    padding: 20px 30px;
+  }
 
-    .partner-logo-box {
-        width: 140px;
-        height: 80px;
-    }
+  .partner-logo-box {
+    width: 140px;
+    height: 80px;
+  }
 }
 
 @media (max-width: 576px) {
-    .partner-track {
-        gap: 20px;
-        animation: smoothPartnerSlide 30s linear infinite;
-    }
+  .partner-track {
+    gap: 20px;
+    animation: smoothPartnerSlide 30s linear infinite;
+  }
 
-    .partner-card {
-        padding: 15px 20px;
-    }
+  .partner-card {
+    padding: 15px 20px;
+  }
 
-    .partner-logo-box {
-        width: 120px;
-        height: 70px;
-    }
+  .partner-logo-box {
+    width: 120px;
+    height: 70px;
+  }
 
-    .partner-modern-slider::before,
-    .partner-modern-slider::after {
-        width: 80px;
-    }
+  .partner-modern-slider::before,
+  .partner-modern-slider::after {
+    width: 80px;
+  }
 }
 
 /* ========================================
-   BUTTON PENDAFTARAN — CLEAN & PREMIUM
+   BUTTON PENDAFTARAN - PUTIH DENGAN TEXT BIRU
    ======================================== */
 
 .btn-daftar {
-    background: linear-gradient(135deg, #06a34e, #039e45) !important;
-    color: #fff !important;
-    padding:30px 30px !important;
-    height: 50px !important;        /* atur tinggi fix */
-    line-height: 38px !important;   /* biar teks ketengah */
-    border-radius: 50px !important;
-    font-weight: 800 !important;
-    font-size: 14px !important;
-    border: none !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    gap: 8px !important;
-    box-shadow: 0 5px 14px rgba(6, 163, 78, 0.25) !important;
-    text-decoration: none !important;
-    transition: 0.25s ease-in-out !important;
-    margin-top: 5px !important; /* TURUNIN DI SINI */
-    margin-right: 10px !important; /* TURUNIN DI SINI */
+  background: #ffffff !important;
+  color: #0066cc !important;
+  padding: 30px 30px !important;
+  height: 50px !important;
+  line-height: 38px !important;
+  border-radius: 50px !important;
+  font-weight: 800 !important;
+  font-size: 14px !important;
+  border: 2px solid #ffffff !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+  text-decoration: none !important;
+  transition: 0.25s ease-in-out !important;
+  margin-top: 5px !important;
+  margin-right: 10px !important;
 }
 
 .btn-daftar:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(6, 163, 78, 0.35) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2) !important;
+  background: #f8f9fa !important;
+  color: #0066cc !important;
 }
 
-
-/* Active (tekan) */
 .btn-daftar:active {
-    transform: translateY(0) !important;
-    box-shadow: 0 3px 8px rgba(6, 163, 78, 0.22) !important;
+  transform: translateY(0) !important;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15) !important;
 }
 
-/* Icon movement minimal */
 .btn-daftar i {
-    transition: transform 0.25s ease !important;
+  transition: transform 0.25s ease !important;
 }
 
 .btn-daftar:hover i {
-    transform: translateX(3px) !important;
+  transform: translateX(3px) !important;
 }
 
-/* Desktop — tampil sejajar dengan menu */
 @media (min-width: 992px) {
-    .navbar-collapse {
-        display: flex !important;
-        align-items: center !important;
-        
-    }
+  .navbar-collapse {
+    display: flex !important;
+    align-items: center !important;
+  }
 
-    .btn-daftar {
-        margin-left: 0 !important;
-    }
+  .btn-daftar {
+    margin-left: 0 !important;
+  }
 }
 
-/* Tablet & Mobile — full width */
 @media (max-width: 991.98px) {
-    .btn-daftar {
-        width: calc(100% - 30px) !important;
-        margin: 15px auto 10px auto !important;
-        justify-content: center !important;
-        display: flex !important;
-    }
+  .btn-daftar {
+    width: calc(100% - 30px) !important;
+    margin: 15px auto 10px auto !important;
+    justify-content: center !important;
+    display: flex !important;
+  }
 }
 
-/* Very small phones */
 @media (max-width: 576px) {
-    .btn-daftar {
-        font-size: 13px !important;
-        padding: 10px 20px !important;
-    }
+  .btn-daftar {
+    font-size: 13px !important;
+    padding: 10px 20px !important;
+  }
 }
 
 /* Hilangkan biru pada dropdown item */
 .navbar .dropdown-menu .dropdown-item,
 .navbar .dropdown-menu .dropdown-item:active,
 .navbar .dropdown-menu .dropdown-item:focus {
-    color: #2c3e50 !important;      /* warna teks normal */
-    background-color: transparent !important; /* tidak biru */
-    outline: none !important;
+  color: #0066cc !important;
+  background-color: transparent !important;
+  outline: none !important;
 }
 
-/* Hover tetap hijau */
 .navbar .dropdown-menu .dropdown-item:hover {
-    background: #f8f9fa !important;
-    color: #06a34e !important;
-    border-left-color: #06a34e;
+  background: #1e90ff !important;
+  color: #ffffff !important;
+  border-left-color: #ffffff;
 }
 
 /* ========================================
-   POPUP PENDAFTARAN PPDB - SMP OCEAN BLUE
+   POPUP PENDAFTARAN PPDB - OCEAN BLUE
    ======================================== */
 
-/* Popup Overlay */
 #brosurPopupSMP {
   position: fixed;
   inset: 0;
@@ -1370,7 +1363,6 @@ html {
   padding: 20px;
 }
 
-/* Container Popup */
 #popupContainerSMP {
   background: #fff;
   width: 100%;
@@ -1385,7 +1377,6 @@ html {
   animation: slideUpSMP 0.4s ease-out;
 }
 
-/* Tombol Close */
 #btnCloseSMP {
   position: absolute;
   top: 15px;
@@ -1414,7 +1405,6 @@ html {
   transform: rotate(90deg) scale(1.1);
 }
 
-/* Header Popup - OCEAN BLUE GRADIENT */
 .popup-header-smp {
   background: linear-gradient(135deg, #1e90ff 0%, #0066cc 100%);
   padding: 35px 30px 30px;
@@ -1424,7 +1414,6 @@ html {
   flex-shrink: 0;
 }
 
-/* Logo Sekolah - TANPA BORDER, LANGSUNG LOGO AJA */
 .header-logo-smp {
   width: 80px;
   height: 80px;
@@ -1455,7 +1444,6 @@ html {
   font-weight: 400;
 }
 
-/* Form Section - FIXED SCROLL */
 #formSectionSMP {
   padding: 25px 30px 30px;
   overflow-y: auto;
@@ -1463,12 +1451,10 @@ html {
   background: #fafafa;
 }
 
-/* IMPORTANT: Add padding bottom for button visibility */
 #formSectionSMP form {
   padding-bottom: 20px;
 }
 
-/* Custom Scrollbar - OCEAN BLUE */
 #formSectionSMP::-webkit-scrollbar {
   width: 8px;
 }
@@ -1487,7 +1473,6 @@ html {
   background: #0066cc;
 }
 
-/* Form Group */
 .form-group-smp {
   margin-bottom: 16px;
 }
@@ -1500,7 +1485,6 @@ html {
   font-size: 13px;
 }
 
-/* Icon Label - OCEAN BLUE */
 .icon-label-smp {
   color: #1e90ff;
   margin-right: 5px;
@@ -1512,7 +1496,6 @@ html {
   font-weight: bold;
 }
 
-/* Form Control */
 .form-control-smp {
   width: 100%;
   padding: 11px 14px;
@@ -1524,7 +1507,6 @@ html {
   font-family: inherit;
 }
 
-/* Form Control Focus - OCEAN BLUE */
 .form-control-smp:focus {
   outline: none;
   border-color: #1e90ff;
@@ -1544,14 +1526,12 @@ html {
   font-style: italic;
 }
 
-/* Textarea */
 textarea.form-control-smp {
   resize: vertical;
   min-height: 80px;
   font-family: inherit;
 }
 
-/* Select - OCEAN BLUE */
 select.form-control-smp {
   cursor: pointer;
   appearance: none;
@@ -1561,7 +1541,6 @@ select.form-control-smp {
   padding-right: 35px;
 }
 
-/* Row untuk 2 kolom */
 .row-smp {
   display: flex;
   gap: 12px;
@@ -1575,7 +1554,6 @@ select.form-control-smp {
   padding: 0;
 }
 
-/* Button Submit - OCEAN BLUE */
 .btn-submit-smp {
   width: 100%;
   padding: 14px;
@@ -1608,7 +1586,6 @@ select.form-control-smp {
   transform: none;
 }
 
-/* Form Footer */
 .form-footer-smp {
   text-align: center;
   margin-top: 12px;
@@ -1617,7 +1594,6 @@ select.form-control-smp {
   color: #6c757d;
 }
 
-/* Alert Container */
 #alertContainerSMP {
   margin-bottom: 18px;
 }
@@ -1640,15 +1616,14 @@ select.form-control-smp {
   color: #721c24;
 }
 
-/* Animasi Slide Up */
 @keyframes slideUpSMP {
   from {
-      opacity: 0;
-      transform: translateY(50px) scale(0.95);
+    opacity: 0;
+    transform: translateY(50px) scale(0.95);
   }
   to {
-      opacity: 1;
-      transform: translateY(0) scale(1);
+    opacity: 1;
+    transform: translateY(0) scale(1);
   }
 }
 
@@ -1656,125 +1631,122 @@ select.form-control-smp {
  RESPONSIVE DESIGN - SMP
  ======================================== */
 
-/* Tablet */
 @media (max-width: 768px) {
   #brosurPopupSMP {
-      padding: 15px;
+    padding: 15px;
   }
 
   #popupContainerSMP {
-      max-width: 100%;
-      border-radius: 15px;
+    max-width: 100%;
+    border-radius: 15px;
   }
 
   .popup-header-smp {
-      padding: 28px 20px 24px;
+    padding: 28px 20px 24px;
   }
 
   .header-logo-smp {
-      width: 65px;
-      height: 65px;
+    width: 65px;
+    height: 65px;
   }
 
   .form-title-smp {
-      font-size: 20px;
+    font-size: 20px;
   }
 
   .form-subtitle-smp {
-      font-size: 13px;
+    font-size: 13px;
   }
 
   #formSectionSMP {
-      padding: 20px;
+    padding: 20px;
   }
 
   .row-smp {
-      flex-direction: column;
-      gap: 0;
+    flex-direction: column;
+    gap: 0;
   }
 
   .row-smp .col-md-6-smp {
-      width: 100%;
+    width: 100%;
   }
 }
 
-/* Mobile */
 @media (max-width: 480px) {
   #brosurPopupSMP {
-      padding: 8px;
+    padding: 8px;
   }
 
   #popupContainerSMP {
-      max-height: 95vh;
-      border-radius: 12px;
+    max-height: 95vh;
+    border-radius: 12px;
   }
 
   .popup-header-smp {
-      padding: 22px 15px 18px;
+    padding: 22px 15px 18px;
   }
 
   .header-logo-smp {
-      width: 55px;
-      height: 55px;
-      margin-bottom: 12px;
+    width: 55px;
+    height: 55px;
+    margin-bottom: 12px;
   }
 
   .form-title-smp {
-      font-size: 17px;
+    font-size: 17px;
   }
 
   .form-subtitle-smp {
-      font-size: 12px;
+    font-size: 12px;
   }
 
   #formSectionSMP {
-      padding: 18px 15px 25px;
+    padding: 18px 15px 25px;
   }
 
   #btnCloseSMP {
-      width: 35px;
-      height: 35px;
-      font-size: 18px;
-      top: 10px;
-      right: 10px;
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+    top: 10px;
+    right: 10px;
   }
 
   .form-group-smp {
-      margin-bottom: 13px;
+    margin-bottom: 13px;
   }
 
   .form-label-smp {
-      font-size: 12px;
-      margin-bottom: 5px;
+    font-size: 12px;
+    margin-bottom: 5px;
   }
 
   .form-control-smp {
-      padding: 9px 11px;
-      font-size: 13px;
+    padding: 9px 11px;
+    font-size: 13px;
   }
 
   .btn-submit-smp {
-      padding: 11px;
-      font-size: 13px;
+    padding: 11px;
+    font-size: 13px;
   }
 }
 
-/* Very Small Mobile */
 @media (max-width: 360px) {
   .popup-header-smp {
-      padding: 20px 12px 16px;
+    padding: 20px 12px 16px;
   }
 
   .header-logo-smp {
-      width: 50px;
-      height: 50px;
+    width: 50px;
+    height: 50px;
   }
 
   .form-title-smp {
-      font-size: 16px;
+    font-size: 16px;
   }
 
   #formSectionSMP {
-      padding: 15px 12px 20px;
+    padding: 15px 12px 20px;
   }
 }
