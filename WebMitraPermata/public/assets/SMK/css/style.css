@@ -392,13 +392,61 @@
 }
 
 /*** Team ***/
+.team-item .overflow-hidden {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  background: #f8f9fa !important;
+  padding: 20px 0 !important;
+}
+
 .team-item img {
   transition: 0.5s;
+  width: 50% !important;
+  height: 175px !important;
+  object-fit: cover !important;
+  object-position: center top !important;
+  margin: 0 auto !important;
+  display: block !important;
 }
 
 .team-item:hover img {
   transform: scale(1.1);
 }
+
+/* Responsive foto guru */
+@media (max-width: 991px) {
+  .team-item img {
+    width: 45% !important;
+    height: 200px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-item img {
+    width: 40% !important;
+    height: 220px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .team-item img {
+    width: 50% !important;
+    height: 240px !important;
+  }
+  
+  .team-item .overflow-hidden {
+    padding: 30px 0 !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .team-item img {
+    width: 60% !important;
+    height: 260px !important;
+  }
+}
+
 
 /*** Testimonial ***/
 .testimonial-carousel::before {
