@@ -8,7 +8,7 @@ $uri = service('uri');
 
 <head>
     <meta charset="utf-8">
-    <title>SD Mitra Permata</title>
+    <title>SD | Mitra Permata</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -32,7 +32,6 @@ $uri = service('uri');
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="<?= base_url('assets/sd/css/bootstrap.min.css') ?>" rel="stylesheet">
-
     <!-- Template Stylesheet -->
     <link href="<?= base_url('assets/sd/css/style.css') ?>" rel="stylesheet">
 
@@ -40,8 +39,7 @@ $uri = service('uri');
 
 <body>
 
-
-<!-- Popup Pendaftaran PPDB - SD Version -->
+ <!-- Popup Pendaftaran PPDB - SD Version -->
 <div id="brosurPopup">
     <div id="popupContainer">
         
@@ -304,17 +302,10 @@ document.addEventListener('keydown', function(e) {
     </div>
     <!-- Spinner End -->
 
-
-    <!-- Navbar Start -->
-   <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-    <a href="<?= base_url('index.php'); ?>"  class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-
-        <!-- LOGO -->
-        <img src="<?= base_url('assets/sd/img/logo.png') ?>" 
-             alt="Logo" 
-             style="height: 45px; width: auto;" 
-             class="me-3">
-
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+     <a href="index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <img src="<?= base_url('assets/SD/img/logo.png') ?>" alt="Logo" style="height: 45px; width: auto;" class="me-3">
         <h2 class="m-0 text-primary">SD Mitra Permata</h2>
     </a>
 
@@ -322,54 +313,38 @@ document.addEventListener('keydown', function(e) {
         <span class="navbar-toggler-icon"></span>
     </button>
 
-     <div class="collapse navbar-collapse" id="navbarCollapse">
+   <div class="collapse navbar-collapse" id="navbarCollapse">
     <div class="navbar-nav ms-auto p-4 p-lg-0">
-        <a href="<?= base_url('sd'); ?>" 
-            class="nav-item nav-link <?= ($uri->getSegment(1) == 'sd' && $uri->getTotalSegments() == 1 ? 'active' : '') ?>">
-            Beranda
-            </a>
-
-        <a href="<?= base_url('sd/about'); ?>" 
-            class="nav-item nav-link <?= ($uri->getSegment(2) == 'about' ? 'active' : '') ?>">
-            Tentang
-            </a>
-
-        <a href="<?= base_url('sd/courses'); ?>" 
-            class="nav-item nav-link <?= ($uri->getSegment(2) == 'courses' ? 'active' : '') ?>">
-            Jurusan
-            </a>
-
-
-        <?php  $pagesActive = in_array($uri->getSegment(2), ['kegiatan', 'prestasi', 'berita']); ?>
-
-
+        <a href="#about" class="nav-item nav-link">Tentang Kami</a>
+        <a href="#jurusan" class="nav-item nav-link">Kejuruan</a>
+        
         <div class="nav-item dropdown">
-            <a href="<?= base_url('sd/kegiatan'); ?>" class="nav-link dropdown-toggle <?= $pagesActive ? 'active' : '' ?>" data-bs-toggle="dropdown"> Kegiatan </a>
-            <div class="dropdown-menu fade-down m-0">
-            
-            <a href="<?= base_url('sd/prestasi'); ?>" class="dropdown-item <?= ($uri->getSegment(2) == 'prestasi' ? 'active' : '') ?>"> Prestasi </a>
-            
-            <a href="<?= base_url('sd/berita'); ?>" class="dropdown-item <?= ($uri->getSegment(2) == 'berita' ? 'active' : '') ?>"> Berita </a>
-
+            <a href="#kegiatan" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Kegiatan</a>
+            <div class="dropdown-menu">
+                <a href="#prestasi" class="dropdown-item">Prestasi</a>
+                <a href="#eskul" class="dropdown-item">Extrakulikuler</a>
+                <a href="#berita" class="dropdown-item">Berita</a>
+            </div>
         </div>
+
+        <a href="#kontak" class="nav-item nav-link">Kontak</a>
+        
+       <!-- PINDAHKAN BUTTON KE DALAM NAVBAR-NAV -->
+            <a href="javascript:void(0)"  onclick="document.getElementById('brosurPopup')
+            .style.display='flex'" class="btn-daftar ms-lg-3"> PENDAFTARAN <i class="fas fa-arrow-right"></i>
+            </a>
     </div>
+</nav>
+<!-- Navbar End -->
 
-       <a href="<?= base_url('sd/contact'); ?>" class="nav-item nav-link <?= ($uri->getSegment(2) == 'contact' ? 'active' : '') ?>"> Kontak </a>
-
-
-    <a href="#" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">
-        Daftar Sekarang<i class="fa fa-arrow-right ms-3"></i>
-    </a>
-</div>
-
-    </nav>
-    <!-- Navbar End -->
-
-      <!-- Content Section -->
+    <!-- Content Section -->
     <?= $this->renderSection('content') ?>
 
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
-        <!-- Footer Start -->
+
+   <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5">
         <div class="container py-5">
         <div class="row g-5">
@@ -379,8 +354,11 @@ document.addEventListener('keydown', function(e) {
                 <h4 class="text-white mb-3">Akses Cepat</h4>
                 <a class="btn btn-link" href="<?= base_url('sd'); ?>">Beranda</a>
                 <a class="btn btn-link" href="<?= base_url('sd/about'); ?>">Tentang</a>
+                <a class="btn btn-link" href="<?= base_url('sd/about'); ?>">Ekstrakulikuler</a>
+                <a class="btn btn-link" href="<?= base_url('sd/about'); ?>">Jurusan</a>
+                <a class="btn btn-link" href="<?= base_url('sd/about'); ?>">Prestasi</a>
                 <a class="btn btn-link" href="<?= base_url('sd/contact'); ?>">Kontak</a>
-                <a class="btn btn-link" href="#">Pendaftaran</a>
+                <!-- <a class="btn btn-link" href="#">Pendaftaran</a> -->
             </div>
 
             <!-- CONTACT -->
@@ -406,7 +384,7 @@ document.addEventListener('keydown', function(e) {
             <div class="col-lg-4 col-md-6">
                 <h4 class="text-white mb-3">Sekolah Mitra Permata</h4>
                 <p style="text-align: justify;">
-                    Lembaga pendidikan dari TK, SD, sd, hingga sd yang berkomitmen memberikan layanan pendidikan berkualitas 
+                    Lembaga pendidikan dari TK, SD, SMP, hingga SMK yang berkomitmen memberikan layanan pendidikan berkualitas 
                     dengan lingkungan belajar yang aman, nyaman, dan berkarakter.
                 </p>
             </div>
@@ -417,15 +395,15 @@ document.addEventListener('keydown', function(e) {
         <!-- COPYRIGHT -->
         <div class="container">
         <div class="copyright text-center">
-            &copy; 2025 Sekolah Mitra Permata. All Rights Reserved.
+            &copy; 2025 Sekolah Mitra Permata. All Rights Reserved
+            <p>By ShōtenLab</p>
         </div>
     </div>
 </div>
     <!-- Footer End -->
 
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
 
 
     <!-- JavaScript Libraries -->
@@ -462,6 +440,186 @@ document.querySelectorAll('.nav-item.dropdown > a.dropdown-toggle').forEach(func
         }
     });
 });
+</script>
+
+
+
+   <!-- ======================================== -->
+   <!-- SECTION EKSTRAKURIKULER - SLIDER STYLE   -->
+   <!-- ======================================== -->
+   <script>
+let eskulCurrentIndex = 0;
+const eskulCardsPerView = getEskulCardsPerView();
+
+function getEskulCardsPerView() {
+    if (window.innerWidth <= 576) return 1;
+    if (window.innerWidth <= 768) return 2;
+    if (window.innerWidth <= 1200) return 3;
+    return 4;
+}
+
+function eskulSlide(direction) {
+    const track = document.getElementById('eskulTrack');
+    const cards = track.children;
+    const totalCards = cards.length;
+    const maxIndex = totalCards - eskulCardsPerView;
+
+    eskulCurrentIndex += direction;
+
+    if (eskulCurrentIndex < 0) {
+        eskulCurrentIndex = 0;
+    } else if (eskulCurrentIndex > maxIndex) {
+        eskulCurrentIndex = maxIndex;
+    }
+
+    const cardWidth = cards[0].offsetWidth;
+    const gap = 30;
+    const translateX = -(eskulCurrentIndex * (cardWidth + gap));
+
+    track.style.transform = `translateX(${translateX}px)`;
+    updateEskulDots();
+}
+
+function updateEskulDots() {
+    const dotsContainer = document.getElementById('eskulDots');
+    const totalCards = document.getElementById('eskulTrack').children.length;
+    const totalDots = totalCards - eskulCardsPerView + 1;
+
+    dotsContainer.innerHTML = '';
+
+    for (let i = 0; i < totalDots; i++) {
+        const dot = document.createElement('div');
+        dot.className = 'eskul-dot' + (i === eskulCurrentIndex ? ' active' : '');
+        dot.onclick = () => goToEskulSlide(i);
+        dotsContainer.appendChild(dot);
+    }
+}
+
+function goToEskulSlide(index) {
+    const track = document.getElementById('eskulTrack');
+    const cards = track.children;
+    eskulCurrentIndex = index;
+
+    const cardWidth = cards[0].offsetWidth;
+    const gap = 30;
+    const translateX = -(eskulCurrentIndex * (cardWidth + gap));
+
+    track.style.transform = `translateX(${translateX}px)`;
+    updateEskulDots();
+}
+
+// Initialize dots on page load
+window.addEventListener('load', updateEskulDots);
+
+// Update on window resize
+let resizeTimer;
+window.addEventListener('resize', function() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+        eskulCurrentIndex = 0;
+        document.getElementById('eskulTrack').style.transform = 'translateX(0)';
+        updateEskulDots();
+    }, 250);
+});
+</script>
+
+
+
+    <!--======================================== -->
+   <!--Smooth scroll polyfill untuk semua browser -->
+   <!-- ======================================== -->
+   <script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Smooth scroll polyfill untuk semua browser
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function(e) {
+            var href = this.getAttribute('href');
+            if (!href || href === '#') return;
+            
+            var target = document.querySelector(href);
+            if (target) {
+                e.preventDefault();
+                
+                var navbar = document.querySelector('.navbar');
+                var offset = navbar ? navbar.offsetHeight + 20 : 100;
+                var targetPosition = target.offsetTop - offset;
+                var startPosition = window.pageYOffset;
+                var distance = targetPosition - startPosition;
+                var duration = 800; // 800ms = 0.8 detik
+                var start = null;
+                
+                function animation(currentTime) {
+                    if (start === null) start = currentTime;
+                    var timeElapsed = currentTime - start;
+                    var run = ease(timeElapsed, startPosition, distance, duration);
+                    window.scrollTo(0, run);
+                    if (timeElapsed < duration) requestAnimationFrame(animation);
+                }
+                
+                // Easing function untuk smooth effect
+                function ease(t, b, c, d) {
+                    t /= d / 2;
+                    if (t < 1) return c / 2 * t * t + b;
+                    t--;
+                    return -c / 2 * (t * (t - 2) - 1) + b;
+                }
+                
+                requestAnimationFrame(animation);
+            }
+        });
+    });
+});
+</script>
+
+<script>
+// Ambil semua menu navbar yang pakai anchor #
+const navLinks = document.querySelectorAll('.navbar a[href^="#"]');
+
+// Ambil semua section yang punya ID
+const sections = document.querySelectorAll("section[id], div[id]");
+
+function setActiveNav() {
+    let scrollPos = window.scrollY + 120; // tambahan offset biar pas
+
+    sections.forEach(sec => {
+        if (sec.offsetTop <= scrollPos && (sec.offsetTop + sec.offsetHeight) > scrollPos) {
+            let id = sec.getAttribute("id");
+
+            navLinks.forEach(link => {
+                link.classList.remove("active");
+
+                if (link.getAttribute("href") === "#" + id) {
+                    link.classList.add("active");
+                }
+            });
+        }
+    });
+}
+
+window.addEventListener("scroll", setActiveNav);
+</script>
+
+<script>
+window.onload = function() {
+    <?php if (session()->has('popup_errors') || session()->has('popup_success')): ?>
+        document.getElementById('brosurPopup').style.display = 'flex';
+        
+        // Auto close alert sukses setelah 5 detik
+        <?php if (session()->has('popup_success')): ?>
+            setTimeout(function() {
+                const successAlert = document.querySelector('.alert-success');
+                if (successAlert) {
+                    successAlert.classList.remove('show');
+                    setTimeout(() => successAlert.remove(), 150);
+                }
+            }, 5000); // 5 detik
+        <?php endif ?>
+    <?php else: ?>
+        setTimeout(function() {
+            document.getElementById('brosurPopup').style.display = 'flex';
+        }, 2000);
+    <?php endif ?>
+};
 </script>
 
 </body>

@@ -8,7 +8,7 @@
     <div class="container-fluid p-0 mb-5">
         <div class="owl-carousel header-carousel position-relative">
             <div class="owl-carousel-item position-relative">
-                  <img class="img-fluid" src="<?= base_url('assets/SMP/img/background1.jpg') ?>" alt="">
+                  <img class="img-fluid" src="<?= base_url('assets/smp/img/background1.jpg') ?>" alt="">
                 <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .7);">
                     <div class="container">
                         <div class="row justify-content-start">
@@ -24,7 +24,7 @@
                 </div>
             </div>
             <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="<?= base_url('assets/SMP/img/background2.png') ?>" alt="">
+                <img class="img-fluid" src="<?= base_url('assets/smp/img/background2.jpg') ?>" alt="">
                 <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .7);">
                     <div class="container">
                         <div class="row justify-content-start">
@@ -49,7 +49,7 @@
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
-                    <img class="img-fluid position-absolute w-100 h-100" src="<?= base_url('assets/SMP/img/rektor.jpg') ?>" alt="" style="object-fit: cover;">
+                    <img class="img-fluid position-absolute w-100 h-100" src="<?= base_url('assets/smp/img/kepsek.png') ?>" alt="" style="object-fit: cover;">
 
                     </div>
                 </div>
@@ -74,69 +74,59 @@
     </div>
     <!-- About End -->
 
-    <!-- Kemitraan Start -->
-     <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Kerja Sama</h6>
-                <h1 class="mb-5">Kemitraan</h1>
-        </div>
-     </div>
-    <!-- Kemitraan End -->
+    <!-- Service Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-4">
 
- <!-- Service Start -->
-<div class="container-xxl py-5">
-    <div class="container">
-        <div class="row g-4">
-
-            <!-- Guru Profesional -->
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="service-item text-center pt-3">
-                    <div class="p-4">
-                        <i class="fa fa-3x fa-user-graduate text-primary mb-4"></i>
-                        <h5 class="mb-3">Guru Profesional</h5>
-                        <p>Tenaga pendidik yang kompeten dan berdedikasi untuk membimbing siswa meraih prestasi terbaik.</p>
+                <!-- Guru Profesional -->
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-user-tie text-primary mb-4"></i>
+                            <h5 class="mb-3">Guru Profesional & Berpengalaman</h5>
+                            <p>Tenaga pendidik berkualifikasi tinggi dan berpengalaman di bidangnya untuk memastikan kualitas pembelajaran terbaik.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Kegiatan Ekstrakurikuler -->
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="service-item text-center pt-3">
-                    <div class="p-4">
-                        <i class="fa fa-3x fa-running text-primary mb-4"></i>
-                        <h5 class="mb-3">Ekstrakurikuler Variatif</h5>
-                        <p>Beragam kegiatan pengembangan minat dan bakat untuk meningkatkan kreativitas dan percaya diri siswa.</p>
+                <!-- Kurikulum Nasional -->
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-book-open text-primary mb-4"></i>
+                            <h5 class="mb-3">Kurikulum Nasional</h5>
+                            <p>Menggunakan kurikulum resmi Kemendikbud yang selalu diperbarui agar sesuai dengan perkembangan dunia pendidikan serta kebutuhan peserta didik.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Fasilitas Lengkap -->
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="service-item text-center pt-3">
-                    <div class="p-4">
-                        <i class="fa fa-3x fa-school text-primary mb-4"></i>
-                        <h5 class="mb-3">Fasilitas Lengkap</h5>
-                        <p>Ruang kelas, perpustakaan, laboratorium, dan sarana lainnya yang menunjang kegiatan belajar mengajar.</p>
+                <!-- Fasilitas Lengkap & Modern -->
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-school text-primary mb-4"></i>
+                            <h5 class="mb-3">Fasilitas Lengkap & Modern</h5>
+                            <p>Dilengkapi ruang kelas nyaman, laboratorium, area bermain, serta sarana pembelajaran yang mendukung siswa.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Lingkungan Belajar Nyaman -->
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                <div class="service-item text-center pt-3">
-                    <div class="p-4">
-                        <i class="fa fa-3x fa-leaf text-primary mb-4"></i>
-                        <h5 class="mb-3">Lingkungan Nyaman</h5>
-                        <p>Suasana sekolah yang aman, bersih, dan kondusif untuk mendukung proses belajar yang optimal.</p>
+                <!-- Terakreditasi -->
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-certificate text-primary mb-4"></i>
+                            <h5 class="mb-3">Terakreditasi</h5>
+                            <p>Sekolah dengan status akreditasi resmi yang menjamin mutu dan kualitas pendidikan serta memastikan proses pembelajaran berjalan amandan terpercaya.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
+            </div>
         </div>
     </div>
-</div>
-<!-- Service End -->
-
+    <!-- Service End -->
 
     <!-- Guru Start -->
     <div class="container-xxl py-5">
@@ -146,10 +136,11 @@
                 <h1 class="mb-5">Tenaga Pendidik Dan Kependidikan</h1>
             </div>
             <div class="row g-4">
+
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item bg-light">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="<?= base_url('assets/SMP/img/team-1.jpg') ?>" alt="">
+                            <img class="img-fluid" src="<?= base_url('assets/smp/img/guru-1-removebg-preview.png') ?>" alt="">
 
                         </div>
                         <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
@@ -160,15 +151,16 @@
                             </div>
                         </div>
                         <div class="text-center p-4">
-                            <h5 class="mb-0">Muhamad Rodiyansah</h5>
-                            <small>Guru Bahasa Batin</small>
+                            <h5 class="mb-0">Habibi, S.Pd</h5>
+                            <small>Kurikulum</small>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item bg-light">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="<?= base_url('assets/SMP/img/team-2.jpg') ?>" alt="">
+                            <img class="img-fluid" src="<?= base_url('assets/smp/img/guru-2-removebg-preview.png') ?>" alt="">
 
                         </div>
                         <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
@@ -179,33 +171,16 @@
                             </div>
                         </div>
                         <div class="text-center p-4">
-                            <h5 class="mb-0">Instructor Name</h5>
-                            <small>Designation</small>
+                            <h5 class="mb-0">Aan Hasanah, S.Pd</h5>
+                            <small>Kurikulum</small>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item bg-light">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="<?= base_url('assets/SMP/img/team-3.jpg') ?>" alt="">
-                        </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Dwi Bayu Nugraha</h5>
-                            <small>Guru Agama</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="<?= base_url('assets/SMP/img/team-4.jpg') ?>" alt="">
+                            <img class="img-fluid" src="<?= base_url('assets/smp/img/guru-3-removebg-preview.png') ?>" alt="">
 
                         </div>
                         <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
@@ -216,8 +191,88 @@
                             </div>
                         </div>
                         <div class="text-center p-4">
-                            <h5 class="mb-0">Instructor Name</h5>
-                            <small>Designation</small>
+                            <h5 class="mb-0">Aan Hasanah, S.Pd</h5>
+                            <small>Kurikulum</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item bg-light">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="<?= base_url('assets/smp/img/guru-4-removebg-preview.png') ?>" alt="">
+
+                        </div>
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Aan Hasanah, S.Pd</h5>
+                            <small>Kurikulum</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item bg-light">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="<?= base_url('assets/smp/img/guru-5-removebg-preview.png') ?>" alt="">
+
+                        </div>
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Siti Nurjannah, S.Pd</h5>
+                            <small>Kurikulum</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item bg-light">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="<?= base_url('assets/smp/img/guru-6-removebg-preview.png') ?>" alt="">
+
+                        </div>
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Erika Juli Agustin, S.Pd</h5>
+                            <small>Kurikulum</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item bg-light">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="<?= base_url('assets/smp/img/guru-7-removebg-preview.png') ?>" alt="">
+
+                        </div>
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Vita Nuraina, S.Pd</h5>
+                            <small>Kurikulum</small>
                         </div>
                     </div>
                 </div>
@@ -226,120 +281,58 @@
     </div>
     <!-- Guru End -->
 
-    <!-- Prestasi  Start -->
+   <!-- Prestasi Start -->
     <div id="prestasi" class="container-xxl py-5 category">
-
         <div class="container">
 
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="section-title bg-white text-center text-primary px-3">Prestasi</h6>
-                <h1 class="mb-5">Prestasi Terbaik Siswa</h1>
+                <h1 class="mb-3">Terbaik Siswa</h1>
+                <p class="text-muted mb-4">Siswa-siswi kami berhasil meraih berbagai prestasi yang membanggakan, baik di bidang akademik, olahraga, maupun seni. Setiap pencapaian ini menunjukkan kerja keras, disiplin, serta semangat mereka dalam mengembangkan potensi terbaik</p>
             </div>
 
             <div class="row g-4">
-
-                <!-- Card 1 -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="prestasi-card shadow-lg rounded overflow-hidden">
-                        <div class="prestasi-img">
-                            <img src="<?= base_url('assets/images/achievements/Juara 1 Badminton.png') ?>" class="img-fluid" alt="Prestasi 1">
+                <?php if (!empty($prestasi)): ?>
+                    <?php foreach ($prestasi as $item): ?>
+                        <!-- Prestasi Card -->
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="prestasi-card shadow-lg rounded overflow-hidden">
+                                <div class="prestasi-img">
+                                   <!-- Untuk Berita -->
+                                <img src="<?= base_url('uploads/' . strtolower($item['jenjang']) . '/prestasi/' . $item['gambar']) ?>" 
+                                    alt="<?= esc($item['judul']) ?>">
+                                </div>
+                                <div class="prestasi-body p-4">
+                                    <h5 class="fw-bold mb-2"><?= esc($item['judul']) ?></h5>
+                                    <p class="text-muted mb-0">
+                                        <?= esc($item['deskripsi']) ?>
+                                    </p>
+                                    <small class="text-muted d-block mt-2">
+                                        <i class="fa fa-calendar"></i> 
+                                        <?= date('d M Y', strtotime($item['tanggal'])) ?>
+                                    </small>
+                                </div>
+                            </div>
                         </div>
-                        <div class="prestasi-body p-4">
-                            <h5 class="fw-bold mb-2">Juara 1 Lomba Badminton</h5>
-                            <p class="text-muted mb-0">
-                                Siswa Mitra Permata Meraih Juara 1 Lomba Badminton dalam Kejuaraan Kota Tangerang Selatan 2025.
-                            </p>
-                        </div>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <div class="col-12">
+                        <p class="text-center text-muted">Belum ada prestasi tersedia.</p>
                     </div>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="prestasi-card shadow-lg rounded overflow-hidden">
-                        <div class="prestasi-img">
-                            <img src="<?= base_url('assets/images/achievements/Juara 1 Voly.png') ?>" class="img-fluid" alt="Prestasi 2">
-                        </div>
-                        <div class="prestasi-body p-4">
-                            <h5 class="fw-bold mb-2">Juara 1 Volly Putra</h5>
-                            <p class="text-muted mb-0">
-                                Siswa SMP Mitra Permata  Meraih Juara 1 Lomba Volly OSIS CUP di SMAN 4 Kabupaten Tangerang.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="prestasi-card shadow-lg rounded overflow-hidden">
-                        <div class="prestasi-img">
-                            <img src="<?= base_url('assets/images/achievements/Juara 3 Voly.png') ?>" class="img-fluid" alt="Prestasi 3">
-                        </div>
-                        <div class="prestasi-body p-4">
-                            <h5 class="fw-bold mb-2">Juara 3 Volly Putra</h5>
-                            <p class="text-muted mb-0">
-                               Siswa Mitra Permata Meraih Juara 3 Lomba Volly SLTA Se-Banten dalam Piala Rektor UIN SMH BANTEN 2025.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-
-                   <!-- Card 1 -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="prestasi-card shadow-lg rounded overflow-hidden">
-                        <div class="prestasi-img">
-                            <img src="<?= base_url('assets/images/achievements/Juara 1 Badminton.png') ?>" class="img-fluid" alt="Prestasi 1">
-                        </div>
-                        <div class="prestasi-body p-4">
-                            <h5 class="fw-bold mb-2">Juara 1 Lomba Badminton</h5>
-                            <p class="text-muted mb-0">
-                                Siswa Mitra Permata Meraih Juara 1 Lomba Badminton dalam Kejuaraan Kota Tangerang Selatan 2025.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="prestasi-card shadow-lg rounded overflow-hidden">
-                        <div class="prestasi-img">
-                            <img src="<?= base_url('assets/images/achievements/Juara 1 Voly.png') ?>" class="img-fluid" alt="Prestasi 2">
-                        </div>
-                        <div class="prestasi-body p-4">
-                            <h5 class="fw-bold mb-2">Juara 1 Volly Putra</h5>
-                            <p class="text-muted mb-0">
-                                Siswa SMP Mitra Permata  Meraih Juara 1 Lomba Volly OSIS CUP di SMAN 4 Kabupaten Tangerang.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="prestasi-card shadow-lg rounded overflow-hidden">
-                        <div class="prestasi-img">
-                            <img src="<?= base_url('assets/images/achievements/Juara 3 Voly.png') ?>" class="img-fluid" alt="Prestasi 3">
-                        </div>
-                        <div class="prestasi-body p-4">
-                            <h5 class="fw-bold mb-2">Juara 3 Volly Putra</h5>
-                            <p class="text-muted mb-0">
-                               Siswa Mitra Permata Meraih Juara 3 Lomba Volly SLTA Se-Banten dalam Piala Rektor UIN SMH BANTEN 2025.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
+                <?php endif; ?>
             </div>
+
         </div>
     </div>
-    <!-- Prestasi  End -->
+    <!-- Prestasi End -->
 
     <!-- Ekstrakurikuler Start -->
     <div id="eskul" class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Ekstrakurikuler</h6>
-                <h1 class="mb-2">Kegiatan Ekstrakurikuler</h1>
+                <h6 class="section-title bg-white text-center text-primary px-3">Kegiatan</h6>
+                <h1 class="mb-2">Ekstrakurikuler</h1>
+                <p class="text-muted mb-4">Di sekolah kami, kegiatan ekstrakurikuler menjadi wadah untuk mengembangkan bakat, minat, dan kreativitas siswa. Melalui berbagai kegiatan yang seru dan bermanfaat, siswa dapat belajar hal baru, melatih kedisiplinan, serta membangun kerja sama dalam tim. Setiap kegiatan dirancang agar mendukung perkembangan karakter sekaligus memberikan pengalaman belajar yang menyenangkan di luar kelas.</p>
             </div>
 
             <!-- Eskul Slider Container -->
@@ -446,196 +439,87 @@
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="section-title bg-white text-center text-primary px-3">Acara</h6>
-                <h1 class="mb-5">Kegiatan Sekolah</h1>
+                <h1 class="mb-3">Kegiatan Sekolah</h1>
+                <p class="text-muted mb-4">Kegiatan sekolah kami mencakup berbagai program yang edukatif, kreatif, dan membangun karakter. Mulai dari kegiatan rutin hingga acara khusus, semuanya dirancang untuk memberikan pengalaman belajar yang menyenangkan sekaligus memperkuat kebersamaan di lingkungan sekolah</p>
             </div>
 
-            <div class="row g-4">
-            
-            <!-- Kegiatan Card 1 -->
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="kegiatan-card">
-                    <div class="kegiatan-image">
-                        <img src="<?= base_url('assets/SMP/img/pramuka.jpg') ?>" alt="Upacara Hari Pahlawan">
-                        <div class="kegiatan-date">15 Jan 2025</div>
-                    </div>
-                    <div class="kegiatan-content">
-                        <h5 class="kegiatan-title">Upacara Hari Pahlawan</h5>
-                        <p class="kegiatan-desc">Pelaksanaan upacara bendera dalam rangka memperingati Hari Pahlawan Nasional yang dihadiri seluruh siswa dan guru SMP Mitra Permata.</p>
-                        <a href="#" class="kegiatan-link">
-                            Lihat Detail <i class="fa fa-arrow-right"></i>
-                        </a>
+           <div class="row g-4">
+
+        <?php if (!empty($kegiatan)): ?>
+            <?php foreach ($kegiatan as $item): ?>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="kegiatan-card">
+                        <div class="kegiatan-image">
+                             <!-- Untuk Berita -->
+                                <img src="<?= base_url('uploads/' . strtolower($item['jenjang']) . '/kegiatan/' . $item['gambar']) ?>" 
+                                alt="<?= esc($item['judul']) ?>">
+                            <div class="kegiatan-date">
+                                <?= date('d M Y', strtotime($item['tanggal'])) ?>
+                            </div>
+                        </div>
+                        <div class="kegiatan-content">
+                            <h5 class="kegiatan-title"><?= esc($item['judul']) ?></h5>
+                            <p class="kegiatan-desc"><?= esc($item['deskripsi']) ?></p>
+                            <a href="<?= base_url('kegiatan/detail/' . $item['id']) ?>" class="kegiatan-link">
+                                Lihat Detail <i class="fa fa-arrow-right"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
+            <?php endforeach; ?>
+        <?php else: ?>
+            <div class="col-12 text-center text-muted">Belum ada kegiatan tersedia.</div>
+        <?php endif; ?>
 
-            <!-- Kegiatan Card 2 -->
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="kegiatan-card">
-                    <div class="kegiatan-image">
-                        <img src="<?= base_url('assets/SMP/img/paskibra.jpg') ?>" alt="Kunjungan Industri">
-                        <div class="kegiatan-date">20 Jan 2025</div>
-                    </div>
-                    <div class="kegiatan-content">
-                        <h5 class="kegiatan-title">Kunjungan Industri</h5>
-                        <p class="kegiatan-desc">Siswa jurusan TKJ berkunjung ke perusahaan teknologi untuk menambah wawasan dan pengalaman kerja di dunia industri teknologi informasi.</p>
-                        <a href="#" class="kegiatan-link">
-                            Lihat Detail <i class="fa fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
+        </div>
 
-            <!-- Kegiatan Card 3 -->
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="kegiatan-card">
-                    <div class="kegiatan-image">
-                        <img src="<?= base_url('assets/SMP/img/marawis.jpg') ?>" alt="Class Meeting 2025">
-                        <div class="kegiatan-date">25 Jan 2025</div>
-                    </div>
-                    <div class="kegiatan-content">
-                        <h5 class="kegiatan-title">Class Meeting 2025</h5>
-                        <p class="kegiatan-desc">Kompetisi olahraga dan seni antar kelas dalam rangka mempererat tali persaudaraan dan mengembangkan sportivitas siswa SMP Mitra Permata.</p>
-                        <a href="#" class="kegiatan-link">
-                            Lihat Detail <i class="fa fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            </div>
         </div>
     </div>
     <!-- Kegiatan End-->
 
     <!-- Berita Start-->
-    <div id="berita" class="container-xxl py-5 category">
-    <div class="container">
-        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title bg-white text-center text-primary px-3">News</h6>
-            <h1 class="mb-5">Berita Sekolah</h1>
-        </div>
-
-        <div class="row g-4">
-            
-            <!-- Berita Card 1 -->
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="berita-card">
-                    <div class="berita-image">
-                        <img src="<?= base_url('assets/images/berita/spnb.png') ?>" alt="PPDB">
-                        <div class="berita-badge">
-                            <i class="fa fa-calendar"></i> 10 Feb 2025
-                        </div>
-                    </div>
-                    <div class="berita-content">
-                        <h5 class="berita-title">Pendaftaran Siswa Baru 2025/2026 Resmi Dibuka</h5>
-                        <p class="berita-desc">SMP Mitra Permata membuka pendaftaran siswa baru untuk tahun ajaran 2025/2026. Segera daftarkan putra-putri Anda dan raih masa depan cerah bersama kami!</p>
-                        <a href="#" class="berita-link">
-                            Baca Selengkapnya <i class="fa fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
+    <div id="berita" class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Informasi</h6>
+                <h1 class="mb-5">Berita Terkini</h1>
             </div>
 
-            <!-- Berita Card 2 -->
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="berita-card">
-                    <div class="berita-image">
-                        <img src="<?= base_url('assets/images/berita/hut ri.webp') ?>" alt="Kerja Sama">
-                        <div class="berita-badge">
-                            <i class="fa fa-calendar"></i> 08 Feb 2025
-                        </div>
-                    </div>
-                    <div class="berita-content">
-                        <h5 class="berita-title">Peringatan HUT RI dengan Berbagai Lomba Menarik</h5>
-                        <p class="berita-desc">Kemeriahan HUT RI ke-80 terasa di lingkungan SMP Mitra Permata dengan berbagai kompetisi seru dan kegiatan yang melibatkan seluruh siswa.</p>
-                        <a href="#" class="berita-link">
-                            Baca Selengkapnya <i class="fa fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
+            <div class="row g-4">
+                <?php if (!empty($berita)): ?>
+                    <?php foreach ($berita as $item): ?>
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="berita-card">
+                                <div class="berita-image">
+                               <!-- Untuk Berita -->
+                                <img src="<?= base_url('uploads/' . strtolower($item['jenjang']) . '/berita/' . $item['gambar']) ?>" 
+                                    alt="<?= esc($item['judul']) ?>">
 
-            <!-- Berita Card 3 -->
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="berita-card">
-                    <div class="berita-image">
-                        <img src="<?= base_url('assets/images/berita/Juara 1 Badminton.jpg') ?>" alt="Pelatihan">
-                        <div class="berita-badge">
-                            <i class="fa fa-calendar"></i> 05 Feb 2025
+                                    <div class="berita-badge">
+                                        <i class="fa fa-calendar"></i> 
+                                        <?= date('d M Y', strtotime($item['tanggal'])) ?>
+                                    </div>
+                                </div>
+                                <div class="berita-content">
+                                    <h5 class="berita-title"><?= esc($item['judul']) ?></h5>
+                                    <p class="berita-desc"><?= esc($item['deskripsi']) ?></p>
+                                    <a href="<?= base_url('berita/detail/' . $item['id']) ?>" class="berita-link">
+                                        Baca Selengkapnya <i class="fa fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <div class="col-12">
+                        <p class="text-center text-muted">Belum ada berita tersedia.</p>
                     </div>
-                    <div class="berita-content">
-                        <h5 class="berita-title">Juara 1 Lomba Badminton Tingkat Nasional</h5>
-                        <p class="berita-desc">Atlet badminton SMP Mitra Permata berhasil meraih juara pertama dalam turnamen bergengsi tingkat nasional. Prestasi luar biasa ini merupakan hasil dari latihan intensif dan dedikasi tinggi.</p>
-                        <a href="#" class="berita-link">
-                            Baca Selengkapnya <i class="fa fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
+                <?php endif; ?>
             </div>
-
-            <!-- Berita Card 4 -->
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="berita-card">
-                    <div class="berita-image">
-                        <img src="<?= base_url('assets/images/berita/tips ujian.png') ?>" alt="Prestasi">
-                        <div class="berita-badge">
-                            <i class="fa fa-calendar"></i> 01 Feb 2025
-                        </div>
-                    </div>
-                    <div class="berita-content">
-                        <h5 class="berita-title">Tips Sukses Menghadapi Ujian Akhir Semester</h5>
-                        <p class="berita-desc">Persiapan matang adalah kunci kesuksesan. Berikut tips dan strategi belajar efektif dari para guru untuk menghadapi ujian dengan percaya diri</p>
-                        <a href="#" class="berita-link">
-                            Baca Selengkapnya <i class="fa fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Berita Card 5 -->
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="berita-card">
-                    <div class="berita-image">
-                        <img src="<?= base_url('assets/images/berita/pkk.png') ?>" alt="Seminar">
-                        <div class="berita-badge">
-                            <i class="fa fa-calendar"></i> 28 Jan 2025
-                        </div>
-                    </div>
-                    <div class="berita-content">
-                        <h5 class="berita-title">Sidang PKL Siswa/Siswi SMP Mitra Permata Tahun 2025</h5>
-                        <p class="berita-desc">SMP Mitra Permata mengadakan Sidang PKL untuk membekali siswa dengan mindset dan skill.</p>
-                        <a href="#" class="berita-link">
-                            Baca Selengkapnya <i class="fa fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Berita Card 6 -->
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="berita-card">
-                    <div class="berita-image">
-                        <img src="<?= base_url('assets/images/berita/kunjungan industri.jpg') ?>" alt="Fasilitas">
-                        <div class="berita-badge">
-                            <i class="fa fa-calendar"></i> 25 Jan 2025
-                        </div>
-                    </div>
-                    <div class="berita-content">
-                        <h5 class="berita-title">Kunjungan Industri ke Perusahaan Teknologi Terkemuka</h5>
-                        <p class="berita-desc">Siswa jurusan TKJ mendapat kesempatan emas untuk berkunjung langsung ke perusahaan teknologi startup unicorn. Pengalaman berharga ini memberikan insight dunia kerja</p>
-                        <a href="#" class="berita-link">
-                            Baca Selengkapnya <i class="fa fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </div>
-</div>
     <!-- Berita End-->
-
+    
     <!-- Testimonial Start -->
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
@@ -645,7 +529,7 @@
             </div>
             <div class="owl-carousel testimonial-carousel position-relative">
                 <div class="testimonial-item text-center">
-                   <img class="border rounded-circle p-2 mx-auto mb-3" src="<?= base_url('assets/SMP/img/testimonial-1.jpg') ?>" style="width: 80px; height: 80px;">
+                   <img class="border rounded-circle p-2 mx-auto mb-3" src="<?= base_url('assets/smp/img/testimonial-1.jpg') ?>" style="width: 80px; height: 80px;">
 
                     <h5 class="mb-0">Yunita</h5>
                     <p>Siswi</p>
@@ -654,7 +538,7 @@
                     </div>
                 </div>
                 <div class="testimonial-item text-center">
-                   <img class="border rounded-circle p-2 mx-auto mb-3" src="<?= base_url('assets/SMP/img/testimonial-2.jpg') ?>" style="width: 80px; height: 80px;">
+                   <img class="border rounded-circle p-2 mx-auto mb-3" src="<?= base_url('assets/smp/img/testimonial-2.jpg') ?>" style="width: 80px; height: 80px;">
                     <h5 class="mb-0">Agung Rizki Saputra</h5>
                     <p>Siswa</p>
                     <div class="testimonial-text bg-light text-center p-4">
@@ -662,7 +546,7 @@
                     </div>
                 </div>
                 <div class="testimonial-item text-center">
-                  <img class="border rounded-circle p-2 mx-auto mb-3" src="<?= base_url('assets/SMP/img/testimonial-3.jpg') ?>" style="width: 80px; height: 80px;">
+                  <img class="border rounded-circle p-2 mx-auto mb-3" src="<?= base_url('assets/smp/img/testimonial-3.jpg') ?>" style="width: 80px; height: 80px;">
                     <h5 class="mb-0">Irvandy Zainur</h5>
                     <p>Siswa</p>
                     <div class="testimonial-text bg-light text-center p-4">
@@ -670,7 +554,7 @@
                     </div>
                 </div>
                 <div class="testimonial-item text-center">
-                   <img class="border rounded-circle p-2 mx-auto mb-3" src="<?= base_url('assets/SMP/img/testimonial-4.jpg') ?>" style="width: 80px; height: 80px;">
+                   <img class="border rounded-circle p-2 mx-auto mb-3" src="<?= base_url('assets/smp/img/testimonial-4.jpg') ?>" style="width: 80px; height: 80px;">
                     <h5 class="mb-0">Someone</h5>
                     <p>Siswi</p>
                     <div class="testimonial-text bg-light text-center p-4">
@@ -709,7 +593,7 @@
                         </div>
                         <div class="ms-3">
                             <h5 class="text-primary">No Telepon</h5>
-                            <p class="mb-1  ">(021) 123456</p>
+                            <p class="mb-1  ">0858-4632-5633 (Miss. Tita) - Staff</p>
                         </div>
                     </div>
                     <div class="d-flex align-items-center">

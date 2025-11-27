@@ -8,7 +8,7 @@ $uri = service('uri');
 
 <head>
     <meta charset="utf-8">
-    <title>SMP Mitra Permata</title>
+    <title>SMP | Mitra Permata</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -32,7 +32,6 @@ $uri = service('uri');
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="<?= base_url('assets/smp/css/bootstrap.min.css') ?>" rel="stylesheet">
-
     <!-- Template Stylesheet -->
     <link href="<?= base_url('assets/smp/css/style.css') ?>" rel="stylesheet">
 
@@ -49,66 +48,150 @@ $uri = service('uri');
         <div style="background: #fff; width: 100%; max-width: 750px; 
                 border-radius: 15px; overflow: hidden; box-shadow: 0 0 30px rgba(0,0,0,0.3); 
                 display: flex; flex-wrap: wrap; position: relative;
-                max-height: 90vh;"> <!-- BATAS TINGGI 90% LAYAR -->
+                max-height: 90vh;">
 
-        <!-- Tombol Close -->
-        <button onclick="document.getElementById('brosurPopup').style.display='none'"
-            style="position: absolute; top: 15px; right: 15px; background: white; border: none; 
-                   color: #000000 ; width: 35px; height: 35px; font-size: 18px;
-                   border-radius: 50%; cursor: pointer;">
-            ✕
-        </button>
+            <!-- Tombol Close -->
+            <button onclick="document.getElementById('brosurPopup').style.display='none'"
+                style="position: absolute; top: 15px; right: 15px; background: white; border: none; 
+                    color: #000000; width: 35px; height: 35px; font-size: 18px;
+                    border-radius: 50%; cursor: pointer; z-index: 10;">
+                ✕
+            </button>
 
-        <!-- KIRI (GAMBAR PROMO) -->
-        <div style="flex: 1; min-width: 40%; max-height: 90vh;">
-            <img src="<?= base_url('assets/images/berita/brosur.jpg') ?>"
-                 style="width: 100%; height: 100%; object-fit: cover;">
-        </div>
+            <!-- KIRI -->
+            <div style="flex: 1; min-width: 40%; max-height: 90vh;">
+                <img src="<?= base_url('assets/images/berita/brosur.jpg') ?>"
+                    style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
 
-        <!-- KANAN (FORM) -->
-        <div style="flex: 1; min-width: 60%; padding: 25px; overflow-y: auto; max-height: 90vh;">
+            <!-- KANAN (FORM) -->
+            <div style="flex: 1; min-width: 60%; padding: 25px; overflow-y: auto; max-height: 90vh;">
 
-            <h3 class="text-center mb-4" style="font-weight: 800;">
-                Pendaftaran Peserta Didik Baru 2025
-            </h3>
+                <h3 class="text-center mb-4" style="font-weight: 800;">
+                    Pendaftaran Peserta Didik Baru 2025
+                </h3>
 
-            <form>
-                <div class="mb-3">
-                    <label class="form-label">Nama Lengkap</label>
-                    <input type="text" class="form-control" placeholder="Masukkan nama lengkap">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Tempat, Tanggal Lahir</label>
-                    <input type="text" class="form-control" placeholder="Tangerang, 01-01-2010">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Asal Sekolah</label>
-                    <input type="text" class="form-control" placeholder="SD Negeri 5">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Nomor WhatsApp</label>
-                    <input type="text" class="form-control" placeholder="0812xxxxxxx">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Jurusan</label>
-                    <select class="form-control">
-                        <option>Teknik Komputer Jaringan</option>
-                        <option>Teknik Kendaraan Ringan</option>
-                    </select>
-                </div>
-                <button type="submit" class="btn btn-primary w-100 py-2">Kirim Pendaftaran</button>
-            </form>
+                <!-- NOTIF / ALERT -->
+                <div id="alertContainer"></div>
+
+                <form id="formPendaftaran">
+                    
+                    <div class="mb-3">
+                        <label class="form-label">Nama Lengkap *</label>
+                        <input type="text" name="nama" class="form-control" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Alamat Lengkap</label>
+                        <input type="text" name="alamat" class="form-control">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Asal Sekolah</label>
+                        <input type="text" name="asal_sekolah" class="form-control">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Nomor WhatsApp *</label>
+                        <input type="text" name="no_hp" class="form-control" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Jurusan *</label>
+                        <select name="jurusan" class="form-control" required>
+                            <option value="">-- Pilih Jurusan --</option>
+                            <option value="TKJ">Teknik Jaringan dan Komputer</option>
+                            <option value="TKR">Teknik Kendaraan Ringan Otomotif</option>
+                        </select>
+                    </div>
+
+                    <!-- Token CSRF -->
+                    <input type="hidden" name="<?= csrf_token() ?>" value="<?= csrf_hash() ?>">
+
+                    <button type="submit" id="btnSubmit" class="btn btn-primary w-100 py-2">
+                        <i class="fa fa-paper-plane me-2"></i>Kirim Pendaftaran
+                    </button>
+                </form>
 
             </div>
         </div>
     </div>
 
-    <script>
-    window.onload = function() {
+    <!-- Script Popup & AJAX -->
+   <script>
+// Tampilkan popup setelah 2 detik (jika tidak ada session error/success)
+window.addEventListener("load", function () {
+
+    <?php if (session()->has('popup_errors') || session()->has('popup_success')): ?>
         document.getElementById('brosurPopup').style.display = 'flex';
-    };
-    </script>
+    <?php else: ?>
+        setTimeout(() => {
+            document.getElementById('brosurPopup').style.display = 'flex';
+        }, 2000);
+    <?php endif ?>
+});
+</script>
+
+
+<script>
+// Submit AJAX
+document.getElementById("formPendaftaran").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let form = new FormData(this);
+    let alertBox = document.getElementById("alertContainer");
+    let btn = document.getElementById("btnSubmit");
+
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fa fa-spinner fa-spin me-2"></i>Mengirim...';
+
+   fetch("<?= base_url('pendaftaran/submit/smk') ?>", {
+    method: "POST",
+    body: form,
+    headers: {
+        "X-Requested-With": "XMLHttpRequest"
+    }
+})
+
+    .then(r => r.json())
+    .then(res => {
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fa fa-paper-plane me-2"></i>Kirim Pendaftaran';
+
+        if (res.success) {
+            alertBox.innerHTML = `
+                <div class="alert alert-success">
+                    <b>Berhasil!</b><br>${res.message}
+                </div>
+            `;
+            document.getElementById("formPendaftaran").reset();
+            setTimeout(() => location.reload(), 2000);
+        } else {
+            let errorList = "";
+            for (let i in res.errors) {
+                errorList += `<li>${res.errors[i]}</li>`;
+            }
+            alertBox.innerHTML = `
+                <div class="alert alert-danger">
+                    <b>Gagal mengirim!</b><br><ul>${errorList}</ul>
+                </div>
+            `;
+        }
+    })
+    .catch(() => {
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fa fa-paper-plane me-2"></i>Kirim Pendaftaran';
+        alertBox.innerHTML = `
+            <div class="alert alert-danger">
+                ❌ Kesalahan koneksi. Coba lagi nanti.
+            </div>
+        `;
+    });
+});
+</script>
+
     <!-- POP UP BROSUR END -->
+
 
 
     <!-- Spinner Start -->
@@ -119,16 +202,10 @@ $uri = service('uri');
     </div>
     <!-- Spinner End -->
 
-
-    <!-- Navbar Start -->
-   <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-    <a href="<?= base_url('index.php'); ?>"  class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-
-        <!-- LOGO -->
-        <img src="<?= base_url('assets/SMP/img/logo.png') ?>" 
-             alt="Logo" 
-             style="height: 45px; width: auto;" 
-             class="me-3">
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+     <a href="index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <img src="<?= base_url('assets/smp/img/logo.png') ?>" alt="Logo" style="height: 45px; width: auto;" class="me-3">
         <h2 class="m-0 text-primary">SMP Mitra Permata</h2>
     </a>
 
@@ -136,37 +213,28 @@ $uri = service('uri');
         <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarCollapse">
+   <div class="collapse navbar-collapse" id="navbarCollapse">
     <div class="navbar-nav ms-auto p-4 p-lg-0">
-        <a href="<?= base_url('smp'); ?>" 
-            class="nav-item nav-link <?= ($uri->getSegment(1) == 'smp' && $uri->getTotalSegments() == 1 ? 'active' : '') ?>">
-            Beranda
-            </a>
-
-       <a href="#about" class="nav-item nav-link">Tentang Kami</a>
-            <div class="nav-item dropdown">
-            <a href="#kegiatan" 
-            class="nav-link dropdown-toggle" 
-            data-bs-toggle="dropdown">
-            Kegiatan
-            </a>
-
+        <a href="#about" class="nav-item nav-link">Tentang Kami</a>
+        
+        <div class="nav-item dropdown">
+            <a href="#kegiatan" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Kegiatan</a>
             <div class="dropdown-menu">
                 <a href="#prestasi" class="dropdown-item">Prestasi</a>
                 <a href="#eskul" class="dropdown-item">Extrakulikuler</a>
                 <a href="#berita" class="dropdown-item">Berita</a>
             </div>
-            </div>
-
-            <a href="#kontak" class="nav-item nav-link">Kontak</a>
-
-            <!-- <a href="#" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">
-                Daftar Sekarang<i class="fa fa-arrow-right ms-3"></i>
-            </a> -->
-            </div>
         </div>
-    </nav>
-    <!-- Navbar End -->
+
+        <a href="#kontak" class="nav-item nav-link">Kontak</a>
+        
+       <!-- PINDAHKAN BUTTON KE DALAM NAVBAR-NAV -->
+            <a href="javascript:void(0)"  onclick="document.getElementById('brosurPopup')
+            .style.display='flex'" class="btn-daftar ms-lg-3"> PENDAFTARAN <i class="fas fa-arrow-right"></i>
+            </a>
+    </div>
+</nav>
+<!-- Navbar End -->
 
     <!-- Content Section -->
     <?= $this->renderSection('content') ?>
@@ -226,7 +294,8 @@ $uri = service('uri');
         <!-- COPYRIGHT -->
         <div class="container">
         <div class="copyright text-center">
-            &copy; 2025 Sekolah Mitra Permata. All Rights Reserved.
+            &copy; 2025 Sekolah Mitra Permata. All Rights Reserved
+            <p>By ShōtenLab</p>
         </div>
     </div>
 </div>
@@ -234,16 +303,18 @@ $uri = service('uri');
 
 
 
+
+
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-   <script src="<?= base_url('assets/SMP/lib/wow/wow.min.js') ?>"></script>
-    <script src="<?= base_url('assets/SMP/lib/easing/easing.min.js') ?>"></script>
-    <script src="<?= base_url('assets/SMP/lib/waypoints/waypoints.min.js') ?>"></script>
-    <script src="<?= base_url('assets/SMP/lib/owlcarousel/owl.carousel.min.js') ?>"></script>
+   <script src="<?= base_url('assets/smp/lib/wow/wow.min.js') ?>"></script>
+    <script src="<?= base_url('assets/smp/lib/easing/easing.min.js') ?>"></script>
+    <script src="<?= base_url('assets/smp/lib/waypoints/waypoints.min.js') ?>"></script>
+    <script src="<?= base_url('assets/smp/lib/owlcarousel/owl.carousel.min.js') ?>"></script>
 
     <!-- Template Javascript -->
-    <script src="<?= base_url('assets/SMP/js/main.js') ?>"></script>
+    <script src="<?= base_url('assets/smp/js/main.js') ?>"></script>
     <script>
 document.querySelectorAll('.nav-item.dropdown > a.dropdown-toggle').forEach(function(el) {
     let clickedOnce = false;
@@ -398,6 +469,58 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
+
+<script>
+// Ambil semua menu navbar yang pakai anchor #
+const navLinks = document.querySelectorAll('.navbar a[href^="#"]');
+
+// Ambil semua section yang punya ID
+const sections = document.querySelectorAll("section[id], div[id]");
+
+function setActiveNav() {
+    let scrollPos = window.scrollY + 120; // tambahan offset biar pas
+
+    sections.forEach(sec => {
+        if (sec.offsetTop <= scrollPos && (sec.offsetTop + sec.offsetHeight) > scrollPos) {
+            let id = sec.getAttribute("id");
+
+            navLinks.forEach(link => {
+                link.classList.remove("active");
+
+                if (link.getAttribute("href") === "#" + id) {
+                    link.classList.add("active");
+                }
+            });
+        }
+    });
+}
+
+window.addEventListener("scroll", setActiveNav);
+</script>
+
+<script>
+window.onload = function() {
+    <?php if (session()->has('popup_errors') || session()->has('popup_success')): ?>
+        document.getElementById('brosurPopup').style.display = 'flex';
+        
+        // Auto close alert sukses setelah 5 detik
+        <?php if (session()->has('popup_success')): ?>
+            setTimeout(function() {
+                const successAlert = document.querySelector('.alert-success');
+                if (successAlert) {
+                    successAlert.classList.remove('show');
+                    setTimeout(() => successAlert.remove(), 150);
+                }
+            }, 5000); // 5 detik
+        <?php endif ?>
+    <?php else: ?>
+        setTimeout(function() {
+            document.getElementById('brosurPopup').style.display = 'flex';
+        }, 2000);
+    <?php endif ?>
+};
+</script>
+
 </body>
 
 </html>
