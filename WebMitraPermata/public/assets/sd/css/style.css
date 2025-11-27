@@ -1786,3 +1786,24 @@ select.form-control {
     padding: 15px 12px 20px;
   }
 }
+
+/* Perbaikan layout about */
+#about .about-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+#about .about-image img {
+    height: 500px;
+    object-fit: contain;
+}
+
+#about .about-text {
+    flex: 1;
+}
+
+#about .row {
+    display: flex;
+    align-items: flex-start;
+}

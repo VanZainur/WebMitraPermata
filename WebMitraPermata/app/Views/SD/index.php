@@ -199,28 +199,41 @@
     <!-- About Start -->
     <div id="about" class="container-xxl py-5 category">
         <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
-                    <div class="position-relative h-100">
-                    <img class="img-fluid position-absolute w-100 h-100" src="<?= base_url('assets/sd/img/kepsek.png') ?>" alt="" style="object-fit: cover;">
-                    </div>
+
+            <div class="about-wrapper">
+
+                <!-- GAMBAR -->
+                <div class="about-image">
+                    <img class="img-fluid w-100" src="<?= base_url('assets/sd/img/kepsek2.png') ?> "style="object-fit: contain;">
                 </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <!-- <h6 class="section-title bg-white text-start text-primary pe-3">About Us</h6> -->
+
+                <!-- TEKS -->
+                <div class="about-text">
                     <h1 class="mb-4">Sambutan Kepala Sekolah</h1>
-                    <p class="mb-4" style="text-align: justify;">Dengan penuh rasa syukur, kami menyambut Anda di SD Mitra Permata, sebuah 
-                        lembaga pendidikan yang berkomitmen membentuk generasi muda yang unggul, berkarakter, 
-                        dan siap bersaing di dunia kerja. Melalui pembelajaran berbasis kompetensi, fasilitas 
-                        yang mendukung, serta kemitraan dengan berbagai industri, kami berupaya menghadirkan 
-                        lingkungan belajar yang inovatif dan inspiratif bagi seluruh peserta didik.</p>
-                    <p class="mb-4" style="text-align: justify;">Kami percaya bahwa setiap siswa memiliki potensi besar yang harus 
-                        dikembangkan melalui pendidikan yang tepat. Oleh karena itu, SD Mitra Permata 
-                        terus bertransformasi untuk menghadirkan pengalaman belajar yang relevan, berdaya 
-                        guna, dan sejalan dengan kebutuhan perkembangan teknologi serta industri masa kini.</p>
-                    <p class="mb-4" style="text-align: justify;">Semoga website ini dapat menjadi jembatan informasi bagi siswa, 
-                        orang tua, mitra industri, dan masyarakat dalam mengenal lebih dekat SD Mitra Permata.</p>
+
+                    <p style="text-align: justify;">
+                        Dengan penuh rasa syukur, kami menyambut Anda di SD Mitra Permata, sebuah lembaga
+                        pendidikan yang berkomitmen membentuk generasi muda yang unggul, berkarakter, dan siap
+                        bersaing di dunia kerja. Melalui pembelajaran berbasis kompetensi, fasilitas yang mendukung,
+                        serta kemitraan dengan berbagai industri, kami berupaya menghadirkan lingkungan belajar yang
+                        inovatif dan inspiratif bagi seluruh peserta didik.
+                    </p>
+
+                    <p style="text-align: justify;">
+                        Kami percaya bahwa setiap siswa memiliki potensi besar yang harus dikembangkan melalui
+                        pendidikan yang tepat. Oleh karena itu, SD Mitra Permata terus bertransformasi untuk
+                        menghadirkan pengalaman belajar yang relevan, berdaya guna, dan sejalan dengan kebutuhan
+                        perkembangan teknologi serta industri masa kini.
+                    </p>
+
+                    <p style="text-align: justify;">
+                        Semoga website ini dapat menjadi jembatan informasi bagi siswa, orang tua, mitra industri,
+                        dan masyarakat dalam mengenal lebih dekat SD Mitra Permata.
+                    </p>
+
                     <a class="btn btn-primary py-3 px-5 mt-2" href="">Lihat Selengkapnya</a>
                 </div>
+
             </div>
         </div>
     </div>
@@ -232,8 +245,8 @@
             <div class="row g-4">
 
                 <!-- Guru Profesional -->
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item text-center pt-3">
+                <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item text-center pt-3 h-100">
                         <div class="p-4">
                             <i class="fa fa-3x fa-user-tie text-primary mb-4"></i>
                             <h5 class="mb-3">Guru Profesional & Berpengalaman</h5>
@@ -243,8 +256,8 @@
                 </div>
 
                 <!-- Kurikulum Nasional -->
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item text-center pt-3">
+                <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item text-center pt-3 h-100">
                         <div class="p-4">
                             <i class="fa fa-3x fa-book-open text-primary mb-4"></i>
                             <h5 class="mb-3">Kurikulum Nasional</h5>
@@ -253,9 +266,9 @@
                     </div>
                 </div>
 
-                <!-- Fasilitas Lengkap & Modern -->
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item text-center pt-3">
+                <!-- Fasilitas Lengkap -->
+                <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item text-center pt-3 h-100">
                         <div class="p-4">
                             <i class="fa fa-3x fa-school text-primary mb-4"></i>
                             <h5 class="mb-3">Fasilitas Lengkap & Modern</h5>
@@ -265,91 +278,20 @@
                 </div>
 
                 <!-- Terakreditasi -->
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="service-item text-center pt-3">
+                <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="service-item text-center pt-3 h-100">
                         <div class="p-4">
                             <i class="fa fa-3x fa-certificate text-primary mb-4"></i>
                             <h5 class="mb-3">Terakreditasi</h5>
-                            <p>Sekolah dengan status akreditasi resmi yang menjamin mutu dan kualitas pendidikan serta memastikan proses pembelajaran berjalan amandan terpercaya.</p>
+                            <p>Sekolah dengan status akreditasi resmi yang menjamin mutu dan kualitas pendidikan serta memastikan proses pembelajaran berjalan aman dan terpercaya.</p>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
     <!-- Service End -->
-
-    <!-- Jurusan Start -->
-    <div id="jurusan" class="container-xxl py-5 category">
-
-        <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Jurusan</h6>
-                <h1 class="mb-5">Program Keahlian</h1>
-            </div>
-            <div class="row g-4 justify-content-center">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="course-item bg-light">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid" src="<?= base_url('assets/sd/img/SMK2.jpg') ?>" alt="">
-
-                            <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Selengkapnya</a>
-                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Bergabung</a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4 pb-0">
-                            <h3 class="mb-0">Teknik Kendaraan Ringan Otomotif</h3>
-                            <div class="mb-3">
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small>(5)</small>
-                            </div>
-                            <h5 class="mb-4" style="font-weight: normal; font-size: 16px;">Teknik Kendaraan Ringan adalah jurusan yang mempelajari perawatan, 
-                                perbaikan, dan diagnosa sistem pada kendaraan bermotor, sehingga siswa mampu memahami 
-                                teknologi otomotif modern dan siap bekerja di industri perbengkelan maupun manufaktur.</h5>
-                        </div>
-                        <div class="d-flex border-top">
-                           
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="course-item bg-light">
-                        <div class="position-relative overflow-hidden">
-                           <img class="img-fluid" src="<?= base_url('assets/sd/img/LKP.jpg') ?>" alt="">
-
-                            <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Selengkapnya</a>
-                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Bergabung</a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4 pb-0">
-                            <h3 class="mb-0">Teknik Jaringan dan Komputer</h3>
-                            <div class="mb-3">
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small>(5)</small>
-                            </div>
-                            <h5 class="mb-4" style="font-weight: normal; font-size: 16px;">Teknik Komputer dan Jaringan adalah jurusan yang mempelajari instalasi, 
-                                perakitan, dan pengelolaan jaringan komputer, sehingga siswa memiliki kemampuan dalam 
-                                teknologi informasi modern dan siap bekerja di bidang teknisi IT maupun administrasi jaringan.</h5>
-                        </div>
-                        <div class="d-flex border-top">
-                          
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Jurusan End -->
 
     <!-- Guru Start -->
     <div class="container-xxl py-5">
