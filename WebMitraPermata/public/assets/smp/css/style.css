@@ -1353,3 +1353,428 @@ html {
     border-left-color: #06a34e;
 }
 
+/* ========================================
+   POPUP PENDAFTARAN PPDB - SMP OCEAN BLUE
+   ======================================== */
+
+/* Popup Overlay */
+#brosurPopupSMP {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(5px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  padding: 20px;
+}
+
+/* Container Popup */
+#popupContainerSMP {
+  background: #fff;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  position: relative;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  animation: slideUpSMP 0.4s ease-out;
+}
+
+/* Tombol Close */
+#btnCloseSMP {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid #e0e0e0;
+  color: #333;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 20;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#btnCloseSMP:hover {
+  background: #1e90ff;
+  color: white;
+  border-color: #1e90ff;
+  transform: rotate(90deg) scale(1.1);
+}
+
+/* Header Popup - OCEAN BLUE GRADIENT */
+.popup-header-smp {
+  background: linear-gradient(135deg, #1e90ff 0%, #0066cc 100%);
+  padding: 35px 30px 30px;
+  text-align: center;
+  color: white;
+  position: relative;
+  flex-shrink: 0;
+}
+
+/* Logo Sekolah - TANPA BORDER, LANGSUNG LOGO AJA */
+.header-logo-smp {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+}
+
+.header-logo-smp img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+.form-title-smp {
+  margin: 0 0 8px;
+  font-size: 24px;
+  font-weight: 800;
+  color: white;
+}
+
+.form-subtitle-smp {
+  margin: 0;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 400;
+}
+
+/* Form Section - FIXED SCROLL */
+#formSectionSMP {
+  padding: 25px 30px 30px;
+  overflow-y: auto;
+  flex: 1;
+  background: #fafafa;
+}
+
+/* IMPORTANT: Add padding bottom for button visibility */
+#formSectionSMP form {
+  padding-bottom: 20px;
+}
+
+/* Custom Scrollbar - OCEAN BLUE */
+#formSectionSMP::-webkit-scrollbar {
+  width: 8px;
+}
+
+#formSectionSMP::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+#formSectionSMP::-webkit-scrollbar-thumb {
+  background: #1e90ff;
+  border-radius: 10px;
+}
+
+#formSectionSMP::-webkit-scrollbar-thumb:hover {
+  background: #0066cc;
+}
+
+/* Form Group */
+.form-group-smp {
+  margin-bottom: 16px;
+}
+
+.form-label-smp {
+  display: block;
+  margin-bottom: 7px;
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 13px;
+}
+
+/* Icon Label - OCEAN BLUE */
+.icon-label-smp {
+  color: #1e90ff;
+  margin-right: 5px;
+  font-size: 12px;
+}
+
+.required-smp {
+  color: #1e90ff;
+  font-weight: bold;
+}
+
+/* Form Control */
+.form-control-smp {
+  width: 100%;
+  padding: 11px 14px;
+  border-radius: 10px;
+  border: 2px solid #e0e0e0;
+  font-size: 14px;
+  transition: all 0.3s;
+  background: white;
+  font-family: inherit;
+}
+
+/* Form Control Focus - OCEAN BLUE */
+.form-control-smp:focus {
+  outline: none;
+  border-color: #1e90ff;
+  box-shadow: 0 0 0 4px rgba(30, 144, 255, 0.1);
+  background: #fff;
+}
+
+.form-control-smp::placeholder {
+  color: #adb5bd;
+}
+
+.form-text-smp {
+  display: block;
+  margin-top: 5px;
+  font-size: 11px;
+  color: #6c757d;
+  font-style: italic;
+}
+
+/* Textarea */
+textarea.form-control-smp {
+  resize: vertical;
+  min-height: 80px;
+  font-family: inherit;
+}
+
+/* Select - OCEAN BLUE */
+select.form-control-smp {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%231e90ff' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 35px;
+}
+
+/* Row untuk 2 kolom */
+.row-smp {
+  display: flex;
+  gap: 12px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+.row-smp .col-md-6-smp {
+  flex: 1;
+  padding: 0;
+}
+
+/* Button Submit - OCEAN BLUE */
+.btn-submit-smp {
+  width: 100%;
+  padding: 14px;
+  margin-top: 15px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 15px;
+  background: linear-gradient(135deg, #1e90ff 0%, #0066cc 100%);
+  color: white;
+  border: none;
+  box-shadow: 0 6px 20px rgba(30, 144, 255, 0.4);
+  transition: all 0.3s;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-submit-smp:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(30, 144, 255, 0.5);
+}
+
+.btn-submit-smp:active {
+  transform: translateY(-1px);
+}
+
+.btn-submit-smp:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Form Footer */
+.form-footer-smp {
+  text-align: center;
+  margin-top: 12px;
+  margin-bottom: 0;
+  font-size: 11px;
+  color: #6c757d;
+}
+
+/* Alert Container */
+#alertContainerSMP {
+  margin-bottom: 18px;
+}
+
+#alertContainerSMP .alert {
+  padding: 11px 14px;
+  border-radius: 10px;
+  margin-bottom: 0;
+  font-size: 13px;
+  border: none;
+}
+
+.alert-success {
+  background: #d4edda;
+  color: #155724;
+}
+
+.alert-danger {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* Animasi Slide Up */
+@keyframes slideUpSMP {
+  from {
+      opacity: 0;
+      transform: translateY(50px) scale(0.95);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+  }
+}
+
+/* ========================================
+ RESPONSIVE DESIGN - SMP
+ ======================================== */
+
+/* Tablet */
+@media (max-width: 768px) {
+  #brosurPopupSMP {
+      padding: 15px;
+  }
+
+  #popupContainerSMP {
+      max-width: 100%;
+      border-radius: 15px;
+  }
+
+  .popup-header-smp {
+      padding: 28px 20px 24px;
+  }
+
+  .header-logo-smp {
+      width: 65px;
+      height: 65px;
+  }
+
+  .form-title-smp {
+      font-size: 20px;
+  }
+
+  .form-subtitle-smp {
+      font-size: 13px;
+  }
+
+  #formSectionSMP {
+      padding: 20px;
+  }
+
+  .row-smp {
+      flex-direction: column;
+      gap: 0;
+  }
+
+  .row-smp .col-md-6-smp {
+      width: 100%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  #brosurPopupSMP {
+      padding: 8px;
+  }
+
+  #popupContainerSMP {
+      max-height: 95vh;
+      border-radius: 12px;
+  }
+
+  .popup-header-smp {
+      padding: 22px 15px 18px;
+  }
+
+  .header-logo-smp {
+      width: 55px;
+      height: 55px;
+      margin-bottom: 12px;
+  }
+
+  .form-title-smp {
+      font-size: 17px;
+  }
+
+  .form-subtitle-smp {
+      font-size: 12px;
+  }
+
+  #formSectionSMP {
+      padding: 18px 15px 25px;
+  }
+
+  #btnCloseSMP {
+      width: 35px;
+      height: 35px;
+      font-size: 18px;
+      top: 10px;
+      right: 10px;
+  }
+
+  .form-group-smp {
+      margin-bottom: 13px;
+  }
+
+  .form-label-smp {
+      font-size: 12px;
+      margin-bottom: 5px;
+  }
+
+  .form-control-smp {
+      padding: 9px 11px;
+      font-size: 13px;
+  }
+
+  .btn-submit-smp {
+      padding: 11px;
+      font-size: 13px;
+  }
+}
+
+/* Very Small Mobile */
+@media (max-width: 360px) {
+  .popup-header-smp {
+      padding: 20px 12px 16px;
+  }
+
+  .header-logo-smp {
+      width: 50px;
+      height: 50px;
+  }
+
+  .form-title-smp {
+      font-size: 16px;
+  }
+
+  #formSectionSMP {
+      padding: 15px 12px 20px;
+  }
+}
