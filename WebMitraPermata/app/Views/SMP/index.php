@@ -78,7 +78,6 @@
     <div class="container-xxl py-5">
         <div class="container">
             <div class="row g-4">
-
                 <!-- Guru Profesional -->
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item text-center pt-3">
@@ -90,13 +89,13 @@
                     </div>
                 </div>
 
-                <!-- Kurikulum Nasional -->
+                <!-- Ekstrakurikuler Beragam -->
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item text-center pt-3">
                         <div class="p-4">
-                            <i class="fa fa-3x fa-book-open text-primary mb-4"></i>
-                            <h5 class="mb-3">Kurikulum Nasional</h5>
-                            <p>Menggunakan kurikulum resmi Kemendikbud yang selalu diperbarui agar sesuai dengan perkembangan dunia pendidikan serta kebutuhan peserta didik.</p>
+                            <i class="fa fa-3x fa-futbol text-primary mb-4"></i>
+                            <h5 class="mb-3">Ekstrakurikuler Beragam</h5>
+                            <p>Berbagai pilihan kegiatan ekstrakurikuler mulai dari olahraga, seni, sains, hingga teknologi untuk mengembangkan minat dan bakat siswa.</p>
                         </div>
                     </div>
                 </div>
@@ -112,17 +111,16 @@
                     </div>
                 </div>
 
-                <!-- Terakreditasi -->
+                <!-- Lingkungan Belajar Nyaman -->
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
                     <div class="service-item text-center pt-3">
                         <div class="p-4">
-                            <i class="fa fa-3x fa-certificate text-primary mb-4"></i>
-                            <h5 class="mb-3">Terakreditasi</h5>
-                            <p>Sekolah dengan status akreditasi resmi yang menjamin mutu dan kualitas pendidikan serta memastikan proses pembelajaran berjalan amandan terpercaya.</p>
+                            <i class="fa fa-3x fa-tree text-primary mb-4"></i>
+                            <h5 class="mb-3">Lingkungan Belajar Nyaman</h5>
+                            <p>Suasana sekolah yang asri, dan kondusif menciptakan lingkungan belajar yang mendukung perkembangan optimal siswa.</p>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
