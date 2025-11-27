@@ -1,33 +1,33 @@
 /********** Template CSS - OCEAN BLUE THEME **********/
 :root {
-  --primary: #1e90ff !important;
-  --secondary: #0066cc !important;
+  --primary: #ff1e1e !important;
+  --secondary: #cc0000 !important;
   --light: #e3f2fd !important;
   --dark: #0d47a1 !important;
 }
 
 /* Override Bootstrap colors */
 .bg-primary {
-  background-color: #0066cc !important;
+  background-color: #cc0000 !important;
 }
 
 .text-primary {
-  color: #1e90ff !important;
+  color: #ff1e1e !important;
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #1e90ff 0%, #0066cc 100%) !important;
-  border-color: #1e90ff !important;
+  background: linear-gradient(135deg, #ff1e1e 0%, #cc0000 100%) !important;
+  border-color: #ff1e1e !important;
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, #0066cc 0%, #004c99 100%) !important;
-  border-color: #0066cc !important;
+  background: linear-gradient(135deg, #cc0000 0%, #990000 100%) !important;
+  border-color: #cc0000 !important;
 }
 
 /* Accent blue untuk elemen tertentu */
 .text-secondary {
-  color: #0066cc !important;
+  color: #cc0000 !important;
 }
 
 .fw-medium {
@@ -104,7 +104,7 @@
   top: 0 !important;
   width: 100% !important;
   z-index: 999 !important;
-  background: linear-gradient(135deg, #1e90ff 0%, #0066cc 100%) !important;
+  background: linear-gradient(135deg, #ff1e1e 0%, #cc0000 100%) !important;
   box-shadow: 0 2px 20px rgba(30, 144, 255, 0.3) !important;
 }
 
@@ -165,14 +165,14 @@
 
   .navbar .dropdown-menu .dropdown-item {
     padding: 10px 20px;
-    color: #0066cc !important;
+    color: #cc0000 !important;
     font-size: 14px;
     border-left: 3px solid transparent;
     transition: all 0.3s ease;
   }
 
   .navbar .dropdown-menu .dropdown-item:hover {
-    background: #1e90ff !important;
+    background: #ff1e1e !important;
     border-left-color: #ffffff;
     color: #ffffff !important;
     padding-left: 24px;
@@ -195,7 +195,7 @@
 .navbar-light.sticky-top {
   top: 0 !important;
   transition: 0.5s;
-  background: linear-gradient(135deg, #1e90ff 0%, #0066cc 100%) !important;
+  background: linear-gradient(135deg, #ff1e1e 0%, #cc0000 100%) !important;
 }
 
 .navbar-toggler {
@@ -243,7 +243,7 @@
 
   .navbar .dropdown-menu .dropdown-item {
     padding: 10px 20px;
-    color: #0066cc;
+    color: #cc0000;
     font-weight: 500;
     font-size: 14px;
     transition: all 0.25s ease;
@@ -254,7 +254,7 @@
   }
 
   .navbar .dropdown-menu .dropdown-item:hover {
-    background: #1e90ff;
+    background: #ff1e1e;
     border-left-color: #ffffff;
     color: #ffffff;
     padding-left: 24px;
@@ -582,7 +582,7 @@
 }
 
 .prestasi-body h5 {
-  color: #1e90ff;
+  color: #ff1e1e;
   text-align: center;
   font-weight: 700;
 }
@@ -595,7 +595,7 @@
 .card-title {
   font-size: 16px;
   font-weight: 700;
-  color: #1e90ff;
+  color: #ff1e1e;
   margin-bottom: 8px;
 }
 
@@ -744,7 +744,7 @@ html {
   position: absolute;
   top: 20px;
   left: 20px;
-  background: #1e90ff;
+  background: #ff1e1e;
   color: white;
   padding: 8px 16px;
   border-radius: 50px;
@@ -763,7 +763,7 @@ html {
 .kegiatan-title {
   font-size: 20px;
   font-weight: 700;
-  color: #1e90ff;
+  color: #ff1e1e;
   margin-bottom: 12px;
   line-height: 1.4;
 }
@@ -780,7 +780,7 @@ html {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: #1e90ff;
+  color: #ff1e1e;
   font-weight: 600;
   font-size: 14px;
   text-decoration: none;
@@ -789,7 +789,7 @@ html {
 
 .kegiatan-link:hover {
   gap: 12px;
-  color: #0066cc;
+  color: #cc0000;
 }
 
 .kegiatan-link i {
@@ -852,7 +852,7 @@ html {
   position: absolute;
   top: 20px;
   left: 20px;
-  background: #1e90ff;
+  background: #ff1e1e;
   color: white;
   padding: 8px 16px;
   border-radius: 50px;
@@ -878,7 +878,7 @@ html {
 .berita-title {
   font-size: 18px;
   font-weight: 700;
-  color: #1e90ff;
+  color: #ff1e1e;
   margin-bottom: 12px;
   line-height: 1.4;
 }
@@ -895,7 +895,7 @@ html {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: #1e90ff;
+  color: #ff1e1e;
   font-weight: 600;
   font-size: 14px;
   text-decoration: none;
@@ -904,7 +904,7 @@ html {
 
 .berita-link:hover {
   gap: 12px;
-  color: #0066cc;
+  color: #cc0000;
 }
 
 .berita-link i {
@@ -962,7 +962,7 @@ html {
 .eskul-slider-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 30px rgba(30, 144, 255, 0.15);
-  border-color: #1e90ff;
+  border-color: #ff1e1e;
 }
 
 .eskul-slider-image {
@@ -971,7 +971,7 @@ html {
   border-radius: 50%;
   overflow: hidden;
   margin: 0 auto 25px;
-  border: 4px solid #1e90ff;
+  border: 4px solid #ff1e1e;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(30, 144, 255, 0.3);
 }
@@ -995,7 +995,7 @@ html {
 .eskul-slider-title {
   font-size: 22px;
   font-weight: 700;
-  color: #1e90ff;
+  color: #ff1e1e;
   margin-bottom: 15px;
 }
 
@@ -1009,7 +1009,7 @@ html {
 
 .eskul-slider-schedule {
   font-size: 14px;
-  color: #1e90ff;
+  color: #ff1e1e;
   font-weight: 600;
   margin: 0;
 }
@@ -1021,7 +1021,7 @@ html {
   transform: translateY(-50%);
   width: 50px;
   height: 50px;
-  background: #0066cc;
+  background: #cc0000;
   color: white;
   border: none;
   border-radius: 50%;
@@ -1035,7 +1035,7 @@ html {
 }
 
 .eskul-nav:hover {
-  background: #1e90ff;
+  background: #ff1e1e;
   transform: translateY(-50%) scale(1.1);
 }
 
@@ -1069,7 +1069,7 @@ html {
 }
 
 .eskul-dot.active {
-  background: #1e90ff;
+  background: #ff1e1e;
   width: 30px;
   border-radius: 5px;
 }
@@ -1267,7 +1267,7 @@ html {
 
 .btn-daftar {
   background: #ffffff !important;
-  color: #0066cc !important;
+  color: #cc0000 !important;
   padding: 30px 30px !important;
   height: 50px !important;
   line-height: 38px !important;
@@ -1289,7 +1289,7 @@ html {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2) !important;
   background: #f8f9fa !important;
-  color: #0066cc !important;
+  color: #cc0000 !important;
 }
 
 .btn-daftar:active {
@@ -1336,13 +1336,13 @@ html {
 .navbar .dropdown-menu .dropdown-item,
 .navbar .dropdown-menu .dropdown-item:active,
 .navbar .dropdown-menu .dropdown-item:focus {
-  color: #0066cc !important;
+  color: #cc0000 !important;
   background-color: transparent !important;
   outline: none !important;
 }
 
 .navbar .dropdown-menu .dropdown-item:hover {
-  background: #1e90ff !important;
+  background: #ff1e1e !important;
   color: #ffffff !important;
   border-left-color: #ffffff;
 }
@@ -1399,14 +1399,14 @@ html {
 }
 
 #btnCloseSMP:hover {
-  background: #1e90ff;
+  background: #ff1e1e;
   color: white;
-  border-color: #1e90ff;
+  border-color: #ff1e1e;
   transform: rotate(90deg) scale(1.1);
 }
 
 .popup-header-smp {
-  background: linear-gradient(135deg, #1e90ff 0%, #0066cc 100%);
+  background: linear-gradient(135deg, #ff1e1e 0%, #cc0000 100%);
   padding: 35px 30px 30px;
   text-align: center;
   color: white;
@@ -1465,12 +1465,12 @@ html {
 }
 
 #formSectionSMP::-webkit-scrollbar-thumb {
-  background: #1e90ff;
+  background: #ff1e1e;
   border-radius: 10px;
 }
 
 #formSectionSMP::-webkit-scrollbar-thumb:hover {
-  background: #0066cc;
+  background: #cc0000;
 }
 
 .form-group-smp {
@@ -1486,13 +1486,13 @@ html {
 }
 
 .icon-label-smp {
-  color: #1e90ff;
+  color: #ff1e1e;
   margin-right: 5px;
   font-size: 12px;
 }
 
 .required-smp {
-  color: #1e90ff;
+  color: #ff1e1e;
   font-weight: bold;
 }
 
@@ -1509,7 +1509,7 @@ html {
 
 .form-control-smp:focus {
   outline: none;
-  border-color: #1e90ff;
+  border-color: #ff1e1e;
   box-shadow: 0 0 0 4px rgba(30, 144, 255, 0.1);
   background: #fff;
 }
@@ -1561,7 +1561,7 @@ select.form-control-smp {
   border-radius: 12px;
   font-weight: 700;
   font-size: 15px;
-  background: linear-gradient(135deg, #1e90ff 0%, #0066cc 100%);
+  background: linear-gradient(135deg, #ff1e1e 0%, #cc0000 100%);
   color: white;
   border: none;
   box-shadow: 0 6px 20px rgba(30, 144, 255, 0.4);
