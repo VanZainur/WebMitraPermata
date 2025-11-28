@@ -195,12 +195,41 @@
     <section class="gallery">
         <h2 class="section-title">📸 Galeri Kegiatan</h2>
         <div class="gallery-grid">
-            <div class="gallery-item">🎨</div>
-            <div class="gallery-item">🎪</div>
-            <div class="gallery-item">📚</div>
-            <div class="gallery-item">🎵</div>
-            <div class="gallery-item">🌳</div>
-            <div class="gallery-item">🎭</div>
+            <div class="gallery-item">
+                <a href="">
+                    <img src="<?= base_url('assets/tk2/img/tk1.jpg') ?>">
+                    <p class="gallery-caption">Praktek Sholat</p>
+                </a>
+            </div>
+
+            <div class="gallery-item">
+                <a href="">
+                    <img src="<?= base_url('assets/tk2/img/tk2.jpg') ?>">
+                    <p class="gallery-caption">Kegiatan Memasak</p>
+                </a>
+            </div>
+
+            <div class="gallery-item">
+                <a href="">
+                    <img src="<?= base_url('assets/tk2/img/tk3.jpg') ?>">
+                    <p class="gallery-caption">Praktek Menggambar</p>
+                </a>
+            </div>
+
+            <div class="gallery-item">
+                <a href="">
+                    <img src="<?= base_url('assets/tk2/img/tk4.jpg') ?>">
+                    <p class="gallery-caption">Makan Bersama</p>
+                </a>
+            </div>
+
+            <div class="gallery-item">
+                <a href="">
+                    <img src="<?= base_url('assets/tk2/img/tk5.jpg') ?>">
+                    <p class="gallery-caption">Proses Mengajar</p>
+                </a>
+            </div>
+
         </div>
     </section>
 
