@@ -29,8 +29,11 @@
         <ul class="nav-links">
             <li><a href="#home">Beranda</a></li>
             <li><a href="#about">Tentang</a></li>
-            <li><a href="#programs">Program</a></li>
+            <li><a href="#program">Program</a></li>
             <li><a href="#contact">Kontak</a></li>
+            <li class="btn-daftar">
+                <a href="#daftar">Pendaftaran</a>
+            </li>
         </ul>
     </nav>
 
@@ -42,7 +45,7 @@
             <div class="floating star1">⭐</div>
             <div class="floating star2">✨</div>
             <div class="hero-content">
-                <h1>Selamat Datang di <br> TK Mitra Permata</h1>
+                <h1>Selamat Datang di<br>TK Mitra Permata</h1>
                 <p>Tempat Terbaik untuk Anak Bermain & Belajar</p>
                 <button class="cta-button">Daftar Sekarang!</button>
             </div>
@@ -77,7 +80,7 @@
     </section>
 
     <!-- Cards Section -->
-    <section class="cards-section">
+    <section class="cards-section" id="program">
         <h2>✨ Program Kami ✨</h2>
         <div class="cards-container">
             <!-- Card 1 - Rabbit -->
@@ -112,51 +115,9 @@
         </div>
     </section>
 
-    <!-- Programs Section -->
-    <!-- <section class="programs" id="programs">
-        <h2 class="section-title">✨ Program Kami</h2>
-        <div class="programs-grid">
-            <div class="program-card">
-                <span class="program-icon">🎨</span>
-                <h3>Seni & Kreativitas</h3>
-                <p>Mengembangkan imajinasi dan kreativitas anak melalui menggambar, mewarnai, dan kerajinan tangan.</p>
-            </div>
-            
-            <div class="program-card">
-                <span class="program-icon">📚</span>
-                <h3>Literasi & Numerasi</h3>
-                <p>Belajar membaca, menulis, dan berhitung dengan metode yang menyenangkan dan interaktif.</p>
-            </div>
-            
-            <div class="program-card">
-                <span class="program-icon">🎵</span>
-                <h3>Musik & Gerak</h3>
-                <p>Mengasah kemampuan motorik dan kepercayaan diri melalui musik, tari, dan gerakan.</p>
-            </div>
-            
-            <div class="program-card">
-                <span class="program-icon">🌍</span>
-                <h3>Pengenalan Lingkungan</h3>
-                <p>Mengenal alam, hewan, dan lingkungan sekitar melalui kegiatan outdoor yang seru.</p>
-            </div>
-            
-            <div class="program-card">
-                <span class="program-icon">🎭</span>
-                <h3>Drama & Bercerita</h3>
-                <p>Melatih kemampuan komunikasi dan ekspresi diri melalui bermain peran dan storytelling.</p>
-            </div>
-            
-            <div class="program-card">
-                <span class="program-icon">⚽</span>
-                <h3>Olahraga & Permainan</h3>
-                <p>Mengembangkan fisik dan kerjasama tim melalui berbagai permainan edukatif.</p>
-            </div>
-        </div>
-    </section> -->
-
     <!-- Facilities Section -->
-    <section class="facilities">
-        <h2 class="section-title">🏫 Fasilitas Lengkap</h2>
+    <section class="facilities" id="fasilitas">
+        <h2 class="section-title">🏫 Fasilitas</h2>
         <div class="facilities-grid">
             <div class="facility-item">
                 <span>🏢</span>
@@ -192,7 +153,7 @@
     </section>
 
     <!-- Gallery Section -->
-    <section class="gallery">
+    <section class="gallery" id="kegiatan">
         <h2 class="section-title">📸 Galeri Kegiatan</h2>
         <div class="gallery-grid">
             <div class="gallery-item">
@@ -276,17 +237,17 @@
             <div class="contact-item">
                 <span>📍</span>
                 <h3>Alamat</h3>
-                <p>Jl. Pendidikan No. 123<br>Jakarta Selatan</p>
+                <p>Perumahan Villa Permata, Blk. D8 - D9 No.1, Sindangsari, Kec. Ps. Kemis, Kabupaten Tangerang, Banten 15560</p>
             </div>
             <div class="contact-item">
                 <span>📞</span>
                 <h3>Telepon</h3>
-                <p>(021) 1234-5678<br>WA: 0812-3456-7890</p>
+                <p>082112456789</p>
             </div>
             <div class="contact-item">
                 <span>📧</span>
                 <h3>Email</h3>
-                <p>info@tkpelangiceria.com<br>admin@tkpelangiceria.com</p>
+                <p>info@mitrapermata.sch.id</p>
             </div>
         </div>
     </section>
