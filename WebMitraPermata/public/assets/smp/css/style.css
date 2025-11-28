@@ -1,33 +1,33 @@
-/********** Template CSS - OCEAN BLUE THEME **********/
+/********** Template CSS - NAVY BLUE THEME **********/
 :root {
-  --primary: #1e90ff !important;
-  --secondary: #0066cc !important;
+  --primary: #1565c8 !important;
+  --secondary: #0d47a1 !important;
   --light: #e3f2fd !important;
-  --dark: #0d47a1 !important;
+  --dark: #01579b !important;
 }
 
 /* Override Bootstrap colors */
 .bg-primary {
-  background-color: #0066cc !important;
+  background-color: #1565c8 !important;
 }
 
 .text-primary {
-  color: #1e90ff !important;
+  color: #1565c8 !important;
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #1e90ff 0%, #0066cc 100%) !important;
-  border-color: #1e90ff !important;
+  background: linear-gradient(135deg, #1565c8 0%, #0d47a1 100%) !important;
+  border-color: #1565c8 !important;
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, #0066cc 0%, #004c99 100%) !important;
-  border-color: #0066cc !important;
+  background: linear-gradient(135deg, #0d47a1 0%, #01579b 100%) !important;
+  border-color: #0d47a1 !important;
 }
 
 /* Accent blue untuk elemen tertentu */
 .text-secondary {
-  color: #0066cc !important;
+  color: #0d47a1 !important;
 }
 
 .fw-medium {
@@ -98,14 +98,14 @@
   border-radius: 0px;
 }
 
-/*** Navbar - BIRU DENGAN TEXT PUTIH ***/
+/*** Navbar - NAVY BLUE DENGAN TEXT PUTIH ***/
 .navbar {
   position: fixed !important;
   top: 0 !important;
   width: 100% !important;
   z-index: 999 !important;
-  background: linear-gradient(135deg, #1e90ff 0%, #0066cc 100%) !important;
-  box-shadow: 0 2px 20px rgba(30, 144, 255, 0.3) !important;
+  background: linear-gradient(135deg, #1565c8 0%, #0d47a1 100%) !important;
+  box-shadow: 0 2px 20px rgba(21, 101, 200, 0.3) !important;
 }
 
 .navbar-light .navbar-brand h2 {
@@ -165,21 +165,21 @@
 
   .navbar .dropdown-menu .dropdown-item {
     padding: 10px 20px;
-    color: #0066cc !important;
+    color: #1565c8 !important;
     font-size: 14px;
     border-left: 3px solid transparent;
     transition: all 0.3s ease;
   }
 
   .navbar .dropdown-menu .dropdown-item:hover {
-    background: #1e90ff !important;
+    background: #1565c8 !important;
     border-left-color: #ffffff;
     color: #ffffff !important;
     padding-left: 24px;
   }
 
   .navbar .dropdown-menu .dropdown-item + .dropdown-item {
-    border-top: 1px solid rgba(30, 144, 255, 0.1);
+    border-top: 1px solid rgba(21, 101, 200, 0.1);
   }
 }
 
@@ -195,7 +195,7 @@
 .navbar-light.sticky-top {
   top: 0 !important;
   transition: 0.5s;
-  background: linear-gradient(135deg, #1e90ff 0%, #0066cc 100%) !important;
+  background: linear-gradient(135deg, #1565c8 0%, #0d47a1 100%) !important;
 }
 
 .navbar-toggler {
@@ -213,7 +213,7 @@
   top: 0;
   height: 100%;
   width: 0;
-  background: linear-gradient(90deg, rgba(30, 144, 255, 0.1) 0%, transparent 100%);
+  background: linear-gradient(90deg, rgba(21, 101, 200, 0.1) 0%, transparent 100%);
   transition: width 0.3s ease;
 }
 
@@ -227,7 +227,7 @@
     background: #ffffff;
     border: none;
     border-radius: 10px;
-    box-shadow: 0 5px 25px rgba(30, 144, 255, 0.2);
+    box-shadow: 0 5px 25px rgba(21, 101, 200, 0.2);
     padding: 8px 0;
     min-width: 200px;
     overflow: hidden;
@@ -243,7 +243,7 @@
 
   .navbar .dropdown-menu .dropdown-item {
     padding: 10px 20px;
-    color: #0066cc;
+    color: #1565c8;
     font-weight: 500;
     font-size: 14px;
     transition: all 0.25s ease;
@@ -254,14 +254,14 @@
   }
 
   .navbar .dropdown-menu .dropdown-item:hover {
-    background: #1e90ff;
+    background: #1565c8;
     border-left-color: #ffffff;
     color: #ffffff;
     padding-left: 24px;
   }
 
   .navbar .dropdown-menu .dropdown-item + .dropdown-item {
-    border-top: 1px solid rgba(30, 144, 255, 0.1);
+    border-top: 1px solid rgba(21, 101, 200, 0.1);
   }
 }
 
@@ -558,7 +558,7 @@
   border-right: none;
 }
 
-/* Prestasi Modern Card - OCEAN BLUE */
+/* Prestasi Modern Card - NAVY BLUE */
 .prestasi-card {
   background: #ffffff;
   border-radius: 15px;
@@ -574,7 +574,7 @@
 
 .prestasi-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(30, 144, 255, 0.2);
+  box-shadow: 0 20px 40px rgba(21, 101, 200, 0.2);
 }
 
 .prestasi-card:hover img {
@@ -582,7 +582,7 @@
 }
 
 .prestasi-body h5 {
-  color: #1e90ff;
+  color: #1565c8;
   text-align: center;
   font-weight: 700;
 }
@@ -591,11 +591,11 @@
   font-size: 14px;
 }
 
-/* Card Title Umum - Biru Cerah */
+/* Card Title Umum - Navy Blue */
 .card-title {
   font-size: 16px;
   font-weight: 700;
-  color: #1e90ff;
+  color: #1565c8;
   margin-bottom: 8px;
 }
 
@@ -703,7 +703,7 @@ html {
 }
 
 /* ========================================
-   SECTION KEGIATAN - OCEAN BLUE
+   SECTION KEGIATAN - NAVY BLUE
    ======================================== */
 
 .kegiatan-card {
@@ -719,7 +719,7 @@ html {
 
 .kegiatan-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 40px rgba(30, 144, 255, 0.2);
+  box-shadow: 0 12px 40px rgba(21, 101, 200, 0.2);
 }
 
 .kegiatan-image {
@@ -744,13 +744,13 @@ html {
   position: absolute;
   top: 20px;
   left: 20px;
-  background: #1e90ff;
+  background: #1565c8;
   color: white;
   padding: 8px 16px;
   border-radius: 50px;
   font-size: 13px;
   font-weight: 600;
-  box-shadow: 0 4px 12px rgba(30, 144, 255, 0.4);
+  box-shadow: 0 4px 12px rgba(21, 101, 200, 0.4);
 }
 
 .kegiatan-content {
@@ -763,7 +763,7 @@ html {
 .kegiatan-title {
   font-size: 20px;
   font-weight: 700;
-  color: #1e90ff;
+  color: #1565c8;
   margin-bottom: 12px;
   line-height: 1.4;
 }
@@ -780,7 +780,7 @@ html {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: #1e90ff;
+  color: #1565c8;
   font-weight: 600;
   font-size: 14px;
   text-decoration: none;
@@ -789,7 +789,7 @@ html {
 
 .kegiatan-link:hover {
   gap: 12px;
-  color: #0066cc;
+  color: #0d47a1;
 }
 
 .kegiatan-link i {
@@ -811,7 +811,7 @@ html {
 }
 
 /* ========================================
-   SECTION BERITA - OCEAN BLUE
+   SECTION BERITA - NAVY BLUE
    ======================================== */
 
 .berita-card {
@@ -827,7 +827,7 @@ html {
 
 .berita-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 40px rgba(30, 144, 255, 0.2);
+  box-shadow: 0 12px 40px rgba(21, 101, 200, 0.2);
 }
 
 .berita-image {
@@ -852,7 +852,7 @@ html {
   position: absolute;
   top: 20px;
   left: 20px;
-  background: #1e90ff;
+  background: #1565c8;
   color: white;
   padding: 8px 16px;
   border-radius: 50px;
@@ -861,7 +861,7 @@ html {
   display: flex;
   align-items: center;
   gap: 6px;
-  box-shadow: 0 4px 12px rgba(30, 144, 255, 0.4);
+  box-shadow: 0 4px 12px rgba(21, 101, 200, 0.4);
 }
 
 .berita-badge i {
@@ -878,7 +878,7 @@ html {
 .berita-title {
   font-size: 18px;
   font-weight: 700;
-  color: #1e90ff;
+  color: #1565c8;
   margin-bottom: 12px;
   line-height: 1.4;
 }
@@ -895,7 +895,7 @@ html {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: #1e90ff;
+  color: #1565c8;
   font-weight: 600;
   font-size: 14px;
   text-decoration: none;
@@ -904,7 +904,7 @@ html {
 
 .berita-link:hover {
   gap: 12px;
-  color: #0066cc;
+  color: #0d47a1;
 }
 
 .berita-link i {
@@ -926,7 +926,7 @@ html {
 }
 
 /* ========================================
-   SECTION EKSTRAKURIKULER - SLIDER (OCEAN BLUE)
+   SECTION EKSTRAKURIKULER - SLIDER (NAVY BLUE)
    ======================================== */
 
 .eskul-slider-wrapper {
@@ -961,8 +961,8 @@ html {
 
 .eskul-slider-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(30, 144, 255, 0.15);
-  border-color: #1e90ff;
+  box-shadow: 0 10px 30px rgba(21, 101, 200, 0.15);
+  border-color: #1565c8;
 }
 
 .eskul-slider-image {
@@ -971,14 +971,14 @@ html {
   border-radius: 50%;
   overflow: hidden;
   margin: 0 auto 25px;
-  border: 4px solid #1e90ff;
+  border: 4px solid #1565c8;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(30, 144, 255, 0.3);
+  box-shadow: 0 4px 15px rgba(21, 101, 200, 0.3);
 }
 
 .eskul-slider-card:hover .eskul-slider-image {
   transform: scale(1.1);
-  box-shadow: 0 8px 25px rgba(30, 144, 255, 0.4);
+  box-shadow: 0 8px 25px rgba(21, 101, 200, 0.4);
 }
 
 .eskul-slider-image img {
@@ -995,7 +995,7 @@ html {
 .eskul-slider-title {
   font-size: 22px;
   font-weight: 700;
-  color: #1e90ff;
+  color: #1565c8;
   margin-bottom: 15px;
 }
 
@@ -1009,19 +1009,19 @@ html {
 
 .eskul-slider-schedule {
   font-size: 14px;
-  color: #1e90ff;
+  color: #1565c8;
   font-weight: 600;
   margin: 0;
 }
 
-/* Navigation Buttons - OCEAN BLUE */
+/* Navigation Buttons - NAVY BLUE */
 .eskul-nav {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   width: 50px;
   height: 50px;
-  background: #0066cc;
+  background: #0d47a1;
   color: white;
   border: none;
   border-radius: 50%;
@@ -1031,11 +1031,11 @@ html {
   cursor: pointer;
   transition: all 0.3s ease;
   z-index: 10;
-  box-shadow: 0 4px 15px rgba(0, 102, 204, 0.3);
+  box-shadow: 0 4px 15px rgba(13, 71, 161, 0.3);
 }
 
 .eskul-nav:hover {
-  background: #1e90ff;
+  background: #1565c8;
   transform: translateY(-50%) scale(1.1);
 }
 
@@ -1051,7 +1051,7 @@ html {
   font-size: 18px;
 }
 
-/* Slider Dots - OCEAN BLUE */
+/* Slider Dots - NAVY BLUE */
 .eskul-dots {
   display: flex;
   justify-content: center;
@@ -1069,7 +1069,7 @@ html {
 }
 
 .eskul-dot.active {
-  background: #1e90ff;
+  background: #1565c8;
   width: 30px;
   border-radius: 5px;
 }
@@ -1165,7 +1165,7 @@ html {
 
 .partner-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(30, 144, 255, 0.15);
+  box-shadow: 0 8px 25px rgba(21, 101, 200, 0.15);
 }
 
 .partner-logo-box {
@@ -1262,12 +1262,12 @@ html {
 }
 
 /* ========================================
-   BUTTON PENDAFTARAN - PUTIH DENGAN TEXT BIRU
+   BUTTON PENDAFTARAN - PUTIH DENGAN TEXT NAVY BLUE
    ======================================== */
 
 .btn-daftar {
   background: #ffffff !important;
-  color: #0066cc !important;
+  color: #1565c8 !important;
   padding: 30px 30px !important;
   height: 50px !important;
   line-height: 38px !important;
@@ -1289,7 +1289,7 @@ html {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2) !important;
   background: #f8f9fa !important;
-  color: #0066cc !important;
+  color: #1565c8 !important;
 }
 
 .btn-daftar:active {
@@ -1336,19 +1336,19 @@ html {
 .navbar .dropdown-menu .dropdown-item,
 .navbar .dropdown-menu .dropdown-item:active,
 .navbar .dropdown-menu .dropdown-item:focus {
-  color: #0066cc !important;
+  color: #1565c8 !important;
   background-color: transparent !important;
   outline: none !important;
 }
 
 .navbar .dropdown-menu .dropdown-item:hover {
-  background: #1e90ff !important;
+  background: #1565c8 !important;
   color: #ffffff !important;
   border-left-color: #ffffff;
 }
 
 /* ========================================
-   POPUP PENDAFTARAN PPDB - OCEAN BLUE
+   POPUP PENDAFTARAN PPDB - NAVY BLUE
    ======================================== */
 
 #brosurPopupSMP {
@@ -1399,14 +1399,14 @@ html {
 }
 
 #btnCloseSMP:hover {
-  background: #1e90ff;
+  background: #1565c8;
   color: white;
-  border-color: #1e90ff;
+  border-color: #1565c8;
   transform: rotate(90deg) scale(1.1);
 }
 
 .popup-header-smp {
-  background: linear-gradient(135deg, #1e90ff 0%, #0066cc 100%);
+  background: linear-gradient(135deg, #1565c8 0%, #0d47a1 100%);
   padding: 35px 30px 30px;
   text-align: center;
   color: white;
@@ -1465,12 +1465,12 @@ html {
 }
 
 #formSectionSMP::-webkit-scrollbar-thumb {
-  background: #1e90ff;
+  background: #1565c8;
   border-radius: 10px;
 }
 
 #formSectionSMP::-webkit-scrollbar-thumb:hover {
-  background: #0066cc;
+  background: #0d47a1;
 }
 
 .form-group-smp {
@@ -1486,13 +1486,13 @@ html {
 }
 
 .icon-label-smp {
-  color: #1e90ff;
+  color: #1565c8;
   margin-right: 5px;
   font-size: 12px;
 }
 
 .required-smp {
-  color: #1e90ff;
+  color: #1565c8;
   font-weight: bold;
 }
 
@@ -1509,8 +1509,8 @@ html {
 
 .form-control-smp:focus {
   outline: none;
-  border-color: #1e90ff;
-  box-shadow: 0 0 0 4px rgba(30, 144, 255, 0.1);
+  border-color: #1565c8;
+  box-shadow: 0 0 0 4px rgba(21, 101, 200, 0.1);
   background: #fff;
 }
 
@@ -1535,7 +1535,7 @@ textarea.form-control-smp {
 select.form-control-smp {
   cursor: pointer;
   appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%231e90ff' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%231565c8' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 12px center;
   padding-right: 35px;
@@ -1561,10 +1561,10 @@ select.form-control-smp {
   border-radius: 12px;
   font-weight: 700;
   font-size: 15px;
-  background: linear-gradient(135deg, #1e90ff 0%, #0066cc 100%);
+  background: linear-gradient(135deg, #1565c8 0%, #0d47a1 100%);
   color: white;
   border: none;
-  box-shadow: 0 6px 20px rgba(30, 144, 255, 0.4);
+  box-shadow: 0 6px 20px rgba(21, 101, 200, 0.4);
   transition: all 0.3s;
   cursor: pointer;
   text-transform: uppercase;
@@ -1573,7 +1573,7 @@ select.form-control-smp {
 
 .btn-submit-smp:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(30, 144, 255, 0.5);
+  box-shadow: 0 10px 30px rgba(21, 101, 200, 0.5);
 }
 
 .btn-submit-smp:active {
