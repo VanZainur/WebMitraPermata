@@ -50,20 +50,36 @@ Vagrantfile
 #-------------------------
 writable/cache/*
 !writable/cache/index.html
+!writable/cache/.gitkeep
 
 writable/logs/*
 !writable/logs/index.html
+!writable/logs/.gitkeep
 
 writable/session/*
 !writable/session/index.html
-
-writable/uploads/*
-!writable/uploads/index.html
+!writable/session/.gitkeep
 
 writable/debugbar/*
 !writable/debugbar/index.html
+!writable/debugbar/.gitkeep
 
 php_errors.log
+
+#-------------------------
+# Upload Files Configuration
+#-------------------------
+# *** BAGIAN INI SUDAH DIHAPUS ***
+# Agar writable/uploads TIDAK di-ignore
+#
+# Tidak lagi:
+# writable/uploads/*/*/*
+# writable/uploads/*/*
+# writable/uploads/*
+#
+# File foto sekarang akan masuk Git secara penuh.
+#
+#-------------------------
 
 #-------------------------
 # User Guide Temp Files
@@ -96,7 +112,7 @@ _modules/*
 # phpenv local config
 .php-version
 
-# Jetbrains editors (PHPStorm, etc)
+# Jetbrains editors
 .idea/
 *.iml
 
@@ -122,5 +138,6 @@ _modules/*
 # Visual Studio Code
 .vscode/
 
+# PHPUnit results
 /results/
 /phpunit*.xml
