@@ -94,8 +94,9 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Select all elements that should animate on scroll
+// PENTING: .gallery-item DIHAPUS agar tidak mengganggu rotasi polaroid!
 const animatedElements = document.querySelectorAll(
-    '.program-card, .facility-item, .teacher-card, .gallery-item'
+    '.program-card, .facility-item, .teacher-card'
 );
 
 // Observe each element
