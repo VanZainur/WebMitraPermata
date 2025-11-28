@@ -13,8 +13,8 @@ class TK2 extends BaseController
     {
         // Data yang mau dikirim ke view (optional)
         $data = [
-            'title' => 'TK Pelangi Ceria - Bermain & Belajar Bersama',
-            'meta_description' => 'Website resmi TK Pelangi Ceria, tempat terbaik untuk anak bermain dan belajar',
+            'title' => 'TK | Mitra Permata',
+            'meta_description' => 'Website resmi TK Mitra Permata, tempat terbaik untuk anak bermain dan belajar',
         ];
 
         // Load view

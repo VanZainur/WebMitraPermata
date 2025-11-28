@@ -35,8 +35,23 @@ body {
 .logo {
     font-size: 1.8rem;
     font-weight: bold;
-    color: #FF6B9D;
-    /* animation: wiggle 2s ease-in-out infinite; */
+    color: #6b93ff;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    gap: 4px;
+    text-decoration: none;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+.logo span {
+    font-size: 22px;
+    font-weight: 600;
 }
 
 @keyframes wiggle {
@@ -135,7 +150,6 @@ body {
 }
 
 .cta-button:hover {
-    transform: scale(1.1) rotate(-2deg);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 

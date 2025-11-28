@@ -11,17 +11,21 @@
     <?php if(isset($meta_description)): ?>
     <meta name="description" content="<?= $meta_description ?>">
     <?php endif; ?>
+
+    <!-- Tambahkan FAVICON di sini -->
+    <link rel="icon" type="image/png" href="<?= base_url('assets/images/logo.png') ?>">
     
     <!-- Link CSS - Cara 1: Langsung -->
     <link rel="stylesheet" href="<?= base_url('assets/TK2/css/style.css') ?>">
-    
-    <!-- Link CSS - Cara 2: Pakai helper (harus load dulu di controller) -->
-    <!-- <link rel="stylesheet" href="<?php // echo base_url('assets/TK2/css/style.css') ?>"> -->
 </head>
+
 <body>
     <!-- Navbar -->
     <nav class="navbar">
-        <div class="logo">🌈 TK Mitra Permata</div>
+        <a href="index.php" class="logo">
+            <img src="assets/images/logo.png" alt="">
+            <span>TK Mitra Permata</span>
+        </a>
         <ul class="nav-links">
             <li><a href="#home">Beranda</a></li>
             <li><a href="#about">Tentang</a></li>
@@ -38,7 +42,7 @@
             <div class="floating star1">⭐</div>
             <div class="floating star2">✨</div>
             <div class="hero-content">
-                <h1>🌈 Selamat Datang di TK Pelangi Ceria! 🌈</h1>
+                <h1>Selamat Datang di <br> TK Mitra Permata</h1>
                 <p>Tempat Terbaik untuk Anak Bermain & Belajar</p>
                 <button class="cta-button">Daftar Sekarang!</button>
             </div>
@@ -50,28 +54,15 @@
             <div class="floating star1">🌟</div>
             <div class="floating star2">💫</div>
             <div class="hero-content">
-                <h1>✨ Berkembang Bersama Kami ✨</h1>
+                <h1>Berkembang Bersama Kami</h1>
                 <p>Program Pendidikan Modern & Menyenangkan</p>
                 <button class="cta-button">Lihat Program</button>
-            </div>
-        </div>
-        
-        <div class="slide slide3">
-            <div class="floating cloud1">🦋</div>
-            <div class="floating cloud2">🌺</div>
-            <div class="floating star1">🌸</div>
-            <div class="floating star2">🌼</div>
-            <div class="hero-content">
-                <h1>🎓 Guru Berpengalaman & Bersertifikat 🎓</h1>
-                <p>Pendidik Profesional yang Mencintai Anak-anak</p>
-                <button class="cta-button">Info Lebih Lanjut</button>
             </div>
         </div>
 
         <div class="slider-dots">
             <span class="dot active" onclick="currentSlide(0)"></span>
             <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
         </div>
     </div>
 
@@ -79,7 +70,7 @@
     <section class="about" id="about">
         <h2 class="section-title">📖 Tentang Kami</h2>
         <div class="about-content">
-            <p>TK Pelangi Ceria adalah lembaga pendidikan anak usia dini yang berkomitmen untuk mengembangkan potensi anak melalui metode pembelajaran yang menyenangkan dan inovatif. Dengan tenaga pengajar berpengalaman dan fasilitas lengkap, kami siap menjadi mitra terbaik dalam tumbuh kembang buah hati Anda! 🌟</p>
+            <p>TK Mitra Permata adalah lembaga pendidikan anak usia dini yang berkomitmen untuk mengembangkan potensi anak melalui metode pembelajaran yang menyenangkan dan inovatif. Dengan tenaga pengajar berpengalaman dan fasilitas lengkap, kami siap menjadi mitra terbaik dalam tumbuh kembang buah hati Anda! 🌟</p>
             <p style="margin-top: 20px;"><strong>Visi:</strong> Menjadi TK terbaik yang mencetak generasi cerdas, kreatif, dan berakhlak mulia.</p>
             <p style="margin-top: 10px;"><strong>Misi:</strong> Memberikan pendidikan berkualitas dengan pendekatan yang ramah anak dan mengutamakan perkembangan holistik.</p>
         </div>
