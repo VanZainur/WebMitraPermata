@@ -65,8 +65,32 @@ body {
 
 .nav-links {
     display: flex;
-    gap: 30px;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links li {
     list-style: none;
+}
+
+/* Tombol daftar */
+.btn-daftar a {
+    background: #ffffff;
+    padding: 10px 25px;
+    border-radius: 30px;
+    color: #4a63e7;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: 0.3s ease;
+    display: inline-block;
+}
+
+/* Hover efek */
+.btn-daftar a:hover {
+    background: #ffffff;
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
 }
 
 .nav-links a {
@@ -566,37 +590,115 @@ section {
    CONTACT SECTION
 ======================================== */
 
-.contact {
-    background: linear-gradient(to bottom, #e0c3fc 0%, #8ec5fc 100%);
-}
-
-.contact-grid {
+/* WRAPPER UTAMA */
+.contact-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 1fr 1.2fr 1fr;
     gap: 40px;
-    max-width: 1000px;
-    margin: 0 auto;
+    align-items: start;
 }
 
-.contact-item {
-    background: white;
-    padding: 30px;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+/* KIRI */
+.contact-left h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #f5576c;
 }
 
-.contact-item span {
-    font-size: 3rem;
-    display: block;
+.contact-left p {
+    line-height: 1.6;
     margin-bottom: 15px;
 }
 
-.contact-item h3 {
-    color: #667eea;
-    margin-bottom: 10px;
+/* BOX INFO (ikon + text) */
+.contact-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    
 }
 
+.contact-icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    border-radius: 5px;
+}
+
+/* Map */
+.contact-map iframe {
+    width: 100%;
+    height: 380px;
+    border: none;
+    border-radius: 8px;
+}
+
+/* FORM */
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contact-form .btn-kirimpesan{
+    background: #ffffff;
+    padding: 10px 25px;
+    border-radius: 30px;
+    color: #4a63e7;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: 0.3s ease;
+    display: inline-block;
+}
+
+.contact-form .btn-kirimpesan:hover{
+    background: #ffffff;
+    color: #FF6B9D;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.contact-form textarea {
+    min-height: 160px;
+    resize: vertical;
+}
+
+.contact-form button {
+    padding: 14px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 992px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
 
 /* ========================================
    FOOTER
@@ -610,12 +712,22 @@ section {
     overflow: hidden;
 }
 
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: space-between;
+}
+
 .footer-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 40px;
-    max-width: 1200px;
-    margin: 0 auto 30px;
+}
+
+.footer-section{
+    flex: 1;
+    min-width: 250px;
 }
 
 .footer-section h3 {
@@ -636,19 +748,8 @@ section {
     transform: translateX(10px);
 }
 
-.social-icons {
-    display: flex;
-    gap: 15px;
-    font-size: 2rem;
-}
-
-.social-icons span {
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-.social-icons span:hover {
-    transform: scale(1.3) rotate(15deg);
+.footer-section p{
+    margin-bottom: 6px;
 }
 
 .footer-bottom {

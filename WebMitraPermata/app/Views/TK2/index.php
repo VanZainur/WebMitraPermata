@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Title dari controller (optional) -->
-    <title><?= isset($title) ? $title : 'TK Pelangi Ceria' ?></title>
+    <title><?= isset($title) ? $title : 'TK Mitra Permata' ?></title>
     
     <!-- Meta description (optional) -->
     <?php if(isset($meta_description)): ?>
@@ -196,7 +196,7 @@
 
     <!-- Teachers Section -->
     <section class="teachers">
-        <h2 class="section-title">👩‍🏫 Tenaga Pengajar Profesional</h2>
+        <h2 class="section-title">👩‍🏫 Tenaga Pendidik Dan Kependidikan</h2>
         <div class="teachers-grid">
             <div class="teacher-card">
                 <div class="teacher-avatar">👩‍🏫</div>
@@ -233,23 +233,68 @@
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <h2 class="section-title">📍 Hubungi Kami</h2>
-        <div class="contact-grid">
-            <div class="contact-item">
-                <span>📍</span>
-                <h3>Alamat</h3>
-                <p>Perumahan Villa Permata, Blk. D8 - D9 No.1, Sindangsari, Kec. Ps. Kemis, Kabupaten Tangerang, Banten 15560</p>
+        <div class="contact-container">
+
+        <!-- KIRI -->
+        <div class="contact-left">
+            <h2>Kami Siap Membantu</h2>
+            <p>
+                Hubungi kami untuk mendapatkan informasi terbaru seputar program pendidikan,
+                pendaftaran siswa baru, dan layanan akademik. Tim kami siap
+                membantu Anda dengan respon yang cepat dan ramah.
+            </p>
+
+            <div class="contact-box">
+                <div class="contact-icon">📍</div>
+                <div>
+                    <h3>Lokasi</h3>
+                    <p>Perumahan Villa Permata, Blk. D8 - D9 No.1, Sindangsari, Ps. Kemis,
+                    Kabupaten Tangerang, Banten 15540</p>
+                </div>
             </div>
-            <div class="contact-item">
-                <span>📞</span>
-                <h3>Telepon</h3>
-                <p>082112456789</p>
+
+            <div class="contact-box">
+                <div class="contact-icon">📞</div>
+                <div>
+                    <h3>No Telepon</h3>
+                    <p>0858-4632-5633 (Miss Tita)</p>
+                </div>
             </div>
-            <div class="contact-item">
-                <span>📧</span>
-                <h3>Email</h3>
-                <p>info@mitrapermata.sch.id</p>
+
+            <div class="contact-box">
+                <div class="contact-icon">📧</div>
+                <div>
+                    <h3>Email</h3>
+                    <p>info@mitrapermata.sch.id</p>
+                </div>
             </div>
         </div>
+
+        <!-- MAP -->
+        <div class="contact-map">
+            <iframe class="position-relative rounded w-100 h-100"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.9391231209147!2d106.52772367366288!3d-6.13888099384802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6a000100000001%3A0x78b8d9a04432be9f!2sTK-SD-SMP-SMK-PKBM%20-%20LKP%20MITRA%20PERMATA!5e0!3m2!1sid!2sid!4v1759418850999!5m2!1sid!2sid"
+                        frameborder="0" style="min-height: 300px; border:0;" allowfullscreen="" aria-hidden="false"
+                        tabindex="0"></iframe>
+        </div>
+
+        <!-- FORM -->
+        <div class="contact-form">
+            <form>
+                <div class="form-grid">
+                    <input type="text" placeholder="Nama Anda">
+                    <input type="email" placeholder="Email Anda">
+                </div>
+
+                <input type="text" placeholder="Subjek">
+
+                <textarea placeholder="Pesan"></textarea>
+
+                <button class="btn-kirimpesan" type="submit">Kirim Pesan</button>
+            </form>
+        </div>
+
+    </div>
     </section>
 
     <!-- Footer -->
@@ -258,21 +303,11 @@
         <div class="footer-float">⭐</div>
         <div class="footer-float">🌟</div>
         <div class="footer-float">✨</div>
-        
-        <div class="footer-content">
+
+        <div class="footer-container">
+
             <div class="footer-section">
-                <h3>🌈 TK Pelangi Ceria</h3>
-                <p>Tempat terbaik untuk anak Anda bermain, belajar, dan berkembang dengan gembira!</p>
-                <div class="social-icons" style="margin-top: 20px;">
-                    <span>📘</span>
-                    <span>📷</span>
-                    <span>🐦</span>
-                    <span>📹</span>
-                </div>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Link Cepat</h3>
+                <h3>Akses Cepat</h3>
                 <ul>
                     <li>🏠 Beranda</li>
                     <li>📖 Tentang Kami</li>
@@ -281,29 +316,26 @@
                     <li>📸 Galeri</li>
                 </ul>
             </div>
-            
-            <div class="footer-section">
-                <h3>Informasi</h3>
-                <ul>
-                    <li>📝 Pendaftaran</li>
-                    <li>💰 Biaya Sekolah</li>
-                    <li>📅 Kalender Akademik</li>
-                    <li>📋 Syarat & Ketentuan</li>
-                    <li>🔒 Kebijakan Privasi</li>
-                </ul>
+
+            <div class="footer-section footer-contact">
+                <h3>Kontak</h3>
+                <p>📍 Perumahan Villa Permata, Blk. D8 - D9 No.1, Sindangsari, Kec. Ps. Kemis, Kabupaten Tangerang, Banten 15540.</p>
+                <p>📞 (021) 12456789</p>
+                <p>📧 info@mitrapermata.sch.id</p>
             </div>
-            
+
             <div class="footer-section">
-                <h3>Jam Operasional</h3>
-                <p><strong>Senin - Jumat</strong><br>07.00 - 15.00 WIB</p>
-                <p style="margin-top: 10px;"><strong>Sabtu</strong><br>08.00 - 12.00 WIB</p>
-                <p style="margin-top: 10px;"><strong>Minggu</strong><br>Libur</p>
+                <h3>Sekolah Mitra Permata</h3>
+                <p>Lembaga pendidikan dari TK, SD, SMP, hingga SMK yang berkomitmen memberikan 
+                layanan pendidikan berkualitas dengan lingkungan belajar yang aman, nyaman, dan 
+                berkarakter.</p>
             </div>
+
         </div>
         
         <div class="footer-bottom">
-            <p>© 2024 TK Pelangi Ceria. Dibuat dengan ❤️ untuk anak-anak Indonesia</p>
-            <p style="margin-top: 10px;">🌈 Bersama Membangun Generasi Cerdas & Ceria! 🌈</p>
+            <p>© 2025 Sekolah Mitra Permata. All Rights Reserved</p>
+            <p>By ShōtenLab</p>
         </div>
     </footer>
 
