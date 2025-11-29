@@ -56,18 +56,10 @@
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                     <!-- <h6 class="section-title bg-white text-start text-primary pe-3">About Us</h6> -->
                     <h1 class="mb-4">Sambutan Kepala Sekolah</h1>
-                    <p class="mb-4" style="text-align: justify;">Dengan penuh rasa syukur, kami menyambut Anda di SMP Mitra Permata, sebuah 
-                        lembaga pendidikan yang berkomitmen membentuk generasi muda yang unggul, berkarakter, 
-                        dan siap bersaing di dunia kerja. Melalui pembelajaran berbasis kompetensi, fasilitas 
-                        yang mendukung, serta kemitraan dengan berbagai industri, kami berupaya menghadirkan 
-                        lingkungan belajar yang inovatif dan inspiratif bagi seluruh peserta didik.</p>
-                    <p class="mb-4" style="text-align: justify;">Kami percaya bahwa setiap siswa memiliki potensi besar yang harus 
-                        dikembangkan melalui pendidikan yang tepat. Oleh karena itu, SMP Mitra Permata 
-                        terus bertransformasi untuk menghadirkan pengalaman belajar yang relevan, berdaya 
-                        guna, dan sejalan dengan kebutuhan perkembangan teknologi serta industri masa kini.</p>
-                    <p class="mb-4" style="text-align: justify;">Semoga website ini dapat menjadi jembatan informasi bagi siswa, 
-                        orang tua, mitra industri, dan masyarakat dalam mengenal lebih dekat SMP Mitra Permata.</p>
-                    <a class="btn btn-primary py-3 px-5 mt-2" href="">Lihat Selengkapnya</a>
+                    <p class="mb-4" style="text-align: justify;">Dengan penuh rasa syukur kepada Tuhan Yang Maha Esa, kami menyambut Anda di SMP Mitra Permata, sebuah lembaga pendidikan yang berkomitmen membentuk generasi muda yang unggul, berkarakter, dan siap menghadapi tantangan masa depan. Melalui pembelajaran yang inovatif, fasilitas yang mendukung, serta pendekatan pendidikan yang holistik, kami berupaya menghadirkan lingkungan belajar yang inspiratif bagi seluruh peserta didik kami.</p>
+                    <p class="mb-4" style="text-align: justify;">Kami percaya bahwa setiap siswa memiliki potensi besar yang harus dikembangkan melalui pendidikan yang tepat. Setiap anak adalah unik, dengan bakat dan minat yang berbeda. Oleh karena itu, SMP Mitra Permata terus bertransformasi untuk menghadirkan pengalaman belajar yang tidak hanya fokus pada aspek akademik, tetapi juga pengembangan karakter dan keterampilan yang akan membentuk pribadi yang tangguh.</p>
+                    <p class="mb-4" style="text-align: justify;">Semoga website ini dapat menjadi jembatan informasi bagi siswa, orang tua, dan masyarakat dalam mengenal lebih dekat SMP Mitra Permata. Mari bersama-sama kita wujudkan cita-cita untuk menciptakan generasi Indonesia yang cerdas dan berprestasi. Terima kasih atas kepercayaan yang diberikan.</p>
+                    <!-- <a class="btn btn-primary py-3 px-5 mt-2" href="">Lihat Selengkapnya</a> -->
                 </div>
             </div>
         </div>
