@@ -211,18 +211,27 @@
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                     <!-- <h6 class="section-title bg-white text-start text-primary pe-3">About Us</h6> -->
                     <h1 class="mb-4">Sambutan Kepala Sekolah</h1>
-                    <p class="mb-4" style="text-align: justify;">Dengan penuh rasa syukur, kami menyambut Anda di SMK Mitra Permata, sebuah 
-                        lembaga pendidikan yang berkomitmen membentuk generasi muda yang unggul, berkarakter, 
+                    <p class="mb-4" style="text-align: justify;">Dengan penuh rasa syukur kepada Tuhan Yang Maha Esa, kami menyambut Anda di SMK Mitra Permata, sebuah 
+                        lembaga pendidikan kejuruan yang berkomitmen membentuk generasi muda yang unggul, berkarakter, 
                         dan siap bersaing di dunia kerja. Melalui pembelajaran berbasis kompetensi, fasilitas 
-                        yang mendukung, serta kemitraan dengan berbagai industri, kami berupaya menghadirkan 
-                        lingkungan belajar yang inovatif dan inspiratif bagi seluruh peserta didik.</p>
+                        yang mendukung, serta kemitraan dengan berbagai industri terkemuka, kami berupaya menghadirkan 
+                        lingkungan belajar yang inovatif, inspiratif, dan kondusif bagi seluruh peserta didik kami. 
+                        Dengan didukung tenaga pendidik yang profesional dan berpengalaman, kami terus berinovasi 
+                        untuk menyesuaikan kurikulum dengan kebutuhan dunia kerja yang terus berkembang.</p>
+                    
                     <p class="mb-4" style="text-align: justify;">Kami percaya bahwa setiap siswa memiliki potensi besar yang harus 
-                        dikembangkan melalui pendidikan yang tepat. Oleh karena itu, SMK Mitra Permata 
+                        dikembangkan melalui pendidikan yang tepat dan bermakna. Oleh karena itu, SMK Mitra Permata 
                         terus bertransformasi untuk menghadirkan pengalaman belajar yang relevan, berdaya 
-                        guna, dan sejalan dengan kebutuhan perkembangan teknologi serta industri masa kini.</p>
-                    <p class="mb-4" style="text-align: justify;">Semoga website ini dapat menjadi jembatan informasi bagi siswa, 
-                        orang tua, mitra industri, dan masyarakat dalam mengenal lebih dekat SMK Mitra Permata.</p>
-                    <a class="btn btn-primary py-3 px-5 mt-2" href="">Lihat Selengkapnya</a>
+                        guna, dan sejalan dengan kebutuhan perkembangan teknologi serta industri masa kini. 
+                        Melalui program prakerin (praktik kerja industri) dan sertifikasi kompetensi, siswa kami 
+                        tidak hanya mendapat teori, tetapi juga pengalaman nyata yang membekali mereka dengan 
+                        keterampilan siap pakai dan etos kerja profesional.</p>
+                    
+                    <p class="mb-4" style="text-align: justify;">Semoga website ini dapat menjadi jembatan informasi yang efektif 
+                        bagi siswa, orang tua, calon siswa, mitra industri, dan masyarakat dalam mengenal lebih dekat SMK Mitra Permata. 
+                        Mari bersama-sama kita wujudkan cita-cita untuk menciptakan generasi Indonesia yang kompeten, 
+                        berkarakter, dan berdaya saing tinggi di kancah global.</p>
+                    <!-- <a class="btn btn-primary py-3 px-5 mt-2" href="">Lihat Selengkapnya</a> -->
                 </div>
             </div>
         </div>

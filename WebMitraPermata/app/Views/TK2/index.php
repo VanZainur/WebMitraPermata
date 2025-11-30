@@ -26,6 +26,11 @@
             <img src="assets/images/logo.png" alt="">
             <span>TK Mitra Permata</span>
         </a>
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <ul class="nav-links">
             <li><a href="#home">Beranda</a></li>
             <li><a href="#about">Tentang</a></li>

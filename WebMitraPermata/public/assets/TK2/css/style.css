@@ -54,15 +54,6 @@ body {
     font-weight: 600;
 }
 
-@keyframes wiggle {
-    0%, 100% { 
-        transform: rotate(-3deg); 
-    }
-    50% { 
-        transform: rotate(3deg); 
-    }
-}
-
 .nav-links {
     display: flex;
     align-items: center;
@@ -71,6 +62,18 @@ body {
 
 .nav-links li {
     list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #667eea;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.nav-links a:hover {
+    color: #FF6B9D;
+    transform: scale(1.1);
 }
 
 /* Tombol daftar */
@@ -85,24 +88,33 @@ body {
     display: inline-block;
 }
 
-/* Hover efek */
 .btn-daftar a:hover {
     background: #ffffff;
-    color: #ffffff;
+    color: #FF6B9D;
     transform: translateY(-3px);
     box-shadow: 0 6px 18px rgba(0,0,0,0.2);
 }
 
-.nav-links a {
-    text-decoration: none;
-    color: #667eea;
-    font-weight: bold;
-    transition: all 0.3s;
+/* Hamburger Menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 6px;
+    z-index: 1001;
+    padding: 5px;
 }
 
-.nav-links a:hover {
-    color: #FF6B9D;
-    transform: scale(1.1);
+.menu-toggle span {
+    width: 28px;
+    height: 3px;
+    background-color: #667eea;
+    border-radius: 2px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-toggle:hover span {
+    background-color: #FF6B9D;
 }
 
 
@@ -310,74 +322,125 @@ section {
 
 
 /* ========================================
-   PROGRAMS SECTION
+   CARDS SECTION
 ======================================== */
 
-.programs {
-    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+.cards-section {
+    min-height: 100vh;
+    padding: 80px 20px;
+    background: linear-gradient(to bottom, #764ba2, #f093fb);
 }
 
-.programs-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+.cards-section h2 {
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 60px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
     gap: 40px;
+    flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.program-card {
+.card {
+    width: 300px;
+    height: 400px;
     background: white;
-    padding: 30px;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     cursor: pointer;
+    transition: transform 0.3s ease;
     position: relative;
     overflow: hidden;
 }
 
-.program-card:hover {
-    transform: translateY(-10px) rotate(-2deg);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
 }
 
-.program-card::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-    transform: rotate(45deg);
-    transition: all 0.5s;
-}
-
-.program-card:hover::before {
-    left: 100%;
-}
-
-.program-icon {
-    font-size: 4rem;
-    margin-bottom: 20px;
-    display: block;
-    animation: rotate 3s ease-in-out infinite;
-}
-
-@keyframes rotate {
-    0%, 100% { 
-        transform: rotate(0deg); 
-    }
-    50% { 
-        transform: rotate(15deg); 
-    }
-}
-
-.program-card h3 {
+.card h3 {
     color: #667eea;
-    font-size: 1.8rem;
-    margin-bottom: 15px;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
 }
+
+.card p {
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Animal Animations */
+.animal {
+    position: absolute;
+    font-size: 4rem;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.card.active .animal {
+    opacity: 1;
+}
+
+.rabbit {
+    bottom: 10px;
+    right: 20px;
+    animation: hop 1s ease-in-out infinite;
+}
+
+@keyframes hop {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.butterfly {
+    top: 20px;
+    right: 20px;
+    animation: flutter 2s ease-in-out infinite;
+}
+
+@keyframes flutter {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(10px, -10px) rotate(10deg); }
+    50% { transform: translate(-10px, -5px) rotate(-10deg); }
+    75% { transform: translate(5px, 5px) rotate(5deg); }
+}
+
+.owl {
+    bottom: 20px;
+    left: 20px;
+    animation: sway 2s ease-in-out infinite;
+}
+
+@keyframes sway {
+    0%, 100% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+}
+
+/* Stars decoration */
+.star {
+    position: absolute;
+    color: #FFD700;
+    animation: twinkle 2s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.5; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.2); }
+}
+
+.card .star:nth-child(1) { top: 10px; left: 10px; }
+.card .star:nth-child(2) { top: 10px; right: 10px; }
+.card .star:nth-child(3) { bottom: 50px; left: 50%; }
 
 
 /* ========================================
@@ -590,7 +653,6 @@ section {
    CONTACT SECTION
 ======================================== */
 
-/* WRAPPER UTAMA */
 .contact-container {
     display: grid;
     grid-template-columns: 1fr 1.2fr 1fr;
@@ -598,7 +660,6 @@ section {
     align-items: start;
 }
 
-/* KIRI */
 .contact-left h2 {
     font-size: 2rem;
     margin-bottom: 15px;
@@ -610,12 +671,10 @@ section {
     margin-bottom: 15px;
 }
 
-/* BOX INFO (ikon + text) */
 .contact-box {
     display: flex;
     align-items: flex-start;
     gap: 15px;
-    
 }
 
 .contact-icon {
@@ -628,7 +687,6 @@ section {
     border-radius: 5px;
 }
 
-/* Map */
 .contact-map iframe {
     width: 100%;
     height: 380px;
@@ -636,7 +694,6 @@ section {
     border-radius: 8px;
 }
 
-/* FORM */
 .contact-form form {
     display: flex;
     flex-direction: column;
@@ -689,16 +746,6 @@ section {
     cursor: pointer;
 }
 
-/* MOBILE RESPONSIVE */
-@media (max-width: 992px) {
-    .contact-container {
-        grid-template-columns: 1fr;
-    }
-
-    .form-grid {
-        grid-template-columns: 1fr;
-    }
-}
 
 /* ========================================
    FOOTER
@@ -717,12 +764,6 @@ section {
     flex-wrap: wrap;
     gap: 50px;
     justify-content: space-between;
-}
-
-.footer-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
 }
 
 .footer-section{
@@ -757,11 +798,6 @@ section {
     padding-top: 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
-
-
-/* ========================================
-   FOOTER FLOATING ELEMENTS
-======================================== */
 
 .footer-float {
     position: absolute;
@@ -805,16 +841,130 @@ section {
 
 
 /* ========================================
-   RESPONSIVE DESIGN
+   RESPONSIVE - TABLET & MOBILE
 ======================================== */
+
+@media (max-width: 992px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
 
 @media (max-width: 768px) {
     .navbar {
         padding: 15px 20px;
+        position: fixed;
+        width: 100%;
     }
     
+    /* TAMPILKAN Hamburger Menu */
+    .menu-toggle {
+        display: flex;
+        margin-right: 0;
+    }
+    
+    /* Nav Links dropdown FULL WIDTH */
     .nav-links {
-        display: none;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100vw;
+        background: white;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        z-index: 999;
+    }
+    
+    .nav-links.active {
+        max-height: 500px;
+        padding: 0;
+    }
+    
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .nav-links li:last-child {
+        border-bottom: none;
+    }
+    
+    .nav-links a {
+        color: #667eea !important;
+        font-size: 1.1rem;
+        padding: 20px 0;
+        display: block;
+        width: 100%;
+        text-align: center;
+        transition: all 0.3s;
+        border-bottom: 1px solid #f0f0f0;
+        margin: 0;
+    }
+    
+    .nav-links li:last-child a {
+        border-bottom: none;
+    }
+    
+    .nav-links a:hover {
+        background: linear-gradient(to right, #f8f9ff, #fff, #f8f9ff);
+        color: #FF6B9D !important;
+        transform: none;
+    }
+    
+    .btn-daftar {
+        margin: 20px 20px;
+        padding: 0;
+    }
+    
+    .btn-daftar a {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+        color: white !important;
+        padding: 14px 40px;
+        border-radius: 30px;
+        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        border: none !important;
+        display: inline-block;
+        width: auto;
+        margin: 0 auto;
+    }
+    
+    .btn-daftar a:hover {
+        background: linear-gradient(135deg, #FF6B9D 0%, #f5576c 100%) !important;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(255, 107, 157, 0.4);
+    }
+    
+    body::after {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 999;
+        pointer-events: none;
+    }
+    
+    body.menu-open::after {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
     }
     
     .hero-content h1 {
@@ -839,7 +989,6 @@ section {
         grid-template-columns: 1fr;
     }
 
-    /* Gallery Responsive */
     .gallery {
         padding: 60px 20px;
     }
@@ -868,7 +1017,24 @@ section {
 
 @media (max-width: 480px) {
     .logo {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
+    }
+    
+    .logo span {
+        font-size: 16px;
+    }
+    
+    .logo img {
+        height: 32px;
+    }
+    
+    .nav-links {
+        width: 85%;
+        max-width: 300px;
+    }
+    
+    .nav-links a {
+        font-size: 1.2rem;
     }
     
     .hero-content h1 {
@@ -884,7 +1050,6 @@ section {
         font-size: 1rem;
     }
 
-    /* Gallery Mobile */
     .gallery-item img {
         height: 180px;
     }
@@ -893,128 +1058,3 @@ section {
         font-size: 0.95rem;
     }
 }
-
-
-/* ========================================
-   CARDS SECTION
-======================================== */
-
-.cards-section {
-    min-height: 100vh;
-    padding: 80px 20px;
-    background: linear-gradient(to bottom, #764ba2, #f093fb);
-}
-
-.cards-section h2 {
-    text-align: center;
-    color: white;
-    font-size: 3rem;
-    margin-bottom: 60px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-}
-
-.cards-container {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.card {
-    width: 300px;
-    height: 400px;
-    background: white;
-    border-radius: 20px;
-    padding: 30px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.card:hover {
-    transform: translateY(-10px) scale(1.05);
-}
-
-.card h3 {
-    color: #667eea;
-    font-size: 2rem;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.card p {
-    color: #666;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    text-align: center;
-}
-
-/* Animal Animations */
-.animal {
-    position: absolute;
-    font-size: 4rem;
-    opacity: 0;
-    transition: all 0.5s ease;
-}
-
-.card.active .animal {
-    opacity: 1;
-}
-
-/* Rabbit */
-.rabbit {
-    bottom: 10px;
-    right: 20px;
-    animation: hop 1s ease-in-out infinite;
-}
-
-@keyframes hop {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
-}
-
-/* Butterfly */
-.butterfly {
-    top: 20px;
-    right: 20px;
-    animation: flutter 2s ease-in-out infinite;
-}
-
-@keyframes flutter {
-    0%, 100% { transform: translate(0, 0) rotate(0deg); }
-    25% { transform: translate(10px, -10px) rotate(10deg); }
-    50% { transform: translate(-10px, -5px) rotate(-10deg); }
-    75% { transform: translate(5px, 5px) rotate(5deg); }
-}
-
-/* Owl */
-.owl {
-    bottom: 20px;
-    left: 20px;
-    animation: sway 2s ease-in-out infinite;
-}
-
-@keyframes sway {
-    0%, 100% { transform: rotate(-5deg); }
-    50% { transform: rotate(5deg); }
-}
-
-/* Stars decoration */
-.star {
-    position: absolute;
-    color: #FFD700;
-    animation: twinkle 2s ease-in-out infinite;
-}
-
-@keyframes twinkle {
-    0%, 100% { opacity: 0.5; transform: scale(1); }
-    50% { opacity: 1; transform: scale(1.2); }
-}
-
-.card .star:nth-child(1) { top: 10px; left: 10px; }
-.card .star:nth-child(2) { top: 10px; right: 10px; }
-.card .star:nth-child(3) { bottom: 50px; left: 50%; }
