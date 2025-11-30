@@ -87,7 +87,7 @@
                         <div class="p-4">
                             <i class="fa fa-3x fa-futbol text-primary mb-4"></i>
                             <h5 class="mb-3">Ekstrakurikuler Beragam</h5>
-                            <p>Berbagai pilihan kegiatan ekstrakurikuler mulai dari olahraga, seni, sains, hingga teknologi untuk mengembangkan minat dan bakat siswa.</p>
+                            <p>Berbagai pilihan kegiatan ekstrakurikuler yang seru dan menarik untuk mengembangkan minat dan bakat siswa.</p>
                         </div>
                     </div>
                 </div>

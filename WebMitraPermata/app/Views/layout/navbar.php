@@ -19,7 +19,7 @@
     <div class="navbar-content">
       <a href="/" class="navbar-brand">
       <img src="<?= base_url('assets/images/logo.png') ?>" alt="Logo Mitra Permata" class="navbar-logo">
-      <span>Mitra Permata</span>
+      <span>Yayasan Wiyata Insani</span>
     </a>
       <ul class="navbar-nav">
          <li class="dropdown">
@@ -125,7 +125,7 @@
 
   <!-- CTA Pendaftaran -->
   <div class="mobile-dropdown">
-    <a href="#" class="navbar-cta-M mobile-dropdown-toggle">Pendaftaran
+    <a href="#" class="navbar-cta-M mobile-dropdown-toggle">Jenjang Pendidikan
       <span class="arrow">▼</span>
     </a>
     <div class="mobile-dropdown-content">

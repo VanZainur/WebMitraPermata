@@ -1398,7 +1398,7 @@ html {
    POPUP PENDAFTARAN PPDB - MERAH BATA
    ======================================== */
 
-#brosurPopupSMP {
+#brosurPopupSD {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.75);
