@@ -23,7 +23,7 @@
                 <i class="fas fa-heart"></i>
                 <span>Peduli & Berakhlak</span>
             </div>
-            <h1>Yayasan Mitra Permata</h1>
+            <h1>Yayasan Wiyata Insani</h1>
             <p class="hero-subtitle">Membangun generasi yang berilmu, peduli, dan berakhlak mulia sejak tahun 2004</p>
             <div class="hero-stats">
                 <div class="stat-item">
@@ -51,7 +51,7 @@
             <div class="intro-text">
                 <h2>Tentang Kami</h2>
                 <p>
-                    Yayasan Mitra Permata hadir sebagai lembaga yang berkomitmen tinggi dalam bidang pendidikan, sosial, dan kemanusiaan. 
+                    Yayasan Wiyata Insani hadir sebagai lembaga yang berkomitmen tinggi dalam bidang pendidikan, sosial, dan kemanusiaan. 
                     Selama lebih dari dua dekade, kami telah konsisten memberikan kontribusi nyata dalam mencetak generasi yang tidak hanya 
                     berilmu pengetahuan, tetapi juga memiliki kepedulian sosial yang tinggi dan berakhlak mulia.
                 </p>

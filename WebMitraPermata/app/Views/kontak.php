@@ -28,7 +28,7 @@
         <h2>Alamat</h2>
         <div class="contact-info-name">
             <img src="<?= base_url('assets/images/logo.png') ?>" class="contact-logo">
-            <p>Yayasan Mitra Permata</p>
+            <p>Yayasan Wiyata Insani</p>
         </div>
         <p>Perumahan Villa Permata, Blk. D8 - D9 No.1, Sindangsari, 
         Kec. Ps. Kemis, Kabupaten Tangerang, Banten 15560</p>

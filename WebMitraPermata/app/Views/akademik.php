@@ -113,7 +113,7 @@
         </a>
 
         <!-- Program Unggulan -->
-        <a href="<?= base_url('akademik/program-unggulan') ?>" class="akademik-card akademik-card-featured" data-category="special">
+        <!-- <a href="<?= base_url('akademik/program-unggulan') ?>" class="akademik-card akademik-card-featured" data-category="special">
             <div class="featured-badge">✨ Featured</div>
             <div class="card-image">
                 <img src="<?= base_url('assets/images/akademik/program.jpg') ?>" alt="Program Unggulan">
@@ -131,7 +131,7 @@
                     <span class="feature-tag">Robotika</span>
                 </div>
             </div>
-        </a>
+        </a> -->
     </div>
 
     <!-- CTA Section -->

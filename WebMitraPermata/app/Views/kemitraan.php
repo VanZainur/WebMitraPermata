@@ -46,32 +46,36 @@
         <div class="categories-grid">
             <div class="category-card">
                 <div class="category-icon">
-                    <i class="fas fa-graduation-cap"></i>
+                    <i class="fas fa-book-open"></i>
                 </div>
                 <h3>Pendidikan</h3>
                 <p>Beasiswa, pelatihan guru, dan pengembangan kurikulum</p>
             </div>
+
             <div class="category-card">
                 <div class="category-icon">
-                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-people-group"></i>
                 </div>
                 <h3>Sosial</h3>
                 <p>Program bantuan sosial dan pemberdayaan masyarakat</p>
             </div>
+
             <div class="category-card">
                 <div class="category-icon">
-                    <i class="fas fa-hands-helping"></i>
+                    <i class="fas fa-hand-holding-heart"></i>
                 </div>
                 <h3>Kemanusiaan</h3>
                 <p>Bantuan darurat dan program kemanusiaan</p>
             </div>
+
             <div class="category-card">
                 <div class="category-icon">
-                    <i class="fas fa-seedling"></i>
+                    <i class="fas fa-leaf"></i>
                 </div>
                 <h3>Lingkungan</h3>
                 <p>Konservasi lingkungan dan pembangunan berkelanjutan</p>
             </div>
+
         </div>
     </div>
 </div>

@@ -6,8 +6,10 @@
   <title><?= $this->renderSection('title') ?> | Mitra Permata</title>
   <link rel="icon" type="image/png" href="<?= base_url('assets/images/logo.png') ?>">
 
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <!-- Google Fonts Poppins -->
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <!-- Navbar CSS -->
   <link rel="stylesheet" href="<?= base_url('assets/css/navbar.css') ?>">
 </head>

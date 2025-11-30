@@ -107,7 +107,7 @@
             <img src="<?= base_url('assets/images/fasilitas/Tu.jpg') ?>" alt="Musholla">
             <div class="content">
                 <h3>Ruang TU</h3>
-                <p>...</p>
+                <p>Ruang Tata Usaha merupakan pusat layanan administrasi sekolah yang melayani kebutuhan siswa, orang tua, dan guru. Untuk memastikan proses administrasi, informasi akademik, dan pelayanan surat-menyurat dapat dilakukan dengan cepat, tertib, dan profesional.</p>
             </div>
         </div>
 
@@ -116,7 +116,7 @@
             <img src="<?= base_url('assets/images/fasilitas/Yayasan.jpg') ?>" alt="Musholla">
             <div class="content">
                 <h3>Ruang Yayasan</h3>
-                <p>...</p>
+                <p>Ruang Yayasan merupakan pusat administrasi dan koordinasi sekolah, tempat berlangsungnya kegiatan manajerial, pelayanan orang tua, serta pengelolaan program pendidikan agar seluruh aktivitas sekolah berjalan tertib dan profesional.</p>
             </div>
         </div>
     </div>
