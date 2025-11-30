@@ -125,7 +125,7 @@
 
   <!-- CTA Pendaftaran -->
   <div class="mobile-dropdown">
-    <a href="#" class="navbar-cta-M mobile-dropdown-toggle">Pendaftaran
+    <a href="#" class="navbar-cta-M mobile-dropdown-toggle">Jenjang Pendidikan
       <span class="arrow">▼</span>
     </a>
     <div class="mobile-dropdown-content">
