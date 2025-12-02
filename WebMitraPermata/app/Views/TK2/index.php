@@ -356,5 +356,296 @@
         const siteUrl = "<?= base_url() ?>";
         console.log('Base URL:', siteUrl);
     </script>
+    <!-- Popup Pendaftaran PPDB - TK -->
+<div id="brosurPopupTK">
+    <div id="popupContainerTK">
+        
+        <!-- Tombol Close -->
+        <button onclick="document.getElementById('brosurPopupTK').style.display='none'" id="btnCloseTK">
+            ✕
+        </button>
+
+        <!-- Header Popup -->
+        <div class="popup-header-tk">
+            <!-- Logo Sekolah - Ganti src dengan logo TK Anda -->
+            <div class="header-logo-tk">
+                <img src="<?= base_url('assets/images/logo.png') ?>" alt="Logo TK">
+            </div>
+            <h3 class="form-title-tk">Pendaftaran Peserta Didik Baru</h3>
+            <p class="form-subtitle-tk">TK - Tahun Ajaran 2025/2026</p>
+        </div>
+
+        <!-- Form Content -->
+        <div id="formSectionTK">
+            
+            <!-- NOTIF / ALERT -->
+            <div id="alertContainerTK"></div>
+
+            <form id="formPendaftaranTK">
+                
+                <!-- Nama Lengkap -->
+                <div class="form-group-tk">
+                    <label class="form-label-tk">
+                        <i class="fa fa-user icon-label-tk"></i>
+                        Nama Lengkap Anak <span class="required-tk">*</span>
+                    </label>
+                    <input type="text" name="nama" class="form-control-tk" 
+                        placeholder="Contoh: Aira Putri Azzahra" required>
+                </div>
+
+                <!-- Nama Panggilan -->
+                <div class="form-group-tk">
+                    <label class="form-label-tk">
+                        <i class="fa fa-smile icon-label-tk"></i>
+                        Nama Panggilan <span class="required-tk">*</span>
+                    </label>
+                    <input type="text" name="nama_panggilan" class="form-control-tk" 
+                        placeholder="Contoh: Aira" required>
+                </div>
+
+                <!-- Tempat Lahir & Tanggal Lahir -->
+                <div class="row-tk">
+                    <div class="col-md-6-tk form-group-tk">
+                        <label class="form-label-tk">
+                            <i class="fa fa-map-marker-alt icon-label-tk"></i>
+                            Tempat Lahir <span class="required-tk">*</span>
+                        </label>
+                        <input type="text" name="tempat_lahir" class="form-control-tk" 
+                            placeholder="Contoh: Jakarta" required>
+                    </div>
+                    <div class="col-md-6-tk form-group-tk">
+                        <label class="form-label-tk">
+                            <i class="fa fa-calendar icon-label-tk"></i>
+                            Tanggal Lahir <span class="required-tk">*</span>
+                        </label>
+                        <input type="date" name="tanggal_lahir" class="form-control-tk" required>
+                    </div>
+                </div>
+
+                <!-- Jenis Kelamin & Anak Ke -->
+                <div class="row-tk">
+                    <div class="col-md-6-tk form-group-tk">
+                        <label class="form-label-tk">
+                            <i class="fa fa-venus-mars icon-label-tk"></i>
+                            Jenis Kelamin <span class="required-tk">*</span>
+                        </label>
+                        <select name="jenis_kelamin" class="form-control-tk" required>
+                            <option value="">-- Pilih --</option>
+                            <option value="Laki-laki">Laki-laki</option>
+                            <option value="Perempuan">Perempuan</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6-tk form-group-tk">
+                        <label class="form-label-tk">
+                            <i class="fa fa-child icon-label-tk"></i>
+                            Anak Ke- <span class="required-tk">*</span>
+                        </label>
+                        <input type="number" name="anak_ke" class="form-control-tk" 
+                            placeholder="Contoh: 1" min="1" required>
+                    </div>
+                </div>
+
+                <!-- Nama Ayah & Nama Ibu -->
+                <div class="row-tk">
+                    <div class="col-md-6-tk form-group-tk">
+                        <label class="form-label-tk">
+                            <i class="fa fa-male icon-label-tk"></i>
+                            Nama Ayah <span class="required-tk">*</span>
+                        </label>
+                        <input type="text" name="nama_ayah" class="form-control-tk" 
+                            placeholder="Contoh: Budi Santoso" required>
+                    </div>
+                    <div class="col-md-6-tk form-group-tk">
+                        <label class="form-label-tk">
+                            <i class="fa fa-female icon-label-tk"></i>
+                            Nama Ibu <span class="required-tk">*</span>
+                        </label>
+                        <input type="text" name="nama_ibu" class="form-control-tk" 
+                            placeholder="Contoh: Siti Aminah" required>
+                    </div>
+                </div>
+
+                <!-- Pekerjaan Ayah & Pekerjaan Ibu -->
+                <div class="row-tk">
+                    <div class="col-md-6-tk form-group-tk">
+                        <label class="form-label-tk">
+                            <i class="fa fa-briefcase icon-label-tk"></i>
+                            Pekerjaan Ayah <span class="required-tk">*</span>
+                        </label>
+                        <input type="text" name="pekerjaan_ayah" class="form-control-tk" 
+                            placeholder="Contoh: Wiraswasta" required>
+                    </div>
+                    <div class="col-md-6-tk form-group-tk">
+                        <label class="form-label-tk">
+                            <i class="fa fa-briefcase icon-label-tk"></i>
+                            Pekerjaan Ibu <span class="required-tk">*</span>
+                        </label>
+                        <input type="text" name="pekerjaan_ibu" class="form-control-tk" 
+                            placeholder="Contoh: Ibu Rumah Tangga" required>
+                    </div>
+                </div>
+
+                <!-- Agama -->
+                <div class="form-group-tk">
+                    <label class="form-label-tk">
+                        <i class="fa fa-book icon-label-tk"></i>
+                        Agama <span class="required-tk">*</span>
+                    </label>
+                    <select name="agama" class="form-control-tk" required>
+                        <option value="">-- Pilih Agama --</option>
+                        <option value="Islam">Islam</option>
+                        <option value="Kristen">Kristen</option>
+                        <option value="Katolik">Katolik</option>
+                        <option value="Hindu">Hindu</option>
+                        <option value="Buddha">Buddha</option>
+                        <option value="Konghucu">Konghucu</option>
+                    </select>
+                </div>
+
+                <!-- Alamat Lengkap -->
+                <div class="form-group-tk">
+                    <label class="form-label-tk">
+                        <i class="fa fa-home icon-label-tk"></i>
+                        Alamat Lengkap <span class="required-tk">*</span>
+                    </label>
+                    <textarea name="alamat" class="form-control-tk" rows="3" 
+                        placeholder="Contoh: Jl. Merdeka No. 123, RT 01/RW 05, Kelurahan ABC, Kecamatan XYZ" required></textarea>
+                </div>
+
+                <!-- Nomor WhatsApp -->
+                <div class="form-group-tk">
+                    <label class="form-label-tk">
+                        <i class="fa fa-phone icon-label-tk"></i>
+                        Nomor WhatsApp Orang Tua <span class="required-tk">*</span>
+                    </label>
+                    <input type="tel" name="no_hp" class="form-control-tk" 
+                        placeholder="Contoh: 081234567890" required>
+                    <small class="form-text-tk">Gunakan format: 08xxxxxxxxxx</small>
+                </div>
+
+                <!-- Token CSRF -->
+                <input type="hidden" name="<?= csrf_token() ?>" value="<?= csrf_hash() ?>">
+
+                <!-- Tombol Submit -->
+                <button type="submit" id="btnSubmitTK" class="btn-submit-tk">
+                    <i class="fa fa-paper-plane me-2"></i>Kirim Pendaftaran
+                </button>
+
+                <p class="form-footer-tk">
+                    <span class="required-tk">*</span> Wajib diisi
+                </p>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<!-- Script Popup -->
+<script>
+// Tampilkan popup setelah 2 detik
+window.addEventListener("load", function () {
+    <?php if (session()->has('popup_errors') || session()->has('popup_success')): ?>
+        document.getElementById('brosurPopupTK').style.display = 'flex';
+    <?php else: ?>
+        setTimeout(() => {
+            document.getElementById('brosurPopupTK').style.display = 'flex';
+        }, 2000);
+    <?php endif ?>
+});
+
+// Validasi nomor WhatsApp
+document.querySelector('#formPendaftaranTK input[name="no_hp"]').addEventListener('input', function(e) {
+    this.value = this.value.replace(/[^0-9]/g, '');
+    
+    if (this.value.length > 0 && !this.value.startsWith('08')) {
+        this.setCustomValidity('Nomor harus diawali dengan 08');
+    } else if (this.value.length > 0 && this.value.length < 10) {
+        this.setCustomValidity('Nomor minimal 10 digit');
+    } else {
+        this.setCustomValidity('');
+    }
+});
+
+// Validasi anak ke
+document.querySelector('#formPendaftaranTK input[name="anak_ke"]').addEventListener('input', function(e) {
+    if (this.value < 1) {
+        this.value = 1;
+    }
+});
+
+// Submit form dengan AJAX
+document.getElementById('formPendaftaranTK').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const btnSubmit = document.getElementById('btnSubmitTK');
+    const originalText = btnSubmit.innerHTML;
+    
+    btnSubmit.disabled = true;
+    btnSubmit.innerHTML = '<i class="fa fa-spinner fa-spin me-2"></i>Mengirim...';
+    
+    const formData = new FormData(this);
+    
+    fetch('<?= base_url("pendaftaran/submit") ?>', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        const alertContainer = document.getElementById('alertContainerTK');
+        
+        if (data.success) {
+            alertContainer.innerHTML = `
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <i class="fa fa-check-circle me-2"></i>${data.message}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            `;
+            document.getElementById('formPendaftaranTK').reset();
+            
+            setTimeout(() => {
+                document.getElementById('brosurPopupTK').style.display = 'none';
+            }, 3000);
+        } else {
+            alertContainer.innerHTML = `
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <i class="fa fa-exclamation-circle me-2"></i>${data.message}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            `;
+        }
+        
+        btnSubmit.disabled = false;
+        btnSubmit.innerHTML = originalText;
+        alertContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        btnSubmit.disabled = false;
+        btnSubmit.innerHTML = originalText;
+        
+        document.getElementById('alertContainerTK').innerHTML = `
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <i class="fa fa-exclamation-circle me-2"></i>Terjadi kesalahan. Silakan coba lagi.
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+        `;
+    });
+});
+
+// Tutup popup saat klik di luar
+document.getElementById('brosurPopupTK').addEventListener('click', function(e) {
+    if (e.target === this) {
+        this.style.display = 'none';
+    }
+});
+
+// Tutup dengan tombol ESC
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        document.getElementById('brosurPopupTK').style.display = 'none';
+    }
+});
+</script>
+<!-- POP UP PENDAFTARAN TK END -->
 </body>
 </html>
