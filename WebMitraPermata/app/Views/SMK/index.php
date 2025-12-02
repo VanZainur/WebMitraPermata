@@ -518,48 +518,49 @@
     <!-- Guru End -->
 
    <!-- Prestasi Start -->
-    <div id="prestasi" class="container-xxl py-5 category">
-        <div class="container">
+  <div id="prestasi" class="container-xxl py-5 category">
+    <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h6 class="section-title bg-white text-center text-primary px-3">Prestasi</h6>
+            <h1 class="mb-3">Terbaik Siswa</h1>
+            <p class="text-muted mb-4">Siswa-siswi kami berhasil meraih berbagai prestasi yang membanggakan</p>
+        </div>
 
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Prestasi</h6>
-                <h1 class="mb-3">Terbaik Siswa</h1>
-                <p class="text-muted mb-4">Siswa-siswi kami berhasil meraih berbagai prestasi yang membanggakan, baik di bidang akademik, olahraga, maupun seni. Setiap pencapaian ini menunjukkan kerja keras, disiplin, serta semangat mereka dalam mengembangkan potensi terbaik</p>
-            </div>
-
-            <div class="row g-4">
-                <?php if (!empty($prestasi)): ?>
-                    <?php foreach ($prestasi as $item): ?>
-                        <!-- Prestasi Card -->
-                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="prestasi-card shadow-lg rounded overflow-hidden">
-                                <div class="prestasi-img">
-                                   <!-- Untuk Berita -->
+        <div class="row g-4">
+            <?php if (!empty($prestasi)): ?>
+                <?php foreach ($prestasi as $item): ?>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="prestasi-card shadow-lg rounded overflow-hidden">
+                            <div class="prestasi-img">
                                 <img src="<?= base_url('uploads/' . strtolower($item['jenjang']) . '/prestasi/' . $item['gambar']) ?>" 
                                     alt="<?= esc($item['judul']) ?>">
-                                </div>
-                                <div class="prestasi-body p-4">
-                                    <h5 class="fw-bold mb-2"><?= esc($item['judul']) ?></h5>
-                                    <p class="text-muted mb-0">
-                                        <?= esc($item['deskripsi']) ?>
-                                    </p>
-                                    <small class="text-muted d-block mt-2">
-                                        <i class="fa fa-calendar"></i> 
-                                        <?= date('d M Y', strtotime($item['tanggal'])) ?>
-                                    </small>
-                                </div>
+                            </div>
+                            <div class="prestasi-body p-4">
+                                <h5 class="fw-bold mb-2"><?= esc($item['judul']) ?></h5>
+                                <p class="text-muted mb-3">
+                                    <?= esc(substr($item['deskripsi'], 0, 100)) ?>...
+                                </p>
+                                <small class="text-muted d-block mb-3">
+                                    <i class="fa fa-calendar"></i> 
+                                    <?= date('d M Y', strtotime($item['tanggal'])) ?>
+                                </small>
+                                <!-- Tombol Lihat Detail -->
+                                <button class="btn btn-primary btn-sm" 
+                                        onclick="openModal('prestasi', <?= htmlspecialchars(json_encode($item), ENT_QUOTES, 'UTF-8') ?>)">
+                                    <i class="fa fa-eye"></i> Lihat Detail
+                                </button>
                             </div>
                         </div>
-                    <?php endforeach; ?>
-                <?php else: ?>
-                    <div class="col-12">
-                        <p class="text-center text-muted">Belum ada prestasi tersedia.</p>
                     </div>
-                <?php endif; ?>
-            </div>
-
+                <?php endforeach; ?>
+            <?php else: ?>
+                <div class="col-12">
+                    <p class="text-center text-muted">Belum ada prestasi tersedia.</p>
+                </div>
+            <?php endif; ?>
         </div>
     </div>
+</div>
     <!-- Prestasi End -->
 
     <!-- Ekstrakurikuler Start -->
@@ -672,89 +673,105 @@
 
     <!-- kegiatan Start-->
     <div id="kegiatan" class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Acara</h6>
-                <h1 class="mb-3">Kegiatan Sekolah</h1>
-                <p class="text-muted mb-4">Kegiatan sekolah kami mencakup berbagai program yang edukatif, kreatif, dan membangun karakter. Mulai dari kegiatan rutin hingga acara khusus, semuanya dirancang untuk memberikan pengalaman belajar yang menyenangkan sekaligus memperkuat kebersamaan di lingkungan sekolah</p>
-            </div>
+    <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h6 class="section-title bg-white text-center text-primary px-3">Acara</h6>
+            <h1 class="mb-3">Kegiatan Sekolah</h1>
+            <p class="text-muted mb-4">Kegiatan sekolah kami mencakup berbagai program yang edukatif</p>
+        </div>
 
-           <div class="row g-4">
-
-        <?php if (!empty($kegiatan)): ?>
-            <?php foreach ($kegiatan as $item): ?>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="kegiatan-card">
-                        <div class="kegiatan-image">
-                             <!-- Untuk Berita -->
+        <div class="row g-4">
+            <?php if (!empty($kegiatan)): ?>
+                <?php foreach ($kegiatan as $item): ?>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="kegiatan-card">
+                            <div class="kegiatan-image">
                                 <img src="<?= base_url('uploads/' . strtolower($item['jenjang']) . '/kegiatan/' . $item['gambar']) ?>" 
-                                alt="<?= esc($item['judul']) ?>">
-                            <div class="kegiatan-date">
-                                <?= date('d M Y', strtotime($item['tanggal'])) ?>
+                                    alt="<?= esc($item['judul']) ?>">
+                                <div class="kegiatan-date">
+                                    <?= date('d M Y', strtotime($item['tanggal'])) ?>
+                                </div>
+                            </div>
+                            <div class="kegiatan-content">
+                                <h5 class="kegiatan-title"><?= esc($item['judul']) ?></h5>
+                                <p class="kegiatan-desc"><?= esc(substr($item['deskripsi'], 0, 100)) ?>...</p>
+                                <!-- Tombol Lihat Detail -->
+                                <button class="btn btn-primary btn-sm" 
+                                        onclick="openModal('kegiatan', <?= htmlspecialchars(json_encode($item), ENT_QUOTES, 'UTF-8') ?>)">
+                                    Lihat Detail <i class="fa fa-arrow-right"></i>
+                                </button>
                             </div>
                         </div>
-                        <div class="kegiatan-content">
-                            <h5 class="kegiatan-title"><?= esc($item['judul']) ?></h5>
-                            <p class="kegiatan-desc"><?= esc($item['deskripsi']) ?></p>
-                            <a href="<?= base_url('kegiatan/detail/' . $item['id']) ?>" class="kegiatan-link">
-                                Lihat Detail <i class="fa fa-arrow-right"></i>
-                            </a>
-                        </div>
                     </div>
-                </div>
-            <?php endforeach; ?>
-        <?php else: ?>
-            <div class="col-12 text-center text-muted">Belum ada kegiatan tersedia.</div>
-        <?php endif; ?>
-
-        </div>
-
+                <?php endforeach; ?>
+            <?php else: ?>
+                <div class="col-12 text-center text-muted">Belum ada kegiatan tersedia.</div>
+            <?php endif; ?>
         </div>
     </div>
+</div>
     <!-- Kegiatan End-->
 
     <!-- Berita Start-->
-    <div id="berita" class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Informasi</h6>
-                <h1 class="mb-5">Berita Terkini</h1>
-            </div>
+<div id="berita" class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h6 class="section-title bg-white text-center text-primary px-3">Informasi</h6>
+            <h1 class="mb-5">Berita Terkini</h1>
+        </div>
 
-            <div class="row g-4">
-                <?php if (!empty($berita)): ?>
-                    <?php foreach ($berita as $item): ?>
-                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="berita-card">
-                                <div class="berita-image">
-                               <!-- Untuk Berita -->
+        <div class="row g-4">
+            <?php if (!empty($berita)): ?>
+                <?php foreach ($berita as $item): ?>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="berita-card">
+                            <div class="berita-image">
                                 <img src="<?= base_url('uploads/' . strtolower($item['jenjang']) . '/berita/' . $item['gambar']) ?>" 
                                     alt="<?= esc($item['judul']) ?>">
-
-                                    <div class="berita-badge">
-                                        <i class="fa fa-calendar"></i> 
-                                        <?= date('d M Y', strtotime($item['tanggal'])) ?>
-                                    </div>
-                                </div>
-                                <div class="berita-content">
-                                    <h5 class="berita-title"><?= esc($item['judul']) ?></h5>
-                                    <p class="berita-desc"><?= esc($item['deskripsi']) ?></p>
-                                    <a href="<?= base_url('berita/detail/' . $item['id']) ?>" class="berita-link">
-                                        Baca Selengkapnya <i class="fa fa-arrow-right"></i>
-                                    </a>
+                                <div class="berita-badge">
+                                    <i class="fa fa-calendar"></i> 
+                                    <?= date('d M Y', strtotime($item['tanggal'])) ?>
                                 </div>
                             </div>
+                            <div class="berita-content">
+                                <h5 class="berita-title"><?= esc($item['judul']) ?></h5>
+                                <p class="berita-desc"><?= esc(substr($item['deskripsi'], 0, 100)) ?>...</p>
+                                <!-- Tombol Lihat Detail -->
+                                <button class="btn btn-primary btn-sm" 
+                                        onclick="openModal('berita', <?= htmlspecialchars(json_encode($item), ENT_QUOTES, 'UTF-8') ?>)">
+                                    Baca Selengkapnya <i class="fa fa-arrow-right"></i>
+                                </button>
+                            </div>
                         </div>
-                    <?php endforeach; ?>
-                <?php else: ?>
-                    <div class="col-12">
-                        <p class="text-center text-muted">Belum ada berita tersedia.</p>
                     </div>
-                <?php endif; ?>
-            </div>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <div class="col-12">
+                    <p class="text-center text-muted">Belum ada berita tersedia.</p>
+                </div>
+            <?php endif; ?>
         </div>
     </div>
+</div>
     <!-- Berita End-->
+
+
+    <!-- ============================================================
+     MODAL POPUP (UNIVERSAL UNTUK SEMUA)
+     ============================================================ -->
+<div id="modalDetail" class="modal-detail">
+    <div class="modal-content-detail">
+        <div class="modal-header-detail">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <img id="modalImage" src="" alt="Detail Image">
+        </div>
+        <div class="modal-body-detail">
+            <h2 class="modal-title-detail" id="modalTitle"></h2>
+            <span class="modal-date-detail" id="modalDate"></span>
+            <p class="modal-desc-detail" id="modalDesc"></p>
+        </div>
+    </div>
+</div>
     
     <!-- Testimonial Start -->
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
@@ -885,5 +902,68 @@
         </div>
     </div>
     <!-- Contact End -->
+
+
+    <script>
+function openModal(type, data) {
+    const modal = document.getElementById('modalDetail');
+    const modalImage = document.getElementById('modalImage');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDate = document.getElementById('modalDate');
+    const modalDesc = document.getElementById('modalDesc');
+    
+    // Set base URL dari PHP
+    const baseUrl = '<?= base_url() ?>';
+    
+    // Set konten modal berdasarkan tipe
+    let imagePath = '';
+    if (type === 'prestasi') {
+        imagePath = baseUrl + 'uploads/smk/prestasi/' + data.gambar;
+    } else if (type === 'kegiatan') {
+        imagePath = baseUrl + 'uploads/smk/kegiatan/' + data.gambar;
+    } else if (type === 'berita') {
+        imagePath = baseUrl + 'uploads/smk/berita/' + data.gambar;
+    }
+    
+    console.log('Image Path:', imagePath); // Debug
+    
+    modalImage.src = imagePath;
+    modalImage.alt = data.judul;
+    modalTitle.textContent = data.judul;
+    modalDate.textContent = formatDate(data.tanggal);
+    modalDesc.textContent = data.deskripsi;
+    
+    // Tampilkan modal
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+    const modal = document.getElementById('modalDetail');
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+}
+
+function formatDate(dateString) {
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Agu', 'Sep', 'Okt', 'Nov', 'Des'];
+    const date = new Date(dateString);
+    return date.getDate() + ' ' + months[date.getMonth()] + ' ' + date.getFullYear();
+}
+
+// Tutup modal dengan ESC
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closeModal();
+    }
+});
+
+// Tutup modal jika klik di luar konten
+window.onclick = function(event) {
+    const modal = document.getElementById('modalDetail');
+    if (event.target == modal) {
+        closeModal();
+    }
+}
+</script>
  
 <?= $this->endSection() ?>  

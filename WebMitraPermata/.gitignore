@@ -73,9 +73,9 @@ php_errors.log
 # Agar writable/uploads TIDAK di-ignore
 #
 # Tidak lagi:
-# writable/uploads/*/*/*
-# writable/uploads/*/*
-# writable/uploads/*
+!writable/uploads/*/*/*
+!writable/uploads/*/*
+!writable/uploads/*
 #
 # File foto sekarang akan masuk Git secara penuh.
 #

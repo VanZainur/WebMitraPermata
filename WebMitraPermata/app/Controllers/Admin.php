@@ -6,6 +6,8 @@ use App\Models\PendaftaranModel;
 use App\Models\BeritaModel;
 use App\Models\KegiatanModel;
 use App\Models\PrestasiModel;
+use App\Models\GuruModel;
+
 
 class Admin extends BaseController
 {
@@ -851,4 +853,225 @@ class Admin extends BaseController
 
         return redirect()->to('/admin/prestasi')->with('success', 'Prestasi berhasil dihapus');
     }
+
+
+
+
+
+    // ==========================================
+// GURU
+// ==========================================
+
+public function guru()
+{
+    $session = session();
+    $nama    = $session->get('nama');
+    $jenjang = $session->get('jenjang');
+    $role    = $session->get('role');
+
+    $guruModel = new GuruModel();
+
+    if ($role === "superadmin") {
+        $guru = $guruModel->orderBy('tanggal', 'DESC')->findAll();
+    } else {
+        $guru = $guruModel->where('jenjang', $jenjang)->orderBy('tanggal', 'DESC')->findAll();
+    }
+
+    return view('admin/guru/list', [
+        'nama'    => $nama,
+        'jenjang' => $jenjang,
+        'role'    => $role,
+        'guru'    => $guru
+    ]);
+}
+
+public function guruCreate()
+{
+    $session = session();
+    return view('admin/guru/create', [
+        'nama'    => $session->get('nama'),
+        'jenjang' => $session->get('jenjang'),
+        'role'    => $session->get('role')
+    ]);
+}
+
+public function guruStore()
+{
+    $session = session();
+    $guruModel = new GuruModel();
+
+    if ($session->get('role') === 'superadmin') {
+        $jenjang = $this->request->getPost('jenjang');
+    } else {
+        $jenjang = $session->get('jenjang');
+        if (empty($jenjang)) {
+            $username = $session->get('username');
+            $jenjang = str_replace('admin_', '', $username);
+        }
+    }
+
+    if (empty($jenjang)) {
+        return redirect()->back()->with('error', 'Jenjang tidak ditemukan.')->withInput();
+    }
+
+    $rules = [
+        'nama'     => 'required|min_length[3]',
+        'jabatan'  => 'required|min_length[3]',
+        'foto'     => 'uploaded[foto]|max_size[foto,2048]|is_image[foto]'
+    ];
+
+    if (!$this->validate($rules)) {
+        return redirect()->back()->withInput()->with('error', implode('<br>', $this->validator->getErrors()));
+    }
+
+    // Upload foto
+    $foto = $this->request->getFile('foto');
+    $path = WRITEPATH . 'uploads/' . strtolower($jenjang) . '/guru/';
+
+    if (!is_dir($path)) {
+        mkdir($path, 0777, true);
+    }
+
+    $namaFoto = $foto->getRandomName();
+
+    try {
+        $foto->move($path, $namaFoto);
+
+        if (!file_exists($path . $namaFoto)) {
+            return redirect()->back()->with('error', 'Gagal upload foto')->withInput();
+        }
+
+    } catch (\Exception $e) {
+        return redirect()->back()->with('error', 'Error: ' . $e->getMessage())->withInput();
+    }
+
+    $data = [
+        'jenjang'  => strtolower($jenjang),
+        'nama'     => $this->request->getPost('nama'),
+        'jabatan'  => $this->request->getPost('jabatan'),
+        'foto'     => $namaFoto
+        // tanggal otomatis dari DB
+    ];
+
+    try {
+        $result = $guruModel->insert($data);
+
+        if ($result) {
+            return redirect()->to('/admin/guru')->with('success', 'Guru berhasil ditambahkan!');
+        } else {
+            @unlink($path . $namaFoto);
+            return redirect()->back()->with('error', 'Gagal menyimpan ke database')->withInput();
+        }
+
+    } catch (\Exception $e) {
+        @unlink($path . $namaFoto);
+        return redirect()->back()->with('error', 'Error: ' . $e->getMessage())->withInput();
+    }
+}
+
+public function guruEdit($id)
+{
+    $session = session();
+    $guruModel = new GuruModel();
+
+    $guru = $guruModel->find($id);
+
+    if (!$guru) {
+        return redirect()->to('/admin/guru')->with('error', 'Guru tidak ditemukan');
+    }
+
+    return view('admin/guru/edit', [
+        'nama'    => $session->get('nama'),
+        'jenjang' => $session->get('jenjang'),
+        'role'    => $session->get('role'),
+        'guru'    => $guru
+    ]);
+}
+
+public function guruUpdate($id)
+{
+    $session = session();
+    $guruModel = new GuruModel();
+
+    $guruLama = $guruModel->find($id);
+
+    if (!$guruLama) {
+        return redirect()->to('/admin/guru')->with('error', 'Guru tidak ditemukan');
+    }
+
+    $jenjang = ($session->get('role') === 'superadmin')
+                ? $this->request->getPost('jenjang')
+                : $session->get('jenjang');
+
+    $foto = $this->request->getFile('foto');
+    $namaFoto = $guruLama['foto'];
+
+    // Jika upload foto baru
+    if ($foto && $foto->isValid() && !$foto->hasMoved()) {
+
+        // hapus foto lama
+        $pathLama = WRITEPATH . 'uploads/' . strtolower($guruLama['jenjang']) . '/guru/' . $guruLama['foto'];
+        if (file_exists($pathLama)) {
+            @unlink($pathLama);
+        }
+
+        $namaFoto = $foto->getRandomName();
+        $pathBaru = WRITEPATH . 'uploads/' . strtolower($jenjang) . '/guru/';
+
+        if (!is_dir($pathBaru)) {
+            mkdir($pathBaru, 0777, true);
+        }
+
+        $foto->move($pathBaru, $namaFoto);
+
+    } else {
+        // Jika jenjang pindah, pindahkan foto
+        if (strtolower($jenjang) !== strtolower($guruLama['jenjang'])) {
+
+            $pathLama = WRITEPATH . 'uploads/' . strtolower($guruLama['jenjang']) . '/guru/' . $guruLama['foto'];
+            $pathBaru = WRITEPATH . 'uploads/' . strtolower($jenjang) . '/guru/';
+
+            if (!is_dir($pathBaru)) {
+                mkdir($pathBaru, 0777, true);
+            }
+
+            if (file_exists($pathLama)) {
+                copy($pathLama, $pathBaru . $guruLama['foto']);
+                @unlink($pathLama);
+            }
+        }
+    }
+
+    $data = [
+        'jenjang'  => strtolower($jenjang),
+        'nama'     => $this->request->getPost('nama'),
+        'jabatan'  => $this->request->getPost('jabatan'),
+        'foto'     => $namaFoto
+    ];
+
+    $guruModel->update($id, $data);
+
+    return redirect()->to('/admin/guru')->with('success', 'Guru berhasil diupdate');
+}
+
+public function guruDelete($id)
+{
+    $guruModel = new GuruModel();
+
+    $guru = $guruModel->find($id);
+
+    if ($guru) {
+        $pathFoto = WRITEPATH . 'uploads/' . strtolower($guru['jenjang']) . '/guru/' . $guru['foto'];
+        if (file_exists($pathFoto)) {
+            @unlink($pathFoto);
+        }
+
+        $guruModel->delete($id);
+    }
+
+    return redirect()->to('/admin/guru')->with('success', 'Guru berhasil dihapus');
+}
+
+
+
 }

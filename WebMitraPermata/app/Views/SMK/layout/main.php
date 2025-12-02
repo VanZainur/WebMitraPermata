@@ -40,6 +40,8 @@ $uri = service('uri');
 
 <body>
 
+
+
     <!-- Popup Brosur Start -->
     <div id="brosurPopup"
         style="position: fixed; inset: 0; background: rgba(0,0,0,0.6); 
@@ -522,6 +524,9 @@ window.onload = function() {
     <?php endif ?>
 };
 </script>
+
+
+
 
 </body>
 
