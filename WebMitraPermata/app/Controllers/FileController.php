@@ -8,7 +8,7 @@ class FileController extends BaseController
     {
         // Validasi jenjang dan kategori
         $allowedJenjang = ['smk', 'smp', 'sd', 'tk'];
-        $allowedKategori = ['berita', 'kegiatan', 'prestasi'];
+        $allowedKategori = ['berita', 'kegiatan', 'prestasi', 'guru']; // ✅ TAMBAHKAN 'guru'
         
         if (!in_array($jenjang, $allowedJenjang) || !in_array($kategori, $allowedKategori)) {
             throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();

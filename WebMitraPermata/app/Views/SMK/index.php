@@ -364,7 +364,7 @@
     </div>
     <!-- Jurusan End -->
 
-    <!-- Guru Start -->
+<!-- Guru Start -->
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
@@ -373,145 +373,35 @@
             </div>
             <div class="row g-4">
 
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="<?= base_url('assets/SMK/img/guru-1-removebg-preview.png') ?>" alt="">
-
-                        </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                <?php if (!empty($guru)): ?>
+                    <?php foreach ($guru as $item): ?>
+                        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="team-item bg-light">
+                                <div class="overflow-hidden">
+                                    <img class="img-fluid" 
+                                         src="<?= base_url('uploads/' . strtolower($item['jenjang']) . '/guru/' . $item['foto']) ?>" 
+                                         alt="<?= esc($item['nama']) ?>">
+                                </div>
+                                <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                                    <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                        <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                        <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                        <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                    </div>
+                                </div>
+                                <div class="text-center p-4">
+                                    <h5 class="mb-0"><?= esc($item['nama']) ?></h5>
+                                    <small><?= esc($item['jabatan']) ?></small>
+                                </div>
                             </div>
                         </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Habibi, S.Pd</h5>
-                            <small>Kurikulum</small>
-                        </div>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <div class="col-12">
+                        <p class="text-center text-muted">Belum ada data guru tersedia.</p>
                     </div>
-                </div>
-                
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="<?= base_url('assets/SMK/img/guru-2-removebg-preview.png') ?>" alt="">
+                <?php endif; ?>
 
-                        </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Aan Hasanah, S.Pd</h5>
-                            <small>Kurikulum</small>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="<?= base_url('assets/SMK/img/guru-3-removebg-preview.png') ?>" alt="">
-
-                        </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Aan Hasanah, S.Pd</h5>
-                            <small>Kurikulum</small>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="<?= base_url('assets/SMK/img/guru-4-removebg-preview.png') ?>" alt="">
-
-                        </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Aan Hasanah, S.Pd</h5>
-                            <small>Kurikulum</small>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="<?= base_url('assets/SMK/img/guru-5-removebg-preview.png') ?>" alt="">
-
-                        </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Siti Nurjannah, S.Pd</h5>
-                            <small>Kurikulum</small>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="<?= base_url('assets/SMK/img/guru-6-removebg-preview.png') ?>" alt="">
-
-                        </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Erika Juli Agustin, S.Pd</h5>
-                            <small>Kurikulum</small>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="<?= base_url('assets/SMK/img/guru-7-removebg-preview.png') ?>" alt="">
-
-                        </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Vita Nuraina, S.Pd</h5>
-                            <small>Kurikulum</small>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -819,90 +709,160 @@
     </div>
     <!-- Testimonial End -->
 
-    <!-- Contact Start -->
-    <div id="kontak" class="container-xxl py-5 category">
+<!-- Contact Start -->
 
-        <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Kontak Kami</h6>
-                <h1 class="mb-5">Hubungi kami untuk pertanyaan apa pun.</h1>
+<div id="kontak" class="container-xxl py-5 category">
+    <div class="container">
+        <!-- Section Header -->
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h6 class="section-title bg-white text-center text-primary px-3">Kontak Kami</h6>
+            <h1 class="mb-5">Hubungi kami untuk pertanyaan apa pun.</h1>
+        </div>
+
+```
+    <!-- Alerts -->
+    <?php if(session()->get('success')): ?>
+        <div class="alert alert-success"><?= session()->get('success') ?></div>
+    <?php endif; ?>
+
+    <?php if(session()->get('error')): ?>
+        <div class="alert alert-danger"><?= session()->get('error') ?></div>
+    <?php endif; ?>
+
+    <!-- Contact Content -->
+    <div class="row g-4">
+        <!-- Info Kontak -->
+        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+            <h5>Kami Siap Membantu</h5>
+            <p class="mb-3 text-justify">
+                Hubungi kami untuk mendapatkan informasi terbaru seputar program pendidikan, pendaftaran siswa baru, dan layanan akademik. Tim kami siap membantu Anda dengan respon yang cepat dan ramah.
+            </p>
+
+            <!-- Alamat -->
+            <div class="d-flex align-items-start mb-3">
+                <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary" style="width: 50px; height: 50px;">
+                    <i class="fa fa-map-marker-alt text-white"></i>
+                </div>
+                <div class="ms-3">
+                    <h5 class="text-primary">Lokasi</h5>
+                    <p class="mb-1">Perumahan Villa Permata, Blok. D8 - D9 No.1, Sindangsari, Ps. Kemis, Tangerang, Banten 15560</p>
+                </div>
             </div>
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <h5>Kami Siap Membantu</h5>
-                    <p class="mb-3" style= "text-align:justify;">Hubungi kami untuk mendapatkan informasi terbaru seputar program pendidikan, pendaftaran siswa baru, dan layanan akademik. Tim kami siap membantu Anda dengan respon yang cepat dan ramah.</p>
-                    <div class="d-flex align-items-left mb-3">
-                        <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary" style="width: 50px; height: 50px;">
-                            <i class="fa fa-map-marker-alt text-white"></i>
-                        </div>
-                        <div class="ms-3">
-                            <h5 class="text-primary">Lokasi</h5>
-                            <p class="mb-1">Perumahan Villa Permata, Blok. D8 - D9 No.1, Sindangsari, Kec. Ps. Kemis, Kabupaten Tangerang, Banten 15560</p>
-                        </div>
-                    </div>
-                    <div class="d-flex align-items-center mb-3">
-                        <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary" style="width: 50px; height: 50px;">
-                            <i class="fa fa-phone-alt text-white"></i>
-                        </div>
-                        <div class="ms-3">
-                            <h5 class="text-primary">No Telepon</h5>
-                            <p class="mb-1  ">0858-4632-5633 (Miss. Tita) - Staff</p>
-                        </div>
-                    </div>
-                    <div class="d-flex align-items-center">
-                        <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary" style="width: 50px; height: 50px;">
-                            <i class="fa fa-envelope-open text-white"></i>
-                        </div>
-                        <div class="ms-3">
-                            <h5 class="text-primary">Email</h5>
-                            <p class="mb-0">info@mitrapermata.sch.id</p>
-                        </div>
-                    </div>
+
+            <!-- Telepon -->
+            <div class="d-flex align-items-start mb-3">
+                <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary" style="width: 50px; height: 50px;">
+                    <i class="fa fa-phone-alt text-white"></i>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <iframe class="position-relative rounded w-100 h-100"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.9391231209147!2d106.52772367366288!3d-6.13888099384802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6a000100000001%3A0x78b8d9a04432be9f!2sTK-SD-SMP-SMK-PKBM%20-%20LKP%20MITRA%20PERMATA!5e0!3m2!1sid!2sid!4v1759418850999!5m2!1sid!2sid"
-                        frameborder="0" style="min-height: 300px; border:0;" allowfullscreen="" aria-hidden="false"
-                        tabindex="0"></iframe>
+                <div class="ms-3">
+                    <h5 class="text-primary">No Telepon</h5>
+                    <p class="mb-1">0858-4632-5633 (Miss. Tita) - Staff</p>
                 </div>
-                <div class="col-lg-4 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
-                    <form>
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                    <label for="name">Nama Anda</label>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                    <label for="email">Email Anda</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
-                                    <label for="subject">Subjek</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 150px"></textarea>
-                                    <label for="message">Pesan</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <button class="btn btn-primary w-100 py-3" type="submit">Kirim Pesan</button>
-                            </div>
-                        </div>
-                    </form>
+            </div>
+
+            <!-- Email -->
+            <div class="d-flex align-items-start">
+                <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary" style="width: 50px; height: 50px;">
+                    <i class="fa fa-envelope-open text-white"></i>
+                </div>
+                <div class="ms-3">
+                    <h5 class="text-primary">Email</h5>
+                    <p class="mb-0">info@mitrapermata.sch.id</p>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Contact End -->
 
+        <!-- Map -->
+        <div class="col-lg-8 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+            <iframe class="position-relative rounded w-100 h-100"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.9391231209147!2d106.52772367366288!3d-6.13888099384802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6a000100000001%3A0x78b8d9a04432be9f!2sTK-SD-SMP-SMK-PKBM%20-%20LKP%20MITRA%20PERMATA!5e0!3m2!1sid!2sid!4v1759418850999!5m2!1sid!2sid"
+                frameborder="0" style="min-height: 300px; border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+            </iframe>
+        </div>
+    </div>
+</div>
+```
+
+</div>
+<!-- Contact End -->
+
+
+
+
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const form = this;
+    const submitBtn = document.getElementById('submitBtn');
+    const btnText = document.getElementById('btnText');
+    const btnLoader = document.getElementById('btnLoader');
+    const alertContainer = document.getElementById('alertContainer');
+    
+    submitBtn.disabled = true;
+    btnText.style.display = 'none';
+    btnLoader.style.display = 'inline';
+    alertContainer.innerHTML = '';
+    
+    const formData = new FormData(form);
+    
+    console.log('=== DEBUG ===');
+    console.log('Sending to:', '<?= base_url('/smk/kirim-kontak') ?>');
+    
+    fetch('<?= base_url('/smk/kirim-kontak') ?>', { // <-- GANTI URL INI
+        method: 'POST',
+        body: formData,
+        headers: {
+            'X-Requested-With': 'XMLHttpRequest'
+        }
+    })
+    .then(response => {
+        console.log('Status:', response.status);
+        return response.text().then(text => {
+            console.log('Response:', text);
+            try {
+                return JSON.parse(text);
+            } catch (e) {
+                console.error('Parse error:', e);
+                console.error('Full response:', text);
+                throw new Error('Server error. Cek console.');
+            }
+        });
+    })
+    .then(data => {
+        submitBtn.disabled = false;
+        btnText.style.display = 'inline';
+        btnLoader.style.display = 'none';
+        
+        const alertClass = data.status === 'success' ? 'alert-success' : 'alert-danger';
+        alertContainer.innerHTML = `
+            <div class="alert ${alertClass} alert-dismissible fade show" role="alert">
+                ${data.message}
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+        `;
+        
+        if (data.status === 'success') {
+            form.reset();
+        }
+        
+        alertContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        submitBtn.disabled = false;
+        btnText.style.display = 'inline';
+        btnLoader.style.display = 'none';
+        
+        alertContainer.innerHTML = `
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                ${error.message}
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+        `;
+    });
+});
+</script>
 
     <script>
 function openModal(type, data) {

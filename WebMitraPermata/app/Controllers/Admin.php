@@ -862,6 +862,7 @@ class Admin extends BaseController
 // GURU
 // ==========================================
 
+// Di Admin.php, method guru()
 public function guru()
 {
     $session = session();
@@ -872,9 +873,12 @@ public function guru()
     $guruModel = new GuruModel();
 
     if ($role === "superadmin") {
-        $guru = $guruModel->orderBy('tanggal', 'DESC')->findAll();
+        // ✅ PERBAIKAN: Ganti 'tanggal' dengan 'id' atau 'created_at'
+        $guru = $guruModel->orderBy('id', 'DESC')->findAll();
     } else {
-        $guru = $guruModel->where('jenjang', $jenjang)->orderBy('tanggal', 'DESC')->findAll();
+        $guru = $guruModel->where('jenjang', $jenjang)
+                         ->orderBy('id', 'DESC')
+                         ->findAll();
     }
 
     return view('admin/guru/list', [

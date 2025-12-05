@@ -52,6 +52,10 @@
                     <span class="menu-icon">🏆</span>
                     <span class="menu-label">Data Prestasi</span>
                 </a>
+               <a href="<?= base_url('admin/guru') ?>" class="menu-item">
+                    <span class="menu-icon">👨‍🏫</span> <!-- ✅ Ganti icon -->
+                    <span class="menu-label">Data Guru</span>
+                </a>
             </nav>
 
             <!-- Footer -->

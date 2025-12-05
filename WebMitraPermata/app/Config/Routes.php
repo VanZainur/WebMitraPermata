@@ -21,6 +21,18 @@ $routes->get('/', 'Home::index');
   // Route untuk serve uploaded files
 $routes->get('uploads/(:segment)/(:segment)/(:segment)', 'FileController::serve/$1/$2/$3');
 
+$routes->post('kontak/kirim', 'KontakController::kirim');
+
+
+$routes->get('testenv', function () {
+    echo "DB Name: " . getenv('database.default.database') . "<br>";
+    echo "DB User: " . getenv('database.default.username') . "<br>";
+    echo "DB Host: " . getenv('database.default.hostname') . "<br>";
+});
+
+
+
+
 // ===========================
 // ROUTE HALAMAN NAVBAR
 // ===========================
@@ -90,9 +102,18 @@ $routes->group('admin', ['filter' => 'auth'], function($routes) {
     $routes->post('prestasi/update/(:num)', 'Admin::prestasiUpdate/$1');
     $routes->get('prestasi/delete/(:num)', 'Admin::prestasiDelete/$1');
 
+       // Guru
+    $routes->get('guru', 'Admin::guru');
+    $routes->get('guru/create', 'Admin::guruCreate');
+    $routes->post('guru/store', 'Admin::guruStore');
+    $routes->get('guru/edit/(:num)', 'Admin::guruEdit/$1');
+    $routes->post('guru/update/(:num)', 'Admin::guruUpdate/$1');
+    $routes->get('guru/delete/(:num)', 'Admin::guruDelete/$1');
+
     // EXPORT FILE
     $routes->get('export-excel', 'Admin::exportExcel');
     $routes->get('export-pdf', 'Admin::exportPdf');
 
   
 });
+
