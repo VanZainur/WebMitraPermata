@@ -40,7 +40,7 @@
 <div class="categories-section">
     <div class="container">
         <div class="section-header">
-            <h2>Kategori Kegiatan</h2>
+            <h2>Kategori Ekstrakulikuler</h2>
             <p>Pilihan beragam kegiatan yang disesuaikan dengan minat dan bakat setiap siswa</p>
         </div>
         <div class="category-tabs">
