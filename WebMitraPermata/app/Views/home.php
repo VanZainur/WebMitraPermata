@@ -258,8 +258,7 @@
         serta membangun keterampilan yang berguna dalam kehidupan sehari-hari.
         </p>
       </div>
-
-      <div class="jenjang-card">
+      <!-- <div class="jenjang-card">
         <div class="jenjang-img-wrapper">
           <img src="<?= base_url('assets/images/jenjang/LKP.jpg') ?>" 
                alt="LKP" 
@@ -270,7 +269,7 @@
         LKP Mitra Permata menyelenggarakan berbagai program kursus dan pelatihan keterampilan praktis
         yang dirancang untuk meningkatkan kompetensi, kemandirian, serta peluang dalam mengembangkan diri.
         </p>
-      </div>
+      </div> -->
     </div>
   </div>
 </section>

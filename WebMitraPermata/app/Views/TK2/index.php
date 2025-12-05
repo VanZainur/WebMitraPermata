@@ -74,15 +74,22 @@
         </div>
     </div>
 
-    <!-- About Section -->
-    <section class="about" id="about">
+<!-- About Section -->
+<section class="about" id="about">
+    <div class="container">
         <h2 class="section-title">📖 Tentang Kami</h2>
         <div class="about-content">
-            <p>TK Mitra Permata adalah lembaga pendidikan anak usia dini yang berkomitmen untuk mengembangkan potensi anak melalui metode pembelajaran yang menyenangkan dan inovatif. Dengan tenaga pengajar berpengalaman dan fasilitas lengkap, kami siap menjadi mitra terbaik dalam tumbuh kembang buah hati Anda! 🌟</p>
-            <p style="margin-top: 20px;"><strong>Visi:</strong> Menjadi TK terbaik yang mencetak generasi cerdas, kreatif, dan berakhlak mulia.</p>
-            <p style="margin-top: 10px;"><strong>Misi:</strong> Memberikan pendidikan berkualitas dengan pendekatan yang ramah anak dan mengutamakan perkembangan holistik.</p>
+            <div class="about-image">
+                <img src="<?= base_url('assets/images/hero/1.jpg') ?>" alt="Gedung TK Mitra Permata">
+            </div>
+            <div class="about-text">
+                <p>TK Mitra Permata adalah lembaga pendidikan anak usia dini yang berkomitmen untuk mengembangkan potensi anak melalui metode pembelajaran yang menyenangkan dan inovatif. Dengan tenaga pengajar berpengalaman dan fasilitas lengkap, kami siap menjadi mitra terbaik dalam tumbuh kembang buah hati Anda! 🌟</p>
+                <p style="margin-top: 20px;"><strong>Visi:</strong> Menjadi TK terbaik yang mencetak generasi cerdas, kreatif, dan berakhlak mulia.</p>
+                <p style="margin-top: 10px;"><strong>Misi:</strong> Memberikan pendidikan berkualitas dengan pendekatan yang ramah anak dan mengutamakan perkembangan holistik.</p>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Cards Section -->
     <section class="cards-section" id="program">
@@ -162,35 +169,35 @@
         <h2 class="section-title">📸 Galeri Kegiatan</h2>
         <div class="gallery-grid">
             <div class="gallery-item">
-                <a href="">
+                <a href="#">
                     <img src="<?= base_url('assets/tk2/img/tk1.jpg') ?>">
                     <p class="gallery-caption">Praktek Sholat</p>
                 </a>
             </div>
 
             <div class="gallery-item">
-                <a href="">
+                <a href="#">
                     <img src="<?= base_url('assets/tk2/img/tk2.jpg') ?>">
                     <p class="gallery-caption">Kegiatan Memasak</p>
                 </a>
             </div>
 
             <div class="gallery-item">
-                <a href="">
+                <a href="#">
                     <img src="<?= base_url('assets/tk2/img/tk3.jpg') ?>">
                     <p class="gallery-caption">Praktek Menggambar</p>
                 </a>
             </div>
 
             <div class="gallery-item">
-                <a href="">
+                <a href="#">
                     <img src="<?= base_url('assets/tk2/img/tk4.jpg') ?>">
                     <p class="gallery-caption">Makan Bersama</p>
                 </a>
             </div>
 
             <div class="gallery-item">
-                <a href="">
+                <a href="#">
                     <img src="<?= base_url('assets/tk2/img/tk5.jpg') ?>">
                     <p class="gallery-caption">Proses Mengajar</p>
                 </a>

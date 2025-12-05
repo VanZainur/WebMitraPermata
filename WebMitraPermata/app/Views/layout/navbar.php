@@ -37,7 +37,7 @@
 
         <li class="dropdown">
           <a href="/kegiatan" class="dropdown-toggle">
-            Kegiatan
+          Ekstrakulikuler
             <span class="arrow">▼</span>
           </a>
           <div class="dropdown-content">
@@ -99,7 +99,7 @@
 
   <!-- Kegiatan Dropdown -->
   <div class="mobile-dropdown">
-    <a href="#" class="mobile-dropdown-toggle">Kegiatan
+    <a href="#" class="mobile-dropdown-toggle">Ekstrakulikuler
       <span class="arrow">▼</span>
     </a>
     <div class="mobile-dropdown-content">

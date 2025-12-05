@@ -385,55 +385,100 @@ body {
 /* ========================================
    JENJANG PENDIDIKAN SECTION
    ======================================== */
-.jenjang-section {
-  padding: 60px 20px;
-  background-color: #f9f9f9;
-}
-
-.jenjang-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-}
-
-.jenjang-card {
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  overflow: hidden;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.jenjang-card:hover {
-  transform: translateY(-5px);
-}
-
-.jenjang-img-wrapper {
-  width: 100%;
-  height: 180px;
-  overflow: hidden;
-}
-
-.jenjang-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.jenjang-title {
-  font-size: 20px;
-  font-weight: 600;
-  color: #222;
-  margin: 15px 10px 5px 10px;
-}
-
-.jenjang-desc {
-  font-size: 14px;
-  color: #555;
-  line-height: 1.5;
-  padding: 0 10px 20px 10px;
-}
+   .jenjang-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .jenjang-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .jenjang-card {
+    flex: 0 0 calc(33.333% - 20px);
+    max-width: 350px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .jenjang-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  }
+  
+  /* Card ke-4 dan ke-5 (SMK dan PKBM) akan otomatis centered */
+  .jenjang-card:nth-child(n+4) {
+    flex: 0 0 calc(33.333% - 20px);
+    max-width: 350px;
+  }
+  
+  .jenjang-img-wrapper {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+  }
+  
+  .jenjang-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .jenjang-card:hover .jenjang-img {
+    transform: scale(1.05);
+  }
+  
+  .jenjang-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #222;
+    margin: 15px 10px 5px 10px;
+  }
+  
+  .jenjang-desc {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+    padding: 0 20px 20px 20px;
+    text-align: center;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 992px) {
+    .jenjang-card {
+      flex: 0 0 calc(50% - 20px);
+    }
+    
+    .jenjang-card:nth-child(n+4) {
+      flex: 0 0 calc(50% - 20px);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .jenjang-grid {
+      gap: 20px;
+    }
+    
+    .jenjang-card {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    
+    .jenjang-card:nth-child(n+4) {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
 
 /* ========================================
    FEATURES SECTION

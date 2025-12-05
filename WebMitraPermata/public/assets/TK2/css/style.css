@@ -310,14 +310,61 @@ section {
 
 .about {
     background: linear-gradient(to bottom, white, #f8f9ff);
+    padding: 60px 20px;
 }
 
 .about-content {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
-    text-align: center;
-    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-image {
+    flex: 0 0 45%;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    object-fit: cover;
+}
+
+.about-text {
+    flex: 1;
+    text-align: left;
+    font-size: 1.1rem;
     line-height: 1.8;
+    text-align: justify;
+}
+
+.about-text p {
+    color: #333;
+}
+
+.about-text strong {
+    color: #667eea;
+    font-size: 1.15rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .about-image {
+        flex: 0 0 100%;
+    }
+    
+    .about-text {
+        text-align: center;
+        font-size: 1rem;
+    }
 }
 
 
