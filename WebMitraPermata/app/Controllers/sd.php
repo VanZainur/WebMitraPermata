@@ -11,18 +11,38 @@ class Sd extends BaseController
 {
     public function index()
     {
-        // AMBIL DATA
-        $berita     = (new BeritaModel())->where('jenjang', 'sd')->orderBy('tanggal', 'DESC')->findAll();
-        $kegiatan   = (new KegiatanModel())->where('jenjang', 'sd')->orderBy('tanggal', 'DESC')->findAll();
-        $prestasi   = (new PrestasiModel())->where('jenjang', 'sd')->orderBy('tanggal', 'DESC')->findAll();
-        $guru       = (new GuruModel())->where('jenjang', 'sd')->orderBy('tanggal', 'DESC')->findAll();
+        // AMBIL DATA DENGAN LIMIT
+        $berita   = (new BeritaModel())
+                    ->where('jenjang', 'sd')
+                    ->orderBy('tanggal', 'DESC')
+                    ->limit(3)
+                    ->findAll();
+
+        $kegiatan = (new KegiatanModel())
+                    ->where('jenjang', 'sd')
+                    ->orderBy('tanggal', 'DESC')
+                    ->limit(4)
+                    ->findAll();
+
+        $prestasi = (new PrestasiModel())
+                    ->where('jenjang', 'sd')
+                    ->orderBy('tanggal', 'DESC')
+                    ->limit(6)
+                    ->findAll();
+
+        // Guru urut pakai id, limit 8
+        $guru     = (new GuruModel())
+                    ->where('jenjang', 'sd')
+                    ->orderBy('id', 'DESC')
+                    ->limit(8)
+                    ->findAll();
 
         // KIRIM KE VIEW
         return view('sd/index', [
-            'berita'     => $berita,
-            'kegiatan'   => $kegiatan,
-            'prestasi'   => $prestasi,
-            'guru'       => $guru
+            'berita'   => $berita,
+            'kegiatan' => $kegiatan,
+            'prestasi' => $prestasi,
+            'guru'     => $guru
         ]);
     }
 }
