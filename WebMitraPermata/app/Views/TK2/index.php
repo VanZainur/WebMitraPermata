@@ -244,8 +244,8 @@
 
     <!-- Contact Section -->
     <section class="contact" id="contact">
-        <h2 class="section-title">📍 Hubungi Kami</h2>
-        <div class="contact-container">
+      <h2 class="section-title">📍 Hubungi Kami</h2>
+      <div class="contact-container">
 
         <!-- KIRI -->
         <div class="contact-left">
@@ -285,27 +285,10 @@
         <!-- MAP -->
         <div class="contact-map">
             <iframe class="position-relative rounded w-100 h-100"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.9391231209147!2d106.52772367366288!3d-6.13888099384802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6a000100000001%3A0x78b8d9a04432be9f!2sTK-SD-SMP-SMK-PKBM%20-%20LKP%20MITRA%20PERMATA!5e0!3m2!1sid!2sid!4v1759418850999!5m2!1sid!2sid"
-                        frameborder="0" style="min-height: 300px; border:0;" allowfullscreen="" aria-hidden="false"
-                        tabindex="0"></iframe>
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.9391231209147!2d106.52772367366288!3d-6.13888099384802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6a000100000001%3A0x78b8d9a04432be9f!2sTK-SD-SMP-SMK-PKBM%20-%20LKP%20MITRA%20PERMATA!5e0!3m2!1sid!2sid!4v1759418850999!5m2!1sid!2sid"
+            frameborder="0" style="min-height: 300px; border:0;" allowfullscreen="" aria-hidden="false"
+            tabindex="0"></iframe>
         </div>
-
-        <!-- FORM -->
-        <div class="contact-form">
-            <form>
-                <div class="form-grid">
-                    <input type="text" placeholder="Nama Anda">
-                    <input type="email" placeholder="Email Anda">
-                </div>
-
-                <input type="text" placeholder="Subjek">
-
-                <textarea placeholder="Pesan"></textarea>
-
-                <button class="btn-kirimpesan" type="submit">Kirim Pesan</button>
-            </form>
-        </div>
-
     </div>
     </section>
 

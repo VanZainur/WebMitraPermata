@@ -19,21 +19,22 @@
         <p>Email : info@mitrapermata.sch.id</p>
         <p>Senin - Jumat <br> 08:00 AM – 16:00 PM</p>
         <div class="social-media">
-        <h3>Ikuti Kami</h3>
+            <h3>Ikuti Kami</h3>
 
-        <div class="social-media-links">
-            <a href="https://facebook.com/mitrapermata" target="_blank">
-                <i class="fab fa-facebook-f"></i> Facebook
-            </a>
-            <a href="https://www.instagram.com/yayasan_wiyata_insani" target="_blank">
-                <i class="fab fa-instagram"></i> Instagram
-            </a>
-            <a href="http://www.youtube.com/@mitrapermata" target="_blank">
-                <i class="fab fa-youtube"></i> YouTube
-            </a>
+            <div class="social-media-links">
+                <a href="https://facebook.com/mitrapermata" target="_blank" class="fb">
+                    <i class="fab fa-facebook-f"></i>Facebook
+                </a>
+
+                <a href="https://www.instagram.com/yayasan_wiyata_insani" target="_blank" class="ig">
+                    <i class="fab fa-instagram"></i>Instagram
+                </a>
+
+                <a href="http://www.youtube.com/@mitrapermata" target="_blank" class="yt">
+                    <i class="fab fa-youtube"></i>YouTube
+                </a>
+            </div>
         </div>
-    </div>
-
     </div>
 
     <!-- Google Maps -->
