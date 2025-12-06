@@ -1797,3 +1797,142 @@ select.form-control-smp {
     padding: 15px 12px 20px;
   }
 }
+
+/* Modal Styling */
+.modal-detail {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-content-detail {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 0;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 800px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  animation: slideDown 0.4s;
+  overflow: hidden;
+}
+
+@keyframes slideDown {
+  from {
+      transform: translateY(-50px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+.modal-header-detail {
+  position: relative;
+  padding: 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.modal-header-detail img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.6);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  z-index: 10;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  background: rgba(255, 0, 0, 0.8);
+  transform: rotate(90deg);
+  border-color: white;
+}
+
+@media (max-width: 768px) {
+  .modal-close {
+      top: 10px;
+      right: 10px;
+      width: 35px;
+      height: 35px;
+      font-size: 24px;
+  }
+}
+
+.modal-body-detail {
+  padding: 30px;
+}
+
+.modal-title-detail {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.modal-date-detail {
+  display: inline-block;
+  background: #667eea;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.modal-desc-detail {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+  text-align: justify;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .modal-content-detail {
+      width: 95%;
+      margin: 10% auto;
+  }
+  
+  .modal-header-detail img {
+      height: 250px;
+  }
+  
+  .modal-title-detail {
+      font-size: 22px;
+  }
+  
+  .modal-body-detail {
+      padding: 20px;
+  }
+}

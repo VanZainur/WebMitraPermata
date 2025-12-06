@@ -719,7 +719,6 @@
             <h1 class="mb-5">Hubungi kami untuk pertanyaan apa pun.</h1>
         </div>
 
-```
     <!-- Alerts -->
     <?php if(session()->get('success')): ?>
         <div class="alert alert-success"><?= session()->get('success') ?></div>
@@ -781,7 +780,7 @@
         </div>
     </div>
 </div>
-```
+
 
 </div>
 <!-- Contact End -->
