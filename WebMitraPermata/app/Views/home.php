@@ -38,9 +38,9 @@
   <!-- Main Content -->
   <div class="hero-content">
     <div class="hero-text">
-      <h1 class="hero-title">Mari Kembangkan Potensi Belajar Kalian Bersama Mitra Permata</h1>
+      <h1 class="hero-title">Kembangkan Potensi Belajar Kalian Bersama Mitra Permata</h1>
       <p class="hero-subtitle">
-        Bergabunglah dengan TK-SD-SMP-SMK-PKBM-LKP Mitra Permata dan rasakan pengalaman 
+        Bergabunglah dengan TK-SD-SMP-SMK-PKBM Mitra Permata dan rasakan pengalaman 
         pendidikan yang lengkap dari usia dini hingga siap kerja.
       </p>
       <p class="hero-location">
