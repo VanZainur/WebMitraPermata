@@ -43,157 +43,365 @@ $uri = service('uri');
 
 
     <!-- Popup Brosur Start -->
-    <div id="brosurPopup"
-        style="position: fixed; inset: 0; background: rgba(0,0,0,0.6); 
-            display: none; align-items: center; justify-content: center; 
-            z-index: 99999; padding: 20px;">
+<!-- Popup Pendaftaran PPDB - SMK -->
+<div id="brosurPopupSMK">
+    <div id="popupContainerSMK">
 
-        <div style="background: #fff; width: 100%; max-width: 750px; 
-                border-radius: 15px; overflow: hidden; box-shadow: 0 0 30px rgba(0,0,0,0.3); 
-                display: flex; flex-wrap: wrap; position: relative;
-                max-height: 90vh;">
+        <!-- Tombol Close -->
+        <button onclick="document.getElementById('brosurPopupSMK').style.display='none'" id="btnCloseSMK">
+            ✕
+        </button>
 
-            <!-- Tombol Close -->
-            <button onclick="document.getElementById('brosurPopup').style.display='none'"
-                style="position: absolute; top: 15px; right: 15px; background: white; border: none; 
-                    color: #000000; width: 35px; height: 35px; font-size: 18px;
-                    border-radius: 50%; cursor: pointer; z-index: 10;">
-                ✕
-            </button>
-
-            <!-- KIRI -->
-            <div style="flex: 1; min-width: 40%; max-height: 90vh;">
-                <img src="<?= base_url('assets/images/berita/brosur.jpg') ?>"
-                    style="width: 100%; height: 100%; object-fit: cover;">
+        <!-- Header Popup -->
+        <div class="popup-header-smk">
+            <div class="header-logo-smk">
+                <img src="<?= base_url('assets/images/logo.png') ?>" alt="Logo SMK">
             </div>
+            <h3 class="form-title-smk">Pendaftaran Peserta Didik Baru</h3>
+            <p class="form-subtitle-smk">SMK - Tahun Ajaran 2025/2026</p>
+        </div>
 
-            <!-- KANAN (FORM) -->
-            <div style="flex: 1; min-width: 60%; padding: 25px; overflow-y: auto; max-height: 90vh;">
+        <!-- Form Content -->
+        <div id="formSectionSMK">
 
-                <h3 class="text-center mb-4" style="font-weight: 800;">
-                    Pendaftaran Peserta Didik Baru 2025
-                </h3>
+            <!-- NOTIF / ALERT -->
+            <div id="alertContainerSMK"></div>
 
-                <!-- NOTIF / ALERT -->
-                <div id="alertContainer"></div>
+            <form id="formPendaftaranSMK">
 
-                <form id="formPendaftaran">
-                    
-                    <div class="mb-3">
-                        <label class="form-label">Nama Lengkap *</label>
-                        <input type="text" name="nama" class="form-control" required>
+                <!-- Nama Lengkap -->
+                <div class="form-group-smk">
+                    <label class="form-label-smk">
+                        <i class="fa fa-user icon-label-smk"></i>
+                        Nama Lengkap <span class="required-smk">*</span>
+                    </label>
+                    <input type="text" name="nama" class="form-control-smk" 
+                           placeholder="Contoh: Ahmad Rizki Maulana" required>
+                </div>
+
+                <!-- Tempat Lahir & Tanggal Lahir -->
+                <div class="row-smk">
+                    <div class="col-md-6-smk form-group-smk">
+                        <label class="form-label-smk">
+                            <i class="fa fa-map-marker-alt icon-label-smk"></i>
+                            Tempat Lahir <span class="required-smk">*</span>
+                        </label>
+                        <input type="text" name="tempat_lahir" class="form-control-smk" 
+                               placeholder="Contoh: Jakarta" required>
                     </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Alamat Lengkap</label>
-                        <input type="text" name="alamat" class="form-control">
+                    <div class="col-md-6-smk form-group-smk">
+                        <label class="form-label-smk">
+                            <i class="fa fa-calendar icon-label-smk"></i>
+                            Tanggal Lahir <span class="required-smk">*</span>
+                        </label>
+                        <input type="date" name="tanggal_lahir" class="form-control-smk" required>
                     </div>
+                </div>
 
-                    <div class="mb-3">
-                        <label class="form-label">Asal Sekolah</label>
-                        <input type="text" name="asal_sekolah" class="form-control">
+                <!-- Jenis Kelamin -->
+                <div class="form-group-smk">
+                    <label class="form-label-smk">
+                        <i class="fa fa-venus-mars icon-label-smk"></i>
+                        Jenis Kelamin <span class="required-smk">*</span>
+                    </label>
+                    <select name="jenis_kelamin" class="form-control-smk" required>
+                        <option value="">-- Pilih Jenis Kelamin --</option>
+                        <option value="Laki-laki">Laki-laki</option>
+                        <option value="Perempuan">Perempuan</option>
+                    </select>
+                </div>
+
+                <!-- Jurusan (KHUSUS SMK) -->
+                <div class="form-group-smk">
+                    <label class="form-label-smk">
+                        <i class="fa fa-graduation-cap icon-label-smk"></i>
+                        Pilihan Jurusan <span class="required-smk">*</span>
+                    </label>
+                    <select name="jurusan" class="form-control-smk" required>
+                        <option value="">-- Pilih Jurusan --</option>
+                        <option value="Teknik Komputer dan Jaringan">Teknik Komputer & Jaringan (TKJ)</option>
+                        <option value="Teknik Kendaraan Ringan">Teknik Kendaraan Ringan (TKR)</option>
+                    </select>
+                </div>
+
+                <!-- Nama Ayah & Nama Ibu -->
+                <div class="row-smk">
+                    <div class="col-md-6-smk form-group-smk">
+                        <label class="form-label-smk">
+                            <i class="fa fa-male icon-label-smk"></i>
+                            Nama Ayah <span class="required-smk">*</span>
+                        </label>
+                        <input type="text" name="nama_ayah" class="form-control-smk" 
+                               placeholder="Contoh: Budi Santoso" required>
                     </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Nomor WhatsApp *</label>
-                        <input type="text" name="no_hp" class="form-control" required>
+                    <div class="col-md-6-smk form-group-smk">
+                        <label class="form-label-smk">
+                            <i class="fa fa-female icon-label-smk"></i>
+                            Nama Ibu <span class="required-smk">*</span>
+                        </label>
+                        <input type="text" name="nama_ibu" class="form-control-smk" 
+                               placeholder="Contoh: Siti Aminah" required>
                     </div>
+                </div>
 
-                    <div class="mb-3">
-                        <label class="form-label">Jurusan *</label>
-                        <select name="jurusan" class="form-control" required>
-                            <option value="">-- Pilih Jurusan --</option>
-                            <option value="TKJ">Teknik Jaringan dan Komputer</option>
-                            <option value="TKR">Teknik Kendaraan Ringan Otomotif</option>
-                        </select>
-                    </div>
+                <!-- Agama -->
+                <div class="form-group-smk">
+                    <label class="form-label-smk">
+                        <i class="fa fa-book icon-label-smk"></i>
+                        Agama <span class="required-smk">*</span>
+                    </label>
+                    <select name="agama" class="form-control-smk" required>
+                        <option value="">-- Pilih Agama --</option>
+                        <option value="Islam">Islam</option>
+                        <option value="Kristen">Kristen</option>
+                        <option value="Katolik">Katolik</option>
+                        <option value="Hindu">Hindu</option>
+                        <option value="Buddha">Buddha</option>
+                        <option value="Konghucu">Konghucu</option>
+                    </select>
+                </div>
 
-                    <!-- Token CSRF -->
-                    <input type="hidden" name="<?= csrf_token() ?>" value="<?= csrf_hash() ?>">
+                <!-- Alamat Lengkap -->
+                <div class="form-group-smk">
+                    <label class="form-label-smk">
+                        <i class="fa fa-home icon-label-smk"></i>
+                        Alamat Lengkap <span class="required-smk">*</span>
+                    </label>
+                    <textarea name="alamat" class="form-control-smk" rows="3" 
+                              placeholder="Contoh: Jl. Merdeka No. 123, RT 01/RW 05" 
+                              required></textarea>
+                </div>
 
-                    <button type="submit" id="btnSubmit" class="btn btn-primary w-100 py-2">
-                        <i class="fa fa-paper-plane me-2"></i>Kirim Pendaftaran
-                    </button>
-                </form>
+                <!-- Nomor WhatsApp -->
+                <div class="form-group-smk">
+                    <label class="form-label-smk">
+                        <i class="fa fa-phone icon-label-smk"></i>
+                        Nomor WhatsApp <span class="required-smk">*</span>
+                    </label>
+                    <input type="tel" name="no_hp" class="form-control-smk" 
+                           placeholder="Contoh: 081234567890" required>
+                    <small class="form-text-smk">Gunakan format: 08xxxxxxxxxx</small>
+                </div>
 
-            </div>
+                <!-- Asal Sekolah -->
+                <div class="form-group-smk">
+                    <label class="form-label-smk">
+                        <i class="fa fa-school icon-label-smk"></i>
+                        Asal Sekolah (SMP/MTs)
+                    </label>
+                    <input type="text" name="asal_sekolah" class="form-control-smk" 
+                           placeholder="Contoh: SMP Negeri 1 Jakarta">
+                    <small class="form-text-smk">Opsional</small>
+                </div>
+
+                <!-- Hidden Fields -->
+                <input type="hidden" name="jenjang" value="smk">
+
+                <!-- Tombol Submit -->
+                <button type="submit" id="btnSubmitSMK" class="btn-submit-smk">
+                    <i class="fa fa-paper-plane me-2"></i>Kirim Pendaftaran
+                </button>
+
+                <p class="form-footer-smk">
+                    <span class="required-smk">*</span> Wajib diisi
+                </p>
+            </form>
+
         </div>
     </div>
+</div>
 
-    <!-- Script Popup & AJAX -->
-   <script>
-// Tampilkan popup setelah 2 detik (jika tidak ada session error/success)
-window.addEventListener("load", function () {
-
-    <?php if (session()->has('popup_errors') || session()->has('popup_success')): ?>
-        document.getElementById('brosurPopup').style.display = 'flex';
-    <?php else: ?>
-        setTimeout(() => {
-            document.getElementById('brosurPopup').style.display = 'flex';
-        }, 2000);
-    <?php endif ?>
-});
-</script>
-
-
+<!-- Script Popup -->
 <script>
-// Submit AJAX
-document.getElementById("formPendaftaran").addEventListener("submit", function(e) {
-    e.preventDefault();
+(function() {
+    'use strict';
 
-    let form = new FormData(this);
-    let alertBox = document.getElementById("alertContainer");
-    let btn = document.getElementById("btnSubmit");
+    // ========================================
+    // FUNGSI GET CSRF TOKEN
+    // ========================================
+    function getCsrfToken() {
+        const meta = document.querySelector('meta[name="X-CSRF-TOKEN"]');
+        if (meta) return meta.getAttribute('content');
 
-    btn.disabled = true;
-    btn.innerHTML = '<i class="fa fa-spinner fa-spin me-2"></i>Mengirim...';
-
-   fetch("<?= base_url('pendaftaran/submit/smk') ?>", {
-    method: "POST",
-    body: form,
-    headers: {
-        "X-Requested-With": "XMLHttpRequest"
-    }
-})
-
-    .then(r => r.json())
-    .then(res => {
-        btn.disabled = false;
-        btn.innerHTML = '<i class="fa fa-paper-plane me-2"></i>Kirim Pendaftaran';
-
-        if (res.success) {
-            alertBox.innerHTML = `
-                <div class="alert alert-success">
-                    <b>Berhasil!</b><br>${res.message}
-                </div>
-            `;
-            document.getElementById("formPendaftaran").reset();
-            setTimeout(() => location.reload(), 2000);
-        } else {
-            let errorList = "";
-            for (let i in res.errors) {
-                errorList += `<li>${res.errors[i]}</li>`;
+        const cookies = document.cookie.split(';');
+        for (let c of cookies) {
+            const [k, v] = c.trim().split('=');
+            if (k === 'csrf_cookie_name' || k === 'csrf_token') {
+                return decodeURIComponent(v);
             }
-            alertBox.innerHTML = `
-                <div class="alert alert-danger">
-                    <b>Gagal mengirim!</b><br><ul>${errorList}</ul>
+        }
+        return null;
+    }
+
+    // ========================================
+    // 1. TAMPILKAN POPUP SETELAH 2 DETIK
+    // ========================================
+    window.addEventListener("load", function () {
+        <?php if (session()->has('popup_errors') || session()->has('popup_success')): ?>
+            document.getElementById('brosurPopupSMK').style.display = 'flex';
+        <?php else: ?>
+            setTimeout(() => {
+                document.getElementById('brosurPopupSMK').style.display = 'flex';
+            }, 2000);
+        <?php endif ?>
+    });
+
+    // ========================================
+    // 2. VALIDASI NOMOR WHATSAPP
+    // ========================================
+    const noHpInput = document.querySelector('#formPendaftaranSMK input[name="no_hp"]');
+    if (noHpInput) {
+        noHpInput.addEventListener('input', function() {
+            this.value = this.value.replace(/[^0-9]/g, '');
+            
+            if (this.value.length > 0 && !this.value.startsWith('08')) {
+                this.setCustomValidity('Nomor harus diawali dengan 08');
+            } else if (this.value.length > 0 && this.value.length < 10) {
+                this.setCustomValidity('Nomor minimal 10 digit');
+            } else {
+                this.setCustomValidity('');
+            }
+        });
+    }
+
+    // ========================================
+    // 3. SUBMIT FORM DENGAN AJAX
+    // ========================================
+    const form = document.getElementById('formPendaftaranSMK');
+    
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const btnSubmit = document.getElementById('btnSubmitSMK');
+        const originalText = btnSubmit.innerHTML;
+        const alertContainer = document.getElementById('alertContainerSMK');
+        
+        // Clear previous alerts
+        alertContainer.innerHTML = '';
+        
+        // Disable button
+        btnSubmit.disabled = true;
+        btnSubmit.innerHTML = '<i class="fa fa-spinner fa-spin me-2"></i>Mengirim...';
+        
+        const formData = new FormData(this);
+        const jenjang = formData.get('jenjang');
+        
+        // Debug
+        console.log('=== FORM DATA SMK ===');
+        for (let pair of formData.entries()) {
+            console.log(pair[0] + ': ' + pair[1]);
+        }
+        
+        // Get CSRF token
+        const csrf = getCsrfToken();
+        console.log('CSRF Token:', csrf);
+        
+        // Setup headers
+        const headers = {
+            'X-Requested-With': 'XMLHttpRequest'
+        };
+        
+        if (csrf) {
+            headers['X-CSRF-TOKEN'] = csrf;
+        }
+        
+        // Send request
+        fetch('<?= base_url("pendaftaran/submit") ?>/' + jenjang, {
+            method: 'POST',
+            headers: headers,
+            body: formData,
+            credentials: 'same-origin'
+        })
+        .then(response => {
+            console.log('Response status:', response.status);
+            
+            if (!response.ok) {
+                throw new Error('HTTP Error! Status: ' + response.status);
+            }
+            
+            return response.json();
+        })
+        .then(data => {
+            console.log('Response data:', data);
+            
+            if (data.success) {
+                // ✅ SUKSES
+                alertContainer.innerHTML = `
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <i class="fa fa-check-circle me-2"></i><strong>Berhasil!</strong> ${data.message}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                `;
+                
+                form.reset();
+                
+                setTimeout(() => {
+                    document.getElementById('brosurPopupSMK').style.display = 'none';
+                    alertContainer.innerHTML = '';
+                }, 3000);
+                
+            } else {
+                // ❌ GAGAL
+                let errorMsg = data.message || 'Pendaftaran gagal';
+                
+                if (data.errors && Object.keys(data.errors).length > 0) {
+                    errorMsg += '<ul class="mb-0 mt-2 text-start small">';
+                    for (let field in data.errors) {
+                        errorMsg += '<li>' + data.errors[field] + '</li>';
+                    }
+                    errorMsg += '</ul>';
+                }
+                
+                alertContainer.innerHTML = `
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <i class="fa fa-exclamation-circle me-2"></i><strong>Gagal!</strong> ${errorMsg}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                `;
+            }
+            
+            // Re-enable button
+            btnSubmit.disabled = false;
+            btnSubmit.innerHTML = originalText;
+            
+            // Scroll to alert
+            alertContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        })
+        .catch(error => {
+            console.error('Fetch Error:', error);
+            
+            alertContainer.innerHTML = `
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <i class="fa fa-exclamation-circle me-2"></i>
+                    <strong>Error!</strong> Terjadi kesalahan koneksi.<br>
+                    <small class="text-muted">${error.message}</small>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
                 </div>
             `;
-        }
-    })
-    .catch(() => {
-        btn.disabled = false;
-        btn.innerHTML = '<i class="fa fa-paper-plane me-2"></i>Kirim Pendaftaran';
-        alertBox.innerHTML = `
-            <div class="alert alert-danger">
-                ❌ Kesalahan koneksi. Coba lagi nanti.
-            </div>
-        `;
+            
+            btnSubmit.disabled = false;
+            btnSubmit.innerHTML = originalText;
+        });
     });
-});
-</script>
 
-    <!-- POP UP BROSUR END -->
+    // ========================================
+    // 4. TUTUP POPUP
+    // ========================================
+    document.getElementById('brosurPopupSMK').addEventListener('click', function(e) {
+        if (e.target === this) {
+            this.style.display = 'none';
+        }
+    });
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            document.getElementById('brosurPopupSMK').style.display = 'none';
+        }
+    });
+
+})();
+</script>
+<!-- POP UP BROSUR SMK END -->
 
 
 

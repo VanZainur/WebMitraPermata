@@ -40,20 +40,27 @@ class Filters extends BaseFilters
         ],
     ];
 
-public array $globals = [
-    'before' => [
-        'csrf' => [
-            'except' => [
-                'smk/kirim-kontak',  // <-- GANTI INI
-                'smp/kirim-kontak',  // Jika SMP juga punya form
-                'sd/kirim-kontak',   // Jika SD juga punya form
-            ]
+    public array $globals = [
+        'before' => [
+            'csrf' => [
+                'except' => [
+                    // ✅ FORM KONTAK (existing)
+                    'smk/kirim-kontak',
+                    'smp/kirim-kontak',
+                    'sd/kirim-kontak',
+                    'tk/kirim-kontak',
+                    
+                    // ✅ FORM PENDAFTARAN (new - TAMBAHKAN INI)
+                    'pendaftaran/*',           // Semua route pendaftaran
+                    'pendaftaran/submit/*',    // Route submit pendaftaran
+                ]
+            ],
         ],
-    ],
-    'after' => [
-        'toolbar'
-    ],
-];
+        'after' => [
+            'toolbar'
+        ],
+    ];
+
     public array $methods = [];
 
     public array $filters = [];
