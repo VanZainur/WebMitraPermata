@@ -94,7 +94,7 @@ body {
 
 .slide-2 { 
   background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
-    url('/assets/images/hero/2.jpg'); 
+    url('/assets/images/hero/6.jpeg'); 
 }
 
 .slide-3 { 
@@ -104,7 +104,7 @@ body {
 
 .slide-4 { 
   background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
-    url('/assets/images/hero/4.jpg'); 
+    url('/assets/images/hero/2.jpg'); 
 }
 
 .slide-5 { 
