@@ -5,7 +5,7 @@
 <?= $this->section('content') ?>
 
     <!-- Carousel Start -->
-    <div class="container-fluid p-0 mb-5">
+    <div class="container-fluid p-0 mb-5" id="beranda">
         <div class="owl-carousel header-carousel position-relative">
             <div class="owl-carousel-item position-relative">
                   <img class="img-fluid" src="<?= base_url('assets/SMK/img/background1.jpg') ?>" alt="">
@@ -306,10 +306,10 @@
                         <div class="position-relative overflow-hidden">
                             <img class="img-fluid" src="<?= base_url('assets/SMK/img/SMK2.jpg') ?>" alt="">
 
-                            <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                            <!-- <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
                                 <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Selengkapnya</a>
                                 <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Bergabung</a>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="text-center p-4 pb-0">
                             <h3 class="mb-0">Teknik Kendaraan Ringan Otomotif</h3>
@@ -335,10 +335,10 @@
                         <div class="position-relative overflow-hidden">
                            <img class="img-fluid" src="<?= base_url('assets/SMK/img/LKP.jpg') ?>" alt="">
 
-                            <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                            <!-- <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
                                 <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Selengkapnya</a>
                                 <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Bergabung</a>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="text-center p-4 pb-0">
                             <h3 class="mb-0">Teknik Jaringan dan Komputer</h3>
@@ -364,7 +364,7 @@
     </div>
     <!-- Jurusan End -->
 
-<!-- Guru Start -->
+    <!-- Guru Start -->
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
@@ -407,50 +407,69 @@
     </div>
     <!-- Guru End -->
 
-   <!-- Prestasi Start -->
-  <div id="prestasi" class="container-xxl py-5 category">
-    <div class="container">
-        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title bg-white text-center text-primary px-3">Prestasi</h6>
-            <h1 class="mb-3">Terbaik Siswa</h1>
-            <p class="text-muted mb-4">Siswa-siswi kami berhasil meraih berbagai prestasi yang membanggakan</p>
-        </div>
+    <!-- Prestasi Start -->
+    <div id="prestasi" class="container-xxl py-5 category">
+        <div class="container">
 
-        <div class="row g-4">
-            <?php if (!empty($prestasi)): ?>
-                <?php foreach ($prestasi as $item): ?>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="prestasi-card shadow-lg rounded overflow-hidden">
-                            <div class="prestasi-img">
-                                <img src="<?= base_url('uploads/' . strtolower($item['jenjang']) . '/prestasi/' . $item['gambar']) ?>" 
-                                    alt="<?= esc($item['judul']) ?>">
-                            </div>
-                            <div class="prestasi-body p-4">
-                                <h5 class="fw-bold mb-2"><?= esc($item['judul']) ?></h5>
-                                <p class="text-muted mb-3">
-                                    <?= esc(substr($item['deskripsi'], 0, 100)) ?>...
-                                </p>
-                                <small class="text-muted d-block mb-3">
-                                    <i class="fa fa-calendar"></i> 
-                                    <?= date('d M Y', strtotime($item['tanggal'])) ?>
-                                </small>
-                                <!-- Tombol Lihat Detail -->
-                                <button class="btn btn-primary btn-sm" 
-                                        onclick="openModal('prestasi', <?= htmlspecialchars(json_encode($item), ENT_QUOTES, 'UTF-8') ?>)">
-                                    <i class="fa fa-eye"></i> Lihat Detail
-                                </button>
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">
+                    Prestasi
+                </h6>
+                <h1 class="mb-3">Terbaik Siswa</h1>
+                <p class="text-muted mb-4">
+                    Siswa-siswi kami berhasil meraih berbagai prestasi yang membanggakan
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <?php if (!empty($prestasi)): ?>
+                    <?php foreach ($prestasi as $item): ?>
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="prestasi-card shadow-lg rounded overflow-hidden">
+
+                                <div class="prestasi-img">
+                                    <img 
+                                        src="<?= base_url('uploads/' . strtolower($item['jenjang']) . '/prestasi/' . $item['gambar']) ?>" 
+                                        alt="<?= esc($item['judul']) ?>"
+                                    >
+                                </div>
+
+                                <div class="prestasi-body p-4">
+                                    <h5 class="fw-bold mb-2">
+                                        <?= esc($item['judul']) ?>
+                                    </h5>
+
+                                    <p class="text-muted mb-3">
+                                        <?= esc(substr($item['deskripsi'], 0, 100)) ?>...
+                                    </p>
+
+                                    <small class="text-muted d-block mb-3">
+                                        <i class="fa fa-calendar"></i>
+                                        <?= date('d M Y', strtotime($item['tanggal'])) ?>
+                                    </small>
+
+                                    <button 
+                                        class="btn btn-primary btn-sm"
+                                        onclick="openModal('prestasi', <?= htmlspecialchars(json_encode($item), ENT_QUOTES, 'UTF-8') ?>)"
+                                    >
+                                        <i class="fa fa-eye"></i> Lihat Detail
+                                    </button>
+                                </div>
+
                             </div>
                         </div>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <div class="col-12">
+                        <p class="text-center text-muted">
+                            Belum ada prestasi tersedia.
+                        </p>
                     </div>
-                <?php endforeach; ?>
-            <?php else: ?>
-                <div class="col-12">
-                    <p class="text-center text-muted">Belum ada prestasi tersedia.</p>
-                </div>
-            <?php endif; ?>
+                <?php endif; ?>
+            </div>
+
         </div>
     </div>
-</div>
     <!-- Prestasi End -->
 
     <!-- Ekstrakurikuler Start -->
@@ -563,7 +582,7 @@
 
     <!-- kegiatan Start-->
     <div id="kegiatan" class="container-xxl py-5">
-    <div class="container">
+        <div class="container">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
             <h6 class="section-title bg-white text-center text-primary px-3">Acara</h6>
             <h1 class="mb-3">Kegiatan Sekolah</h1>
@@ -598,51 +617,51 @@
                 <div class="col-12 text-center text-muted">Belum ada kegiatan tersedia.</div>
             <?php endif; ?>
         </div>
+        </div>
     </div>
-</div>
     <!-- Kegiatan End-->
 
     <!-- Berita Start-->
-<div id="berita" class="container-xxl py-5">
-    <div class="container">
-        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title bg-white text-center text-primary px-3">Informasi</h6>
-            <h1 class="mb-5">Berita Terkini</h1>
-        </div>
+    <div id="berita" class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Informasi</h6>
+                <h1 class="mb-5">Berita Terkini</h1>
+            </div>
 
-        <div class="row g-4">
-            <?php if (!empty($berita)): ?>
-                <?php foreach ($berita as $item): ?>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="berita-card">
-                            <div class="berita-image">
-                                <img src="<?= base_url('uploads/' . strtolower($item['jenjang']) . '/berita/' . $item['gambar']) ?>" 
-                                    alt="<?= esc($item['judul']) ?>">
-                                <div class="berita-badge">
-                                    <i class="fa fa-calendar"></i> 
-                                    <?= date('d M Y', strtotime($item['tanggal'])) ?>
+            <div class="row g-4">
+                <?php if (!empty($berita)): ?>
+                    <?php foreach ($berita as $item): ?>
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="berita-card">
+                                <div class="berita-image">
+                                    <img src="<?= base_url('uploads/' . strtolower($item['jenjang']) . '/berita/' . $item['gambar']) ?>" 
+                                        alt="<?= esc($item['judul']) ?>">
+                                    <div class="berita-badge">
+                                        <i class="fa fa-calendar"></i> 
+                                        <?= date('d M Y', strtotime($item['tanggal'])) ?>
+                                    </div>
+                                </div>
+                                <div class="berita-content">
+                                    <h5 class="berita-title"><?= esc($item['judul']) ?></h5>
+                                    <p class="berita-desc"><?= esc(substr($item['deskripsi'], 0, 100)) ?>...</p>
+                                    <!-- Tombol Lihat Detail -->
+                                    <button class="btn btn-primary btn-sm" 
+                                            onclick="openModal('berita', <?= htmlspecialchars(json_encode($item), ENT_QUOTES, 'UTF-8') ?>)">
+                                        Baca Selengkapnya <i class="fa fa-arrow-right"></i>
+                                    </button>
                                 </div>
                             </div>
-                            <div class="berita-content">
-                                <h5 class="berita-title"><?= esc($item['judul']) ?></h5>
-                                <p class="berita-desc"><?= esc(substr($item['deskripsi'], 0, 100)) ?>...</p>
-                                <!-- Tombol Lihat Detail -->
-                                <button class="btn btn-primary btn-sm" 
-                                        onclick="openModal('berita', <?= htmlspecialchars(json_encode($item), ENT_QUOTES, 'UTF-8') ?>)">
-                                    Baca Selengkapnya <i class="fa fa-arrow-right"></i>
-                                </button>
-                            </div>
                         </div>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <div class="col-12">
+                        <p class="text-center text-muted">Belum ada berita tersedia.</p>
                     </div>
-                <?php endforeach; ?>
-            <?php else: ?>
-                <div class="col-12">
-                    <p class="text-center text-muted">Belum ada berita tersedia.</p>
-                </div>
-            <?php endif; ?>
+                <?php endif; ?>
+            </div>
         </div>
     </div>
-</div>
     <!-- Berita End-->
 
 

@@ -1540,7 +1540,7 @@ html {
     }
   }
 
-  /* ========================================
+/* ========================================
    POPUP PENDAFTARAN PPDB - SMK (HIJAU)
    ======================================== */
 
@@ -1559,7 +1559,7 @@ html {
 #popupContainerSMK {
   background: #fff;
   width: 100%;
-  max-width: 600px;
+  max-width: 650px;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
@@ -1666,8 +1666,43 @@ html {
   background: #039e45;
 }
 
+/* ========================================
+   FORM SECTIONS
+   ======================================== */
+.form-section-smk {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e8e8e8;
+}
+
+.section-title-smk {
+  margin: 0 0 18px 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #06a34e;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #06a34e;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-title-smk i {
+  font-size: 18px;
+}
+
+/* ========================================
+   FORM GROUPS & LABELS
+   ======================================== */
 .form-group-smk {
   margin-bottom: 16px;
+}
+
+.form-group-smk:last-child {
+  margin-bottom: 0;
 }
 
 .form-label-smk {
@@ -1689,6 +1724,9 @@ html {
   font-weight: bold;
 }
 
+/* ========================================
+   FORM CONTROLS
+   ======================================== */
 .form-control-smk {
   width: 100%;
   padding: 11px 14px;
@@ -1734,6 +1772,9 @@ select.form-control-smk {
   padding-right: 35px;
 }
 
+/* ========================================
+   ROW & COLUMNS
+   ======================================== */
 .row-smk {
   display: flex;
   gap: 12px;
@@ -1747,6 +1788,9 @@ select.form-control-smk {
   padding: 0;
 }
 
+/* ========================================
+   SUBMIT BUTTON
+   ======================================== */
 .btn-submit-smk {
   width: 100%;
   padding: 14px;
@@ -1787,6 +1831,9 @@ select.form-control-smk {
   color: #6c757d;
 }
 
+/* ========================================
+   ALERTS
+   ======================================== */
 #alertContainerSMK {
   margin-bottom: 18px;
 }
@@ -1797,6 +1844,7 @@ select.form-control-smk {
   margin-bottom: 0;
   font-size: 13px;
   border: none;
+  animation: slideDown 0.3s ease-out;
 }
 
 .alert-success {
@@ -1809,6 +1857,14 @@ select.form-control-smk {
   color: #721c24;
 }
 
+.alert .btn-close {
+  padding: 0.5rem;
+  font-size: 0.75rem;
+}
+
+/* ========================================
+   ANIMATIONS
+   ======================================== */
 @keyframes slideUpSMK {
   from {
     opacity: 0;
@@ -1820,10 +1876,20 @@ select.form-control-smk {
   }
 }
 
-/* ========================================
- RESPONSIVE DESIGN - SMK
- ======================================== */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
+/* ========================================
+   RESPONSIVE DESIGN - TABLET
+   ======================================== */
 @media (max-width: 768px) {
   #brosurPopupSMK {
     padding: 15px;
@@ -1855,6 +1921,16 @@ select.form-control-smk {
     padding: 20px;
   }
 
+  .form-section-smk {
+    padding: 16px;
+    margin-bottom: 15px;
+  }
+
+  .section-title-smk {
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
+
   .row-smk {
     flex-direction: column;
     gap: 0;
@@ -1865,6 +1941,9 @@ select.form-control-smk {
   }
 }
 
+/* ========================================
+   RESPONSIVE DESIGN - MOBILE
+   ======================================== */
 @media (max-width: 480px) {
   #brosurPopupSMK {
     padding: 8px;
@@ -1894,7 +1973,23 @@ select.form-control-smk {
   }
 
   #formSectionSMK {
-    padding: 18px 15px 25px;
+    padding: 15px;
+  }
+
+  .form-section-smk {
+    padding: 14px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+  }
+
+  .section-title-smk {
+    font-size: 14px;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+  }
+
+  .section-title-smk i {
+    font-size: 16px;
   }
 
   #btnCloseSMK {
@@ -1925,6 +2020,9 @@ select.form-control-smk {
   }
 }
 
+/* ========================================
+   RESPONSIVE DESIGN - EXTRA SMALL
+   ======================================== */
 @media (max-width: 360px) {
   .popup-header-smk {
     padding: 20px 12px 16px;
@@ -1940,6 +2038,14 @@ select.form-control-smk {
   }
 
   #formSectionSMK {
-    padding: 15px 12px 20px;
+    padding: 12px;
+  }
+
+  .form-section-smk {
+    padding: 12px;
+  }
+
+  .section-title-smk {
+    font-size: 13px;
   }
 }

@@ -390,48 +390,48 @@ $uri = service('uri');
     </div>
     <!-- Spinner End -->
 
-<!-- Navbar Start -->
-<nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-     <a href="index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-        <img src="<?= base_url('assets/sd/img/logo.png') ?>" alt="Logo" style="height: 45px; width: auto;" class="me-3">
-        <h2 class="m-0 text-primary">SD Mitra Permata</h2>
-    </a>
+  <!-- Navbar Start -->
+  <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+      <a href="index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+          <img src="<?= base_url('assets/sd/img/logo.png') ?>" alt="Logo" style="height: 45px; width: auto;" class="me-3">
+          <h2 class="m-0 text-primary">SD Mitra Permata</h2>
+      </a>
 
-    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+      <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+      </button>
 
-   <div class="collapse navbar-collapse" id="navbarCollapse">
-    <div class="navbar-nav ms-auto p-4 p-lg-0">
-        <a href="#about" class="nav-item nav-link">Tentang Kami</a>
-        
-        <div class="nav-item dropdown">
-            <a href="#kegiatan" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Kegiatan</a>
-            <div class="dropdown-menu">
-                <a href="#prestasi" class="dropdown-item">Prestasi</a>
-                <a href="#eskul" class="dropdown-item">Extrakulikuler</a>
-                <a href="#berita" class="dropdown-item">Berita</a>
-            </div>
-        </div>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav ms-auto p-4 p-lg-0">
+          <a href="#about" class="nav-item nav-link">Tentang Kami</a>
+          
+          <div class="nav-item dropdown">
+              <a href="#kegiatan" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Kegiatan</a>
+              <div class="dropdown-menu">
+                  <a href="#prestasi" class="dropdown-item">Prestasi</a>
+                  <a href="#eskul" class="dropdown-item">Extrakulikuler</a>
+                  <a href="#berita" class="dropdown-item">Berita</a>
+              </div>
+          </div>
 
-        <a href="#kontak" class="nav-item nav-link">Kontak</a>
-        
-       <!-- PINDAHKAN BUTTON KE DALAM NAVBAR-NAV -->
-            <a href="javascript:void(0)"  onclick="document.getElementById('brosurPopupSD')
-            .style.display='flex'" class="btn-daftar ms-lg-3"> PENDAFTARAN <i class="fas fa-arrow-right"></i>
-            </a>
-    </div>
-</nav>
-<!-- Navbar End -->
+          <a href="#kontak" class="nav-item nav-link">Kontak</a>
+          
+        <!-- PINDAHKAN BUTTON KE DALAM NAVBAR-NAV -->
+              <a href="javascript:void(0)"  onclick="document.getElementById('brosurPopupSD')
+              .style.display='flex'" class="btn-daftar ms-lg-3"> PENDAFTARAN <i class="fas fa-arrow-right"></i>
+              </a>
+      </div>
+  </nav>
+  <!-- Navbar End -->
 
-    <!-- Content Section -->
-    <?= $this->renderSection('content') ?>
+  <!-- Content Section -->
+  <?= $this->renderSection('content') ?>
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+  <!-- Back to Top -->
+  <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
 
-   <!-- Footer Start -->
+  <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5">
         <div class="container py-5">
         <div class="row g-5">
@@ -439,11 +439,11 @@ $uri = service('uri');
             <!-- QUICK LINK -->
             <div class="col-lg-4 col-md-6">
                 <h4 class="text-white mb-3">Akses Cepat</h4>
-                <a class="btn btn-link" href="<?= base_url('sd'); ?>">Beranda</a>
-                <a class="btn btn-link" href="<?= base_url('sd/about'); ?>">Tentang</a>
-                <a class="btn btn-link" href="<?= base_url('sd/about'); ?>">Ekstrakulikuler</a>
-                <a class="btn btn-link" href="<?= base_url('sd/about'); ?>">Prestasi</a>
-                <a class="btn btn-link" href="<?= base_url('sd/contact'); ?>">Kontak</a>
+                <a class="btn btn-link" href="#beranda">Beranda</a>
+                <a class="btn btn-link" href="#about">Tentang</a>
+                <a class="btn btn-link" href="#eskul">Ekstrakulikuler</a>
+                <a class="btn btn-link" href="#prestasi">Prestasi</a>
+                <a class="btn btn-link" href="#kontak">Kontak</a>
                 <!-- <a class="btn btn-link" href="#">Pendaftaran</a> -->
             </div>
 
