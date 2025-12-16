@@ -74,22 +74,22 @@
         </div>
     </div>
 
-<!-- About Section -->
-<section class="about" id="about">
-    <div class="container">
-        <h2 class="section-title">📖 Tentang Kami</h2>
-        <div class="about-content">
-            <div class="about-image">
-                <img src="<?= base_url('assets/images/hero/1.jpg') ?>" alt="Gedung TK Mitra Permata">
-            </div>
-            <div class="about-text">
-                <p>TK Mitra Permata adalah lembaga pendidikan anak usia dini yang berkomitmen untuk mengembangkan potensi anak melalui metode pembelajaran yang menyenangkan dan inovatif. Dengan tenaga pengajar berpengalaman dan fasilitas lengkap, kami siap menjadi mitra terbaik dalam tumbuh kembang buah hati Anda! 🌟</p>
-                <p style="margin-top: 20px;"><strong>Visi:</strong> Menjadi TK terbaik yang mencetak generasi cerdas, kreatif, dan berakhlak mulia.</p>
-                <p style="margin-top: 10px;"><strong>Misi:</strong> Memberikan pendidikan berkualitas dengan pendekatan yang ramah anak dan mengutamakan perkembangan holistik.</p>
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">📖 Tentang Kami</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="<?= base_url('assets/images/hero/1.jpg') ?>" alt="Gedung TK Mitra Permata">
+                </div>
+                <div class="about-text">
+                    <p>TK Mitra Permata adalah lembaga pendidikan anak usia dini yang berkomitmen untuk mengembangkan potensi anak melalui metode pembelajaran yang menyenangkan dan inovatif. Dengan tenaga pengajar berpengalaman dan fasilitas lengkap, kami siap menjadi mitra terbaik dalam tumbuh kembang buah hati Anda! 🌟</p>
+                    <p style="margin-top: 20px;"><strong>Visi:</strong> Menjadi TK terbaik yang mencetak generasi cerdas, kreatif, dan berakhlak mulia.</p>
+                    <p style="margin-top: 10px;"><strong>Misi:</strong> Memberikan pendidikan berkualitas dengan pendekatan yang ramah anak dan mengutamakan perkembangan holistik.</p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Cards Section -->
     <section class="cards-section" id="program">
@@ -304,11 +304,11 @@
             <div class="footer-section">
                 <h3>Akses Cepat</h3>
                 <ul>
-                    <li>🏠 Beranda</li>
-                    <li>📖 Tentang Kami</li>
-                    <li>✨ Program</li>
-                    <li>👩‍🏫 Guru</li>
-                    <li>📸 Galeri</li>
+                    <li><a href="#home">🏠 Beranda</a></li>
+                    <li><a href="#about">📖 Tentang Kami</a></li>
+                    <li><a href="#program">✨ Program</a></li>
+                    <li><a href="#kegiatan">📸 Galeri</a></li>
+                    <li><a href="#contact">💬 Kontak</a></li>
                 </ul>
             </div>
 
