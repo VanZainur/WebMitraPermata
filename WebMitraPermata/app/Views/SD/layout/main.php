@@ -431,7 +431,7 @@ $uri = service('uri');
   <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
 
-  <!-- Footer Start -->
+   <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5">
         <div class="container py-5">
         <div class="row g-5">
@@ -484,13 +484,9 @@ $uri = service('uri');
             &copy; 2025 Sekolah Mitra Permata. All Rights Reserved
             <p>By ShōtenLab</p>
         </div>
+      </div>
     </div>
-</div>
     <!-- Footer End -->
-
-
-
-
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -503,209 +499,207 @@ $uri = service('uri');
     <!-- Template Javascript -->
     <script src="<?= base_url('assets/sd/js/main.js') ?>"></script>
     <script>
-document.querySelectorAll('.nav-item.dropdown > a.dropdown-toggle').forEach(function(el) {
-    let clickedOnce = false;
-    
-    el.addEventListener('click', function(e) {
-        // kalau klik pertama → buka dropdown saja
-        if (!clickedOnce) {
-            e.preventDefault(); // cegah buka halaman
-            clickedOnce = true;
-            
-            // reset kalau user klik di luar dropdown
-            document.addEventListener('click', function reset(e2) {
-                if (!el.parentElement.contains(e2.target)) {
-                    clickedOnce = false;
-                    document.removeEventListener('click', reset);
-                }
-            });
+    document.querySelectorAll('.nav-item.dropdown > a.dropdown-toggle').forEach(function(el) {
+        let clickedOnce = false;
+        
+        el.addEventListener('click', function(e) {
+            // kalau klik pertama → buka dropdown saja
+            if (!clickedOnce) {
+                e.preventDefault(); // cegah buka halaman
+                clickedOnce = true;
+                
+                // reset kalau user klik di luar dropdown
+                document.addEventListener('click', function reset(e2) {
+                    if (!el.parentElement.contains(e2.target)) {
+                        clickedOnce = false;
+                        document.removeEventListener('click', reset);
+                    }
+                });
 
-        } else {
-            // klik kedua → pergi ke halaman normal
-            window.location = el.getAttribute('href');
-        }
+            } else {
+                // klik kedua → pergi ke halaman normal
+                window.location = el.getAttribute('href');
+            }
+        });
     });
-});
-</script>
+    </script>
 
    <!-- ======================================== -->
    <!-- SECTION EKSTRAKURIKULER - SLIDER STYLE   -->
    <!-- ======================================== -->
    <script>
-let eskulCurrentIndex = 0;
-const eskulCardsPerView = getEskulCardsPerView();
+  let eskulCurrentIndex = 0;
+  const eskulCardsPerView = getEskulCardsPerView();
 
-function getEskulCardsPerView() {
-    if (window.innerWidth <= 576) return 1;
-    if (window.innerWidth <= 768) return 2;
-    if (window.innerWidth <= 1200) return 3;
-    return 4;
-}
+  function getEskulCardsPerView() {
+      if (window.innerWidth <= 576) return 1;
+      if (window.innerWidth <= 768) return 2;
+      if (window.innerWidth <= 1200) return 3;
+      return 4;
+  }
 
-function eskulSlide(direction) {
-    const track = document.getElementById('eskulTrack');
-    const cards = track.children;
-    const totalCards = cards.length;
-    const maxIndex = totalCards - eskulCardsPerView;
+  function eskulSlide(direction) {
+      const track = document.getElementById('eskulTrack');
+      const cards = track.children;
+      const totalCards = cards.length;
+      const maxIndex = totalCards - eskulCardsPerView;
 
-    eskulCurrentIndex += direction;
+      eskulCurrentIndex += direction;
 
-    if (eskulCurrentIndex < 0) {
-        eskulCurrentIndex = 0;
-    } else if (eskulCurrentIndex > maxIndex) {
-        eskulCurrentIndex = maxIndex;
-    }
+      if (eskulCurrentIndex < 0) {
+          eskulCurrentIndex = 0;
+      } else if (eskulCurrentIndex > maxIndex) {
+          eskulCurrentIndex = maxIndex;
+      }
 
-    const cardWidth = cards[0].offsetWidth;
-    const gap = 30;
-    const translateX = -(eskulCurrentIndex * (cardWidth + gap));
+      const cardWidth = cards[0].offsetWidth;
+      const gap = 30;
+      const translateX = -(eskulCurrentIndex * (cardWidth + gap));
 
-    track.style.transform = `translateX(${translateX}px)`;
-    updateEskulDots();
-}
+      track.style.transform = `translateX(${translateX}px)`;
+      updateEskulDots();
+  }
 
-function updateEskulDots() {
-    const dotsContainer = document.getElementById('eskulDots');
-    const totalCards = document.getElementById('eskulTrack').children.length;
-    const totalDots = totalCards - eskulCardsPerView + 1;
+  function updateEskulDots() {
+      const dotsContainer = document.getElementById('eskulDots');
+      const totalCards = document.getElementById('eskulTrack').children.length;
+      const totalDots = totalCards - eskulCardsPerView + 1;
 
-    dotsContainer.innerHTML = '';
+      dotsContainer.innerHTML = '';
 
-    for (let i = 0; i < totalDots; i++) {
-        const dot = document.createElement('div');
-        dot.className = 'eskul-dot' + (i === eskulCurrentIndex ? ' active' : '');
-        dot.onclick = () => goToEskulSlide(i);
-        dotsContainer.appendChild(dot);
-    }
-}
+      for (let i = 0; i < totalDots; i++) {
+          const dot = document.createElement('div');
+          dot.className = 'eskul-dot' + (i === eskulCurrentIndex ? ' active' : '');
+          dot.onclick = () => goToEskulSlide(i);
+          dotsContainer.appendChild(dot);
+      }
+  }
 
-function goToEskulSlide(index) {
-    const track = document.getElementById('eskulTrack');
-    const cards = track.children;
-    eskulCurrentIndex = index;
+  function goToEskulSlide(index) {
+      const track = document.getElementById('eskulTrack');
+      const cards = track.children;
+      eskulCurrentIndex = index;
 
-    const cardWidth = cards[0].offsetWidth;
-    const gap = 30;
-    const translateX = -(eskulCurrentIndex * (cardWidth + gap));
+      const cardWidth = cards[0].offsetWidth;
+      const gap = 30;
+      const translateX = -(eskulCurrentIndex * (cardWidth + gap));
 
-    track.style.transform = `translateX(${translateX}px)`;
-    updateEskulDots();
-}
+      track.style.transform = `translateX(${translateX}px)`;
+      updateEskulDots();
+  }
 
-// Initialize dots on page load
-window.addEventListener('load', updateEskulDots);
+  // Initialize dots on page load
+  window.addEventListener('load', updateEskulDots);
 
-// Update on window resize
-let resizeTimer;
-window.addEventListener('resize', function() {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(function() {
-        eskulCurrentIndex = 0;
-        document.getElementById('eskulTrack').style.transform = 'translateX(0)';
-        updateEskulDots();
-    }, 250);
-});
-</script>
-
+  // Update on window resize
+  let resizeTimer;
+  window.addEventListener('resize', function() {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function() {
+          eskulCurrentIndex = 0;
+          document.getElementById('eskulTrack').style.transform = 'translateX(0)';
+          updateEskulDots();
+      }, 250);
+  });
+  </script>
 
 
     <!--======================================== -->
    <!--Smooth scroll polyfill untuk semua browser -->
    <!-- ======================================== -->
    <script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Smooth scroll polyfill untuk semua browser
-    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
-        anchor.addEventListener('click', function(e) {
-            var href = this.getAttribute('href');
-            if (!href || href === '#') return;
-            
-            var target = document.querySelector(href);
-            if (target) {
-                e.preventDefault();
+    document.addEventListener('DOMContentLoaded', function() {
+        // Smooth scroll polyfill untuk semua browser
+        document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+            anchor.addEventListener('click', function(e) {
+                var href = this.getAttribute('href');
+                if (!href || href === '#') return;
                 
-                var navbar = document.querySelector('.navbar');
-                var offset = navbar ? navbar.offsetHeight + 20 : 100;
-                var targetPosition = target.offsetTop - offset;
-                var startPosition = window.pageYOffset;
-                var distance = targetPosition - startPosition;
-                var duration = 800; // 800ms = 0.8 detik
-                var start = null;
-                
-                function animation(currentTime) {
-                    if (start === null) start = currentTime;
-                    var timeElapsed = currentTime - start;
-                    var run = ease(timeElapsed, startPosition, distance, duration);
-                    window.scrollTo(0, run);
-                    if (timeElapsed < duration) requestAnimationFrame(animation);
-                }
-                
-                // Easing function untuk smooth effect
-                function ease(t, b, c, d) {
-                    t /= d / 2;
-                    if (t < 1) return c / 2 * t * t + b;
-                    t--;
-                    return -c / 2 * (t * (t - 2) - 1) + b;
-                }
-                
-                requestAnimationFrame(animation);
-            }
-        });
-    });
-});
-</script>
-
-<script>
-// Ambil semua menu navbar yang pakai anchor #
-const navLinks = document.querySelectorAll('.navbar a[href^="#"]');
-
-// Ambil semua section yang punya ID
-const sections = document.querySelectorAll("section[id], div[id]");
-
-function setActiveNav() {
-    let scrollPos = window.scrollY + 120; // tambahan offset biar pas
-
-    sections.forEach(sec => {
-        if (sec.offsetTop <= scrollPos && (sec.offsetTop + sec.offsetHeight) > scrollPos) {
-            let id = sec.getAttribute("id");
-
-            navLinks.forEach(link => {
-                link.classList.remove("active");
-
-                if (link.getAttribute("href") === "#" + id) {
-                    link.classList.add("active");
+                var target = document.querySelector(href);
+                if (target) {
+                    e.preventDefault();
+                    
+                    var navbar = document.querySelector('.navbar');
+                    var offset = navbar ? navbar.offsetHeight + 20 : 100;
+                    var targetPosition = target.offsetTop - offset;
+                    var startPosition = window.pageYOffset;
+                    var distance = targetPosition - startPosition;
+                    var duration = 800; // 800ms = 0.8 detik
+                    var start = null;
+                    
+                    function animation(currentTime) {
+                        if (start === null) start = currentTime;
+                        var timeElapsed = currentTime - start;
+                        var run = ease(timeElapsed, startPosition, distance, duration);
+                        window.scrollTo(0, run);
+                        if (timeElapsed < duration) requestAnimationFrame(animation);
+                    }
+                    
+                    // Easing function untuk smooth effect
+                    function ease(t, b, c, d) {
+                        t /= d / 2;
+                        if (t < 1) return c / 2 * t * t + b;
+                        t--;
+                        return -c / 2 * (t * (t - 2) - 1) + b;
+                    }
+                    
+                    requestAnimationFrame(animation);
                 }
             });
-        }
+        });
     });
-}
+    </script>
 
-window.addEventListener("scroll", setActiveNav);
-</script>
+  <script>
+  // Ambil semua menu navbar yang pakai anchor #
+  const navLinks = document.querySelectorAll('.navbar a[href^="#"]');
 
-<script>
-window.onload = function() {
-    <?php if (session()->has('popup_errors') || session()->has('popup_success')): ?>
-        document.getElementById('brosurPopup').style.display = 'flex';
-        
-        // Auto close alert sukses setelah 5 detik
-        <?php if (session()->has('popup_success')): ?>
-            setTimeout(function() {
-                const successAlert = document.querySelector('.alert-success');
-                if (successAlert) {
-                    successAlert.classList.remove('show');
-                    setTimeout(() => successAlert.remove(), 150);
-                }
-            }, 5000); // 5 detik
-        <?php endif ?>
-    <?php else: ?>
-        setTimeout(function() {
-            document.getElementById('brosurPopup').style.display = 'flex';
-        }, 2000);
-    <?php endif ?>
-};
-</script>
+  // Ambil semua section yang punya ID
+  const sections = document.querySelectorAll("section[id], div[id]");
+
+  function setActiveNav() {
+      let scrollPos = window.scrollY + 120; // tambahan offset biar pas
+
+      sections.forEach(sec => {
+          if (sec.offsetTop <= scrollPos && (sec.offsetTop + sec.offsetHeight) > scrollPos) {
+              let id = sec.getAttribute("id");
+
+              navLinks.forEach(link => {
+                  link.classList.remove("active");
+
+                  if (link.getAttribute("href") === "#" + id) {
+                      link.classList.add("active");
+                  }
+              });
+          }
+      });
+  }
+
+  window.addEventListener("scroll", setActiveNav);
+  </script>
+
+  <script>
+  window.onload = function() {
+      <?php if (session()->has('popup_errors') || session()->has('popup_success')): ?>
+          document.getElementById('brosurPopup').style.display = 'flex';
+          
+          // Auto close alert sukses setelah 5 detik
+          <?php if (session()->has('popup_success')): ?>
+              setTimeout(function() {
+                  const successAlert = document.querySelector('.alert-success');
+                  if (successAlert) {
+                      successAlert.classList.remove('show');
+                      setTimeout(() => successAlert.remove(), 150);
+                  }
+              }, 5000); // 5 detik
+          <?php endif ?>
+      <?php else: ?>
+          setTimeout(function() {
+              document.getElementById('brosurPopup').style.display = 'flex';
+          }, 2000);
+      <?php endif ?>
+  };
+  </script>
 
 </body>
-
 </html>

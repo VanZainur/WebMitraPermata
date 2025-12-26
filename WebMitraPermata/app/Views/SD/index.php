@@ -547,65 +547,65 @@
     <!-- Contact End -->
 
     <script>
-function openModal(type, data) {
-    const modal = document.getElementById('modalDetail');
-    const modalImage = document.getElementById('modalImage');
-    const modalTitle = document.getElementById('modalTitle');
-    const modalDate = document.getElementById('modalDate');
-    const modalDesc = document.getElementById('modalDesc');
-    
-    // Set base URL dari PHP
-    const baseUrl = '<?= base_url() ?>';
-    
-    // Set konten modal berdasarkan tipe
-    let imagePath = '';
-    if (type === 'prestasi') {
-        imagePath = baseUrl + 'uploads/sd/prestasi/' + data.gambar;
-    } else if (type === 'kegiatan') {
-        imagePath = baseUrl + 'uploads/sd/kegiatan/' + data.gambar;
-    } else if (type === 'berita') {
-        imagePath = baseUrl + 'uploads/sd/berita/' + data.gambar;
+    function openModal(type, data) {
+        const modal = document.getElementById('modalDetail');
+        const modalImage = document.getElementById('modalImage');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalDate = document.getElementById('modalDate');
+        const modalDesc = document.getElementById('modalDesc');
+        
+        // Set base URL dari PHP
+        const baseUrl = '<?= base_url() ?>';
+        
+        // Set konten modal berdasarkan tipe
+        let imagePath = '';
+        if (type === 'prestasi') {
+            imagePath = baseUrl + 'uploads/sd/prestasi/' + data.gambar;
+        } else if (type === 'kegiatan') {
+            imagePath = baseUrl + 'uploads/sd/kegiatan/' + data.gambar;
+        } else if (type === 'berita') {
+            imagePath = baseUrl + 'uploads/sd/berita/' + data.gambar;
+        }
+        
+        console.log('Image Path:', imagePath); // Debug
+        
+        modalImage.src = imagePath;
+        modalImage.alt = data.judul;
+        modalTitle.textContent = data.judul;
+        modalDate.textContent = formatDate(data.tanggal);
+        modalDesc.textContent = data.deskripsi;
+        
+        // Tampilkan modal
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
     }
-    
-    console.log('Image Path:', imagePath); // Debug
-    
-    modalImage.src = imagePath;
-    modalImage.alt = data.judul;
-    modalTitle.textContent = data.judul;
-    modalDate.textContent = formatDate(data.tanggal);
-    modalDesc.textContent = data.deskripsi;
-    
-    // Tampilkan modal
-    modal.style.display = 'block';
-    document.body.style.overflow = 'hidden';
-}
 
-function closeModal() {
-    const modal = document.getElementById('modalDetail');
-    modal.style.display = 'none';
-    document.body.style.overflow = 'auto';
-}
-
-function formatDate(dateString) {
-    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Agu', 'Sep', 'Okt', 'Nov', 'Des'];
-    const date = new Date(dateString);
-    return date.getDate() + ' ' + months[date.getMonth()] + ' ' + date.getFullYear();
-}
-
-// Tutup modal dengan ESC
-document.addEventListener('keydown', function(event) {
-    if (event.key === 'Escape') {
-        closeModal();
+    function closeModal() {
+        const modal = document.getElementById('modalDetail');
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
     }
-});
 
-// Tutup modal jika klik di luar konten
-window.onclick = function(event) {
-    const modal = document.getElementById('modalDetail');
-    if (event.target == modal) {
-        closeModal();
+    function formatDate(dateString) {
+        const months = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Agu', 'Sep', 'Okt', 'Nov', 'Des'];
+        const date = new Date(dateString);
+        return date.getDate() + ' ' + months[date.getMonth()] + ' ' + date.getFullYear();
     }
-}
-</script>
+
+    // Tutup modal dengan ESC
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            closeModal();
+        }
+    });
+
+    // Tutup modal jika klik di luar konten
+    window.onclick = function(event) {
+        const modal = document.getElementById('modalDetail');
+        if (event.target == modal) {
+            closeModal();
+        }
+    }
+    </script>
  
 <?= $this->endSection() ?>  

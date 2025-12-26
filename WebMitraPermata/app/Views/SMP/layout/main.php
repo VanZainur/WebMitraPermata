@@ -38,349 +38,347 @@ $uri = service('uri');
 
 <body>
 
-<!-- Popup Pendaftaran PPDB - SMP -->
-<div id="brosurPopupSMP">
-  <div id="popupContainerSMP">
-    <!-- Tombol Close -->
-    <button onclick="document.getElementById('brosurPopupSMP').style.display='none'" id="btnCloseSMP">
-      ✕
-    </button>
+  <!-- Popup Pendaftaran PPDB - SMP -->
+  <div id="brosurPopupSMP">
+    <div id="popupContainerSMP">
+      <!-- Tombol Close -->
+      <button onclick="document.getElementById('brosurPopupSMP').style.display='none'" id="btnCloseSMP">
+        ✕
+      </button>
 
-    <!-- Header Popup -->
-    <div class="popup-header-smp">
-      <div class="header-logo-smp">
-        <img src="<?= base_url('assets/images/logo.png') ?>" alt="Logo SMP">
+      <!-- Header Popup -->
+      <div class="popup-header-smp">
+        <div class="header-logo-smp">
+          <img src="<?= base_url('assets/images/logo.png') ?>" alt="Logo SMP">
+        </div>
+        <h3 class="form-title-smp">Pendaftaran Peserta Didik Baru</h3>
+        <p class="form-subtitle-smp">SMP - Tahun Ajaran 2025/2026</p>
       </div>
-      <h3 class="form-title-smp">Pendaftaran Peserta Didik Baru</h3>
-      <p class="form-subtitle-smp">SMP - Tahun Ajaran 2025/2026</p>
-    </div>
 
-    <!-- Form Content -->
-    <div id="formSectionSMP">
-      <!-- NOTIF / ALERT -->
-      <div id="alertContainerSMP"></div>
+      <!-- Form Content -->
+      <div id="formSectionSMP">
+        <!-- NOTIF / ALERT -->
+        <div id="alertContainerSMP"></div>
 
-      <form id="formPendaftaranSMP">
-        <!-- Nama Lengkap -->
-        <div class="form-group-smp">
-          <label class="form-label-smp">
-            <i class="fa fa-user icon-label-smp"></i>
-            Nama Lengkap <span class="required-smp">*</span>
-          </label>
-          <input type="text" name="nama" class="form-control-smp" 
-                 placeholder="Contoh: Ahmad Rizki Maulana" required>
-        </div>
-
-        <!-- Tempat Lahir & Tanggal Lahir -->
-        <div class="row-smp">
-          <div class="col-md-6-smp form-group-smp">
+        <form id="formPendaftaranSMP">
+          <!-- Nama Lengkap -->
+          <div class="form-group-smp">
             <label class="form-label-smp">
-              <i class="fa fa-map-marker-alt icon-label-smp"></i>
-              Tempat Lahir <span class="required-smp">*</span>
+              <i class="fa fa-user icon-label-smp"></i>
+              Nama Lengkap <span class="required-smp">*</span>
             </label>
-            <input type="text" name="tempat_lahir" class="form-control-smp" 
-                   placeholder="Contoh: Jakarta" required>
+            <input type="text" name="nama" class="form-control-smp" 
+                  placeholder="Contoh: Ahmad Rizki Maulana" required>
           </div>
-          <div class="col-md-6-smp form-group-smp">
+
+          <!-- Tempat Lahir & Tanggal Lahir -->
+          <div class="row-smp">
+            <div class="col-md-6-smp form-group-smp">
+              <label class="form-label-smp">
+                <i class="fa fa-map-marker-alt icon-label-smp"></i>
+                Tempat Lahir <span class="required-smp">*</span>
+              </label>
+              <input type="text" name="tempat_lahir" class="form-control-smp" 
+                    placeholder="Contoh: Jakarta" required>
+            </div>
+            <div class="col-md-6-smp form-group-smp">
+              <label class="form-label-smp">
+                <i class="fa fa-calendar icon-label-smp"></i>
+                Tanggal Lahir <span class="required-smp">*</span>
+              </label>
+              <input type="date" name="tanggal_lahir" class="form-control-smp" required>
+            </div>
+          </div>
+
+          <!-- Jenis Kelamin -->
+          <div class="form-group-smp">
             <label class="form-label-smp">
-              <i class="fa fa-calendar icon-label-smp"></i>
-              Tanggal Lahir <span class="required-smp">*</span>
+              <i class="fa fa-venus-mars icon-label-smp"></i>
+              Jenis Kelamin <span class="required-smp">*</span>
             </label>
-            <input type="date" name="tanggal_lahir" class="form-control-smp" required>
+            <select name="jenis_kelamin" class="form-control-smp" required>
+              <option value="">-- Pilih Jenis Kelamin --</option>
+              <option value="Laki-laki">Laki-laki</option>
+              <option value="Perempuan">Perempuan</option>
+            </select>
           </div>
-        </div>
 
-        <!-- Jenis Kelamin -->
-        <div class="form-group-smp">
-          <label class="form-label-smp">
-            <i class="fa fa-venus-mars icon-label-smp"></i>
-            Jenis Kelamin <span class="required-smp">*</span>
-          </label>
-          <select name="jenis_kelamin" class="form-control-smp" required>
-            <option value="">-- Pilih Jenis Kelamin --</option>
-            <option value="Laki-laki">Laki-laki</option>
-            <option value="Perempuan">Perempuan</option>
-          </select>
-        </div>
+          <!-- Nama Ayah & Nama Ibu -->
+          <div class="row-smp">
+            <div class="col-md-6-smp form-group-smp">
+              <label class="form-label-smp">
+                <i class="fa fa-male icon-label-smp"></i>
+                Nama Ayah <span class="required-smp">*</span>
+              </label>
+              <input type="text" name="nama_ayah" class="form-control-smp" 
+                    placeholder="Contoh: Budi Santoso" required>
+            </div>
+            <div class="col-md-6-smp form-group-smp">
+              <label class="form-label-smp">
+                <i class="fa fa-female icon-label-smp"></i>
+                Nama Ibu <span class="required-smp">*</span>
+              </label>
+              <input type="text" name="nama_ibu" class="form-control-smp" 
+                    placeholder="Contoh: Siti Aminah" required>
+            </div>
+          </div>
 
-        <!-- Nama Ayah & Nama Ibu -->
-        <div class="row-smp">
-          <div class="col-md-6-smp form-group-smp">
+          <!-- Agama -->
+          <div class="form-group-smp">
             <label class="form-label-smp">
-              <i class="fa fa-male icon-label-smp"></i>
-              Nama Ayah <span class="required-smp">*</span>
+              <i class="fa fa-book icon-label-smp"></i>
+              Agama <span class="required-smp">*</span>
             </label>
-            <input type="text" name="nama_ayah" class="form-control-smp" 
-                   placeholder="Contoh: Budi Santoso" required>
+            <select name="agama" class="form-control-smp" required>
+              <option value="">-- Pilih Agama --</option>
+              <option value="Islam">Islam</option>
+              <option value="Kristen">Kristen</option>
+              <option value="Katolik">Katolik</option>
+              <option value="Hindu">Hindu</option>
+              <option value="Buddha">Buddha</option>
+              <option value="Konghucu">Konghucu</option>
+            </select>
           </div>
-          <div class="col-md-6-smp form-group-smp">
+
+          <!-- Alamat Lengkap -->
+          <div class="form-group-smp">
             <label class="form-label-smp">
-              <i class="fa fa-female icon-label-smp"></i>
-              Nama Ibu <span class="required-smp">*</span>
+              <i class="fa fa-home icon-label-smp"></i>
+              Alamat Lengkap <span class="required-smp">*</span>
             </label>
-            <input type="text" name="nama_ibu" class="form-control-smp" 
-                   placeholder="Contoh: Siti Aminah" required>
+            <textarea name="alamat" class="form-control-smp" rows="3" 
+                      placeholder="Contoh: Jl. Merdeka No. 123, RT 01/RW 05, Kelurahan ABC, Kecamatan XYZ" 
+                      required></textarea>
           </div>
-        </div>
 
-        <!-- Agama -->
-        <div class="form-group-smp">
-          <label class="form-label-smp">
-            <i class="fa fa-book icon-label-smp"></i>
-            Agama <span class="required-smp">*</span>
-          </label>
-          <select name="agama" class="form-control-smp" required>
-            <option value="">-- Pilih Agama --</option>
-            <option value="Islam">Islam</option>
-            <option value="Kristen">Kristen</option>
-            <option value="Katolik">Katolik</option>
-            <option value="Hindu">Hindu</option>
-            <option value="Buddha">Buddha</option>
-            <option value="Konghucu">Konghucu</option>
-          </select>
-        </div>
+          <!-- Nomor WhatsApp -->
+          <div class="form-group-smp">
+            <label class="form-label-smp">
+              <i class="fa fa-phone icon-label-smp"></i>
+              Nomor WhatsApp <span class="required-smp">*</span>
+            </label>
+            <input type="tel" name="no_hp" class="form-control-smp" 
+                  placeholder="Contoh: 081234567890" required>
+            <small class="form-text-smp">Gunakan format: 08xxxxxxxxxx</small>
+          </div>
 
-        <!-- Alamat Lengkap -->
-        <div class="form-group-smp">
-          <label class="form-label-smp">
-            <i class="fa fa-home icon-label-smp"></i>
-            Alamat Lengkap <span class="required-smp">*</span>
-          </label>
-          <textarea name="alamat" class="form-control-smp" rows="3" 
-                    placeholder="Contoh: Jl. Merdeka No. 123, RT 01/RW 05, Kelurahan ABC, Kecamatan XYZ" 
-                    required></textarea>
-        </div>
+          <!-- Sekolah Asal -->
+          <div class="form-group-smp">
+            <label class="form-label-smp">
+              <i class="fa fa-school icon-label-smp"></i>
+              Sekolah Asal (SD)
+            </label>
+            <input type="text" name="asal_sekolah" class="form-control-smp" 
+                  placeholder="Contoh: SD Negeri 01 Jakarta">
+            <small class="form-text-smp">Opsional, kosongkan jika belum pasti</small>
+          </div>
 
-        <!-- Nomor WhatsApp -->
-        <div class="form-group-smp">
-          <label class="form-label-smp">
-            <i class="fa fa-phone icon-label-smp"></i>
-            Nomor WhatsApp <span class="required-smp">*</span>
-          </label>
-          <input type="tel" name="no_hp" class="form-control-smp" 
-                 placeholder="Contoh: 081234567890" required>
-          <small class="form-text-smp">Gunakan format: 08xxxxxxxxxx</small>
-        </div>
+          <!-- Hidden Fields -->
+          <input type="hidden" name="jenjang" value="smp">
+          <input type="hidden" name="jurusan" value="-">
 
-        <!-- Sekolah Asal -->
-        <div class="form-group-smp">
-          <label class="form-label-smp">
-            <i class="fa fa-school icon-label-smp"></i>
-            Sekolah Asal (SD)
-          </label>
-          <input type="text" name="asal_sekolah" class="form-control-smp" 
-                 placeholder="Contoh: SD Negeri 01 Jakarta">
-          <small class="form-text-smp">Opsional, kosongkan jika belum pasti</small>
-        </div>
+          <!-- Tombol Submit -->
+          <button type="submit" id="btnSubmitSMP" class="btn-submit-smp">
+            <i class="fa fa-paper-plane me-2"></i>Kirim Pendaftaran
+          </button>
 
-        <!-- Hidden Fields -->
-        <input type="hidden" name="jenjang" value="smp">
-        <input type="hidden" name="jurusan" value="-">
-
-        <!-- Tombol Submit -->
-        <button type="submit" id="btnSubmitSMP" class="btn-submit-smp">
-          <i class="fa fa-paper-plane me-2"></i>Kirim Pendaftaran
-        </button>
-
-        <p class="form-footer-smp">
-          <span class="required-smp">*</span> Wajib diisi
-        </p>
-      </form>
+          <p class="form-footer-smp">
+            <span class="required-smp">*</span> Wajib diisi
+          </p>
+        </form>
+      </div>
     </div>
   </div>
-</div>
 
-<!-- Script Popup - CSRF FIXED -->
-<script>
-(function() {
-  'use strict';
+  <!-- Script Popup - CSRF FIXED -->
+  <script>
+  (function() {
+    'use strict';
 
-  // ========================================
-  // FUNGSI GET CSRF TOKEN
-  // ========================================
-  function getCsrfToken() {
-    // Cari dari meta tag
-    const metaToken = document.querySelector('meta[name="X-CSRF-TOKEN"]');
-    if (metaToken) {
-      return metaToken.getAttribute('content');
-    }
-    
-    // Cari dari cookie
-    const cookies = document.cookie.split(';');
-    for (let cookie of cookies) {
-      const [name, value] = cookie.trim().split('=');
-      if (name === 'csrf_cookie_name' || name === 'csrf_token') {
-        return decodeURIComponent(value);
-      }
-    }
-    
-    return null;
-  }
-
-  // ========================================
-  // 1. TAMPILKAN POPUP SETELAH 2 DETIK
-  // ========================================
-  window.addEventListener("load", function () {
-    <?php if (session()->has('popup_errors') || session()->has('popup_success')): ?>
-      document.getElementById('brosurPopupSMP').style.display = 'flex';
-    <?php else: ?>
-      setTimeout(() => {
-        document.getElementById('brosurPopupSMP').style.display = 'flex';
-      }, 2000);
-    <?php endif ?>
-  });
-
-  // ========================================
-  // 2. VALIDASI NOMOR WHATSAPP
-  // ========================================
-  const noHpInput = document.querySelector('#formPendaftaranSMP input[name="no_hp"]');
-  if (noHpInput) {
-    noHpInput.addEventListener('input', function(e) {
-      this.value = this.value.replace(/[^0-9]/g, '');
-      
-      if (this.value.length > 0 && !this.value.startsWith('08')) {
-        this.setCustomValidity('Nomor harus diawali dengan 08');
-      } else if (this.value.length > 0 && this.value.length < 10) {
-        this.setCustomValidity('Nomor minimal 10 digit');
-      } else {
-        this.setCustomValidity('');
-      }
-    });
-  }
-
-  // ========================================
-  // 3. SUBMIT FORM - WITH CSRF FIX
-  // ========================================
-  const form = document.getElementById('formPendaftaranSMP');
-  
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const btnSubmit = document.getElementById('btnSubmitSMP');
-    const originalText = btnSubmit.innerHTML;
-    const alertContainer = document.getElementById('alertContainerSMP');
-    
-    alertContainer.innerHTML = '';
-    btnSubmit.disabled = true;
-    btnSubmit.innerHTML = '<i class="fa fa-spinner fa-spin me-2"></i>Mengirim...';
-    
-    const formData = new FormData(this);
-    const jenjang = formData.get('jenjang');
-    
-    // ✅ AMBIL CSRF TOKEN
-    const csrfToken = getCsrfToken();
-    console.log('CSRF Token:', csrfToken);
-    
-    // Debug
-    console.log('=== FORM DATA ===');
-    for (let pair of formData.entries()) {
-      console.log(pair[0] + ': ' + pair[1]);
-    }
-    
-    // ✅ KIRIM DENGAN CSRF TOKEN
-    const headers = {
-      'X-Requested-With': 'XMLHttpRequest'
-    };
-    
-    // Tambahkan CSRF token ke header jika ada
-    if (csrfToken) {
-      headers['X-CSRF-TOKEN'] = csrfToken;
-    }
-    
-    fetch('<?= base_url("pendaftaran/submit") ?>/' + jenjang, {
-      method: 'POST',
-      headers: headers,
-      body: formData,
-      credentials: 'same-origin' // ✅ PENTING untuk cookie CSRF
-    })
-    .then(response => {
-      console.log('Response status:', response.status);
-      console.log('Response headers:', [...response.headers.entries()]);
-      
-      if (!response.ok) {
-        throw new Error('HTTP Error! Status: ' + response.status);
+    // ========================================
+    // FUNGSI GET CSRF TOKEN
+    // ========================================
+    function getCsrfToken() {
+      // Cari dari meta tag
+      const metaToken = document.querySelector('meta[name="X-CSRF-TOKEN"]');
+      if (metaToken) {
+        return metaToken.getAttribute('content');
       }
       
-      return response.json();
-    })
-    .then(data => {
-      console.log('Response data:', data);
-      
-      if (data.success) {
-        alertContainer.innerHTML = `
-          <div class="alert alert-success alert-dismissible fade show" role="alert">
-            <i class="fa fa-check-circle me-2"></i><strong>Berhasil!</strong> ${data.message}
-            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-          </div>
-        `;
-        
-        form.reset();
-        
-        setTimeout(() => {
-          document.getElementById('brosurPopupSMP').style.display = 'none';
-          alertContainer.innerHTML = '';
-        }, 3000);
-        
-      } else {
-        let errorMsg = data.message || 'Pendaftaran gagal';
-        
-        if (data.errors && Object.keys(data.errors).length > 0) {
-          errorMsg += '<ul class="mb-0 mt-2 text-start small">';
-          for (let field in data.errors) {
-            errorMsg += '<li>' + data.errors[field] + '</li>';
-          }
-          errorMsg += '</ul>';
+      // Cari dari cookie
+      const cookies = document.cookie.split(';');
+      for (let cookie of cookies) {
+        const [name, value] = cookie.trim().split('=');
+        if (name === 'csrf_cookie_name' || name === 'csrf_token') {
+          return decodeURIComponent(value);
         }
+      }
+      
+      return null;
+    }
+
+    // ========================================
+    // 1. TAMPILKAN POPUP SETELAH 2 DETIK
+    // ========================================
+    window.addEventListener("load", function () {
+      <?php if (session()->has('popup_errors') || session()->has('popup_success')): ?>
+        document.getElementById('brosurPopupSMP').style.display = 'flex';
+      <?php else: ?>
+        setTimeout(() => {
+          document.getElementById('brosurPopupSMP').style.display = 'flex';
+        }, 2000);
+      <?php endif ?>
+    });
+
+    // ========================================
+    // 2. VALIDASI NOMOR WHATSAPP
+    // ========================================
+    const noHpInput = document.querySelector('#formPendaftaranSMP input[name="no_hp"]');
+    if (noHpInput) {
+      noHpInput.addEventListener('input', function(e) {
+        this.value = this.value.replace(/[^0-9]/g, '');
+        
+        if (this.value.length > 0 && !this.value.startsWith('08')) {
+          this.setCustomValidity('Nomor harus diawali dengan 08');
+        } else if (this.value.length > 0 && this.value.length < 10) {
+          this.setCustomValidity('Nomor minimal 10 digit');
+        } else {
+          this.setCustomValidity('');
+        }
+      });
+    }
+
+    // ========================================
+    // 3. SUBMIT FORM - WITH CSRF FIX
+    // ========================================
+    const form = document.getElementById('formPendaftaranSMP');
+    
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const btnSubmit = document.getElementById('btnSubmitSMP');
+      const originalText = btnSubmit.innerHTML;
+      const alertContainer = document.getElementById('alertContainerSMP');
+      
+      alertContainer.innerHTML = '';
+      btnSubmit.disabled = true;
+      btnSubmit.innerHTML = '<i class="fa fa-spinner fa-spin me-2"></i>Mengirim...';
+      
+      const formData = new FormData(this);
+      const jenjang = formData.get('jenjang');
+      
+      // ✅ AMBIL CSRF TOKEN
+      const csrfToken = getCsrfToken();
+      console.log('CSRF Token:', csrfToken);
+      
+      // Debug
+      console.log('=== FORM DATA ===');
+      for (let pair of formData.entries()) {
+        console.log(pair[0] + ': ' + pair[1]);
+      }
+      
+      // ✅ KIRIM DENGAN CSRF TOKEN
+      const headers = {
+        'X-Requested-With': 'XMLHttpRequest'
+      };
+      
+      // Tambahkan CSRF token ke header jika ada
+      if (csrfToken) {
+        headers['X-CSRF-TOKEN'] = csrfToken;
+      }
+      
+      fetch('<?= base_url("pendaftaran/submit") ?>/' + jenjang, {
+        method: 'POST',
+        headers: headers,
+        body: formData,
+        credentials: 'same-origin' // ✅ PENTING untuk cookie CSRF
+      })
+      .then(response => {
+        console.log('Response status:', response.status);
+        console.log('Response headers:', [...response.headers.entries()]);
+        
+        if (!response.ok) {
+          throw new Error('HTTP Error! Status: ' + response.status);
+        }
+        
+        return response.json();
+      })
+      .then(data => {
+        console.log('Response data:', data);
+        
+        if (data.success) {
+          alertContainer.innerHTML = `
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+              <i class="fa fa-check-circle me-2"></i><strong>Berhasil!</strong> ${data.message}
+              <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+          `;
+          
+          form.reset();
+          
+          setTimeout(() => {
+            document.getElementById('brosurPopupSMP').style.display = 'none';
+            alertContainer.innerHTML = '';
+          }, 3000);
+          
+        } else {
+          let errorMsg = data.message || 'Pendaftaran gagal';
+          
+          if (data.errors && Object.keys(data.errors).length > 0) {
+            errorMsg += '<ul class="mb-0 mt-2 text-start small">';
+            for (let field in data.errors) {
+              errorMsg += '<li>' + data.errors[field] + '</li>';
+            }
+            errorMsg += '</ul>';
+          }
+          
+          alertContainer.innerHTML = `
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+              <i class="fa fa-exclamation-circle me-2"></i><strong>Gagal!</strong> ${errorMsg}
+              <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+          `;
+        }
+        
+        btnSubmit.disabled = false;
+        btnSubmit.innerHTML = originalText;
+        alertContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      })
+      .catch(error => {
+        console.error('Fetch Error:', error);
         
         alertContainer.innerHTML = `
           <div class="alert alert-danger alert-dismissible fade show" role="alert">
-            <i class="fa fa-exclamation-circle me-2"></i><strong>Gagal!</strong> ${errorMsg}
+            <i class="fa fa-exclamation-circle me-2"></i>
+            <strong>Error!</strong> Terjadi kesalahan koneksi.<br>
+            <small class="text-muted">${error.message}</small>
             <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
           </div>
         `;
-      }
-      
-      btnSubmit.disabled = false;
-      btnSubmit.innerHTML = originalText;
-      alertContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    })
-    .catch(error => {
-      console.error('Fetch Error:', error);
-      
-      alertContainer.innerHTML = `
-        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-          <i class="fa fa-exclamation-circle me-2"></i>
-          <strong>Error!</strong> Terjadi kesalahan koneksi.<br>
-          <small class="text-muted">${error.message}</small>
-          <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-        </div>
-      `;
-      
-      btnSubmit.disabled = false;
-      btnSubmit.innerHTML = originalText;
+        
+        btnSubmit.disabled = false;
+        btnSubmit.innerHTML = originalText;
+      });
     });
-  });
 
-  // ========================================
-  // 4. TUTUP POPUP
-  // ========================================
-  document.getElementById('brosurPopupSMP').addEventListener('click', function(e) {
-    if (e.target === this) {
-      this.style.display = 'none';
-    }
-  });
+    // ========================================
+    // 4. TUTUP POPUP
+    // ========================================
+    document.getElementById('brosurPopupSMP').addEventListener('click', function(e) {
+      if (e.target === this) {
+        this.style.display = 'none';
+      }
+    });
 
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-      document.getElementById('brosurPopupSMP').style.display = 'none';
-    }
-  });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        document.getElementById('brosurPopupSMP').style.display = 'none';
+      }
+    });
 
-})();
-</script>
-<!-- POP UP BROSUR SMP END -->
-
-
+  })();
+  </script>
+  <!-- POP UP BROSUR SMP END -->
 
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -440,12 +438,11 @@ $uri = service('uri');
             <!-- QUICK LINK -->
             <div class="col-lg-4 col-md-6">
                 <h4 class="text-white mb-3">Akses Cepat</h4>
-                <a class="btn btn-link" href="<?= base_url('smp'); ?>">Beranda</a>
-                <a class="btn btn-link" href="<?= base_url('smp/about'); ?>">Tentang</a>
-                <a class="btn btn-link" href="<?= base_url('smp/about'); ?>">Ekstrakulikuler</a>
-                <a class="btn btn-link" href="<?= base_url('smp/about'); ?>">Jurusan</a>
-                <a class="btn btn-link" href="<?= base_url('smp/about'); ?>">Prestasi</a>
-                <a class="btn btn-link" href="<?= base_url('smp/contact'); ?>">Kontak</a>
+                <a class="btn btn-link" href="#beranda">Beranda</a>
+                <a class="btn btn-link" href="#about">Tentang</a>
+                <a class="btn btn-link" href="#eskul">Ekstrakulikuler</a>
+                <a class="btn btn-link" href="#prestasi">Prestasi</a>
+                <a class="btn btn-link" href="#kontak">Kontak</a>
                 <!-- <a class="btn btn-link" href="#">Pendaftaran</a> -->
             </div>
 
@@ -486,13 +483,9 @@ $uri = service('uri');
             &copy; 2025 Sekolah Mitra Permata. All Rights Reserved
             <p>By ShōtenLab</p>
         </div>
+      </div>
     </div>
-</div>
     <!-- Footer End -->
-
-
-
-
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

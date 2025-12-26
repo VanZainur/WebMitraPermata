@@ -150,7 +150,7 @@ $uri = service('uri');
                         <div class="form-group-smk">
                             <label class="form-label-smk">
                                 <i class="fa fa-file-invoice icon-label-smk"></i>
-                                NPWP Siswa
+                                NPWP Orang Tua/Wali
                             </label>
                             <input type="text" name="npwp" class="form-control-smk" 
                                 placeholder="Contoh: 12.345.678.9-012.000" maxlength="20">

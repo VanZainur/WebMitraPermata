@@ -5,7 +5,7 @@
 <?= $this->section('content') ?>
 
     <!-- Carousel Start -->
-    <div class="container-fluid p-0 mb-5">
+    <div class="container-fluid p-0 mb-5" id="beranda">
         <div class="owl-carousel header-carousel position-relative">
             <div class="owl-carousel-item position-relative">
                   <img class="img-fluid" src="<?= base_url('assets/smp/img/background1.jpg') ?>" alt="">
@@ -118,94 +118,90 @@
     </div>
     <!-- Service End -->
 
-<!-- Guru Start -->
-<div class="container-xxl py-5">
+    <!-- Guru Start -->
+    <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="section-title bg-white text-center text-primary px-3">Guru</h6>
                 <h1 class="mb-5">Tenaga Pendidik Dan Kependidikan</h1>
             </div>
-            <div class="row g-4">
+        <div class="row g-4">
+            <?php if (!empty($guru)): ?>
+            <?php foreach ($guru as $item): ?>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item bg-light">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="<?= base_url('uploads/' . strtolower($item['jenjang']) . '/guru/' . $item['foto']) ?>" alt="<?= esc($item['nama']) ?>">
+                        </div>
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0"><?= esc($item['nama']) ?></h5>
+                            <small><?= esc($item['jabatan']) ?></small>
+                        </div>
+                    </div>
+                </div>
+                    <?php endforeach; ?>
+                    <?php else: ?>
+                    <div class="col-12">
+                        <p class="text-center text-muted">Belum ada data guru tersedia.</p>
+                    </div>
+                <?php endif; ?>
+            </div>
+        </div>
+    </div>    
+    <!-- Guru End -->
 
-                <?php if (!empty($guru)): ?>
-                    <?php foreach ($guru as $item): ?>
-                        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="team-item bg-light">
-                                <div class="overflow-hidden">
-                                    <img class="img-fluid" 
-                                         src="<?= base_url('uploads/' . strtolower($item['jenjang']) . '/guru/' . $item['foto']) ?>" 
-                                         alt="<?= esc($item['nama']) ?>">
+    <!-- Prestasi Start -->
+    <div id="prestasi" class="container-xxl py-5 category">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Prestasi</h6>
+                <h1 class="mb-3">Terbaik Siswa</h1>
+                <p class="text-muted mb-4">Siswa-siswi kami berhasil meraih berbagai prestasi yang membanggakan</p>
+            </div>
+
+            <div class="row g-4">
+                <?php if (!empty($prestasi)): ?>
+                    <?php foreach ($prestasi as $item): ?>
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="prestasi-card shadow-lg rounded overflow-hidden">
+                                <div class="prestasi-img">
+                                    <img src="<?= base_url('uploads/' . strtolower($item['jenjang']) . '/prestasi/' . $item['gambar']) ?>" 
+                                        alt="<?= esc($item['judul']) ?>">
                                 </div>
-                                <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                                    <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                        <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                        <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                        <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                    </div>
-                                </div>
-                                <div class="text-center p-4">
-                                    <h5 class="mb-0"><?= esc($item['nama']) ?></h5>
-                                    <small><?= esc($item['jabatan']) ?></small>
+                                <div class="prestasi-body p-4">
+                                    <h5 class="fw-bold mb-2"><?= esc($item['judul']) ?></h5>
+                                    <p class="text-muted mb-3">
+                                        <?= esc(substr($item['deskripsi'], 0, 100)) ?>...
+                                    </p>
+                                    <small class="text-muted d-block mb-3">
+                                        <i class="fa fa-calendar"></i> 
+                                        <?= date('d M Y', strtotime($item['tanggal'])) ?>
+                                    </small>
+                                    <!-- Tombol Lihat Detail -->
+                                    <button class="btn btn-primary btn-sm" 
+                                            onclick="openModal('prestasi', <?= htmlspecialchars(json_encode($item), ENT_QUOTES, 'UTF-8') ?>)">
+                                        <i class="fa fa-eye"></i> Lihat Detail
+                                    </button>
                                 </div>
                             </div>
                         </div>
                     <?php endforeach; ?>
                 <?php else: ?>
                     <div class="col-12">
-                        <p class="text-center text-muted">Belum ada data guru tersedia.</p>
+                        <p class="text-center text-muted">Belum ada prestasi tersedia.</p>
                     </div>
                 <?php endif; ?>
-
             </div>
         </div>
     </div>
     <!-- Guru End -->
-
-   <!-- Prestasi Start -->
-  <div id="prestasi" class="container-xxl py-5 category">
-    <div class="container">
-        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title bg-white text-center text-primary px-3">Prestasi</h6>
-            <h1 class="mb-3">Terbaik Siswa</h1>
-            <p class="text-muted mb-4">Siswa-siswi kami berhasil meraih berbagai prestasi yang membanggakan</p>
-        </div>
-
-        <div class="row g-4">
-            <?php if (!empty($prestasi)): ?>
-                <?php foreach ($prestasi as $item): ?>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="prestasi-card shadow-lg rounded overflow-hidden">
-                            <div class="prestasi-img">
-                                <img src="<?= base_url('uploads/' . strtolower($item['jenjang']) . '/prestasi/' . $item['gambar']) ?>" 
-                                    alt="<?= esc($item['judul']) ?>">
-                            </div>
-                            <div class="prestasi-body p-4">
-                                <h5 class="fw-bold mb-2"><?= esc($item['judul']) ?></h5>
-                                <p class="text-muted mb-3">
-                                    <?= esc(substr($item['deskripsi'], 0, 100)) ?>...
-                                </p>
-                                <small class="text-muted d-block mb-3">
-                                    <i class="fa fa-calendar"></i> 
-                                    <?= date('d M Y', strtotime($item['tanggal'])) ?>
-                                </small>
-                                <!-- Tombol Lihat Detail -->
-                                <button class="btn btn-primary btn-sm" 
-                                        onclick="openModal('prestasi', <?= htmlspecialchars(json_encode($item), ENT_QUOTES, 'UTF-8') ?>)">
-                                    <i class="fa fa-eye"></i> Lihat Detail
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                <?php endforeach; ?>
-            <?php else: ?>
-                <div class="col-12">
-                    <p class="text-center text-muted">Belum ada prestasi tersedia.</p>
-                </div>
-            <?php endif; ?>
-        </div>
-    </div>
-</div>
-<!-- Guru End -->
 
     <!-- Ekstrakurikuler Start -->
     <div id="eskul" class="container-xxl py-5">
@@ -315,17 +311,17 @@
     </div>
     <!-- Ekstrakurikuler End -->
 
-        <!-- kegiatan Start-->
-        <div id="kegiatan" class="container-xxl py-5">
-    <div class="container">
-        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title bg-white text-center text-primary px-3">Acara</h6>
-            <h1 class="mb-3">Kegiatan Sekolah</h1>
-            <p class="text-muted mb-4">Kegiatan sekolah kami mencakup berbagai program yang edukatif</p>
-        </div>
+    <!-- kegiatan Start-->
+    <div id="kegiatan" class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Acara</h6>
+                <h1 class="mb-3">Kegiatan Sekolah</h1>
+                <p class="text-muted mb-4">Kegiatan sekolah kami mencakup berbagai program yang edukatif</p>
+            </div>
 
-        <div class="row g-4">
-            <?php if (!empty($kegiatan)): ?>
+            <div class="row g-4">
+                <?php if (!empty($kegiatan)): ?>
                 <?php foreach ($kegiatan as $item): ?>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="kegiatan-card">
@@ -348,21 +344,21 @@
                         </div>
                     </div>
                 <?php endforeach; ?>
-            <?php else: ?>
-                <div class="col-12 text-center text-muted">Belum ada kegiatan tersedia.</div>
-            <?php endif; ?>
+                <?php else: ?>
+                    <div class="col-12 text-center text-muted">Belum ada kegiatan tersedia.</div>
+                <?php endif; ?>
+            </div>
         </div>
     </div>
-</div>
     <!-- Kegiatan End-->
 
     <!-- Berita Start-->
     <div id="berita" class="container-xxl py-5">
-    <div class="container">
-        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title bg-white text-center text-primary px-3">Informasi</h6>
-            <h1 class="mb-5">Berita Terkini</h1>
-        </div>
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Informasi</h6>
+                <h1 class="mb-5">Berita Terkini</h1>
+            </div>
 
         <div class="row g-4">
             <?php if (!empty($berita)): ?>
@@ -389,32 +385,32 @@
                         </div>
                     </div>
                 <?php endforeach; ?>
-            <?php else: ?>
+                <?php else: ?>
                 <div class="col-12">
                     <p class="text-center text-muted">Belum ada berita tersedia.</p>
                 </div>
-            <?php endif; ?>
+                <?php endif; ?>
+            </div>
         </div>
     </div>
-</div>
     <!-- Berita End-->
 
 <!-- ============================================================
      MODAL POPUP (UNIVERSAL UNTUK SEMUA)
      ============================================================ -->
-<div id="modalDetail" class="modal-detail">
-    <div class="modal-content-detail">
-        <div class="modal-header-detail">
-            <span class="modal-close" onclick="closeModal()">&times;</span>
-            <img id="modalImage" src="" alt="Detail Image">
-        </div>
-        <div class="modal-body-detail">
-            <h2 class="modal-title-detail" id="modalTitle"></h2>
-            <span class="modal-date-detail" id="modalDate"></span>
-            <p class="modal-desc-detail" id="modalDesc"></p>
+    <div id="modalDetail" class="modal-detail">
+        <div class="modal-content-detail">
+            <div class="modal-header-detail">
+                <span class="modal-close" onclick="closeModal()">&times;</span>
+                <img id="modalImage" src="" alt="Detail Image">
+            </div>
+            <div class="modal-body-detail">
+                <h2 class="modal-title-detail" id="modalTitle"></h2>
+                <span class="modal-date-detail" id="modalDate"></span>
+                <p class="modal-desc-detail" id="modalDesc"></p>
+            </div>
         </div>
     </div>
-</div>
     
     <!-- Testimonial Start -->
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
@@ -462,79 +458,78 @@
     </div>
     <!-- Testimonial End -->
 
-<!-- Contact Start -->
-
-<div id="kontak" class="container-xxl py-5 category">
-    <div class="container">
-        <!-- Section Header -->
-        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title bg-white text-center text-primary px-3">Kontak Kami</h6>
-            <h1 class="mb-5">Hubungi kami untuk pertanyaan apa pun.</h1>
-        </div>
-
-    <!-- Alerts -->
-    <?php if(session()->get('success')): ?>
-        <div class="alert alert-success"><?= session()->get('success') ?></div>
-    <?php endif; ?>
-
-    <?php if(session()->get('error')): ?>
-        <div class="alert alert-danger"><?= session()->get('error') ?></div>
-    <?php endif; ?>
-
-    <!-- Contact Content -->
-    <div class="row g-4">
-        <!-- Info Kontak -->
-        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-            <h5>Kami Siap Membantu</h5>
-            <p class="mb-3 text-justify">
-                Hubungi kami untuk mendapatkan informasi terbaru seputar program pendidikan, pendaftaran siswa baru, dan layanan akademik. Tim kami siap membantu Anda dengan respon yang cepat dan ramah.
-            </p>
-
-            <!-- Alamat -->
-            <div class="d-flex align-items-start mb-3">
-                <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary" style="width: 50px; height: 50px;">
-                    <i class="fa fa-map-marker-alt text-white"></i>
-                </div>
-                <div class="ms-3">
-                    <h5 class="text-primary">Lokasi</h5>
-                    <p class="mb-1">Perumahan Villa Permata, Blok. D8 - D9 No.1, Sindangsari, Ps. Kemis, Tangerang, Banten 15560</p>
-                </div>
+    <!-- Contact Start -->
+    <div id="kontak" class="container-xxl py-5 category">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Kontak Kami</h6>
+                <h1 class="mb-5">Hubungi kami untuk pertanyaan apa pun.</h1>
             </div>
 
-            <!-- Telepon -->
-            <div class="d-flex align-items-start mb-3">
-                <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary" style="width: 50px; height: 50px;">
-                    <i class="fa fa-phone-alt text-white"></i>
+            <!-- Alerts -->
+            <?php if(session()->get('success')): ?>
+                <div class="alert alert-success"><?= session()->get('success') ?></div>
+            <?php endif; ?>
+
+            <?php if(session()->get('error')): ?>
+                <div class="alert alert-danger"><?= session()->get('error') ?></div>
+            <?php endif; ?>
+
+            <!-- Contact Content -->
+            <div class="row g-4">
+                <!-- Info Kontak -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <h5>Kami Siap Membantu</h5>
+                    <p class="mb-3 text-justify">
+                        Hubungi kami untuk mendapatkan informasi terbaru seputar program pendidikan, pendaftaran siswa baru, dan layanan akademik. Tim kami siap membantu Anda dengan respon yang cepat dan ramah.
+                    </p>
+
+                    <!-- Alamat -->
+                    <div class="d-flex align-items-start mb-3">
+                        <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary" style="width: 50px; height: 50px;">
+                            <i class="fa fa-map-marker-alt text-white"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h5 class="text-primary">Lokasi</h5>
+                            <p class="mb-1">Perumahan Villa Permata, Blok. D8 - D9 No.1, Sindangsari, Ps. Kemis, Tangerang, Banten 15560</p>
+                        </div>
+                    </div>
+
+                    <!-- Telepon -->
+                    <div class="d-flex align-items-start mb-3">
+                        <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary" style="width: 50px; height: 50px;">
+                            <i class="fa fa-phone-alt text-white"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h5 class="text-primary">No Telepon</h5>
+                            <p class="mb-1">0858-4632-5633 (Miss. Tita) - Staff</p>
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="d-flex align-items-start">
+                        <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary" style="width: 50px; height: 50px;">
+                            <i class="fa fa-envelope-open text-white"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h5 class="text-primary">Email</h5>
+                            <p class="mb-0">info@mitrapermata.sch.id</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="ms-3">
-                    <h5 class="text-primary">No Telepon</h5>
-                    <p class="mb-1">0858-4632-5633 (Miss. Tita) - Staff</p>
+
+                <!-- Map -->
+                <div class="col-lg-8 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <iframe class="position-relative rounded w-100 h-100"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.9391231209147!2d106.52772367366288!3d-6.13888099384802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6a000100000001%3A0x78b8d9a04432be9f!2sTK-SD-SMP-SMK-PKBM%20-%20LKP%20MITRA%20PERMATA!5e0!3m2!1sid!2sid!4v1759418850999!5m2!1sid!2sid"
+                        frameborder="0" style="min-height: 300px; border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+                    </iframe>
                 </div>
             </div>
-
-            <!-- Email -->
-            <div class="d-flex align-items-start">
-                <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary" style="width: 50px; height: 50px;">
-                    <i class="fa fa-envelope-open text-white"></i>
-                </div>
-                <div class="ms-3">
-                    <h5 class="text-primary">Email</h5>
-                    <p class="mb-0">info@mitrapermata.sch.id</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Map -->
-        <div class="col-lg-8 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-            <iframe class="position-relative rounded w-100 h-100"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.9391231209147!2d106.52772367366288!3d-6.13888099384802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6a000100000001%3A0x78b8d9a04432be9f!2sTK-SD-SMP-SMK-PKBM%20-%20LKP%20MITRA%20PERMATA!5e0!3m2!1sid!2sid!4v1759418850999!5m2!1sid!2sid"
-                frameborder="0" style="min-height: 300px; border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
-            </iframe>
         </div>
     </div>
-</div>
-</div>
-<!-- Contact End -->
+    <!-- Contact End -->
 
     <script>
 function openModal(type, data) {

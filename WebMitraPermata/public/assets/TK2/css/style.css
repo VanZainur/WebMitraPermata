@@ -817,6 +817,11 @@ section {
     transition: all 0.3s;
 }
 
+.footer-section ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
 .footer-section li:hover {
     transform: translateX(10px);
 }
