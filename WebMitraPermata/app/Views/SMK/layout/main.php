@@ -39,254 +39,174 @@ $uri = service('uri');
 </head>
 
 <body>
-    <!-- Popup Brosur Start -->
-    <!-- Popup Pendaftaran PPDB - SMK -->
-    <div id="brosurPopupSMK">
-        <div id="popupContainerSMK">
+<!-- Popup Brosur Start -->
+<!-- Popup Pendaftaran PPDB - SMK -->
+<div id="brosurPopupSMK">
+    <div id="popupContainerSMK">
 
-            <!-- Tombol Close -->
-            <button onclick="document.getElementById('brosurPopupSMK').style.display='none'" id="btnCloseSMK">
-                ✕
-            </button>
+        <!-- Tombol Close -->
+        <button onclick="document.getElementById('brosurPopupSMK').style.display='none'" id="btnCloseSMK">
+            ✕
+        </button>
 
-            <!-- Header Popup -->
-            <div class="popup-header-smk">
-                <div class="header-logo-smk">
-                    <img src="<?= base_url('assets/images/logo.png') ?>" alt="Logo SMK">
+        <!-- Header Popup -->
+        <div class="popup-header-smk">
+            <div class="header-logo-smk">
+                <img src="<?= base_url('assets/images/logo.png') ?>" alt="Logo SMK">
+            </div>
+            <h3 class="form-title-smk">Pendaftaran Peserta Didik Baru</h3>
+            <p class="form-subtitle-smk">SMK - Tahun Ajaran 2025/2026</p>
+        </div>
+
+        <!-- Form Content -->
+        <div id="formSectionSMK">
+
+            <!-- NOTIF / ALERT -->
+            <div id="alertContainerSMK"></div>
+
+            <form id="formPendaftaranSMK">
+
+                <!-- Nama Lengkap -->
+                <div class="form-group-smk">
+                    <label class="form-label-smk">
+                        <i class="fa fa-user icon-label-smk"></i>
+                        Nama Lengkap <span class="required-smk">*</span>
+                    </label>
+                    <input type="text" name="nama" class="form-control-smk" 
+                           placeholder="Contoh: Ahmad Rizki Maulana" required>
                 </div>
-                <h3 class="form-title-smk">Pendaftaran Peserta Didik Baru</h3>
-                <p class="form-subtitle-smk">SMK - Tahun Ajaran 2025/2026</p>
-            </div>
 
-            <!-- Form Content -->
-            <div id="formSectionSMK">
-
-                <!-- NOTIF / ALERT -->
-                <div id="alertContainerSMK"></div>
-
-                <form id="formPendaftaranSMK">
-
-                    <!-- ============================================ -->
-                    <!-- SECTION 1: DATA PRIBADI SISWA -->
-                    <!-- ============================================ -->
-                    <div class="form-section-smk">
-                        <h4 class="section-title-smk">
-                            <i class="fa fa-user-circle"></i> Data Pribadi Siswa
-                        </h4>
-
-                        <!-- Nama Lengkap -->
-                        <div class="form-group-smk">
-                            <label class="form-label-smk">
-                                <i class="fa fa-user icon-label-smk"></i>
-                                Nama Lengkap <span class="required-smk">*</span>
-                            </label>
-                            <input type="text" name="nama" class="form-control-smk" 
-                                placeholder="Contoh: Ahmad Rizki Maulana" required>
-                        </div>
-
-                        <!-- Tempat Lahir & Tanggal Lahir -->
-                        <div class="row-smk">
-                            <div class="col-md-6-smk form-group-smk">
-                                <label class="form-label-smk">
-                                    <i class="fa fa-map-marker-alt icon-label-smk"></i>
-                                    Tempat Lahir <span class="required-smk">*</span>
-                                </label>
-                                <input type="text" name="tempat_lahir" class="form-control-smk" 
-                                    placeholder="Contoh: Jakarta" required>
-                            </div>
-                            <div class="col-md-6-smk form-group-smk">
-                                <label class="form-label-smk">
-                                    <i class="fa fa-calendar icon-label-smk"></i>
-                                    Tanggal Lahir <span class="required-smk">*</span>
-                                </label>
-                                <input type="date" name="tanggal_lahir" class="form-control-smk" required>
-                            </div>
-                        </div>
-
-                        <!-- NIK Siswa -->
-                        <div class="form-group-smk">
-                            <label class="form-label-smk">
-                                <i class="fa fa-id-card icon-label-smk"></i>
-                                NIK Siswa (16 Digit) <span class="required-smk">*</span>
-                            </label>
-                            <input type="text" name="nik_siswa" class="form-control-smk" 
-                                placeholder="Contoh: 3201234567890001" 
-                                maxlength="16" required>
-                            <small class="form-text-smk">Sesuai KTP/Kartu Keluarga</small>
-                        </div>
+                <!-- Tempat Lahir & Tanggal Lahir -->
+                <div class="row-smk">
+                    <div class="col-md-6-smk form-group-smk">
+                        <label class="form-label-smk">
+                            <i class="fa fa-map-marker-alt icon-label-smk"></i>
+                            Tempat Lahir <span class="required-smk">*</span>
+                        </label>
+                        <input type="text" name="tempat_lahir" class="form-control-smk" 
+                               placeholder="Contoh: Jakarta" required>
                     </div>
-
-                    <!-- ============================================ -->
-                    <!-- SECTION 2: DATA DOKUMEN -->
-                    <!-- ============================================ -->
-                    <div class="form-section-smk">
-                        <h4 class="section-title-smk">
-                            <i class="fa fa-file-alt"></i> Data Dokumen
-                        </h4>
-
-                        <!-- No Kartu Keluarga & No Akte -->
-                        <div class="row-smk">
-                            <div class="col-md-6-smk form-group-smk">
-                                <label class="form-label-smk">
-                                    <i class="fa fa-users icon-label-smk"></i>
-                                    No. Kartu Keluarga
-                                </label>
-                                <input type="text" name="no_kk" class="form-control-smk" 
-                                    placeholder="Contoh: 3201234567890001" maxlength="16">
-                                <small class="form-text-smk">Opsional - 16 digit</small>
-                            </div>
-                            <div class="col-md-6-smk form-group-smk">
-                                <label class="form-label-smk">
-                                    <i class="fa fa-certificate icon-label-smk"></i>
-                                    No. Akte Kelahiran
-                                </label>
-                                <input type="text" name="no_akte" class="form-control-smk" 
-                                    placeholder="Contoh: 1234/AB/2010">
-                                <small class="form-text-smk">Opsional</small>
-                            </div>
-                        </div>
-
-                        <!-- NPWP -->
-                        <div class="form-group-smk">
-                            <label class="form-label-smk">
-                                <i class="fa fa-file-invoice icon-label-smk"></i>
-                                NPWP Orang Tua/Wali
-                            </label>
-                            <input type="text" name="npwp" class="form-control-smk" 
-                                placeholder="Contoh: 12.345.678.9-012.000" maxlength="20">
-                            <small class="form-text-smk">Opsional - Jika sudah memiliki</small>
-                        </div>
+                    <div class="col-md-6-smk form-group-smk">
+                        <label class="form-label-smk">
+                            <i class="fa fa-calendar icon-label-smk"></i>
+                            Tanggal Lahir <span class="required-smk">*</span>
+                        </label>
+                        <input type="date" name="tanggal_lahir" class="form-control-smk" required>
                     </div>
+                </div>
 
-                    <!-- ============================================ -->
-                    <!-- SECTION 3: KONTAK & ALAMAT SISWA -->
-                    <!-- ============================================ -->
-                    <div class="form-section-smk">
-                        <h4 class="section-title-smk">
-                            <i class="fa fa-map-marked-alt"></i> Kontak & Alamat Siswa
-                        </h4>
+                <!-- Jenis Kelamin -->
+                <div class="form-group-smk">
+                    <label class="form-label-smk">
+                        <i class="fa fa-venus-mars icon-label-smk"></i>
+                        Jenis Kelamin <span class="required-smk">*</span>
+                    </label>
+                    <select name="jenis_kelamin" class="form-control-smk" required>
+                        <option value="">-- Pilih Jenis Kelamin --</option>
+                        <option value="Laki-laki">Laki-laki</option>
+                        <option value="Perempuan">Perempuan</option>
+                    </select>
+                </div>
 
-                        <!-- Alamat Lengkap Siswa -->
-                        <div class="form-group-smk">
-                            <label class="form-label-smk">
-                                <i class="fa fa-home icon-label-smk"></i>
-                                Alamat Lengkap Siswa <span class="required-smk">*</span>
-                            </label>
-                            <textarea name="alamat" class="form-control-smk" rows="3" 
-                                    placeholder="Contoh: Jl. Merdeka No. 123, RT 01/RW 05, Kelurahan ABC, Kecamatan XYZ" 
-                                    required></textarea>
-                        </div>
+                <!-- Jurusan (KHUSUS SMK) -->
+                <div class="form-group-smk">
+                    <label class="form-label-smk">
+                        <i class="fa fa-graduation-cap icon-label-smk"></i>
+                        Pilihan Jurusan <span class="required-smk">*</span>
+                    </label>
+                    <select name="jurusan" class="form-control-smk" required>
+                        <option value="">-- Pilih Jurusan --</option>
+                        <option value="Teknik Komputer dan Jaringan">Teknik Komputer & Jaringan (TKJ)</option>
+                        <option value="Teknik Kendaraan Ringan">Teknik Kendaraan Ringan (TKR)</option>
+                    </select>
+                </div>
 
-                        <!-- No Telepon Siswa -->
-                        <div class="form-group-smk">
-                            <label class="form-label-smk">
-                                <i class="fa fa-phone icon-label-smk"></i>
-                                No. Telepon/WhatsApp Siswa
-                            </label>
-                            <input type="tel" name="no_hp_siswa" class="form-control-smk" 
-                                placeholder="Contoh: 081234567890">
-                            <small class="form-text-smk">Opsional - Format: 08xxxxxxxxxx</small>
-                        </div>
+                <!-- Nama Ayah & Nama Ibu -->
+                <div class="row-smk">
+                    <div class="col-md-6-smk form-group-smk">
+                        <label class="form-label-smk">
+                            <i class="fa fa-male icon-label-smk"></i>
+                            Nama Ayah <span class="required-smk">*</span>
+                        </label>
+                        <input type="text" name="nama_ayah" class="form-control-smk" 
+                               placeholder="Contoh: Budi Santoso" required>
                     </div>
-
-                    <!-- ============================================ -->
-                    <!-- SECTION 4: ASAL SEKOLAH -->
-                    <!-- ============================================ -->
-                    <div class="form-section-smk">
-                        <h4 class="section-title-smk">
-                            <i class="fa fa-school"></i> Asal Sekolah
-                        </h4>
-
-                        <div class="form-group-smk">
-                            <label class="form-label-smk">
-                                <i class="fa fa-building icon-label-smk"></i>
-                                Asal Sekolah (SMP/MTs)
-                            </label>
-                            <input type="text" name="asal_sekolah" class="form-control-smk" 
-                                placeholder="Contoh: SMP Negeri 1 Jakarta">
-                            <small class="form-text-smk">Opsional</small>
-                        </div>
+                    <div class="col-md-6-smk form-group-smk">
+                        <label class="form-label-smk">
+                            <i class="fa fa-female icon-label-smk"></i>
+                            Nama Ibu <span class="required-smk">*</span>
+                        </label>
+                        <input type="text" name="nama_ibu" class="form-control-smk" 
+                               placeholder="Contoh: Siti Aminah" required>
                     </div>
+                </div>
 
-                    <!-- ============================================ -->
-                    <!-- SECTION 5: DATA ORANG TUA/WALI -->
-                    <!-- ============================================ -->
-                    <div class="form-section-smk">
-                        <h4 class="section-title-smk">
-                            <i class="fa fa-user-friends"></i> Data Orang Tua/Wali
-                        </h4>
+                <!-- Agama -->
+                <div class="form-group-smk">
+                    <label class="form-label-smk">
+                        <i class="fa fa-book icon-label-smk"></i>
+                        Agama <span class="required-smk">*</span>
+                    </label>
+                    <select name="agama" class="form-control-smk" required>
+                        <option value="">-- Pilih Agama --</option>
+                        <option value="Islam">Islam</option>
+                        <option value="Kristen">Kristen</option>
+                        <option value="Katolik">Katolik</option>
+                        <option value="Hindu">Hindu</option>
+                        <option value="Buddha">Buddha</option>
+                        <option value="Konghucu">Konghucu</option>
+                    </select>
+                </div>
 
-                        <!-- Nama Orang Tua/Wali -->
-                        <div class="form-group-smk">
-                            <label class="form-label-smk">
-                                <i class="fa fa-user-tie icon-label-smk"></i>
-                                Nama Orang Tua/Wali
-                            </label>
-                            <input type="text" name="nama_wali" class="form-control-smk" 
-                                placeholder="Contoh: Budi Santoso">
-                            <small class="form-text-smk">Opsional</small>
-                        </div>
+                <!-- Alamat Lengkap -->
+                <div class="form-group-smk">
+                    <label class="form-label-smk">
+                        <i class="fa fa-home icon-label-smk"></i>
+                        Alamat Lengkap <span class="required-smk">*</span>
+                    </label>
+                    <textarea name="alamat" class="form-control-smk" rows="3" 
+                              placeholder="Contoh: Jl. Merdeka No. 123, RT 01/RW 05" 
+                              required></textarea>
+                </div>
 
-                        <!-- NIK Wali -->
-                        <div class="form-group-smk">
-                            <label class="form-label-smk">
-                                <i class="fa fa-id-card icon-label-smk"></i>
-                                NIK Orang Tua/Wali
-                            </label>
-                            <input type="text" name="nik_wali" class="form-control-smk" 
-                                placeholder="Contoh: 3201234567890001" maxlength="16">
-                            <small class="form-text-smk">Opsional - 16 digit</small>
-                        </div>
+                <!-- Nomor WhatsApp -->
+                <div class="form-group-smk">
+                    <label class="form-label-smk">
+                        <i class="fa fa-phone icon-label-smk"></i>
+                        Nomor WhatsApp <span class="required-smk">*</span>
+                    </label>
+                    <input type="tel" name="no_hp" class="form-control-smk" 
+                           placeholder="Contoh: 081234567890" required>
+                    <small class="form-text-smk">Gunakan format: 08xxxxxxxxxx</small>
+                </div>
 
-                        <!-- Alamat Orang Tua/Wali -->
-                        <div class="form-group-smk">
-                            <label class="form-label-smk">
-                                <i class="fa fa-map-marker-alt icon-label-smk"></i>
-                                Alamat Lengkap Orang Tua/Wali
-                            </label>
-                            <textarea name="alamat_wali" class="form-control-smk" rows="3" 
-                                    placeholder="Contoh: Jl. Merdeka No. 123, RT 01/RW 05..."></textarea>
-                            <small class="form-text-smk">Opsional - Jika berbeda dengan alamat siswa</small>
-                        </div>
-                    </div>
+                <!-- Asal Sekolah -->
+                <div class="form-group-smk">
+                    <label class="form-label-smk">
+                        <i class="fa fa-school icon-label-smk"></i>
+                        Asal Sekolah (SMP/MTs)
+                    </label>
+                    <input type="text" name="asal_sekolah" class="form-control-smk" 
+                           placeholder="Contoh: SMP Negeri 1 Jakarta">
+                    <small class="form-text-smk">Opsional</small>
+                </div>
 
-                    <!-- ============================================ -->
-                    <!-- SECTION 6: PILIHAN JURUSAN -->
-                    <!-- ============================================ -->
-                    <div class="form-section-smk">
-                        <h4 class="section-title-smk">
-                            <i class="fa fa-graduation-cap"></i> Pilihan Jurusan
-                        </h4>
+                <!-- Hidden Fields -->
+                <input type="hidden" name="jenjang" value="smk">
 
-                        <div class="form-group-smk">
-                            <label class="form-label-smk">
-                                <i class="fa fa-cogs icon-label-smk"></i>
-                                Jurusan yang Dipilih <span class="required-smk">*</span>
-                            </label>
-                            <select name="jurusan" class="form-control-smk" required>
-                                <option value="">-- Pilih Jurusan --</option>
-                                <option value="Teknik Komputer dan Jaringan">Teknik Komputer dan Jaringan (TKJ)</option>
-                                <option value="Teknik Kendaraan Ringan Otomotif">Teknik Kendaraan Ringan Otomotif (TKRO)</option>
-                            </select>
-                        </div>
-                    </div>
+                <!-- Tombol Submit -->
+                <button type="submit" id="btnSubmitSMK" class="btn-submit-smk">
+                    <i class="fa fa-paper-plane me-2"></i>Kirim Pendaftaran
+                </button>
 
-                    <!-- Hidden Fields -->
-                    <input type="hidden" name="jenjang" value="smk">
+                <p class="form-footer-smk">
+                    <span class="required-smk">*</span> Wajib diisi
+                </p>
+            </form>
 
-                    <!-- Tombol Submit -->
-                    <button type="submit" id="btnSubmitSMK" class="btn-submit-smk">
-                        <i class="fa fa-paper-plane me-2"></i>Kirim Pendaftaran
-                    </button>
-
-                    <p class="form-footer-smk">
-                        <span class="required-smk">*</span> Wajib diisi
-                    </p>
-                </form>
-
-            </div>
         </div>
     </div>
+</div>
 
     <!-- Script Popup -->
     <script>
